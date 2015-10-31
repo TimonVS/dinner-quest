@@ -68,7 +68,7 @@ let discoverModule = angular.module('discover', [
           }
         }
       }
-    })
+    });
 })
 
 .directive('discover', discoverComponent);
