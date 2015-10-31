@@ -1,5 +1,6 @@
 {
-  "name": "ng6-starter",
+  "name": "dinner-quest",
+  "repository": "https://github.com/TimonVS/dinner-quest",
   "version": "0.0.1",
   "description": "Starter for Angular + ES6 + (Webpack or JSPM)",
   "main": "index.js",
