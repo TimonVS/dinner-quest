@@ -3,11 +3,11 @@
 import 'angularfire';
 import Firebase from 'firebase';
 
-const FIREBASEPATH = 'https://torrid-fire-8656.firebaseio.com';
+const FIREBASEPATH = 'https://diner-quest.firebaseio.com';
 
-let AuthFactory = function ($firebaseAuth) {
+let AuthFactory = function ($firebaseAuth, $rootScope) {
 
-  let ref = new Firebase(FIREBASEPATH);
+  let ref = new Firebase(FIREBASEPATH + '/users');
   let auth = $firebaseAuth(ref);
 
   /**
@@ -15,9 +15,10 @@ let AuthFactory = function ($firebaseAuth) {
    */
 
   let login = () => {
-    auth.$authWithOAuthPopup('facebook').then(function(authData) {
+    auth.$authWithOAuthPopup('facebook').then(function (authData) {
       console.log('Logged in as:', authData.uid);
-    }).catch(function(error) {
+      $rootScope.$emit('USER_LOGGED_IN', authData);
+    }).catch(function (error) {
       console.log('Authentication failed:', error);
     });
   };

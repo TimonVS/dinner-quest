@@ -1,15 +1,17 @@
-let UserFactory = function (Auth) {
-  const user = {};
+let UserFactory = function (Auth, $rootScope) {
+  let user = {};
 
   let getUser = () => {
     return user;
   };
 
   let isSignedIn = () => {
-    return user.isSignedIn;
+    return !!Object.keys(user).length;
   };
 
-  let auth = Auth;
+  $rootScope.$on('USER_LOGGED_IN', (e, data) => {
+    user = data;
+  });
 
   return { getUser, isSignedIn, Auth };
 };
