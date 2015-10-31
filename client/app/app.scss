@@ -4,3 +4,18 @@ $ionicons-font-path: 'fonts' !default;
 $font-family-base: 'Titillium Web', sans-serif;
 
 @import '../../node_modules/ionic-sdk/scss/ionic';
+
+.tabs {
+  border-top: 5px solid $border !important;
+  height: 80px !important;
+  background: $positive !important;
+}
+
+.tab-nav .tab-item .icon {
+  color: $light;
+  margin-top: 20px !important;
+}
+
+.tab-nav .tab-item.tab-item-active .icon {
+  color: #a4fff2;
+}
