@@ -2,12 +2,12 @@
 
 import uiRouter from 'angular-ui-router';
 import discoverComponent from './discover.component';
-
-const apiURL = 'https://frahmework.ah.nl/ah/json/recepten?receptomschrijving=pasta&nasanr=1&personalkey=QIMw3XwUtCI3H102gZTbTpK7NMCjtNtz';
+import Recepies from '../recepies/recepies';
 
 let discoverModule = angular.module('discover', [
   uiRouter,
-  'rzModule'
+  'rzModule',
+  Recepies.name
 ])
 
 .config(($stateProvider, $urlRouterProvider) => {
@@ -16,8 +16,13 @@ let discoverModule = angular.module('discover', [
   $stateProvider
     .state('discover', {
       url: '/',
-      template: '<discover></discover>',
-      // resolve: ['']
+      template: '<discover recepies="recepies"></discover>',
+      controller: ($scope, recepies) => {
+        $scope.recepies = recepies;
+      },
+      resolve: {
+        recepies: (Recepies) => Recepies.query({})
+      }
     });
 })
 

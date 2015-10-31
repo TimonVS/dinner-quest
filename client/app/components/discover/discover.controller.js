@@ -1,7 +1,7 @@
 'use strict';
 
 class DiscoverController {
-  constructor() {
+  constructor () {
     this.name = 'discover';
 
     this.items = [

@@ -5,7 +5,9 @@ import './discover.scss';
 let discoverComponent = function () {
   return {
     restrict: 'E',
-    scope: {},
+    scope: {
+      recepies: '='
+    },
     template,
     controller,
     controllerAs: 'vm',
