@@ -4,6 +4,7 @@ export default function () {
   return {
     restrict: 'E',
     scope: {
+      value: '=',
       max: '=',
       type: '='
     },
@@ -13,7 +14,6 @@ export default function () {
     </div>
     </div>`,
     link: function (scope) {
-      scope.active = 0;
       scope.items = [];
 
       for (let i = 0; i < scope.max; i++) {
@@ -21,11 +21,11 @@ export default function () {
       }
 
       scope.activate = function (index) {
-        scope.active = index;
+        scope.value = index;
       }
 
       scope.isActive = function (index) {
-        return index <= scope.active
+        return index <= scope.value
       }
     }
   }
