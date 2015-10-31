@@ -7,8 +7,10 @@ export default function () {
       max: '=',
       type: '='
     },
-    template: `<div class="dq-slider">
-      <span ng-repeat="item in items" ng-class="{active: isActive($index)}" ng-click="activate($index)" class="{{ type }}"></span>
+    template: `<div class="dq-slider row">
+    <div class="col" ng-repeat="item in items">
+    <span ng-class="{active: isActive($index)}" ng-click="activate($index)" class="{{ type }}"></span>
+    </div>
     </div>`,
     link: function (scope) {
       scope.active = 0;

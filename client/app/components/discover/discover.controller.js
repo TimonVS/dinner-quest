@@ -3,6 +3,8 @@
 class DiscoverController {
   constructor () {
     this.name = 'discover';
+
+    this.sort = 'default';
   }
 }
 

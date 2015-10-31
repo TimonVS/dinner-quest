@@ -1,28 +1,24 @@
-<div class="bar bar-header bar-positive">
-  <h1 class="title">{{ vm.name }}</h1>
-</div>
-
-<div class="bar bar-subheader item-input-inset">
-  <label class="item-input-wrapper">
-    <i class="icon ion-ios-search placeholder-icon"></i>
-    <input type="search" placeholder="Search">
-  </label>
-  <button class="button button-clear">
-    Cancel
-  </button>
-</div>
-
-<ion-content class="has-subheader has-tabs">
+<ion-content class="has-tabs">
   <hero></hero>
 
   <div class="button-bar">
-    <a class="button" ui-sref=".default" ui-sref-active="active">Default</a>
-    <a class="button" ui-sref=".rating" ui-sref-active="active">Rating</a>
-    <a class="button" ui-sref=".category" ui-sref-active="active">Category</a>
-    <a class="button" ui-sref=".search" ui-sref-active="active">Search</a>
-    <a class="button" ui-sref=".location" ui-sref-active="active">Location</a>
+    <a class="button button-skew" href ng-click="vm.sort = 'default'" ng-class="{'active': vm.sort === 'default'}">
+      <span class="skew-back">Default</span>
+    </a>
+    <a class="button button-skew" href ng-click="vm.sort = 'rating'" ng-class="{'active': vm.sort === 'rating'}">
+      <span class="skew-back">Rating</span>
+    </a>
+    <a class="button button-skew" href ng-click="vm.sort = 'category'" ng-class="{'active': vm.sort === 'category'}">
+      <span class="skew-back">Category</span>
+    </a>
+    <a class="button button-skew" href ng-click="vm.sort = 'search'" ng-class="{'active': vm.sort === 'search'}">
+      <span class="skew-back">Search</span>
+    </a>
+    <a class="button button-skew" href ng-click="vm.sort = 'location'" ng-class="{'active': vm.sort === 'location'}">
+      <span class="skew-back">Location</span>
+    </a>
   </div>
 
-  <div ui-view="listView"></div>
+  <list sorting="vm.sort"></list>
 
 </ion-content>
