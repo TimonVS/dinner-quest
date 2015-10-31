@@ -1,0 +1,29 @@
+.dq-slider {
+
+}
+
+.dq-slider .person {
+  display: inline-block;
+  height: 50px;
+  width: 18px;
+  background-image: url('people1.svg');
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+
+.dq-slider .person.active {
+  background-image: url('people.svg');
+}
+
+.dq-slider .coin {
+  display: inline-block;
+  height: 35px;
+  width: 35px;
+  background-image: url('images/coin.svg');
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+
+.dq-slider .coin.active {
+  background-image: url('images/coin.svg');
+}

@@ -7,6 +7,7 @@ import Notifications from './notifications/notifications'
 import Review from './review/review'
 import Badges from './badges/badges'
 import userHeader from './userHeader/userHeader';
+import Sliders from './sliders/sliders'
 
 let componentModule = angular.module('app.components', [
   Discover.name,
@@ -15,7 +16,8 @@ let componentModule = angular.module('app.components', [
   Notifications.name,
   Review.name,
   Badges.name,
-  userHeader.name
+  userHeader.name,
+  Sliders.name
 ]);
 
 export default componentModule;
