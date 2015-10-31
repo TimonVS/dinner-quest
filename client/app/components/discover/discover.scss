@@ -10,6 +10,9 @@ ion-content {
   background: #E3D4B1 !important;
   color: #827966 !important;
   font-weight:bold;
+  box-shadow:none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
 
   &:first-child {
     margin-left:-20px;
@@ -25,9 +28,38 @@ ion-content {
     background: #F9E8BD !important;
     border-bottom:0 !important;
   }
+
+  i {
+    width: 22px;
+    position: absolute;
+    height: 22px;
+    margin-top: 9px;
+    background-repeat: no-repeat;
+    display: inline-block;
+  }
 }
 
 .skew-back {
   display:block;
   transform: skewx(-20deg);
+}
+
+.icon-discover-default {
+   background-image: url('images/dinnerquest-09.svg');
+}
+
+.icon-discover-category {
+  background-image: url('images/dinnerquest-10.svg');
+}
+
+.icon-discover-rating {
+  background-image: url('images/dinnerquest-11.svg');
+}
+
+.icon-discover-location {
+  background-image: url('images/dinnerquest-12.svg');
+}
+
+.icon-discover-search {
+  background-image: url('images/dinnerquest-13.svg');
 }

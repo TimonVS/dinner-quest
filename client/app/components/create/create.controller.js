@@ -6,7 +6,9 @@ const apiURL = 'https://dinner-quest-api.herokuapp.com/dinners';
 
 class CreateController {
   constructor($rootScope, $http, $location) {
-    this.closeModal = function () {
+    var vm = this;
+
+    vm.closeModal = function () {
       $rootScope.$emit('close_modal');
     };
 
@@ -22,11 +24,14 @@ class CreateController {
       });
     }
 
-    this.start = function () {
+    vm.people = 0;
+    vm.coins = 0;
+
+    vm.start = function () {
       $http.post(apiURL, {
         location: location,
-        attendees: 2,
-        fee: 0,
+        attendees: vm.people,
+        fee: vm.coins,
         recepie: {} // this is the albert heijn recepie object
       })
       .success(() => $location.path('/discover'))
