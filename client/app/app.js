@@ -5,7 +5,6 @@ import Components from './components/components';
 import AppComponent from './app.component';
 import 'normalize.css';
 import 'ionic-sdk/release/js/ionic.bundle.js'
-//import 'ionic-sdk/release/css/ionic.css'
 import 'app.scss'
 
 angular.module('app', [

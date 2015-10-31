@@ -1,10 +1,8 @@
 import angular from 'angular';
-import Home from './home/home';
-import About from './about/about';
+import Discover from './discover/discover'
 
 let componentModule = angular.module('app.components', [
-  Home.name,
-  About.name
+  Discover.name
 ]);
 
 export default componentModule;
