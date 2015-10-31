@@ -1,7 +1,7 @@
 'use strict';
 
-// const apiURL = 'https://dinner-quest-api.herokuapp.com/dinners';
-const apiURL = 'http://localhost:4000/dinners';
+const apiURL = 'https://dinner-quest-api.herokuapp.com/dinners';
+// const apiURL = 'http://localhost:4000/dinners';
 
 class CreateController {
   constructor($rootScope, $http, $location) {
