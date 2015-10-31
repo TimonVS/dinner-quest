@@ -6,13 +6,13 @@
   <hero></hero>
 
   <div class="button-bar">
-    <a class="button" ui-sref=".default" ui-sref-active="active">Default</a>
-    <a class="button" ui-sref=".rating" ui-sref-active="active">Rating</a>
-    <a class="button" ui-sref=".category" ui-sref-active="active">Category</a>
-    <a class="button" ui-sref=".search" ui-sref-active="active">Search</a>
-    <a class="button" ui-sref=".location" ui-sref-active="active">Location</a>
+    <a class="button" href ng-click="vm.sort = 'default'" ng-class="{'active': vm.sort === 'default'}">Default</a>
+    <a class="button" href ng-click="vm.sort = 'rating'" ng-class="{'active': vm.sort === 'rating'}">Rating</a>
+    <a class="button" href ng-click="vm.sort = 'category'" ng-class="{'active': vm.sort === 'category'}">Category</a>
+    <a class="button" href ng-click="vm.sort = 'search'" ng-class="{'active': vm.sort === 'search'}">Search</a>
+    <a class="button" href ng-click="vm.sort = 'location'" ng-class="{'active': vm.sort === 'location'}">Location</a>
   </div>
 
-  <div ui-view="listView"></div>
+  <list sorting="vm.sort"></list>
 
 </ion-content>
