@@ -33,7 +33,7 @@ let resolveToCommon = (glob) => {
 // map of all paths
 let paths = {
   js: [].concat(resolveToComponents('**/*!(.spec.js).js'), resolveToCommon('**/*!(.spec.js).js'), resolveToApp('*!(.spec.js).js')), // exclude spec files
-  styl: resolveToApp('**/*.styl'), // stylesheets
+  scss: resolveToApp('**/*.scss'), // stylesheets
   html: [
     resolveToApp('**/*.html'),
     path.join(root, 'index.html')
@@ -59,7 +59,7 @@ gulp.task('serve', () => {
 });
 
 gulp.task('watch', () => {
-  let allPaths = [].concat([paths.js], paths.html, [paths.styl]);
+  let allPaths = [].concat([paths.js], paths.html, [paths.scss]);
   gulp.watch(allPaths, ['webpack', reload]);
 });
 

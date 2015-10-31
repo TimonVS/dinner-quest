@@ -34,5 +34,8 @@ module.exports = {
         loader: 'file'
       }
     ]
+  },
+  externals: {
+    angular: 'angular'
   }
 };
