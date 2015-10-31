@@ -19,8 +19,27 @@ let commonModule = angular.module('app.common', [
   Auth.name,
   Login.name,
   List.name
+])
 
-]);
+.constant('token', function ($window, $q, $cookies) {
+  return {
+    request: function (config) {
+      if (~config.url.indexOf('frahmework.ah.nl')) return config;
+      var user = $cookies.getObject('user');
+      // Set the x-auth-token to authenticate endpoints
+      config.headers['x-auth-token'] = user.facebook.id;
+      return config;
+    },
+    responseError: function (rejection) {
+      if (rejection.status >= 400) console.error(rejection);
+      return $q.reject(rejection);
+    }
+  };
+})
+
+.config(['$httpProvider', 'token', function ($httpProvider, token) {
+  $httpProvider.interceptors.push(token);
+}]);
 
 export default commonModule;
 
