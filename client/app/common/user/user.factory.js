@@ -11,7 +11,7 @@ let UserFactory = function (Auth) {
 
   let auth = Auth;
 
-  return { getUser, isSignedIn, auth };
+  return { getUser, isSignedIn, Auth };
 };
 
 export default UserFactory;

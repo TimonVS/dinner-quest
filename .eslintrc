@@ -1,0 +1,25 @@
+{
+  "extends": "eslint:recommended",
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "strict": [2, "global"],
+    "quotes": [2, "single", "avoid-escape"],
+    "semi": [2, "always"],
+    "no-console": 0
+  },
+  "globals": {
+    "expect": true,
+    "debug": true,
+    "angular": true,
+    "moment": true,
+    "$": true,
+    "google": true,
+    "Modernizr": true,
+    "Quill": true
+  }
+}
