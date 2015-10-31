@@ -1,7 +1,9 @@
 class DiscoverController {
-  constructor(User) {
+  constructor($rootScope, User) {
     this.name = 'discover';
-    User.Auth.login()
+    User.Auth.login((data) => {
+      this.user = data.facebook;
+    });
   }
 }
 

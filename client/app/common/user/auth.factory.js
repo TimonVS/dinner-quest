@@ -14,10 +14,11 @@ let AuthFactory = function ($firebaseAuth, $rootScope) {
    * Login
    */
 
-  let login = () => {
+  let login = (cb) => {
     auth.$authWithOAuthPopup('facebook').then(function (authData) {
       console.log('Logged in as:', authData.uid);
       $rootScope.$emit('USER_LOGGED_IN', authData);
+      cb(authData);
     }).catch(function (error) {
       console.log('Authentication failed:', error);
     });

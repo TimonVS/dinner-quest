@@ -11,6 +11,7 @@ let UserFactory = function (Auth, $rootScope) {
 
   $rootScope.$on('USER_LOGGED_IN', (e, data) => {
     user = data;
+    $rootScope.currentUser = user;
   });
 
   return { getUser, isSignedIn, Auth };
