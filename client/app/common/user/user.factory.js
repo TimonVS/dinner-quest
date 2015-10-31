@@ -1,5 +1,6 @@
 'use strict';
 
+import _ from 'lodash';
 import Firebase from 'firebase';
 import { FIREBASEPATH } from '../common';
 
@@ -10,6 +11,16 @@ let UserFactory = function (Auth, $rootScope, $cookies) {
     user = data;
     $cookies.putObject('user', data);
     $rootScope.currentUser = user;
+
+    console.log(data, data.facebook.id)
+
+    getUserByFb(data.facebook.id, function (val) {
+      console.log(val)
+      console.log(data.facebook)
+      if (!val) {
+        createNewUser(data.facebook)
+      }
+    });
   });
 
   let getUser = () => {
@@ -27,7 +38,9 @@ let UserFactory = function (Auth, $rootScope, $cookies) {
 
   function getUserByFb (fbid, callback) {
     fb.child('users/' + fbid)
-      .once('value', (snap) => callback(snap.val()));
+      .once('value', function () {
+        console.log('hahah')
+      });
   }
 
   /**
