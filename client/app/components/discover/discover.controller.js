@@ -1,8 +1,10 @@
+'use strict';
+
 class DiscoverController {
   constructor($rootScope, User) {
     this.name = 'discover';
 
-    if (!$rootScope.currentUser) {
+    if (!User.isSignedIn) {
       User.Auth.login((data) => {
         this.user = data.facebook;
       });

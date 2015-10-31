@@ -1,3 +1,5 @@
+'use strict';
+
 let UserFactory = function (Auth, $rootScope) {
   let user = {};
 
