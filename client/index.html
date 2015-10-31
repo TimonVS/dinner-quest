@@ -9,10 +9,24 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="description" content="NG6-Starter by @AngularClass">
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <script type="text/javascript">
+      WebFontConfig = {
+        google: { families: [ 'Titillium+Web:400,700,900,300,200,600:latin' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })(); </script>
     <base href="/">
   </head>
   <body ng-app="app" ng-cloak>
-
+    <h1>Test</h1>
+    <p>Test</p>
     <app>
       Loading...
     </app>
