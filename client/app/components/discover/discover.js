@@ -3,11 +3,13 @@
 import uiRouter from 'angular-ui-router';
 import discoverComponent from './discover.component';
 import Recepies from '../recepies/recepies';
+import Dinners from '../dinners/dinners';
 
 let discoverModule = angular.module('discover', [
   uiRouter,
   'rzModule',
-  Recepies.name
+  Recepies.name,
+  Dinners.name
 ])
 
 .config(($stateProvider, $urlRouterProvider) => {
@@ -16,13 +18,15 @@ let discoverModule = angular.module('discover', [
   $stateProvider
     .state('discover', {
       url: '/',
-      controller: ($scope, recepies) => {
+      controller: ($scope, recepies, dinners) => {
         $scope.recepies = recepies;
+        $scope.dinners = dinners;
       },
       resolve: {
-        recepies: (Recepies) => Recepies.query({})
+        recepies: (Recepies) => Recepies.query({}),
+        dinners: (Dinners) => Dinners.query({ sort: 'location' })
       },
-      template: '<discover recepies="recepies"></discover>'
+      template: '<discover dinners="dinners" recepies="recepies"></discover>'
     })
     .state('discover.search', {
       views: {

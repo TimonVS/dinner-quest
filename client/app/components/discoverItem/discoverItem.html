@@ -1,17 +1,17 @@
 <div class="discover-item">
   <div class="row">
     <div class="col col-25">
-      <img class="image" ng-src="{{ vm.data.image }}" alt=""/>
+      <img class="image" ng-src="{{ vm.data.recepie.receptafbeelding }}" alt=""/>
     </div>
     <div class="col col-75">
       <div class="item-information">
         <div class="clearfix">
-          <span class="title" ng-bind="vm.data.title"></span>
+          <span class="title" ng-bind="vm.data.recepie.recepttitel"></span>
           <span class="distance">{{ vm.data.distance }}km</span>
         </div>
         <div class="clearfix">
-          <span class="price">{{ vm.data.price }} coins</span>
-          <span class="timeago" ng-bind="vm.data.datetime"></span>
+          <span class="price">{{ vm.data.fee }} coins</span>
+          <span class="timeago" am-time-ago="vm.data.readyAt"></span>
         </div>
       </div>
     </div>

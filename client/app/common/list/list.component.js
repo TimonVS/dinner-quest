@@ -1,3 +1,5 @@
+'use strict';
+
 import template from './list.html';
 import controller from './list.controller';
 import './list.styl';
@@ -5,7 +7,9 @@ import './list.styl';
 let listComponent = function () {
   return {
     restrict: 'E',
-    scope: {},
+    scope: {
+      items: '='
+    },
     template,
     controller,
     controllerAs: 'vm',

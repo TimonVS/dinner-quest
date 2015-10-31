@@ -1,6 +1,6 @@
 <ion-content class="has-tabs">
   <hero></hero>
-
+<search-bar></search-bar>
   <div class="button-bar">
     <a class="button button-skew" href ng-click="vm.sort = 'default'" ng-class="{'active': vm.sort === 'default'}">
       <span class="skew-back"><i class="icon-discover-default"></i></span>
@@ -19,6 +19,6 @@
     </a>
   </div>
 
-  <list sorting="vm.sort"></list>
+  <list items="vm.dinners" sorting="vm.sort"></list>
 
 </ion-content>

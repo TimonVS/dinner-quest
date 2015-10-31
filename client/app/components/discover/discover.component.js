@@ -6,7 +6,8 @@ let discoverComponent = function () {
   return {
     restrict: 'E',
     scope: {
-      recepies: '='
+      recepies: '=',
+      dinners: '='
     },
     template,
     controller,
