@@ -1,9 +1,14 @@
 class DiscoverController {
   constructor($rootScope, User) {
     this.name = 'discover';
-    User.Auth.login((data) => {
-      this.user = data.facebook;
-    });
+
+    if (!$rootScope.currentUser) {
+      User.Auth.login((data) => {
+        this.user = data.facebook;
+      });
+    } else {
+      this.user = $rootScope.currentUser;
+    }
   }
 }
 
