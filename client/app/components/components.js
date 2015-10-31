@@ -6,7 +6,7 @@ import Profile from './profile/profile'
 import Notifications from './notifications/notifications'
 import Review from './review/review'
 import Badges from './badges/badges'
-import userHeader from './userHeader/userHeader;
+import userHeader from './userHeader/userHeader';
 
 let componentModule = angular.module('app.components', [
   Discover.name,
