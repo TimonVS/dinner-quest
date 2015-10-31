@@ -1,5 +1,5 @@
 import uiRouter from 'angular-ui-router';
-import sliderComponent from './euro-slider.component';
+import sliderComponent from './sliders.component';
 
 let slidersModule = angular.module('review', [
   uiRouter
