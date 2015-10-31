@@ -8,6 +8,8 @@ import Footer from './footer-nav/footer-nav';
 import Auth from './user/auth';
 import Login from './login/login';
 
+const FIREBASEPATH = 'https://diner-quest.firebaseio.com';
+
 let commonModule = angular.module('app.common', [
   Navbar.name,
   Hero.name,
@@ -18,3 +20,7 @@ let commonModule = angular.module('app.common', [
 ]);
 
 export default commonModule;
+
+export {
+  FIREBASEPATH
+};

@@ -3,11 +3,11 @@
 import 'angularfire';
 import Firebase from 'firebase';
 
-const FIREBASEPATH = 'https://diner-quest.firebaseio.com';
+import { FIREBASEPATH } from '../common';
 
 let AuthFactory = function ($firebaseAuth, $rootScope, $cookies) {
 
-  let ref = new Firebase(FIREBASEPATH + '/users');
+  let ref = new Firebase(FIREBASEPATH);
   let auth = $firebaseAuth(ref);
 
   /**
