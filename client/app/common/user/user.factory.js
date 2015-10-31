@@ -1,22 +1,24 @@
 'use strict';
 
-let UserFactory = function (Auth, $rootScope) {
+let UserFactory = function (Auth, $rootScope, $cookies) {
   let user = {};
 
   let getUser = () => {
+    user = $cookies.getObject('user');
+    $rootScope.currentUser = user;
     return user;
-  };
-
-  let isSignedIn = () => {
-    return !!Object.keys(user).length;
   };
 
   $rootScope.$on('USER_LOGGED_IN', (e, data) => {
     user = data;
+    $cookies.putObject('user', data);
     $rootScope.currentUser = user;
   });
 
-  return { getUser, isSignedIn, Auth };
+  return {
+    getUser,
+    Auth
+  };
 };
 
 export default UserFactory;

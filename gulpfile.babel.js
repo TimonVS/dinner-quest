@@ -39,7 +39,7 @@ let paths = {
     path.join(root, 'index.html')
   ],
   entry: path.join(root, 'app/app.js'),
-  output: path.join(root, 'public'),
+  output: root,
   blankTemplates: path.join(__dirname, 'generator', 'component/**/*.**')
 };
 

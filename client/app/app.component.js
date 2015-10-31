@@ -5,7 +5,7 @@ let appComponent = () => {
     template,
     restrict: 'E',
     controller: function (User, $rootScope, $location) {
-      if (!User.isSignedIn()) {
+      if (!User.getUser()) {
         $location.path('/login');
       } else {
         $rootScope.user = User.getUser();

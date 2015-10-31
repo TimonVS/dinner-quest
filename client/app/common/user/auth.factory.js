@@ -5,7 +5,7 @@ import Firebase from 'firebase';
 
 const FIREBASEPATH = 'https://diner-quest.firebaseio.com';
 
-let AuthFactory = function ($firebaseAuth, $rootScope) {
+let AuthFactory = function ($firebaseAuth, $rootScope, $cookies) {
 
   let ref = new Firebase(FIREBASEPATH + '/users');
   let auth = $firebaseAuth(ref);
@@ -30,6 +30,7 @@ let AuthFactory = function ($firebaseAuth, $rootScope) {
 
   let logout = () => {
     ref.unauth();
+    $cookies.remove('user');
   };
 
   return { login, logout };
