@@ -6,6 +6,14 @@ let profileModule = angular.module('profile', [
   uiRouter
 ])
 
+    .config(($stateProvider) => {
+      $stateProvider
+          .state('profile', {
+            url: '/profile',
+            template: '<profile></profile>'
+          });
+    })
+
 .directive('profile', profileComponent);
 
 export default profileModule;
