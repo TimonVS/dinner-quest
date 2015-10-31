@@ -1,5 +1,18 @@
-<div>
-  <h1>{{ vm.name }}</h1>
+<div class="bar bar-header bar-positive">
+    <h1 class="title">{{ vm.name }}</h1>
 </div>
 
-<badges></badges>
+
+<ion-content class="has-header has-tabs">
+
+    <user-header></user-header>
+
+    <badges></badges>
+
+    <div class="row">
+        <button class="button button-block button-positive">
+            Request a dinner!
+        </button>
+    </div>
+
+</ion-content>
