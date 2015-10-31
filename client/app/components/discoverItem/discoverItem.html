@@ -1,0 +1,21 @@
+<div class="discover-item">
+  <div class="row">
+    <div class="col col-25">
+      <img class="image" ng-src="{{ vm.data.image }}" alt=""/>
+    </div>
+    <div class="col col75">
+      <div class="row">
+        <div class="col">
+          <span class="title" ng-bind="vm.data.title"></span>
+          <span class="distance">{{ vm.data.distance }}km</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <span class="price">{{ vm.data.price }} coins</span>
+          <span class="timeago" ng-bind="vm.data.datetime"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

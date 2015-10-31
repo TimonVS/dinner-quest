@@ -13,7 +13,9 @@
 </div>
 
 <ion-content class="has-subheader has-tabs">
-  <div class="list card">
+  <hero></hero>
+
+  <!--<div class="list card">
 
     <div class="item item-avatar">
       <img src="avatar.jpg">
@@ -21,5 +23,7 @@
       <p>4 spots left!</p>
     </div>
 
-  </div>
+  </div>-->
+
+  <discover-item ng-repeat="item in vm.items" data="item"></discover-item>
 </ion-content>
