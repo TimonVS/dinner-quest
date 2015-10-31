@@ -7,6 +7,7 @@
   "dependencies": {
     "angular": "^1.4.4",
     "angular-cookies": "~1.4.7",
+    "angular-moment": "~0.10.3",
     "angular-resource": "~1.4.7",
     "angular-scroll": "^0.7.3",
     "angular-ui-router": "^0.2.15",
