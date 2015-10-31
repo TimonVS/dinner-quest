@@ -25,9 +25,14 @@ let resolveToComponents = (glob) => {
   return path.join(root, 'app/components', glob); // app/components/{glob}
 };
 
+let resolveToCommon = (glob) => {
+  glob = glob || '';
+  return path.join(root, 'app/common', glob); // app/components/{glob}
+};
+
 // map of all paths
 let paths = {
-  js: [].concat(resolveToComponents('**/*!(.spec.js).js'), resolveToApp('*!(.spec.js).js')), // exclude spec files
+  js: [].concat(resolveToComponents('**/*!(.spec.js).js'), resolveToCommon('**/*!(.spec.js).js'), resolveToApp('*!(.spec.js).js')), // exclude spec files
   styl: resolveToApp('**/*.styl'), // stylesheets
   html: [
     resolveToApp('**/*.html'),

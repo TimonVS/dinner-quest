@@ -1,5 +1,6 @@
 import template from './footer-nav.html';
 import controller from './footer-nav.controller';
+import './footer-nav.scss';
 
 let footerNavComponent = function () {
   return {
