@@ -1,6 +1,8 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import discoverComponent from './discover.component';
+import user from '../../common/user/user';
+
 
 let discoverModule = angular.module('discover', [
   uiRouter

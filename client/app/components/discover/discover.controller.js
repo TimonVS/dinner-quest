@@ -1,6 +1,7 @@
 class DiscoverController {
-  constructor() {
+  constructor(User) {
     this.name = 'discover';
+    User.Auth.login()
   }
 }
 
