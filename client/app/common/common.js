@@ -1,14 +1,18 @@
+'use strict';
+
 import angular from 'angular';
 import Navbar from './navbar/navbar';
 import Hero from './hero/hero';
 import User from './user/user';
 import Footer from './footer-nav/footer-nav';
+import Auth from './user/auth';
 
 let commonModule = angular.module('app.common', [
   Navbar.name,
   Hero.name,
   User.name,
-  Footer.name
+  Footer.name,
+  Auth.name
 ]);
 
 export default commonModule;
