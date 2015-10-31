@@ -33,6 +33,34 @@ input::-webkit-input-placeholder {
   text-align: center;
 }
 
+.close-button {
+  padding: 4px;
+  color: #A42100;
+  background-color: #D75530;
+  box-shadow: 0 0 0 4px #A42100;
+  border: 3px solid #D1310A !important;
+  border-radius: 50px;
+  font-size: 18px !important;
+  font-weight: 600;
+  width: 100%;
+
+  &.activated, &:active, &:hover {
+
+  }
+}
+
 .create-button {
   padding: 4px;
+  background-color: #DBCFB1;
+  box-shadow: 0 0 0 4px #968D78;
+  border: 3px solid #C4BA9E !important;
+  border-radius: 50px;
+  font-size: 18px !important;
+  font-weight: 600;
+  width: 100%;
+
+  &.activated, &:active, &:hover {
+    color: rgb(103, 99, 99);
+    background-color: rgba(0, 0, 0, 0.28);
+  }
 }
