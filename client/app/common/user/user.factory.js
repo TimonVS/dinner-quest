@@ -4,8 +4,9 @@ let UserFactory = function (Auth, $rootScope, $cookies) {
   let user = {};
 
   let getUser = () => {
-    let stored = $cookies.getObject('user');
-    return stored;
+    user = $cookies.getObject('user');
+    $rootScope.currentUser = user;
+    return user;
   };
 
   $rootScope.$on('USER_LOGGED_IN', (e, data) => {
