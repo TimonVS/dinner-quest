@@ -1,6 +1,6 @@
 import template from './create.html';
 import controller from './create.controller';
-import './create.styl';
+import './create.scss';
 
 let createComponent = function () {
   return {
