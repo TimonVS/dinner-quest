@@ -7,6 +7,7 @@ import User from './user/user';
 import Footer from './footer-nav/footer-nav';
 import Auth from './user/auth';
 import Login from './login/login';
+import List from './list/list';
 
 const FIREBASEPATH = 'https://diner-quest.firebaseio.com';
 
@@ -16,7 +17,9 @@ let commonModule = angular.module('app.common', [
   User.name,
   Footer.name,
   Auth.name,
-  Login.name
+  Login.name,
+  List.name
+
 ]);
 
 export default commonModule;

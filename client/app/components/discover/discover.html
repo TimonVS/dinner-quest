@@ -15,15 +15,14 @@
 <ion-content class="has-subheader has-tabs">
   <hero></hero>
 
-  <!--<div class="list card">
+  <div class="button-bar">
+    <a class="button" ui-sref=".default" ui-sref-active="active">Default</a>
+    <a class="button" ui-sref=".rating" ui-sref-active="active">Rating</a>
+    <a class="button" ui-sref=".category" ui-sref-active="active">Category</a>
+    <a class="button" ui-sref=".search" ui-sref-active="active">Search</a>
+    <a class="button" ui-sref=".location" ui-sref-active="active">Location</a>
+  </div>
 
-    <div class="item item-avatar">
-      <img src="avatar.jpg">
-      <h2>Sushi</h2>
-      <p>4 spots left!</p>
-    </div>
+  <div ui-view="listView"></div>
 
-  </div>-->
-
-  <discover-item ng-repeat="item in vm.items" data="item"></discover-item>
 </ion-content>
