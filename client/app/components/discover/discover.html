@@ -6,11 +6,21 @@
   <hero></hero>
 
   <div class="button-bar">
-    <a class="button" href ng-click="vm.sort = 'default'" ng-class="{'active': vm.sort === 'default'}">Default</a>
-    <a class="button" href ng-click="vm.sort = 'rating'" ng-class="{'active': vm.sort === 'rating'}">Rating</a>
-    <a class="button" href ng-click="vm.sort = 'category'" ng-class="{'active': vm.sort === 'category'}">Category</a>
-    <a class="button" href ng-click="vm.sort = 'search'" ng-class="{'active': vm.sort === 'search'}">Search</a>
-    <a class="button" href ng-click="vm.sort = 'location'" ng-class="{'active': vm.sort === 'location'}">Location</a>
+    <a class="button button-skew" href ng-click="vm.sort = 'default'" ng-class="{'active': vm.sort === 'default'}">
+      <span class="skew-back">Default</span>
+    </a>
+    <a class="button button-skew" href ng-click="vm.sort = 'rating'" ng-class="{'active': vm.sort === 'rating'}">
+      <span class="skew-back">Rating</span>
+    </a>
+    <a class="button button-skew" href ng-click="vm.sort = 'category'" ng-class="{'active': vm.sort === 'category'}">
+      <span class="skew-back">Category</span>
+    </a>
+    <a class="button button-skew" href ng-click="vm.sort = 'search'" ng-class="{'active': vm.sort === 'search'}">
+      <span class="skew-back">Search</span>
+    </a>
+    <a class="button button-skew" href ng-click="vm.sort = 'location'" ng-class="{'active': vm.sort === 'location'}">
+      <span class="skew-back">Location</span>
+    </a>
   </div>
 
   <list sorting="vm.sort"></list>

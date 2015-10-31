@@ -3,3 +3,31 @@
 ion-content {
   background-color: $content-wrap !important;
 }
+.button-skew {
+  transform: skewx(20deg);
+  border: 4px solid #D6C296 !important;
+  border-right: 0 !important;
+  background: #E3D4B1 !important;
+  color: #827966 !important;
+  font-weight:bold;
+
+  &:first-child {
+    margin-left:-20px;
+    padding-left: 36px;
+  }
+
+  &:last-child {
+    margin-right:-20px;
+    padding-right: 36px !important;
+  }
+
+  &.active {
+    background: #F9E8BD !important;
+    border-bottom:0 !important;
+  }
+}
+
+.skew-back {
+  display:block;
+  transform: skewx(-20deg);
+}
