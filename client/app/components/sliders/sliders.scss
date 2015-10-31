@@ -1,14 +1,14 @@
 .dq-slider {
-
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 .dq-slider .person {
   display: inline-block;
-  height: 50px;
-  width: 18px;
+  height: 60px;
+  width: 23px;
   background-image: url('images/people1.svg');
   background-repeat: no-repeat;
-  margin-right: 10px;
 }
 
 .dq-slider .person.active {
@@ -21,7 +21,6 @@
   width: 35px;
   background-image: url('images/coin1.svg');
   background-repeat: no-repeat;
-  margin-right: 10px;
 }
 
 .dq-slider .coin.active {

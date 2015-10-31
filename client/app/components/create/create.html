@@ -12,31 +12,33 @@
 
   <ion-content class="has-header">
     <hero></hero>
-    <div class="row">
-      <input type="text"/>
-    </div>
-    <div class="row">
-      <div class="col">
-        <span class="create-label">Attendees</span>
-        <dq-slider max="8" type="'person'"></dq-slider>
+    <div class="create-modal">
+      <div class="row">
+        <input class="search-input" placeholder="Search Recipes" type="search"/>
       </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <span class="create-label">Fee</span>
-        <dq-slider max="8" type="'coin'"></dq-slider>
+      <div class="row">
+        <div class="col">
+          <span class="create-label">Attendees</span>
+          <dq-slider max="8" type="'person'"></dq-slider>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col col-25">
-        <button class="button" ng-click="vm.closeModal()">
-          Cancel
-        </button>
+      <div class="row">
+        <div class="col">
+          <span class="create-label">Fee</span>
+          <dq-slider max="8" type="'coin'"></dq-slider>
+        </div>
       </div>
-      <div class="col col-75">
-        <button class="button">
-          Start cooking!
-        </button>
+      <div class="row">
+        <div class="col col-25">
+          <button class="button" ng-click="vm.closeModal()">
+            Cancel
+          </button>
+        </div>
+        <div class="col col-75">
+          <button class="create-button">
+            Start cooking!
+          </button>
+        </div>
       </div>
     </div>
   </ion-content>
