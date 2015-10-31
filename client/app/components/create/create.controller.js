@@ -1,5 +1,8 @@
 class CreateController {
-  constructor() {
+  constructor($rootScope) {
+    this.closeModal = function () {
+      $rootScope.$emit('close_modal');
+    }
   }
 }
 
