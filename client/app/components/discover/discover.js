@@ -15,7 +15,52 @@ let discoverModule = angular.module('discover', [
     .state('discover', {
       url: '/',
       template: '<discover></discover>'
-    });
+    })
+    .state('discover.search', {
+      views: {
+        'listView': {
+          template: '<list></list>',
+          controller: function ($scope) {
+          }
+        }
+      }
+    })
+    .state('discover.default', {
+      views: {
+        'listView': {
+          template: '<list></list>',
+          controller: function ($scope) {
+          }
+        }
+      }
+    })
+    .state('discover.category', {
+      views: {
+        'listView': {
+          template: '<list></list>',
+          controller: function ($scope) {
+          }
+        }
+      }
+    })
+    .state('discover.rating', {
+      views: {
+        'listView': {
+          template: '<list></list>',
+          controller: function ($scope) {
+          }
+        }
+      }
+    })
+    .state('discover.location', {
+      views: {
+        'listView': {
+          template: '<list></list>',
+          controller: function ($scope) {
+          }
+        }
+      }
+    })
 })
 
 .directive('discover', discoverComponent);
