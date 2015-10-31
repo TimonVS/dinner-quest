@@ -3,7 +3,6 @@ import path from 'path'
 module.exports = {
   devtool: 'sourcemap',
   output: {
-    folder: path.join(__dirname, 'client', 'public'),
     filename: 'bundle.js'
   },
   resolve: {

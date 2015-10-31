@@ -4,7 +4,8 @@ import uiRouter from 'angular-ui-router';
 import discoverComponent from './discover.component';
 
 let discoverModule = angular.module('discover', [
-  uiRouter
+  uiRouter,
+  'rzModule'
 ])
 
   .config(($stateProvider, $urlRouterProvider) => {

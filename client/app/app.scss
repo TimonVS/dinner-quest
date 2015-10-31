@@ -3,6 +3,7 @@
 $ionicons-font-path: 'fonts' !default;
 $font-family-base: 'Titillium Web', sans-serif;
 
+@import "../../node_modules/angularjs-slider/dist/rzslider.css";
 @import '../../node_modules/ionic-sdk/scss/ionic';
 
 .tabs {
@@ -19,3 +20,5 @@ $font-family-base: 'Titillium Web', sans-serif;
 .tab-nav .tab-item.tab-item-active .icon {
   color: #a4fff2;
 }
+
+

@@ -1,12 +1,10 @@
-import createModalTemplate from 'components/create/create-modal.html'
-
 class FooterNavController {
   constructor($scope, $ionicModal) {
     this.openCreateModal = function () {
-      let modal = $ionicModal.fromTemplate(createModalTemplate, {
+      $scope.modal = $ionicModal.fromTemplate('<create></create>', {
         scope: $scope
       });
-      modal.show();
+      $scope.modal.show();
     }
   }
 }

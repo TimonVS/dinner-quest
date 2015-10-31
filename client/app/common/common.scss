@@ -4,3 +4,14 @@ $positive: #00A490;
 $light: #00F1D3;
 $content-wrap: #F9E8BD;
 $border: #D6C296;
+
+.button-pill {
+  @extend .button;
+  border: 2px solid #000;
+  background: #eee;
+  border-radius: 50px !important;
+
+  &:active, &:hover {
+
+  }
+}
