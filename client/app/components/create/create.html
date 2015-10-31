@@ -1,9 +1,32 @@
 <ion-modal-view>
   <ion-content>
     <hero></hero>
-    Hello!
-    <button class="button-pill" ng-click="hide()">
-      Default
-    </button>
+    <div class="row">
+      <input type="text"/>
+    </div>
+    <div class="row">
+      <div class="col">
+        <span class="create-label">Attendees</span>
+        <dq-slider max="8" type="'person'"></dq-slider>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <span class="create-label">Fee</span>
+        <dq-slider max="8" type="'coin'"></dq-slider>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-25">
+        <button class="button">
+          Cancel
+        </button>
+      </div>
+      <div class="col col-75">
+        <button class="button">
+          Start cooking!
+        </button>
+      </div>
+    </div>
   </ion-content>
 </ion-modal-view>

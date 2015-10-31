@@ -1,5 +1,6 @@
 import template from './discover.html';
 import controller from './discover.controller';
+import './discover.scss';
 
 let discoverComponent = function () {
   return {
