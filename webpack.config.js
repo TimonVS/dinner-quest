@@ -9,7 +9,7 @@ module.exports = {
     root: [
       path.join(__dirname, 'client', 'app'),
       path.join(__dirname, 'bower_components'),
-      path.join(__dirname, 'node_modules'),
+      path.join(__dirname, 'node_modules')
     ],
     moduleDirectories: [
       'bower_components',
@@ -23,7 +23,7 @@ module.exports = {
        { test: /\.js$/, exclude: [/app\/lib/, /node_modules/], loader: 'babel' },
        { test: /\.html$/, loader: 'raw' },
        { test: /\.styl$/, loader: 'style!css!stylus' },
-       { test: /\.scss$/, loader: 'style!css!sass?includePaths[]=' + (path.join(__dirname, 'node_modules'))},
+       { test: /\.scss$/, loader: 'style!css!resolve-url!sass' },
        { test: /\.css$/, loader: 'style!css' },
       {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
