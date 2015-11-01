@@ -23,7 +23,7 @@ body{
 .scene li:nth-child(1){
     height: 150%;
     width: 150%;
-    margin-left: -29%;
+    margin-left: -15%;
     margin-top: -14%;
     background-image: url(../img/sun.svg);
     background-repeat: no-repeat;
