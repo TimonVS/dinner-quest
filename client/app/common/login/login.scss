@@ -9,10 +9,22 @@
   background-size: cover;
   background-position: center;
 
+  h2 {
+    text-align: center;
+    font-size: 31px;
+    margin-bottom: 63px;
+    font-weight: bold;
+    margin: 0 auto 60px auto;
+    max-width: 901px;
+    color: #776D54;
+  }
+
   .button {
     color: #fff !important;
     background: #00A490 !important;
     font-weight: bold !important;
+    max-width: 400px;
+    margin: 0 auto;
   }
 
   .logo {
@@ -23,4 +35,8 @@
     background-size: 100%;
     background-position: center;
   }
+}
+
+login .scroll {
+  min-height: 100%;
 }
