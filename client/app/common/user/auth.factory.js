@@ -15,7 +15,7 @@ let AuthFactory = function ($firebaseAuth, $rootScope, $cookies) {
    */
 
   let login = (cb) => {
-    auth.$authWithOAuthPopup('facebook').then(function (authData) {
+    auth.$authWithOAuthRedirect('facebook').then(function (authData) {
       console.log('Logged in as:', authData.uid);
       $rootScope.$emit('USER_LOGGED_IN', authData);
       cb(authData);
