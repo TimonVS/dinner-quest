@@ -5,7 +5,7 @@ import Firebase from 'firebase';
 
 import { FIREBASEPATH } from '../common';
 
-let AuthFactory = function ($firebaseAuth, $rootScope, $cookies) {
+let AuthFactory = function ($firebaseAuth, $rootScope, $cookies, $location) {
 
   let ref = new Firebase(FIREBASEPATH);
   let auth = $firebaseAuth(ref);
@@ -31,6 +31,7 @@ let AuthFactory = function ($firebaseAuth, $rootScope, $cookies) {
   let logout = () => {
     ref.unauth();
     $cookies.remove('user');
+    $location.path('/login');
   };
 
   return { login, logout };

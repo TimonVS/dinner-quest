@@ -1,6 +1,7 @@
 class ProfileController {
-  constructor() {
+  constructor (User) {
     this.name = 'profile';
+    this.logout = User.Auth.logout;
   }
 }
 
