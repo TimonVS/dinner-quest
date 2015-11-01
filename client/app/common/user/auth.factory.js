@@ -22,14 +22,18 @@ let AuthFactory = function ($firebaseAuth, $rootScope, $cookies, $location) {
     }
   };
 
-  let auth = $firebaseAuth(ref);
-  auth.$onAuth(afterLogin);
-
   /**
    * Login
    */
 
   let login = () => {
+    let auth = $firebaseAuth(ref);
+    auth.$onAuth(afterLogin);
+
+    // auth.$authWithOAuthPopup('facebook')
+    //   .then(afterLogin)
+    //   .catch(fail);
+
     auth.$authWithOAuthRedirect('facebook', fail);
   };
 
@@ -38,7 +42,6 @@ let AuthFactory = function ($firebaseAuth, $rootScope, $cookies, $location) {
    */
 
   let logout = () => {
-    ref.unauth();
     $cookies.remove('user');
     $location.path('/login');
   };
