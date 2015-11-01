@@ -44,8 +44,9 @@ input::-webkit-input-placeholder {
 }
 
 .search-results {
+  overflow: scroll;
   position: absolute;
-  height: 200px;
+  height: 300px;
   background: #fff;
   width: 100%;
   box-shadow: 0 3px 0 3px #F2E7C2;
@@ -57,4 +58,18 @@ input::-webkit-input-placeholder {
 
 .search-container {
   width: 100%;
+}
+
+.recipy-title {
+  font-weight: 600;
+  margin-top: 7px;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.recipy-image {
+  border-radius: 100%;
+  width: 70%;
 }
