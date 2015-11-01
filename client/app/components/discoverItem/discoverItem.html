@@ -10,7 +10,9 @@
           <span class="distance">{{ vm.data.distance }}km</span>
         </div>
         <div class="clearfix">
-          <span class="price">{{ vm.data.fee }} coins</span>
+          <span class="price">{{ vm.data.attendees }} spots left
+          &middot;
+          {{ vm.data.fee }} coins</span>
           <span class="timeago" am-time-ago="vm.data.readyAt"></span>
         </div>
       </div>

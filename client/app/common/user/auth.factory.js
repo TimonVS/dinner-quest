@@ -7,6 +7,8 @@ import { FIREBASEPATH } from '../common';
 
 let AuthFactory = function ($firebaseAuth, $rootScope, $cookies, $location) {
 
+  var self = this;
+
   let ref = new Firebase(FIREBASEPATH);
   let auth = $firebaseAuth(ref);
 
@@ -15,12 +17,20 @@ let AuthFactory = function ($firebaseAuth, $rootScope, $cookies, $location) {
    */
 
   let login = (cb) => {
-    auth.$authWithOAuthRedirect('facebook').then(function (authData) {
-      console.log('Logged in as:', authData.uid);
-      $rootScope.$emit('USER_LOGGED_IN', authData);
-      cb(authData);
-    }).catch(function (error) {
-      console.log('Authentication failed:', error);
+    self.cb = cb;
+
+    auth.$authWithOAuthRedirect('facebook', function (error) {
+      console.log(error)
+    })
+
+    auth.$onAuth(function (authData) {
+      if (authData) {
+        console.log('Logged in as:', authData.uid);
+        $rootScope.$emit('USER_LOGGED_IN', authData);
+        self.cb(authData);
+      } else {
+        console.log('Authentication failed:', error);
+      }
     });
   };
 
