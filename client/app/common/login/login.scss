@@ -2,7 +2,29 @@
 .login-wrapper {
   padding: 50px;
 
+
   display: flex;
   align-items:center;
   height: 100%;
+  min-height: 600px;
+  margin: -10px;
+  background: url('images/friends.svg') no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  .button {
+    color: #fff !important;
+    background: #00A490 !important;
+    font-weight: bold !important;
+  }
+
+  .logo {
+    height:200px;
+    position: absolute;
+    top: 30px;
+    width: 340px;
+    background: url('images/sdfsd-16.svg') no-repeat;
+    background-size: 100%;
+    background-position: center;
+  }
 }
