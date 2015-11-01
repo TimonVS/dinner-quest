@@ -69457,7 +69457,9 @@
 	
 	var _common = __webpack_require__(5);
 	
-	var AuthFactory = function AuthFactory($firebaseAuth, $rootScope, $cookies) {
+	var AuthFactory = function AuthFactory($firebaseAuth, $rootScope, $cookies, $location) {
+	
+	  var self = this;
 	
 	  var ref = new _firebase2['default'](_common.FIREBASEPATH);
 	  var auth = $firebaseAuth(ref);
@@ -69467,12 +69469,20 @@
 	   */
 	
 	  var login = function login(cb) {
-	    auth.$authWithOAuthRedirect('facebook').then(function (authData) {
-	      console.log('Logged in as:', authData.uid);
-	      $rootScope.$emit('USER_LOGGED_IN', authData);
-	      cb(authData);
-	    })['catch'](function (error) {
-	      console.log('Authentication failed:', error);
+	    self.cb = cb;
+	
+	    auth.$authWithOAuthRedirect('facebook', function (error) {
+	      console.log(error);
+	    });
+	
+	    auth.$onAuth(function (authData) {
+	      if (authData) {
+	        console.log('Logged in as:', authData.uid);
+	        $rootScope.$emit('USER_LOGGED_IN', authData);
+	        self.cb(authData);
+	      } else {
+	        console.log('Authentication failed:', error);
+	      }
 	    });
 	  };
 	
@@ -69483,6 +69493,7 @@
 	  var logout = function logout() {
 	    ref.unauth();
 	    $cookies.remove('user');
+	    $location.path('/login');
 	  };
 	
 	  return { login: login, logout: logout };
@@ -69859,7 +69870,7 @@
 	var LoginController = function LoginController(User, $rootScope, $location) {
 	  _classCallCheck(this, LoginController);
 	
-	  this.name = 'Login';
+	  this.name = 'Dinner Quest';
 	
 	  if (User.getUser()) {
 	    return $location.path('/');
@@ -70645,7 +70656,7 @@
 /* 75 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"discover-item\">\n  <div class=\"row\" ng-click=\"vm.gotoDetail(vm.data._id)\">\n    <div class=\"col col-25\">\n      <img class=\"image\" ng-src=\"{{ vm.data.recepie.receptafbeelding }}\" alt=\"\"/>\n    </div>\n    <div class=\"col col-75\">\n      <div class=\"item-information\">\n        <div class=\"clearfix\">\n          <span class=\"title\" ng-bind=\"vm.data.recepie.recepttitel\"></span>\n          <span class=\"distance\">{{ vm.data.distance }}km</span>\n        </div>\n        <div class=\"clearfix\">\n          <span class=\"price\">{{ vm.data.fee }} coins</span>\n          <span class=\"timeago\" am-time-ago=\"vm.data.readyAt\"></span>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
+	module.exports = "<div class=\"discover-item\">\n  <div class=\"row\" ng-click=\"vm.gotoDetail(vm.data._id)\">\n    <div class=\"col col-25\">\n      <img class=\"image\" ng-src=\"{{ vm.data.recepie.receptafbeelding }}\" alt=\"\"/>\n    </div>\n    <div class=\"col col-75\">\n      <div class=\"item-information\">\n        <div class=\"clearfix\">\n          <span class=\"title\" ng-bind=\"vm.data.recepie.recepttitel\"></span>\n          <span class=\"distance\">{{ vm.data.distance }}km</span>\n        </div>\n        <div class=\"clearfix\">\n          <span class=\"price\">{{ vm.data.attendees }} spots left\n          &middot;\n          {{ vm.data.fee }} coins</span>\n          <span class=\"timeago\" am-time-ago=\"vm.data.readyAt\"></span>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ },
 /* 76 */
@@ -83006,7 +83017,7 @@
 	
 	var _profileComponent2 = _interopRequireDefault(_profileComponent);
 	
-	var profileModule = _angular2['default'].module('profile', [_angularUiRouter2['default']]).config(function ($stateProvider) {
+	var profileModule = _angular2['default'].module('profile', [_angularUiRouter2['default'], 'user']).config(function ($stateProvider) {
 	  $stateProvider.state('profile', {
 	    url: '/profile',
 	    template: '<profile></profile>'
@@ -83056,7 +83067,7 @@
 /* 177 */
 /***/ function(module, exports) {
 
-	module.exports = "<ion-content class=\"has-tabs\">\n    <hero></hero>\n\n    <user-header></user-header>\n\n    <badges></badges>\n\n    <div class=\"row\">\n        <button class=\"create-button padding-object\">\n            Request a dinner!\n        </button>\n    </div>\n\n    <div class=\"row\">\n        <h2 class=\"padding-object\" style=\"margin-bottom:0;\"><strong>Reviews</strong></h2>\n    </div>\n\n    <div class=\"discover-item\">\n        <div class=\"row\">\n            <div class=\"col col-25\">\n                <img class=\"image\" ng-src=\"{{ vm.data.image }}\" alt=\"\"/>\n            </div>\n            <div class=\"col col-75\">\n                <div class=\"item-information\">\n                    <div class=\"clearfix\">\n                        <span class=\"title\">Flip van Haaren</span>\n                        <span class=\"distance\">3km</span>\n                    </div>\n                    <div class=\"clearfix\">\n                        <span class=\"price\">5 coins</span>\n                        <span class=\"timeago\">3 days ago</span>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n\n    <div class=\"discover-item\">\n        <div class=\"row\">\n            <div class=\"col col-25\">\n                <img class=\"image\" ng-src=\"{{ vm.data.image }}\" alt=\"\"/>\n            </div>\n            <div class=\"col col-75\">\n                <div class=\"item-information\">\n                    <div class=\"clearfix\">\n                        <span class=\"title\">Flip van Haaren</span>\n                        <span class=\"distance\">3km</span>\n                    </div>\n                    <div class=\"clearfix\">\n                        <span class=\"price\">5 coins</span>\n                        <span class=\"timeago\">3 days ago</span>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n\n    &nbsp;<p>\n    &nbsp;<p>\n\n\n</ion-content>"
+	module.exports = "<ion-content class=\"has-tabs\">\n    <hero></hero>\n\n    <user-header></user-header>\n\n    <badges></badges>\n\n    <div class=\"row\">\n        <button class=\"create-button padding-object\">\n            Request a dinner!\n        </button>\n    </div>\n\n    <div class=\"row\">\n        <h2 class=\"padding-object\" style=\"margin-bottom:0;\"><strong>Reviews</strong></h2>\n    </div>\n\n    <div class=\"discover-item\">\n        <div class=\"row\">\n            <div class=\"col col-20\">\n                <img class=\"image\" ng-src=\"{{ vm.data.image }}\" alt=\"\"/>\n            </div>\n            <div class=\"col col-80\">\n                <div class=\"item-information\">\n                    <div class=\"clearfix\">\n                        <span class=\"title\">Flip van Haaren</span>\n                        <span class=\"timeago\">3 days ago</span>\n                    </div>\n                    <div class=\"clearfix\">\n                        <span class=\"price\">Failed food experiment, great hospitality :D</span>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n\n    <div class=\"discover-item\">\n        <div class=\"row\">\n            <div class=\"col col-20\">\n                <img class=\"image\" ng-src=\"{{ vm.data.image }}\" alt=\"\"/>\n            </div>\n            <div class=\"col col-80\">\n                <div class=\"item-information\">\n                    <div class=\"clearfix\">\n                        <span class=\"title\">Madhu</span>\n                        <span class=\"timeago\">5 days ago</span>\n                    </div>\n                    <div class=\"clearfix\">\n                        <span class=\"price\">Master of sushi!</span>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n\n    <br>\n\n    <div class=\"padding\">\n      <button class=\"button button-assertive button-block button-outline\" ng-click=\"vm.logout()\" on-tap=\"vm.logout()\">\n        Logout\n      </button>\n    </div>\n\n    &nbsp;<p>\n    &nbsp;<p>\n\n\n</ion-content>\n"
 
 /***/ },
 /* 178 */
@@ -83070,10 +83081,11 @@
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 	
-	var ProfileController = function ProfileController() {
+	var ProfileController = function ProfileController(User) {
 	  _classCallCheck(this, ProfileController);
 	
 	  this.name = 'profile';
+	  this.logout = User.Auth.logout;
 	};
 	
 	exports['default'] = ProfileController;
@@ -84011,7 +84023,7 @@
 /* 224 */
 /***/ function(module, exports) {
 
-	module.exports = "<!-- Place all UI elements intended to be present across all routes in this file -->\n<div class=\"app\">\n  <ion-nav-view>\n    <ion-view></ion-view>\n  </ion-nav-view>\n  <footer-nav ng-show=\"currentUser\"></footer-nav>\n</div>\n"
+	module.exports = "<!-- Place all UI elements intended to be present across all routes in this file -->\n<div class=\"app\">\n  <ion-nav-view>\n    <ion-view></ion-view>\n  </ion-nav-view>\n  <div ng-show=\"currentUser\">\n    <footer-nav></footer-nav>\n  </div>\n</div>\n"
 
 /***/ },
 /* 225 */
