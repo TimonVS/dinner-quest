@@ -5,6 +5,6 @@ let slidersModule = angular.module('review', [
   uiRouter
 ])
 
-  .directive('dqSlider', sliderComponent);
+.directive('dqSlider', sliderComponent);
 
 export default slidersModule;
