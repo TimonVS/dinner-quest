@@ -69842,7 +69842,7 @@
 /* 41 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"bar bar-header bar-positive\">\n  <h1 class=\"title\">{{ vm.name }}</h1>\n</div>\n\n<ion-content class=\"has-header\" padding=\"50\">\n  <div class=\"login-wrapper\">\n    <button class=\"button button-positive button-block button-outline\" ng-click=\"vm.login()\">\n      Sign in with facebook\n    </button>\n  </div>\n</ion-content>\n"
+	module.exports = "<div class=\"bar bar-header bar-positive\">\n  <h1 class=\"title\">{{ vm.name }}</h1>\n</div>\n\n<ion-content class=\"has-header\" padding=\"50\">\n  <div class=\"login-wrapper\">\n    <button class=\"button button-positive button-block button-outline\" ng-click=\"vm.login()\" on-tap=\"vm.login()\">\n      Sign in with facebook\n    </button>\n  </div>\n</ion-content>\n"
 
 /***/ },
 /* 42 */
@@ -70293,14 +70293,6 @@
 	
 	  $stateProvider.state('discover', {
 	    url: '/',
-	    controller: function controller($rootScope, $scope, dinners) {
-	      $scope.dinners = dinners;
-	    },
-	    resolve: {
-	      dinners: function dinners(Dinners) {
-	        return Dinners.query({ sort: 'location' });
-	      }
-	    },
 	    template: '<discover dinners="dinners" recepies="recepies"></discover>'
 	  }).state('discover.search', {
 	    views: {
@@ -70386,7 +70378,7 @@
 /* 60 */
 /***/ function(module, exports) {
 
-	module.exports = "<ion-content class=\"has-tabs\">\n  <hero></hero>\n  <div class=\"button-bar\">\n    <a class=\"button button-skew\" href ng-click=\"vm.sort = 'default'\" ng-class=\"{'active': vm.sort === 'default'}\">\n      <span class=\"skew-back\"><i class=\"icon-discover-default\"></i></span>\n    </a>\n    <a class=\"button button-skew\" href ng-click=\"vm.sort = 'rating'\" ng-class=\"{'active': vm.sort === 'rating'}\">\n      <span class=\"skew-back\"><i class=\"icon-discover-rating\"></i></span>\n    </a>\n    <a class=\"button button-skew\" href ng-click=\"vm.sort = 'category'\" ng-class=\"{'active': vm.sort === 'category'}\">\n      <span class=\"skew-back\"><i class=\"icon-discover-category\"></i></span>\n    </a>\n    <a class=\"button button-skew\" href ng-click=\"vm.sort = 'search'\" ng-class=\"{'active': vm.sort === 'search'}\">\n      <span class=\"skew-back\"><i class=\"icon-discover-search\"></i></span>\n    </a>\n    <a class=\"button button-skew\" href ng-click=\"vm.sort = 'location'\" ng-class=\"{'active': vm.sort === 'location'}\">\n      <span class=\"skew-back\"><i class=\"icon-discover-location\"></i></span>\n    </a>\n  </div>\n\n  <list items=\"vm.dinners\" sorting=\"vm.sort\"></list>\n\n</ion-content>\n"
+	module.exports = "<ion-content class=\"has-tabs\">\n  <hero></hero>\n  <div class=\"button-bar\">\n    <a class=\"button button-skew\" href ng-click=\"vm.sort = 'distance'\" ng-class=\"{'active': vm.sort === 'distance'}\">\n      <span class=\"skew-back\"><i class=\"icon-discover-location\"></i></span>\n    </a>\n    <a class=\"button button-skew\" href ng-click=\"vm.sort = 'attendees'\" ng-class=\"{'active': vm.sort === 'attendees'}\">\n      <span class=\"skew-back\"><i class=\"icon-discover-default\"></i></span>\n    </a>\n    <a class=\"button button-skew\" href ng-click=\"vm.sort = 'rating'\" ng-class=\"{'active': vm.sort === 'rating'}\">\n      <span class=\"skew-back\"><i class=\"icon-discover-rating\"></i></span>\n    </a>\n    <a class=\"button button-skew\" href ng-click=\"vm.sort = 'fee'\" ng-class=\"{'active': vm.sort === 'fee'}\">\n      <span class=\"skew-back\"><i class=\"icon-discover-category\"></i></span>\n    </a>\n    <!-- <a class=\"button button-skew\" href ng-click=\"vm.sort = 'search'\" ng-class=\"{'active': vm.sort === 'search'}\">\n      <span class=\"skew-back\"><i class=\"icon-discover-search\"></i></span>\n    </a>-->\n  </div>\n\n  <list items=\"vm.dinners\" sorting=\"vm.sort\"></list>\n\n</ion-content>\n"
 
 /***/ },
 /* 61 */
@@ -70400,12 +70392,19 @@
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 	
-	var DiscoverController = function DiscoverController() {
+	var DiscoverController = function DiscoverController(Dinners, $scope) {
 	  _classCallCheck(this, DiscoverController);
 	
-	  this.name = 'discover';
+	  var vm = this;
 	
-	  this.sort = 'default';
+	  vm.name = 'discover';
+	
+	  vm.sort = 'distance';
+	
+	  $scope.$watch("vm.sort", function changeSort(newValue, oldValue) {
+	    var dinners = Dinners.query({ sort: newValue });
+	    vm.dinners = dinners;
+	  });
 	};
 	
 	exports['default'] = DiscoverController;
