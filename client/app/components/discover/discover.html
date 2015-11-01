@@ -1,21 +1,21 @@
 <ion-content class="has-tabs">
   <hero></hero>
   <div class="button-bar">
-    <a class="button button-skew" href ng-click="vm.sort = 'default'" ng-class="{'active': vm.sort === 'default'}">
+    <a class="button button-skew" href ng-click="vm.sort = 'distance'" ng-class="{'active': vm.sort === 'distance'}">
+      <span class="skew-back"><i class="icon-discover-location"></i></span>
+    </a>
+    <a class="button button-skew" href ng-click="vm.sort = 'attendees'" ng-class="{'active': vm.sort === 'attendees'}">
       <span class="skew-back"><i class="icon-discover-default"></i></span>
     </a>
     <a class="button button-skew" href ng-click="vm.sort = 'rating'" ng-class="{'active': vm.sort === 'rating'}">
       <span class="skew-back"><i class="icon-discover-rating"></i></span>
     </a>
-    <a class="button button-skew" href ng-click="vm.sort = 'category'" ng-class="{'active': vm.sort === 'category'}">
+    <a class="button button-skew" href ng-click="vm.sort = 'fee'" ng-class="{'active': vm.sort === 'fee'}">
       <span class="skew-back"><i class="icon-discover-category"></i></span>
     </a>
-    <a class="button button-skew" href ng-click="vm.sort = 'search'" ng-class="{'active': vm.sort === 'search'}">
+    <!-- <a class="button button-skew" href ng-click="vm.sort = 'search'" ng-class="{'active': vm.sort === 'search'}">
       <span class="skew-back"><i class="icon-discover-search"></i></span>
-    </a>
-    <a class="button button-skew" href ng-click="vm.sort = 'location'" ng-class="{'active': vm.sort === 'location'}">
-      <span class="skew-back"><i class="icon-discover-location"></i></span>
-    </a>
+    </a>-->
   </div>
 
   <list items="vm.dinners" sorting="vm.sort"></list>
