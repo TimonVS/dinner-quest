@@ -23,9 +23,10 @@ user-header {
     padding: 7px 23px 8px 40px;
     border-radius: 12px;
     border-bottom-right-radius: 40px;
-    margin-left: 20px;
     margin-top: 18px;
     display: inline-block;
+    position: absolute;
+    left: 100px;
 
     h1 {
       color: #fff;
@@ -35,10 +36,17 @@ user-header {
     }
   }
 
-  img {
+  .user-image {
     border: 3px solid #fff;
     box-shadow: 0 0 0 6px #D6C296;
-    min-height: 100px;
-    min-width: 100px;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 20px;
+    z-index: 99;
   }
 }

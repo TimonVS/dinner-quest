@@ -1,7 +1,7 @@
 <div class="user-card">
 
   <div class="item item-avatar">
-    <img ng-src="{{vm.user.profileImageURL}}">
+    <div class="user-image" ng-style="{'background-image': 'url(' + vm.user.profileImageURL + ')'}"></div>
     <div class="user-content">
       <h1>{{vm.user.displayName}}</h1>
       <p>Table Rookie</p>
