@@ -1,0 +1,23 @@
+
+.dinner-wrapper {
+  .dinner-title {
+    font-weight: bold;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 16px
+  }
+
+  .dinner {
+    padding: 10px 20px;
+
+    .discover-item {
+      padding-top: 0;
+    }
+  }
+
+  .image {
+    max-height: 60px;
+    background-size: cover !important;
+  }
+
+}

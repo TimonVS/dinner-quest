@@ -1,3 +1,68 @@
-<div>
-  {{ vm.dinner | json }}
+<div class="dinner-wrapper">
+  <div class="bar bar-header bar-positive">
+    <h1 class="title">{{ vm.name }}</h1>
+  </div>
+
+  <ion-content class="has-header">
+    <br>
+    <section style="background: url({{ vm.dinner.recepie.receptafbeelding }}) no-repeat 50% 50%; min-height: 200px;">
+    </section>
+
+    <div class="dinner-title" ng-bind="vm.dinner.recepie.recepttitel"></div>
+
+    <div class="dinner">
+      <button class="button button-block button-positive">
+        Join
+      </button>
+
+      <br>
+
+      <div class="text-right discover-item">
+        <div class="row">
+          <div class="col col-25">
+            <div class="image" style="background: url({{ vm.dinner.user.facebook.profileImageURL }}) no-repeat;">
+
+            </div>
+          </div>
+          <div class="col col-75 text-left" style="margin-top: 15px;">
+            &nbsp;&nbsp;<strong>{{ vm.dinner.user.facebook.displayName }}</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col col-25">
+          <strong>Ready in</strong>
+        </div>
+        <div class="col col-75 text-right">
+          <span class="timeago" am-time-ago="vm.dinner.readyAt"></span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col col-25">
+          <strong>Fee</strong>
+        </div>
+        <div class="col col-75 text-right">
+          {{ vm.dinner.fee }} coins
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col col-25">
+          <strong>Calories</strong>
+        </div>
+        <div class="col col-75 text-right">
+          {{ vm.dinner.recepie.receptenergie }}
+        </div>
+      </div>
+
+    </div>
+
+    &nbsp;<p>
+    &nbsp;<p>
+    &nbsp;<p>
+    &nbsp;<p>
+
+  </ion-content>
 </div>

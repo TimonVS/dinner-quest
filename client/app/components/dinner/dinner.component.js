@@ -1,6 +1,8 @@
+'use strict';
+
 import template from './dinner.html';
 import controller from './dinner.controller';
-import './dinner.styl';
+import './dinner.scss';
 
 let dinnerComponent = function () {
   return {

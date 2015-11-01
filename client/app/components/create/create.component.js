@@ -1,3 +1,5 @@
+'use strict';
+
 import template from './create.html';
 import controller from './create.controller';
 import './create.scss';
