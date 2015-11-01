@@ -5,7 +5,9 @@ import './hero.scss';
 let heroComponent = function () {
   return {
     restrict: 'E',
-    scope: {},
+    scope: {
+      profile: '=',
+    },
     template,
     controller,
     controllerAs: 'vm',

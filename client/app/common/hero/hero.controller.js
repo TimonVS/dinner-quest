@@ -1,5 +1,5 @@
 class HeroController {
-  constructor() {
+  constructor($scope) {
     this.name = 'hero';
   }
 }
