@@ -8,6 +8,7 @@ import Footer from './footer-nav/footer-nav';
 import Auth from './user/auth';
 import Login from './login/login';
 import List from './list/list';
+import Parallax from './parallax/parallax'
 
 const FIREBASEPATH = 'https://diner-quest.firebaseio.com';
 
