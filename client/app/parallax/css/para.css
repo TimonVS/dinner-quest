@@ -1,0 +1,112 @@
+body{
+	background-color:rgba(0,0,0,0.1);
+	overflow: hidden
+}
+
+.container{
+	margin:auto;
+	width: 375px;
+	height: 208px;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+}
+
+/* parallax */
+
+.scene{
+	height: 100%;
+	background-color: #00a490;
+	overflow: hidden;
+}
+
+.scene li:nth-child(1){
+    height: 150%;
+    width: 150%;
+    margin-left: -29%;
+    margin-top: -14%;
+    background-image: url(../img/sun.svg);
+    background-repeat: no-repeat;
+}
+
+.scene li:nth-child(2){
+	height: 150%;
+    width: 150%;
+    margin-left: -17%;
+    margin-top: -15%;
+    background-image: url(../img/clouds.svg);
+    background-repeat: repeat-x;
+} 
+
+
+
+.scene li:nth-child(3){
+    height: 150%;
+    width: 150%;
+    margin-left: -23%;
+    margin-top: -10%;
+    background-image: url(../img/cloudback.svg);
+    background-repeat: repeat-x;
+}
+
+.scene li:nth-child(4){
+    height: 150%;
+    width: 150%;
+    margin-left: -17%;
+    margin-top: -11%;
+    background-image: url(../img/eater.svg);
+    background-repeat: no-repeat;
+}
+
+.scene li:nth-child(5){
+    height: 150%;
+    width: 150%;
+    margin-left: -17%;
+    margin-top: -11%;
+    background-image: url(../img/cloudfront.svg);
+    background-repeat: repeat-x;
+} 
+
+/* backgr anim */
+.scene li:nth-child(3){
+ 	-webkit-animation:move 150s linear infinite;
+    -moz-animation:move 150s linear infinite;
+    animation:move 150s linear infinite;
+}
+
+.scene li:nth-child(5){
+ 	-webkit-animation:move 150s linear infinite;
+    -moz-animation:move 150s linear infinite;
+    animation:move 150s linear infinite;
+}
+
+/*move*/
+@-moz-keyframes move{ 
+ 	0% { background-position: 750px 0px; }
+	100% { background-position: 3423px 0px; }
+}
+@-webkit-keyframes move { 
+ 	0% {background-position: 750px 0px;}
+	100% {background-position: 3423px 0px;}
+}
+@keyframes move {
+ 	0% {background-position: 750px 0px;}
+	100% {background-position: 3423px 0px;}
+ }
+
+ @media screen and (min-width: 980px) {
+	.container{
+	    margin: auto;
+	    width: 980px;
+	    height: 544px;
+	    position: fixed;
+	}
+
+	.scene li:nth-child(1) {
+		margin-left: -15%;
+	}
+
+	.scene li:nth-child(2) {
+		margin-left: -15%;
+	}
+}
