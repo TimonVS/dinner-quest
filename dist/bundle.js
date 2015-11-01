@@ -69467,7 +69467,7 @@
 	   */
 	
 	  var login = function login(cb) {
-	    auth.$authWithOAuthPopup('facebook').then(function (authData) {
+	    auth.$authWithOAuthRedirect('facebook').then(function (authData) {
 	      console.log('Logged in as:', authData.uid);
 	      $rootScope.$emit('USER_LOGGED_IN', authData);
 	      cb(authData);
@@ -70197,7 +70197,7 @@
 /* 54 */
 /***/ function(module, exports) {
 
-	module.exports = "<div>\n  {{ vm.dinner | json }}\n</div>\n"
+	module.exports = "<div class=\"dinner-wrapper\">\n  <div class=\"bar bar-header bar-positive\">\n    <h1 class=\"title\">{{ vm.name }}</h1>\n  </div>\n\n  <ion-content class=\"has-header\">\n    <br>\n    <section style=\"background: url({{ vm.dinner.recepie.receptafbeelding }}) no-repeat 50% 50%; min-height: 200px;\">\n    </section>\n\n    <div class=\"dinner-title\" ng-bind=\"vm.dinner.recepie.recepttitel\"></div>\n\n    <div class=\"dinner\">\n      <button class=\"button button-block button-positive\">\n        Join\n      </button>\n\n      <br>\n\n      <div class=\"text-right discover-item\">\n        <div class=\"row\">\n          <div class=\"col col-25\">\n            <div class=\"image\" style=\"background: url({{ vm.dinner.user.facebook.profileImageURL }}) no-repeat;\">\n\n            </div>\n          </div>\n          <div class=\"col col-75 text-left\" style=\"margin-top: 15px;\">\n            &nbsp;&nbsp;<strong>{{ vm.dinner.user.facebook.displayName }}</strong>\n          </div>\n        </div>\n      </div>\n\n      <div class=\"row\">\n        <div class=\"col col-25\">\n          <strong>Ready in</strong>\n        </div>\n        <div class=\"col col-75 text-right\">\n          <span class=\"timeago\" am-time-ago=\"vm.dinner.readyAt\"></span>\n        </div>\n      </div>\n\n      <div class=\"row\">\n        <div class=\"col col-25\">\n          <strong>Fee</strong>\n        </div>\n        <div class=\"col col-75 text-right\">\n          {{ vm.dinner.fee }} coins\n        </div>\n      </div>\n\n      <div class=\"row\">\n        <div class=\"col col-25\">\n          <strong>Calories</strong>\n        </div>\n        <div class=\"col col-75 text-right\">\n          {{ vm.dinner.recepie.receptenergie }}\n        </div>\n      </div>\n\n    </div>\n\n    &nbsp;<p>\n    &nbsp;<p>\n    &nbsp;<p>\n    &nbsp;<p>\n\n  </ion-content>\n</div>\n"
 
 /***/ },
 /* 55 */
@@ -70236,8 +70236,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./dinner.styl", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/stylus-loader/index.js!./dinner.styl");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/resolve-url-loader/index.js!./../../../../node_modules/sass-loader/index.js!./dinner.scss", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/resolve-url-loader/index.js!./../../../../node_modules/sass-loader/index.js!./dinner.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -70255,7 +70255,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".dinner {\n  color: #f00;\n}\n", ""]);
+	exports.push([module.id, ".dinner-wrapper .dinner-title {\n  font-weight: bold;\n  text-align: center;\n  padding-top: 10px;\n  font-size: 16px;\n}\n\n.dinner-wrapper .dinner {\n  padding: 10px 20px;\n}\n\n.dinner-wrapper .dinner .discover-item {\n  padding-top: 0;\n}\n\n.dinner-wrapper .image {\n  max-height: 60px;\n  background-size: cover !important;\n}", ""]);
 	
 	// exports
 
@@ -83970,7 +83970,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".search-input {\n  width: 100%;\n  background-color: #DBCFB1;\n  border: 3px solid #C4BA9E !important;\n  padding: 4px !important;\n  border-radius: 50px;\n  line-height: normal !important;\n  height: auto !important;\n  color: #968D78 !important;\n  font-size: 18px !important;\n  transition: all 0.25s;\n  background-image: url(" + __webpack_require__(68) + ");\n  background-repeat: no-repeat;\n  background-position-x: 10px;\n  background-size: 22px;\n  background-position-y: 6px;\n  padding-left: 45px !important;\n  padding-right: 45px !important;\n}\n\n.search-input.activated {\n  background-color: #fff;\n  color: #5D5D5D;\n  border-color: #D7C393;\n  border-radius: 15px 15px 0 0;\n  padding: 10px 4px !important;\n  transition: all 0.25s;\n  font-weight: 600;\n  border-bottom: 0 !important;\n  background-position-y: 13px;\n  padding-left: 45px !important;\n  padding-right: 45px !important;\n}\n\n.search-input.activated::-webkit-input-placeholder {\n  color: #968D78 !important;\n  text-align: left;\n}\n\n.search-input::-webkit-input-placeholder {\n  color: #968D78 !important;\n  text-align: center;\n}\n\n.search-wrapper {\n  position: relative;\n  width: inherit;\n  box-shadow: 0 0 0 4px #968D78;\n  border-radius: 50px;\n}\n\n.search-wrapper.activated {\n  box-shadow: 0 0 0 4px #F2E7C2;\n  border-radius: 15px 15px 0 0;\n}\n\n.search-results {\n  overflow: scroll;\n  position: absolute;\n  height: 300px;\n  width: 100%;\n  box-shadow: 0 3px 0 3px #F2E7C2;\n  border-radius: 0 0 15px 15px;\n  border: 3px solid #C4BA9E !important;\n  border-top: none !important;\n  padding: 15px;\n  background-color: #F2E5C4;\n}\n\n.search-container {\n  width: 100%;\n}\n\n.recipy-title {\n  font-weight: 600;\n  margin-top: 15px;\n  display: block;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n\n.recipy-time {\n  display: block;\n}\n\n.recipy-image {\n  border-radius: 100%;\n  width: 100%;\n  border: 5px solid #fff;\n}\n\n.popup-container .popup {\n  width: 300px !important;\n  border-radius: 15px !important;\n  background-color: #fff !important;\n}\n\nh3.popup-title {\n  color: #5D5D5D;\n  font-size: 20px;\n  font-weight: 600;\n}\n\n.button {\n  border-radius: 50px !important;\n}\n\n.bold-title-thing {\n  font-weight: 600;\n  margin-bottom: 5px;\n  display: block;\n}\n\n.choose-button {\n  padding: 4px;\n  background-color: #DBCFB1;\n  box-shadow: 0 0 0 4px #968D78;\n  border: 3px solid #C4BA9E !important;\n  border-radius: 50px;\n  font-size: 18px !important;\n  font-weight: 600;\n  width: 100%;\n  margin-top: 30px;\n}\n\n.choose-button.activated,\n.choose-button:active,\n.choose-button:hover {\n  color: #676363;\n  background-color: rgba(0, 0, 0, 0.28);\n}\n\n.popup-body {\n  padding: 20px !important;\n}\n\n.center-dot {\n  margin-left: 5px;\n  margin-right: 5px;\n}", ""]);
+	exports.push([module.id, ".search-input {\n  width: 100%;\n  background-color: #DBCFB1;\n  border: 3px solid #C4BA9E !important;\n  padding: 4px !important;\n  border-radius: 50px;\n  line-height: normal !important;\n  height: auto !important;\n  color: #968D78 !important;\n  font-size: 18px !important;\n  transition: all 0.25s;\n  background-image: url(" + __webpack_require__(68) + ");\n  background-repeat: no-repeat;\n  background-position-x: 10px;\n  background-size: 22px;\n  background-position-y: 6px;\n  padding-left: 45px !important;\n  padding-right: 45px !important;\n}\n\n.search-input.activated {\n  background-color: #fff;\n  color: #5D5D5D;\n  border-color: #D7C393;\n  border-radius: 15px 15px 0 0;\n  padding: 10px 4px !important;\n  transition: all 0.25s;\n  font-weight: 600;\n  border-bottom: 0 !important;\n  background-position-y: 13px;\n  padding-left: 45px !important;\n  padding-right: 45px !important;\n}\n\n.search-input.activated::-webkit-input-placeholder {\n  color: #968D78 !important;\n  text-align: left;\n}\n\n.search-input::-webkit-input-placeholder {\n  color: #968D78 !important;\n  text-align: center;\n}\n\n.search-wrapper {\n  position: relative;\n  width: inherit;\n  box-shadow: 0 0 0 4px #968D78;\n  border-radius: 50px;\n}\n\n.search-wrapper.activated {\n  box-shadow: 0 0 0 4px #F2E7C2;\n  border-radius: 15px 15px 0 0;\n}\n\n.search-results {\n  overflow: scroll;\n  position: absolute;\n  height: 300px;\n  width: 100%;\n  box-shadow: 0 3px 0 3px #F2E7C2;\n  border-radius: 0 0 15px 15px;\n  border: 3px solid #C4BA9E !important;\n  border-top: none !important;\n  padding: 15px;\n  background-color: #F2E5C4;\n}\n\n.search-container {\n  width: 100%;\n}\n\n.recipy-title {\n  font-weight: 600;\n  margin-top: 15px;\n  display: block;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n\n.recipy-time {\n  display: block;\n}\n\n.recipy-image {\n  border-radius: 100%;\n  width: 100%;\n  border: 5px solid #fff;\n}\n\n.popup-container .popup {\n  width: 300px !important;\n  border-radius: 15px !important;\n  background-color: #fff !important;\n}\n\nh3.popup-title {\n  color: #5D5D5D;\n  font-size: 20px;\n  font-weight: 600;\n}\n\n.bold-title-thing {\n  font-weight: 600;\n  margin-bottom: 5px;\n  display: block;\n}\n\n.choose-button {\n  padding: 4px;\n  background-color: #DBCFB1;\n  box-shadow: 0 0 0 4px #968D78;\n  border: 3px solid #C4BA9E !important;\n  border-radius: 50px;\n  font-size: 18px !important;\n  font-weight: 600;\n  width: 100%;\n  margin-top: 30px;\n}\n\n.choose-button.activated,\n.choose-button:active,\n.choose-button:hover {\n  color: #676363;\n  background-color: rgba(0, 0, 0, 0.28);\n}\n\n.popup-body {\n  padding: 20px !important;\n}\n\n.center-dot {\n  margin-left: 5px;\n  margin-right: 5px;\n}", ""]);
 	
 	// exports
 
@@ -84012,7 +84012,7 @@
 /* 224 */
 /***/ function(module, exports) {
 
-	module.exports = "<!-- Place all UI elements intended to be present across all routes in this file -->\n<div class=\"app\">\n  <ion-nav-view>\n    <ion-view></ion-view>\n  </ion-nav-view>\n  <footer-nav ng-if=\"currentUser\"></footer-nav>\n</div>\n"
+	module.exports = "<!-- Place all UI elements intended to be present across all routes in this file -->\n<div class=\"app\">\n  <ion-nav-view>\n    <ion-view></ion-view>\n  </ion-nav-view>\n  <footer-nav ng-show=\"currentUser\"></footer-nav>\n</div>\n"
 
 /***/ },
 /* 225 */
