@@ -60,17 +60,17 @@
 	
 	var _commonCommon2 = _interopRequireDefault(_commonCommon);
 	
-	var _componentsComponents = __webpack_require__(59);
+	var _componentsComponents = __webpack_require__(61);
 	
 	var _componentsComponents2 = _interopRequireDefault(_componentsComponents);
 	
-	var _appComponent = __webpack_require__(231);
+	var _appComponent = __webpack_require__(233);
 	
 	var _appComponent2 = _interopRequireDefault(_appComponent);
 	
-	__webpack_require__(233);
-	
 	__webpack_require__(235);
+	
+	__webpack_require__(237);
 	
 	angular.module('app', [_angularUiRouter2['default'], _commonCommon2['default'].name, _componentsComponents2['default'].name, 'ionic', 'rzModule']).directive('app', _appComponent2['default']);
 
@@ -65289,11 +65289,11 @@
 	
 	var _loginLogin2 = _interopRequireDefault(_loginLogin);
 	
-	var _listList = __webpack_require__(47);
+	var _listList = __webpack_require__(49);
 	
 	var _listList2 = _interopRequireDefault(_listList);
 	
-	var _parallaxParallax = __webpack_require__(53);
+	var _parallaxParallax = __webpack_require__(55);
 	
 	var _parallaxParallax2 = _interopRequireDefault(_parallaxParallax);
 	
@@ -69875,7 +69875,7 @@
 /* 43 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"bar bar-header bar-positive\">\n  <h1 class=\"title\">{{ vm.name }}</h1>\n</div>\n\n<ion-content class=\"has-header\" padding=\"50\">\n  <div class=\"login-wrapper\">\n    <button class=\"button button-positive button-block button-outline\" ng-click=\"vm.login()\" on-tap=\"vm.login()\">\n      Sign in with facebook\n    </button>\n  </div>\n</ion-content>\n"
+	module.exports = "<ion-content padding=\"50\">\n  <div class=\"login-wrapper\">\n\n    <div class=\"logo\"></div>\n\n    <button class=\"button button-positive button-block button-outline\" ng-click=\"vm.login()\" on-tap=\"vm.login()\">\n      Sign in with facebook\n    </button>\n  </div>\n</ion-content>\n"
 
 /***/ },
 /* 44 */
@@ -69941,13 +69941,25 @@
 	
 	
 	// module
-	exports.push([module.id, ".login-wrapper {\n  padding: 50px;\n  display: flex;\n  align-items: center;\n  height: 100%;\n}", ""]);
+	exports.push([module.id, ".login-wrapper {\n  padding: 50px;\n  display: flex;\n  align-items: center;\n  height: 100%;\n  min-height: 600px;\n  margin: -10px;\n  background: url(" + __webpack_require__(47) + ") no-repeat;\n  background-size: cover;\n  background-position: center;\n}\n\n.login-wrapper .button {\n  color: #fff !important;\n  background: #00A490 !important;\n  font-weight: bold !important;\n}\n\n.login-wrapper .logo {\n  height: 200px;\n  position: absolute;\n  top: 30px;\n  width: 340px;\n  background: url(" + __webpack_require__(48) + ") no-repeat;\n  background-size: 100%;\n  background-position: center;\n}", ""]);
 	
 	// exports
 
 
 /***/ },
 /* 47 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "5068045ff19d7b9162731cb22702fb8d.svg"
+
+/***/ },
+/* 48 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "a3f2ee481ba1bb6dddfa5355f82d3fd1.svg"
+
+/***/ },
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -69966,7 +69978,7 @@
 	
 	var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
 	
-	var _listComponent = __webpack_require__(48);
+	var _listComponent = __webpack_require__(50);
 	
 	var _listComponent2 = _interopRequireDefault(_listComponent);
 	
@@ -69976,7 +69988,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 48 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -69987,15 +69999,15 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _listHtml = __webpack_require__(49);
+	var _listHtml = __webpack_require__(51);
 	
 	var _listHtml2 = _interopRequireDefault(_listHtml);
 	
-	var _listController = __webpack_require__(50);
+	var _listController = __webpack_require__(52);
 	
 	var _listController2 = _interopRequireDefault(_listController);
 	
-	__webpack_require__(51);
+	__webpack_require__(53);
 	
 	var listComponent = function listComponent() {
 	  return {
@@ -70014,13 +70026,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 49 */
+/* 51 */
 /***/ function(module, exports) {
 
 	module.exports = "<discover-item ng-repeat=\"item in vm.items\" data=\"item\"></discover-item>\n"
 
 /***/ },
-/* 50 */
+/* 52 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -70041,13 +70053,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 51 */
+/* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(52);
+	var content = __webpack_require__(54);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(13)(content, {});
@@ -70067,7 +70079,7 @@
 	}
 
 /***/ },
-/* 52 */
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(12)();
@@ -70081,7 +70093,7 @@
 
 
 /***/ },
-/* 53 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -70092,7 +70104,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _parallaxComponent = __webpack_require__(54);
+	var _parallaxComponent = __webpack_require__(56);
 	
 	var _parallaxComponent2 = _interopRequireDefault(_parallaxComponent);
 	
@@ -70102,7 +70114,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 54 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -70113,15 +70125,15 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _parallaxHtml = __webpack_require__(55);
+	var _parallaxHtml = __webpack_require__(57);
 	
 	var _parallaxHtml2 = _interopRequireDefault(_parallaxHtml);
 	
-	var _parallaxController = __webpack_require__(56);
+	var _parallaxController = __webpack_require__(58);
 	
 	var _parallaxController2 = _interopRequireDefault(_parallaxController);
 	
-	__webpack_require__(57);
+	__webpack_require__(59);
 	
 	var parallaxComponent = function parallaxComponent() {
 	  return {
@@ -70138,13 +70150,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 55 */
+/* 57 */
 /***/ function(module, exports) {
 
 	module.exports = "<section class=\"parallax-header\">\n  <div class=\"header-parallax\">\n    <div class=\"demo-iframe-holder\">\n      <iframe class=\"\" src=\"http://timonvs.github.io/dinner-quest/dist/parallax/\" frameborder=\"0\"></iframe>\n    </div>\n  </div>\n</section>\n"
 
 /***/ },
-/* 56 */
+/* 58 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -70165,13 +70177,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 57 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(58);
+	var content = __webpack_require__(60);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(13)(content, {});
@@ -70191,7 +70203,7 @@
 	}
 
 /***/ },
-/* 58 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(12)();
@@ -70205,7 +70217,7 @@
 
 
 /***/ },
-/* 59 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -70216,47 +70228,47 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _dinnerDinner = __webpack_require__(60);
+	var _dinnerDinner = __webpack_require__(62);
 	
 	var _dinnerDinner2 = _interopRequireDefault(_dinnerDinner);
 	
-	var _discoverDiscover = __webpack_require__(66);
+	var _discoverDiscover = __webpack_require__(68);
 	
 	var _discoverDiscover2 = _interopRequireDefault(_discoverDiscover);
 	
-	var _discoverItemDiscoverItem = __webpack_require__(81);
+	var _discoverItemDiscoverItem = __webpack_require__(83);
 	
 	var _discoverItemDiscoverItem2 = _interopRequireDefault(_discoverItemDiscoverItem);
 	
-	var _createCreate = __webpack_require__(176);
+	var _createCreate = __webpack_require__(178);
 	
 	var _createCreate2 = _interopRequireDefault(_createCreate);
 	
-	var _profileProfile = __webpack_require__(183);
+	var _profileProfile = __webpack_require__(185);
 	
 	var _profileProfile2 = _interopRequireDefault(_profileProfile);
 	
-	var _notificationsNotifications = __webpack_require__(189);
+	var _notificationsNotifications = __webpack_require__(191);
 	
 	var _notificationsNotifications2 = _interopRequireDefault(_notificationsNotifications);
 	
-	var _reviewReview = __webpack_require__(195);
+	var _reviewReview = __webpack_require__(197);
 	
 	var _reviewReview2 = _interopRequireDefault(_reviewReview);
 	
-	var _badgesBadges = __webpack_require__(201);
+	var _badgesBadges = __webpack_require__(203);
 	
 	var _badgesBadges2 = _interopRequireDefault(_badgesBadges);
 	
-	var _userHeaderUserHeader = __webpack_require__(211);
+	var _userHeaderUserHeader = __webpack_require__(213);
 	
 	var _userHeaderUserHeader2 = _interopRequireDefault(_userHeaderUserHeader);
 	
-	var _slidersSliders = __webpack_require__(217);
+	var _slidersSliders = __webpack_require__(219);
 	
 	var _slidersSliders2 = _interopRequireDefault(_slidersSliders);
 	
-	var _searchBarSearchBar = __webpack_require__(225);
+	var _searchBarSearchBar = __webpack_require__(227);
 	
 	var _searchBarSearchBar2 = _interopRequireDefault(_searchBarSearchBar);
 	
@@ -70266,7 +70278,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 60 */
+/* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -70285,7 +70297,7 @@
 	
 	var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
 	
-	var _dinnerComponent = __webpack_require__(61);
+	var _dinnerComponent = __webpack_require__(63);
 	
 	var _dinnerComponent2 = _interopRequireDefault(_dinnerComponent);
 	
@@ -70310,7 +70322,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 61 */
+/* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -70321,15 +70333,15 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _dinnerHtml = __webpack_require__(62);
+	var _dinnerHtml = __webpack_require__(64);
 	
 	var _dinnerHtml2 = _interopRequireDefault(_dinnerHtml);
 	
-	var _dinnerController = __webpack_require__(63);
+	var _dinnerController = __webpack_require__(65);
 	
 	var _dinnerController2 = _interopRequireDefault(_dinnerController);
 	
-	__webpack_require__(64);
+	__webpack_require__(66);
 	
 	var dinnerComponent = function dinnerComponent() {
 	  return {
@@ -70348,13 +70360,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 62 */
+/* 64 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"dinner-wrapper\">\n  <div class=\"bar bar-header bar-positive\" style=\"background: transparent;\">\n    <button ng-click=\"vm.back()\" class=\"button back-button buttons button-clear header-item\">\n      <i class=\"icon ion-ios-arrow-back\"></i>\n      <span class=\"back-text\">\n        <span class=\"default-title\" style=\"text-shadow: 1px 2px 2px rgba(0,0,0,0.2);\">Back</span></span></button>\n  </div>\n\n  <ion-content>\n    <section style=\"background: url({{ vm.dinner.recepie.receptafbeelding }}) no-repeat #D6C296; background-size: cover; min-height: 200px;\">\n\n\n      <h2 class=\"dinner-title\" ng-bind=\"vm.dinner.recepie.recepttitel\"></h2>\n\n\n      <div class=\"user-card\">\n\n        <div class=\"item item-avatar\">\n          <div class=\"user-image\" ng-style=\"{'background-image': 'url(' + vm.dinner.user.facebook.profileImageURL + ')'}\"></div>\n          <div class=\"user-content\">\n            <h1>{{vm.dinner.user.facebook.displayName}}</h1>\n            <p>Table Rookie</p>\n          </div>\n        </div>\n\n      </div>\n\n    </section>\n\n    <div class=\"dinner\">\n      <button class=\"button button-block button-positive\">\n        Join this dinner!\n      </button>\n\n      <br>\n\n      <div class=\"row\">\n        <div class=\"col col-25\">\n          <strong>Time</strong>\n        </div>\n        <div class=\"col col-75 text-right\">\n          <span class=\"timeago\">\n            in {{vm.dinner.readyAt | amDurationFormat : 'minute' }}\n          </span>\n        </div>\n      </div>\n\n      <div class=\"row\">\n        <div class=\"col col-25\">\n          <strong>Fee</strong>\n        </div>\n        <div class=\"col col-75 text-right\">\n          {{ vm.dinner.fee }} coins\n        </div>\n      </div>\n\n      <div class=\"row\">\n        <div class=\"col col-25\">\n          <strong>Calories</strong>\n        </div>\n        <div class=\"col col-75 text-right\">\n          {{ vm.dinner.recepie.receptenergie }}\n        </div>\n      </div>\n\n    </div>\n\n    &nbsp;<p>\n    &nbsp;<p>\n    &nbsp;<p>\n    &nbsp;<p>\n\n  </ion-content>\n</div>\n"
 
 /***/ },
-/* 63 */
+/* 65 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -70379,13 +70391,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 64 */
+/* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(65);
+	var content = __webpack_require__(67);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(13)(content, {});
@@ -70405,7 +70417,7 @@
 	}
 
 /***/ },
-/* 65 */
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(12)();
@@ -70419,7 +70431,7 @@
 
 
 /***/ },
-/* 66 */
+/* 68 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -70434,15 +70446,15 @@
 	
 	var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
 	
-	var _discoverComponent = __webpack_require__(67);
+	var _discoverComponent = __webpack_require__(69);
 	
 	var _discoverComponent2 = _interopRequireDefault(_discoverComponent);
 	
-	var _recepiesRecepies = __webpack_require__(77);
+	var _recepiesRecepies = __webpack_require__(79);
 	
 	var _recepiesRecepies2 = _interopRequireDefault(_recepiesRecepies);
 	
-	var _dinnersDinners = __webpack_require__(79);
+	var _dinnersDinners = __webpack_require__(81);
 	
 	var _dinnersDinners2 = _interopRequireDefault(_dinnersDinners);
 	
@@ -70494,7 +70506,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 67 */
+/* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -70505,15 +70517,15 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _discoverHtml = __webpack_require__(68);
+	var _discoverHtml = __webpack_require__(70);
 	
 	var _discoverHtml2 = _interopRequireDefault(_discoverHtml);
 	
-	var _discoverController = __webpack_require__(69);
+	var _discoverController = __webpack_require__(71);
 	
 	var _discoverController2 = _interopRequireDefault(_discoverController);
 	
-	__webpack_require__(70);
+	__webpack_require__(72);
 	
 	var discoverComponent = function discoverComponent() {
 	  return {
@@ -70533,13 +70545,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 68 */
+/* 70 */
 /***/ function(module, exports) {
 
 	module.exports = "<ion-content class=\"has-tabs\">\n  <parallax></parallax>\n  <div class=\"button-bar\">\n    <a class=\"button button-skew\" href ng-click=\"vm.sort = 'distance'\" ng-class=\"{'active': vm.sort === 'distance'}\">\n      <span class=\"skew-back\"><i class=\"icon-discover-location\"></i></span>\n    </a>\n    <a class=\"button button-skew\" href ng-click=\"vm.sort = 'attendees'\" ng-class=\"{'active': vm.sort === 'attendees'}\">\n      <span class=\"skew-back\"><i class=\"icon-discover-default\"></i></span>\n    </a>\n    <a class=\"button button-skew\" href ng-click=\"vm.sort = 'rating'\" ng-class=\"{'active': vm.sort === 'rating'}\">\n      <span class=\"skew-back\"><i class=\"icon-discover-rating\"></i></span>\n    </a>\n    <a class=\"button button-skew\" href ng-click=\"vm.sort = 'fee'\" ng-class=\"{'active': vm.sort === 'fee'}\">\n      <span class=\"skew-back\"><i class=\"icon-discover-category\"></i></span>\n    </a>\n    <!-- <a class=\"button button-skew\" href ng-click=\"vm.sort = 'search'\" ng-class=\"{'active': vm.sort === 'search'}\">\n      <span class=\"skew-back\"><i class=\"icon-discover-search\"></i></span>\n    </a>-->\n  </div>\n\n  <list items=\"vm.dinners\" sorting=\"vm.sort\"></list>\n\n</ion-content>\n"
 
 /***/ },
-/* 69 */
+/* 71 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -70569,13 +70581,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 70 */
+/* 72 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(71);
+	var content = __webpack_require__(73);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(13)(content, {});
@@ -70595,7 +70607,7 @@
 	}
 
 /***/ },
-/* 71 */
+/* 73 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(12)();
@@ -70603,43 +70615,43 @@
 	
 	
 	// module
-	exports.push([module.id, ".button-pill {\n  border: 2px solid #000;\n  background: #eee;\n  border-radius: 50px !important;\n}\n\nion-content {\n  background-color: #F9E8BD !important;\n}\n\n.button-skew {\n  transform: skewx(15deg);\n  border: 4px solid #D6C296 !important;\n  border-right: 0 !important;\n  background: #E3D4B1 !important;\n  color: #827966 !important;\n  font-weight: bold;\n  box-shadow: none !important;\n  min-height: 55px !important;\n  -webkit-box-shadow: none !important;\n  -moz-box-shadow: none !important;\n}\n\n.button-skew:first-child {\n  margin-left: -20px;\n  padding-left: 36px;\n}\n\n.button-skew:last-child {\n  margin-right: -20px;\n  padding-right: 36px !important;\n}\n\n.button-skew.active {\n  background: #F9E8BD !important;\n  border-bottom: 0 !important;\n}\n\n.button-skew i {\n  width: 22px;\n  position: absolute;\n  height: 22px;\n  margin-top: 13px;\n  background-repeat: no-repeat;\n  display: inline-block;\n}\n\n.skew-back {\n  display: block;\n  transform: skewx(-15deg);\n}\n\n.icon-discover-default {\n  background-image: url(" + __webpack_require__(72) + ");\n}\n\n.icon-discover-category {\n  background-image: url(" + __webpack_require__(73) + ");\n}\n\n.icon-discover-rating {\n  background-image: url(" + __webpack_require__(74) + ");\n}\n\n.icon-discover-location {\n  background-image: url(" + __webpack_require__(75) + ");\n}\n\n.icon-discover-search {\n  background-image: url(" + __webpack_require__(76) + ");\n}", ""]);
+	exports.push([module.id, ".button-pill {\n  border: 2px solid #000;\n  background: #eee;\n  border-radius: 50px !important;\n}\n\nion-content {\n  background-color: #F9E8BD !important;\n}\n\n.button-skew {\n  transform: skewx(15deg);\n  border: 4px solid #D6C296 !important;\n  border-right: 0 !important;\n  background: #E3D4B1 !important;\n  color: #827966 !important;\n  font-weight: bold;\n  box-shadow: none !important;\n  min-height: 55px !important;\n  -webkit-box-shadow: none !important;\n  -moz-box-shadow: none !important;\n}\n\n.button-skew:first-child {\n  margin-left: -20px;\n  padding-left: 36px;\n}\n\n.button-skew:last-child {\n  margin-right: -20px;\n  padding-right: 36px !important;\n}\n\n.button-skew.active {\n  background: #F9E8BD !important;\n  border-bottom: 0 !important;\n}\n\n.button-skew i {\n  width: 22px;\n  position: absolute;\n  height: 22px;\n  margin-top: 13px;\n  background-repeat: no-repeat;\n  display: inline-block;\n}\n\n.skew-back {\n  display: block;\n  transform: skewx(-15deg);\n}\n\n.icon-discover-default {\n  background-image: url(" + __webpack_require__(74) + ");\n}\n\n.icon-discover-category {\n  background-image: url(" + __webpack_require__(75) + ");\n}\n\n.icon-discover-rating {\n  background-image: url(" + __webpack_require__(76) + ");\n}\n\n.icon-discover-location {\n  background-image: url(" + __webpack_require__(77) + ");\n}\n\n.icon-discover-search {\n  background-image: url(" + __webpack_require__(78) + ");\n}", ""]);
 	
 	// exports
 
 
 /***/ },
-/* 72 */
+/* 74 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "8b2178807dbb1a3bc2cae6e087d37b12.svg"
 
 /***/ },
-/* 73 */
+/* 75 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "f2db49da59729b3c877b5bfdc3aa1ca0.svg"
 
 /***/ },
-/* 74 */
+/* 76 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "6114ee94b1aeb7829a93bbba711cc7dd.svg"
 
 /***/ },
-/* 75 */
+/* 77 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "4a48312f2def49033db7742983e7d1b8.svg"
 
 /***/ },
-/* 76 */
+/* 78 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "c919d49be435dcaa1924837bc68e7f1d.svg"
 
 /***/ },
-/* 77 */
+/* 79 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -70652,7 +70664,7 @@
 	
 	__webpack_require__(28);
 	
-	var _recepiesFactory = __webpack_require__(78);
+	var _recepiesFactory = __webpack_require__(80);
 	
 	var _recepiesFactory2 = _interopRequireDefault(_recepiesFactory);
 	
@@ -70662,7 +70674,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 78 */
+/* 80 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -70689,7 +70701,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 79 */
+/* 81 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -70702,7 +70714,7 @@
 	
 	__webpack_require__(28);
 	
-	var _dinnersFactory = __webpack_require__(80);
+	var _dinnersFactory = __webpack_require__(82);
 	
 	var _dinnersFactory2 = _interopRequireDefault(_dinnersFactory);
 	
@@ -70712,7 +70724,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 80 */
+/* 82 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -70731,7 +70743,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 81 */
+/* 83 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -70750,11 +70762,11 @@
 	
 	var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
 	
-	var _discoverItemComponent = __webpack_require__(82);
+	var _discoverItemComponent = __webpack_require__(84);
 	
 	var _discoverItemComponent2 = _interopRequireDefault(_discoverItemComponent);
 	
-	__webpack_require__(87);
+	__webpack_require__(89);
 	
 	var discoverItemModule = _angular2['default'].module('discoverItem', [_angularUiRouter2['default'], 'angularMoment']).directive('discoverItem', _discoverItemComponent2['default']);
 	
@@ -70762,7 +70774,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 82 */
+/* 84 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -70773,15 +70785,15 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _discoverItemHtml = __webpack_require__(83);
+	var _discoverItemHtml = __webpack_require__(85);
 	
 	var _discoverItemHtml2 = _interopRequireDefault(_discoverItemHtml);
 	
-	var _discoverItemController = __webpack_require__(84);
+	var _discoverItemController = __webpack_require__(86);
 	
 	var _discoverItemController2 = _interopRequireDefault(_discoverItemController);
 	
-	__webpack_require__(85);
+	__webpack_require__(87);
 	
 	var discoverItemComponent = function discoverItemComponent() {
 	  return {
@@ -70800,13 +70812,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 83 */
+/* 85 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"discover-item\">\n  <div class=\"row\" ng-click=\"vm.gotoDetail(vm.data._id)\">\n    <div class=\"col col-25\">\n      <img class=\"image\" ng-src=\"{{ vm.data.recepie.receptafbeelding }}\" alt=\"\"/>\n    </div>\n    <div class=\"col col-75\">\n      <div class=\"item-information\">\n        <div class=\"clearfix\">\n          <span class=\"title\" ng-bind=\"vm.data.recepie.recepttitel\"></span>\n          <span class=\"distance\">{{ vm.data.distance }}km</span>\n        </div>\n        <div class=\"clearfix\">\n          <span class=\"price\">{{ vm.data.attendees }} spots left\n          &middot;\n          {{ vm.data.fee }} coins</span>\n          <span class=\"timeago\">\n            in {{vm.data.readyAt | amDurationFormat : 'minute' }}\n          </span>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ },
-/* 84 */
+/* 86 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -70831,13 +70843,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 85 */
+/* 87 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(86);
+	var content = __webpack_require__(88);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(13)(content, {});
@@ -70857,7 +70869,7 @@
 	}
 
 /***/ },
-/* 86 */
+/* 88 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(12)();
@@ -70871,7 +70883,7 @@
 
 
 /***/ },
-/* 87 */
+/* 89 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* angular-moment.js / v0.10.3 / (c) 2013, 2014, 2015 Uri Shaked / MIT Licence */
@@ -71498,7 +71510,7 @@
 		}
 	
 		if (true) {
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(3), __webpack_require__(88)], __WEBPACK_AMD_DEFINE_FACTORY__ = (angularMoment), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(3), __webpack_require__(90)], __WEBPACK_AMD_DEFINE_FACTORY__ = (angularMoment), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else if (typeof module !== 'undefined' && module && module.exports) {
 			angularMoment(angular, require('moment'));
 			module.exports = 'angularMoment';
@@ -71509,7 +71521,7 @@
 
 
 /***/ },
-/* 88 */
+/* 90 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(module) {//! moment.js
@@ -71780,7 +71792,7 @@
 	                module && module.exports) {
 	            try {
 	                oldLocale = globalLocale._abbr;
-	                __webpack_require__(90)("./" + name);
+	                __webpack_require__(92)("./" + name);
 	                // because defineLocale currently also sets the global locale, we
 	                // want to undo that for lazy loaded locales
 	                locale_locales__getSetGlobalLocale(oldLocale);
@@ -74707,10 +74719,10 @@
 	    return _moment;
 	
 	}));
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(89)(module)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(91)(module)))
 
 /***/ },
-/* 89 */
+/* 91 */
 /***/ function(module, exports) {
 
 	module.exports = function(module) {
@@ -74726,180 +74738,180 @@
 
 
 /***/ },
-/* 90 */
+/* 92 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./af": 91,
-		"./af.js": 91,
-		"./ar": 92,
-		"./ar-ma": 93,
-		"./ar-ma.js": 93,
-		"./ar-sa": 94,
-		"./ar-sa.js": 94,
-		"./ar-tn": 95,
-		"./ar-tn.js": 95,
-		"./ar.js": 92,
-		"./az": 96,
-		"./az.js": 96,
-		"./be": 97,
-		"./be.js": 97,
-		"./bg": 98,
-		"./bg.js": 98,
-		"./bn": 99,
-		"./bn.js": 99,
-		"./bo": 100,
-		"./bo.js": 100,
-		"./br": 101,
-		"./br.js": 101,
-		"./bs": 102,
-		"./bs.js": 102,
-		"./ca": 103,
-		"./ca.js": 103,
-		"./cs": 104,
-		"./cs.js": 104,
-		"./cv": 105,
-		"./cv.js": 105,
-		"./cy": 106,
-		"./cy.js": 106,
-		"./da": 107,
-		"./da.js": 107,
-		"./de": 108,
-		"./de-at": 109,
-		"./de-at.js": 109,
-		"./de.js": 108,
-		"./el": 110,
-		"./el.js": 110,
-		"./en-au": 111,
-		"./en-au.js": 111,
-		"./en-ca": 112,
-		"./en-ca.js": 112,
-		"./en-gb": 113,
-		"./en-gb.js": 113,
-		"./eo": 114,
-		"./eo.js": 114,
-		"./es": 115,
-		"./es.js": 115,
-		"./et": 116,
-		"./et.js": 116,
-		"./eu": 117,
-		"./eu.js": 117,
-		"./fa": 118,
-		"./fa.js": 118,
-		"./fi": 119,
-		"./fi.js": 119,
-		"./fo": 120,
-		"./fo.js": 120,
-		"./fr": 121,
-		"./fr-ca": 122,
-		"./fr-ca.js": 122,
-		"./fr.js": 121,
-		"./fy": 123,
-		"./fy.js": 123,
-		"./gl": 124,
-		"./gl.js": 124,
-		"./he": 125,
-		"./he.js": 125,
-		"./hi": 126,
-		"./hi.js": 126,
-		"./hr": 127,
-		"./hr.js": 127,
-		"./hu": 128,
-		"./hu.js": 128,
-		"./hy-am": 129,
-		"./hy-am.js": 129,
-		"./id": 130,
-		"./id.js": 130,
-		"./is": 131,
-		"./is.js": 131,
-		"./it": 132,
-		"./it.js": 132,
-		"./ja": 133,
-		"./ja.js": 133,
-		"./jv": 134,
-		"./jv.js": 134,
-		"./ka": 135,
-		"./ka.js": 135,
-		"./km": 136,
-		"./km.js": 136,
-		"./ko": 137,
-		"./ko.js": 137,
-		"./lb": 138,
-		"./lb.js": 138,
-		"./lt": 139,
-		"./lt.js": 139,
-		"./lv": 140,
-		"./lv.js": 140,
-		"./me": 141,
-		"./me.js": 141,
-		"./mk": 142,
-		"./mk.js": 142,
-		"./ml": 143,
-		"./ml.js": 143,
-		"./mr": 144,
-		"./mr.js": 144,
-		"./ms": 145,
-		"./ms-my": 146,
-		"./ms-my.js": 146,
-		"./ms.js": 145,
-		"./my": 147,
-		"./my.js": 147,
-		"./nb": 148,
-		"./nb.js": 148,
-		"./ne": 149,
-		"./ne.js": 149,
-		"./nl": 150,
-		"./nl.js": 150,
-		"./nn": 151,
-		"./nn.js": 151,
-		"./pl": 152,
-		"./pl.js": 152,
-		"./pt": 153,
-		"./pt-br": 154,
-		"./pt-br.js": 154,
-		"./pt.js": 153,
-		"./ro": 155,
-		"./ro.js": 155,
-		"./ru": 156,
-		"./ru.js": 156,
-		"./si": 157,
-		"./si.js": 157,
-		"./sk": 158,
-		"./sk.js": 158,
-		"./sl": 159,
-		"./sl.js": 159,
-		"./sq": 160,
-		"./sq.js": 160,
-		"./sr": 161,
-		"./sr-cyrl": 162,
-		"./sr-cyrl.js": 162,
-		"./sr.js": 161,
-		"./sv": 163,
-		"./sv.js": 163,
-		"./ta": 164,
-		"./ta.js": 164,
-		"./th": 165,
-		"./th.js": 165,
-		"./tl-ph": 166,
-		"./tl-ph.js": 166,
-		"./tr": 167,
-		"./tr.js": 167,
-		"./tzl": 168,
-		"./tzl.js": 168,
-		"./tzm": 169,
-		"./tzm-latn": 170,
-		"./tzm-latn.js": 170,
-		"./tzm.js": 169,
-		"./uk": 171,
-		"./uk.js": 171,
-		"./uz": 172,
-		"./uz.js": 172,
-		"./vi": 173,
-		"./vi.js": 173,
-		"./zh-cn": 174,
-		"./zh-cn.js": 174,
-		"./zh-tw": 175,
-		"./zh-tw.js": 175
+		"./af": 93,
+		"./af.js": 93,
+		"./ar": 94,
+		"./ar-ma": 95,
+		"./ar-ma.js": 95,
+		"./ar-sa": 96,
+		"./ar-sa.js": 96,
+		"./ar-tn": 97,
+		"./ar-tn.js": 97,
+		"./ar.js": 94,
+		"./az": 98,
+		"./az.js": 98,
+		"./be": 99,
+		"./be.js": 99,
+		"./bg": 100,
+		"./bg.js": 100,
+		"./bn": 101,
+		"./bn.js": 101,
+		"./bo": 102,
+		"./bo.js": 102,
+		"./br": 103,
+		"./br.js": 103,
+		"./bs": 104,
+		"./bs.js": 104,
+		"./ca": 105,
+		"./ca.js": 105,
+		"./cs": 106,
+		"./cs.js": 106,
+		"./cv": 107,
+		"./cv.js": 107,
+		"./cy": 108,
+		"./cy.js": 108,
+		"./da": 109,
+		"./da.js": 109,
+		"./de": 110,
+		"./de-at": 111,
+		"./de-at.js": 111,
+		"./de.js": 110,
+		"./el": 112,
+		"./el.js": 112,
+		"./en-au": 113,
+		"./en-au.js": 113,
+		"./en-ca": 114,
+		"./en-ca.js": 114,
+		"./en-gb": 115,
+		"./en-gb.js": 115,
+		"./eo": 116,
+		"./eo.js": 116,
+		"./es": 117,
+		"./es.js": 117,
+		"./et": 118,
+		"./et.js": 118,
+		"./eu": 119,
+		"./eu.js": 119,
+		"./fa": 120,
+		"./fa.js": 120,
+		"./fi": 121,
+		"./fi.js": 121,
+		"./fo": 122,
+		"./fo.js": 122,
+		"./fr": 123,
+		"./fr-ca": 124,
+		"./fr-ca.js": 124,
+		"./fr.js": 123,
+		"./fy": 125,
+		"./fy.js": 125,
+		"./gl": 126,
+		"./gl.js": 126,
+		"./he": 127,
+		"./he.js": 127,
+		"./hi": 128,
+		"./hi.js": 128,
+		"./hr": 129,
+		"./hr.js": 129,
+		"./hu": 130,
+		"./hu.js": 130,
+		"./hy-am": 131,
+		"./hy-am.js": 131,
+		"./id": 132,
+		"./id.js": 132,
+		"./is": 133,
+		"./is.js": 133,
+		"./it": 134,
+		"./it.js": 134,
+		"./ja": 135,
+		"./ja.js": 135,
+		"./jv": 136,
+		"./jv.js": 136,
+		"./ka": 137,
+		"./ka.js": 137,
+		"./km": 138,
+		"./km.js": 138,
+		"./ko": 139,
+		"./ko.js": 139,
+		"./lb": 140,
+		"./lb.js": 140,
+		"./lt": 141,
+		"./lt.js": 141,
+		"./lv": 142,
+		"./lv.js": 142,
+		"./me": 143,
+		"./me.js": 143,
+		"./mk": 144,
+		"./mk.js": 144,
+		"./ml": 145,
+		"./ml.js": 145,
+		"./mr": 146,
+		"./mr.js": 146,
+		"./ms": 147,
+		"./ms-my": 148,
+		"./ms-my.js": 148,
+		"./ms.js": 147,
+		"./my": 149,
+		"./my.js": 149,
+		"./nb": 150,
+		"./nb.js": 150,
+		"./ne": 151,
+		"./ne.js": 151,
+		"./nl": 152,
+		"./nl.js": 152,
+		"./nn": 153,
+		"./nn.js": 153,
+		"./pl": 154,
+		"./pl.js": 154,
+		"./pt": 155,
+		"./pt-br": 156,
+		"./pt-br.js": 156,
+		"./pt.js": 155,
+		"./ro": 157,
+		"./ro.js": 157,
+		"./ru": 158,
+		"./ru.js": 158,
+		"./si": 159,
+		"./si.js": 159,
+		"./sk": 160,
+		"./sk.js": 160,
+		"./sl": 161,
+		"./sl.js": 161,
+		"./sq": 162,
+		"./sq.js": 162,
+		"./sr": 163,
+		"./sr-cyrl": 164,
+		"./sr-cyrl.js": 164,
+		"./sr.js": 163,
+		"./sv": 165,
+		"./sv.js": 165,
+		"./ta": 166,
+		"./ta.js": 166,
+		"./th": 167,
+		"./th.js": 167,
+		"./tl-ph": 168,
+		"./tl-ph.js": 168,
+		"./tr": 169,
+		"./tr.js": 169,
+		"./tzl": 170,
+		"./tzl.js": 170,
+		"./tzm": 171,
+		"./tzm-latn": 172,
+		"./tzm-latn.js": 172,
+		"./tzm.js": 171,
+		"./uk": 173,
+		"./uk.js": 173,
+		"./uz": 174,
+		"./uz.js": 174,
+		"./vi": 175,
+		"./vi.js": 175,
+		"./zh-cn": 176,
+		"./zh-cn.js": 176,
+		"./zh-tw": 177,
+		"./zh-tw.js": 177
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -74912,11 +74924,11 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 90;
+	webpackContext.id = 92;
 
 
 /***/ },
-/* 91 */
+/* 93 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -74924,7 +74936,7 @@
 	//! author : Werner Mollentze : https://github.com/wernerm
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -74993,7 +75005,7 @@
 	}));
 
 /***/ },
-/* 92 */
+/* 94 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -75003,7 +75015,7 @@
 	//! Native plural forms: forabi https://github.com/forabi
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -75133,7 +75145,7 @@
 	}));
 
 /***/ },
-/* 93 */
+/* 95 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -75142,7 +75154,7 @@
 	//! author : Abdel Said : https://github.com/abdelsaid
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -75196,7 +75208,7 @@
 	}));
 
 /***/ },
-/* 94 */
+/* 96 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -75204,7 +75216,7 @@
 	//! author : Suhail Alkowaileet : https://github.com/xsoh
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -75303,14 +75315,14 @@
 	}));
 
 /***/ },
-/* 95 */
+/* 97 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
 	//! locale  : Tunisian Arabic (ar-tn)
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -75364,7 +75376,7 @@
 	}));
 
 /***/ },
-/* 96 */
+/* 98 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -75372,7 +75384,7 @@
 	//! author : topchiyev : https://github.com/topchiyev
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -75472,7 +75484,7 @@
 	}));
 
 /***/ },
-/* 97 */
+/* 99 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -75482,7 +75494,7 @@
 	//! Author : Menelion Elensúle : https://github.com/Oire
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -75623,7 +75635,7 @@
 	}));
 
 /***/ },
-/* 98 */
+/* 100 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -75631,7 +75643,7 @@
 	//! author : Krasen Borisov : https://github.com/kraz
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -75717,7 +75729,7 @@
 	}));
 
 /***/ },
-/* 99 */
+/* 101 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -75725,7 +75737,7 @@
 	//! author : Kaushik Gandhi : https://github.com/kaushikgandhi
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -75834,7 +75846,7 @@
 	}));
 
 /***/ },
-/* 100 */
+/* 102 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -75842,7 +75854,7 @@
 	//! author : Thupten N. Chakrishar : https://github.com/vajradog
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -75948,7 +75960,7 @@
 	}));
 
 /***/ },
-/* 101 */
+/* 103 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -75956,7 +75968,7 @@
 	//! author : Jean-Baptiste Le Duigou : https://github.com/jbleduigou
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -76059,7 +76071,7 @@
 	}));
 
 /***/ },
-/* 102 */
+/* 104 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -76068,7 +76080,7 @@
 	//! based on (hr) translation by Bojan Marković
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -76204,7 +76216,7 @@
 	}));
 
 /***/ },
-/* 103 */
+/* 105 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -76212,7 +76224,7 @@
 	//! author : Juan G. Hurtado : https://github.com/juanghurtado
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -76287,7 +76299,7 @@
 	}));
 
 /***/ },
-/* 104 */
+/* 106 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -76295,7 +76307,7 @@
 	//! author : petrbela : https://github.com/petrbela
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -76448,7 +76460,7 @@
 	}));
 
 /***/ },
-/* 105 */
+/* 107 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -76456,7 +76468,7 @@
 	//! author : Anatoly Mironov : https://github.com/mirontoli
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -76515,7 +76527,7 @@
 	}));
 
 /***/ },
-/* 106 */
+/* 108 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -76523,7 +76535,7 @@
 	//! author : Robert Allen
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -76598,7 +76610,7 @@
 	}));
 
 /***/ },
-/* 107 */
+/* 109 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -76606,7 +76618,7 @@
 	//! author : Ulrik Nielsen : https://github.com/mrbase
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -76662,7 +76674,7 @@
 	}));
 
 /***/ },
-/* 108 */
+/* 110 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -76671,7 +76683,7 @@
 	//! author: Menelion Elensúle: https://github.com/Oire
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -76741,7 +76753,7 @@
 	}));
 
 /***/ },
-/* 109 */
+/* 111 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -76751,7 +76763,7 @@
 	//! author : Martin Groller : https://github.com/MadMG
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -76821,7 +76833,7 @@
 	}));
 
 /***/ },
-/* 110 */
+/* 112 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -76829,7 +76841,7 @@
 	//! author : Aggelos Karalias : https://github.com/mehiel
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -76919,14 +76931,14 @@
 	}));
 
 /***/ },
-/* 111 */
+/* 113 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
 	//! locale : australian english (en-au)
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -76989,7 +77001,7 @@
 	}));
 
 /***/ },
-/* 112 */
+/* 114 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -76997,7 +77009,7 @@
 	//! author : Jonathan Abourbih : https://github.com/jonbca
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -77056,7 +77068,7 @@
 	}));
 
 /***/ },
-/* 113 */
+/* 115 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -77064,7 +77076,7 @@
 	//! author : Chris Gedrim : https://github.com/chrisgedrim
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -77127,7 +77139,7 @@
 	}));
 
 /***/ },
-/* 114 */
+/* 116 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -77137,7 +77149,7 @@
 	//!          Se ne, bonvolu korekti kaj avizi min por ke mi povas lerni!
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -77204,7 +77216,7 @@
 	}));
 
 /***/ },
-/* 115 */
+/* 117 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -77212,7 +77224,7 @@
 	//! author : Julio Napurí : https://github.com/julionc
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -77287,7 +77299,7 @@
 	}));
 
 /***/ },
-/* 116 */
+/* 118 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -77296,7 +77308,7 @@
 	//! improvements : Illimar Tambek : https://github.com/ragulka
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -77371,7 +77383,7 @@
 	}));
 
 /***/ },
-/* 117 */
+/* 119 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -77379,7 +77391,7 @@
 	//! author : Eneko Illarramendi : https://github.com/eillarra
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -77439,7 +77451,7 @@
 	}));
 
 /***/ },
-/* 118 */
+/* 120 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -77447,7 +77459,7 @@
 	//! author : Ebrahim Byagowi : https://github.com/ebraminio
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -77548,7 +77560,7 @@
 	}));
 
 /***/ },
-/* 119 */
+/* 121 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -77556,7 +77568,7 @@
 	//! author : Tarmo Aidantausta : https://github.com/bleadof
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -77659,7 +77671,7 @@
 	}));
 
 /***/ },
-/* 120 */
+/* 122 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -77667,7 +77679,7 @@
 	//! author : Ragnar Johannesen : https://github.com/ragnar123
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -77723,7 +77735,7 @@
 	}));
 
 /***/ },
-/* 121 */
+/* 123 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -77731,7 +77743,7 @@
 	//! author : John Fischer : https://github.com/jfroffice
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -77789,7 +77801,7 @@
 	}));
 
 /***/ },
-/* 122 */
+/* 124 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -77797,7 +77809,7 @@
 	//! author : Jonathan Abourbih : https://github.com/jonbca
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -77851,7 +77863,7 @@
 	}));
 
 /***/ },
-/* 123 */
+/* 125 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -77859,7 +77871,7 @@
 	//! author : Robin van der Vliet : https://github.com/robin0van0der0v
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -77926,7 +77938,7 @@
 	}));
 
 /***/ },
-/* 124 */
+/* 126 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -77934,7 +77946,7 @@
 	//! author : Juan G. Hurtado : https://github.com/juanghurtado
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -78005,7 +78017,7 @@
 	}));
 
 /***/ },
-/* 125 */
+/* 127 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -78015,7 +78027,7 @@
 	//! author : Tal Ater : https://github.com/TalAter
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -78091,7 +78103,7 @@
 	}));
 
 /***/ },
-/* 126 */
+/* 128 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -78099,7 +78111,7 @@
 	//! author : Mayank Singhal : https://github.com/mayanksinghal
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -78218,7 +78230,7 @@
 	}));
 
 /***/ },
-/* 127 */
+/* 129 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -78226,7 +78238,7 @@
 	//! author : Bojan Marković : https://github.com/bmarkovic
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -78362,7 +78374,7 @@
 	}));
 
 /***/ },
-/* 128 */
+/* 130 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -78370,7 +78382,7 @@
 	//! author : Adam Brunner : https://github.com/adambrunner
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -78475,7 +78487,7 @@
 	}));
 
 /***/ },
-/* 129 */
+/* 131 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -78483,7 +78495,7 @@
 	//! author : Armendarabyan : https://github.com/armendarabyan
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -78590,7 +78602,7 @@
 	}));
 
 /***/ },
-/* 130 */
+/* 132 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -78599,7 +78611,7 @@
 	//! reference: http://id.wikisource.org/wiki/Pedoman_Umum_Ejaan_Bahasa_Indonesia_yang_Disempurnakan
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -78677,7 +78689,7 @@
 	}));
 
 /***/ },
-/* 131 */
+/* 133 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -78685,7 +78697,7 @@
 	//! author : Hinrik Örn Sigurðsson : https://github.com/hinrik
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -78808,7 +78820,7 @@
 	}));
 
 /***/ },
-/* 132 */
+/* 134 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -78817,7 +78829,7 @@
 	//! author: Mattia Larentis: https://github.com/nostalgiaz
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -78882,7 +78894,7 @@
 	}));
 
 /***/ },
-/* 133 */
+/* 135 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -78890,7 +78902,7 @@
 	//! author : LI Long : https://github.com/baryon
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -78951,7 +78963,7 @@
 	}));
 
 /***/ },
-/* 134 */
+/* 136 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -78960,7 +78972,7 @@
 	//! reference: http://jv.wikipedia.org/wiki/Basa_Jawa
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -79038,7 +79050,7 @@
 	}));
 
 /***/ },
-/* 135 */
+/* 137 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -79046,7 +79058,7 @@
 	//! author : Irakli Janiashvili : https://github.com/irakli-janiashvili
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -79145,7 +79157,7 @@
 	}));
 
 /***/ },
-/* 136 */
+/* 138 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -79153,7 +79165,7 @@
 	//! author : Kruy Vanna : https://github.com/kruyvanna
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -79207,7 +79219,7 @@
 	}));
 
 /***/ },
-/* 137 */
+/* 139 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -79219,7 +79231,7 @@
 	//! - Jeeeyul Lee <jeeeyul@gmail.com>
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -79279,7 +79291,7 @@
 	}));
 
 /***/ },
-/* 138 */
+/* 140 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -79287,7 +79299,7 @@
 	//! author : mweimerskirch : https://github.com/mweimerskirch, David Raison : https://github.com/kwisatz
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -79417,7 +79429,7 @@
 	}));
 
 /***/ },
-/* 139 */
+/* 141 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -79425,7 +79437,7 @@
 	//! author : Mindaugas Mozūras : https://github.com/mmozuras
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -79546,7 +79558,7 @@
 	}));
 
 /***/ },
-/* 140 */
+/* 142 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -79555,7 +79567,7 @@
 	//! author : Jānis Elmeris : https://github.com/JanisE
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -79646,7 +79658,7 @@
 	}));
 
 /***/ },
-/* 141 */
+/* 143 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -79654,7 +79666,7 @@
 	//! author : Miodrag Nikač <miodrag@restartit.me> : https://github.com/miodragnikac
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -79759,7 +79771,7 @@
 	}));
 
 /***/ },
-/* 142 */
+/* 144 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -79767,7 +79779,7 @@
 	//! author : Borislav Mickov : https://github.com/B0k0
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -79853,7 +79865,7 @@
 	}));
 
 /***/ },
-/* 143 */
+/* 145 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -79861,7 +79873,7 @@
 	//! author : Floyd Pink : https://github.com/floydpink
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -79928,7 +79940,7 @@
 	}));
 
 /***/ },
-/* 144 */
+/* 146 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -79936,7 +79948,7 @@
 	//! author : Harshad Kale : https://github.com/kalehv
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -80053,7 +80065,7 @@
 	}));
 
 /***/ },
-/* 145 */
+/* 147 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -80061,7 +80073,7 @@
 	//! author : Weldan Jamili : https://github.com/weldan
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -80139,7 +80151,7 @@
 	}));
 
 /***/ },
-/* 146 */
+/* 148 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -80147,7 +80159,7 @@
 	//! author : Weldan Jamili : https://github.com/weldan
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -80225,7 +80237,7 @@
 	}));
 
 /***/ },
-/* 147 */
+/* 149 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -80233,7 +80245,7 @@
 	//! author : Squar team, mysquar.com
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -80322,7 +80334,7 @@
 	}));
 
 /***/ },
-/* 148 */
+/* 150 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -80331,7 +80343,7 @@
 	//!           Sigurd Gartmann : https://github.com/sigurdga
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -80387,7 +80399,7 @@
 	}));
 
 /***/ },
-/* 149 */
+/* 151 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -80395,7 +80407,7 @@
 	//! author : suvash : https://github.com/suvash
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -80514,7 +80526,7 @@
 	}));
 
 /***/ },
-/* 150 */
+/* 152 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -80522,7 +80534,7 @@
 	//! author : Joris Röling : https://github.com/jjupiter
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -80589,7 +80601,7 @@
 	}));
 
 /***/ },
-/* 151 */
+/* 153 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -80597,7 +80609,7 @@
 	//! author : https://github.com/mechuwind
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -80653,7 +80665,7 @@
 	}));
 
 /***/ },
-/* 152 */
+/* 154 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -80661,7 +80673,7 @@
 	//! author : Rafal Hirsz : https://github.com/evoL
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -80762,7 +80774,7 @@
 	}));
 
 /***/ },
-/* 153 */
+/* 155 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -80770,7 +80782,7 @@
 	//! author : Jefferson : https://github.com/jalex79
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -80830,7 +80842,7 @@
 	}));
 
 /***/ },
-/* 154 */
+/* 156 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -80838,7 +80850,7 @@
 	//! author : Caio Ribeiro Pereira : https://github.com/caio-ribeiro-pereira
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -80894,7 +80906,7 @@
 	}));
 
 /***/ },
-/* 155 */
+/* 157 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -80903,7 +80915,7 @@
 	//! author : Valentin Agachi : https://github.com/avaly
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -80972,7 +80984,7 @@
 	}));
 
 /***/ },
-/* 156 */
+/* 158 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -80981,7 +80993,7 @@
 	//! Author : Menelion Elensúle : https://github.com/Oire
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -81140,7 +81152,7 @@
 	}));
 
 /***/ },
-/* 157 */
+/* 159 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -81148,7 +81160,7 @@
 	//! author : Sampath Sitinamaluwa : https://github.com/sampathsris
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -81209,7 +81221,7 @@
 	}));
 
 /***/ },
-/* 158 */
+/* 160 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -81218,7 +81230,7 @@
 	//! based on work of petrbela : https://github.com/petrbela
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -81371,7 +81383,7 @@
 	}));
 
 /***/ },
-/* 159 */
+/* 161 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -81379,7 +81391,7 @@
 	//! author : Robert Sedovšek : https://github.com/sedovsek
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -81535,7 +81547,7 @@
 	}));
 
 /***/ },
-/* 160 */
+/* 162 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -81545,7 +81557,7 @@
 	//! author : Oerd Cukalla : https://github.com/oerd (fixes)
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -81608,7 +81620,7 @@
 	}));
 
 /***/ },
-/* 161 */
+/* 163 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -81616,7 +81628,7 @@
 	//! author : Milan Janačković<milanjanackovic@gmail.com> : https://github.com/milan-j
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -81720,7 +81732,7 @@
 	}));
 
 /***/ },
-/* 162 */
+/* 164 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -81728,7 +81740,7 @@
 	//! author : Milan Janačković<milanjanackovic@gmail.com> : https://github.com/milan-j
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -81832,7 +81844,7 @@
 	}));
 
 /***/ },
-/* 163 */
+/* 165 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -81840,7 +81852,7 @@
 	//! author : Jens Alm : https://github.com/ulmus
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -81903,7 +81915,7 @@
 	}));
 
 /***/ },
-/* 164 */
+/* 166 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -81911,7 +81923,7 @@
 	//! author : Arjunkumar Krishnamoorthy : https://github.com/tk120404
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -82002,7 +82014,7 @@
 	}));
 
 /***/ },
-/* 165 */
+/* 167 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -82010,7 +82022,7 @@
 	//! author : Kridsada Thanabulpong : https://github.com/sirn
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -82071,7 +82083,7 @@
 	}));
 
 /***/ },
-/* 166 */
+/* 168 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -82079,7 +82091,7 @@
 	//! author : Dan Hagman
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -82137,7 +82149,7 @@
 	}));
 
 /***/ },
-/* 167 */
+/* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -82146,7 +82158,7 @@
 	//!           Burak Yiğit Kaya: https://github.com/BYK
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -82231,7 +82243,7 @@
 	}));
 
 /***/ },
-/* 168 */
+/* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -82239,7 +82251,7 @@
 	//! author : Robin van der Vliet : https://github.com/robin0van0der0v with the help of Iustì Canun
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -82320,7 +82332,7 @@
 	}));
 
 /***/ },
-/* 169 */
+/* 171 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -82328,7 +82340,7 @@
 	//! author : Abdel Said : https://github.com/abdelsaid
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -82382,7 +82394,7 @@
 	}));
 
 /***/ },
-/* 170 */
+/* 172 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -82390,7 +82402,7 @@
 	//! author : Abdel Said : https://github.com/abdelsaid
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -82444,7 +82456,7 @@
 	}));
 
 /***/ },
-/* 171 */
+/* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -82453,7 +82465,7 @@
 	//! Author : Menelion Elensúle : https://github.com/Oire
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -82601,7 +82613,7 @@
 	}));
 
 /***/ },
-/* 172 */
+/* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -82609,7 +82621,7 @@
 	//! author : Sardor Muminov : https://github.com/muminoff
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -82663,7 +82675,7 @@
 	}));
 
 /***/ },
-/* 173 */
+/* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -82671,7 +82683,7 @@
 	//! author : Bang Nguyen : https://github.com/bangnk
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -82733,7 +82745,7 @@
 	}));
 
 /***/ },
-/* 174 */
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -82742,7 +82754,7 @@
 	//! author : Zeno Zeng : https://github.com/zenozeng
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -82864,7 +82876,7 @@
 	}));
 
 /***/ },
-/* 175 */
+/* 177 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -82872,7 +82884,7 @@
 	//! author : Ben : https://github.com/ben-lin
 	
 	(function (global, factory) {
-	    true ? factory(__webpack_require__(88)) :
+	    true ? factory(__webpack_require__(90)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -82969,7 +82981,7 @@
 	}));
 
 /***/ },
-/* 176 */
+/* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -82984,7 +82996,7 @@
 	
 	var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
 	
-	var _createComponent = __webpack_require__(177);
+	var _createComponent = __webpack_require__(179);
 	
 	var _createComponent2 = _interopRequireDefault(_createComponent);
 	
@@ -82994,7 +83006,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 177 */
+/* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -83005,15 +83017,15 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _createHtml = __webpack_require__(178);
+	var _createHtml = __webpack_require__(180);
 	
 	var _createHtml2 = _interopRequireDefault(_createHtml);
 	
-	var _createController = __webpack_require__(179);
+	var _createController = __webpack_require__(181);
 	
 	var _createController2 = _interopRequireDefault(_createController);
 	
-	__webpack_require__(180);
+	__webpack_require__(182);
 	
 	var createComponent = function createComponent() {
 	  return {
@@ -83030,13 +83042,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 178 */
+/* 180 */
 /***/ function(module, exports) {
 
 	module.exports = "<ion-modal-view>\n  <ion-content>\n    <hero></hero>\n    <div class=\"create-modal\">\n      <div class=\"row\">\n        <div class=\"col\">\n          <search-bar></search-bar>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col\">\n          <span class=\"create-label\">Attendees</span>\n          <dq-slider value=\"vm.people\" max=\"8\" type=\"'person'\"></dq-slider>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col\">\n          <span class=\"create-label\">Fee</span>\n          <dq-slider value=\"vm.coins\" max=\"8\" type=\"'coin'\"></dq-slider>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col col-25\">\n          <button class=\"close-button\" ng-click=\"vm.closeModal()\">\n            &#10006;\n          </button>\n        </div>\n        <div class=\"col col-75\">\n          <button class=\"create-button\" ng-click=\"vm.start()\">\n            Start cooking!\n          </button>\n        </div>\n      </div>\n    </div>\n  </ion-content>\n</ion-modal-view>\n"
 
 /***/ },
-/* 179 */
+/* 181 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -83095,13 +83107,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 180 */
+/* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(181);
+	var content = __webpack_require__(183);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(13)(content, {});
@@ -83121,7 +83133,7 @@
 	}
 
 /***/ },
-/* 181 */
+/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(12)();
@@ -83129,19 +83141,19 @@
 	
 	
 	// module
-	exports.push([module.id, ".button-pill {\n  border: 2px solid #000;\n  background: #eee;\n  border-radius: 50px !important;\n}\n\n.create-label {\n  font-size: 20px;\n  display: block;\n  font-weight: bold;\n}\n\n.create-modal {\n  padding: 40px 20px 20px;\n  background: url(" + __webpack_require__(182) + ") no-repeat;\n  background-size: 100%;\n  height: 120%;\n}\n\n.create-modal > .row:nth-child(1) {\n  margin-bottom: 20px;\n}\n\n.close-button {\n  padding: 4px;\n  color: #A42100;\n  background-color: #D75530;\n  box-shadow: 0 0 0 4px #A42100;\n  border: 3px solid #D1310A !important;\n  border-radius: 50px;\n  font-size: 18px !important;\n  font-weight: 600;\n  width: 100%;\n}\n\n.create-button {\n  padding: 4px;\n  background-color: #DBCFB1;\n  box-shadow: 0 0 0 4px #968D78;\n  border: 3px solid #C4BA9E !important;\n  border-radius: 50px;\n  font-size: 18px !important;\n  font-weight: 600;\n  width: 100%;\n}\n\n.create-button.activated,\n.create-button:active,\n.create-button:hover {\n  color: #676363;\n  background-color: rgba(0, 0, 0, 0.28);\n}", ""]);
+	exports.push([module.id, ".button-pill {\n  border: 2px solid #000;\n  background: #eee;\n  border-radius: 50px !important;\n}\n\n.create-label {\n  font-size: 20px;\n  display: block;\n  font-weight: bold;\n}\n\n.create-modal {\n  padding: 40px 20px 20px;\n  background: url(" + __webpack_require__(184) + ") no-repeat;\n  background-size: 100%;\n  height: 120%;\n}\n\n.create-modal > .row:nth-child(1) {\n  margin-bottom: 20px;\n}\n\n.close-button {\n  padding: 4px;\n  color: #A42100;\n  background-color: #D75530;\n  box-shadow: 0 0 0 4px #A42100;\n  border: 3px solid #D1310A !important;\n  border-radius: 50px;\n  font-size: 18px !important;\n  font-weight: 600;\n  width: 100%;\n}\n\n.create-button {\n  padding: 4px;\n  background-color: #DBCFB1;\n  box-shadow: 0 0 0 4px #968D78;\n  border: 3px solid #C4BA9E !important;\n  border-radius: 50px;\n  font-size: 18px !important;\n  font-weight: 600;\n  width: 100%;\n}\n\n.create-button.activated,\n.create-button:active,\n.create-button:hover {\n  color: #676363;\n  background-color: rgba(0, 0, 0, 0.28);\n}", ""]);
 	
 	// exports
 
 
 /***/ },
-/* 182 */
+/* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "200e9a75510b270df65206440648df5b.svg"
 
 /***/ },
-/* 183 */
+/* 185 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -83160,7 +83172,7 @@
 	
 	var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
 	
-	var _profileComponent = __webpack_require__(184);
+	var _profileComponent = __webpack_require__(186);
 	
 	var _profileComponent2 = _interopRequireDefault(_profileComponent);
 	
@@ -83175,7 +83187,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 184 */
+/* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -83186,15 +83198,15 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _profileHtml = __webpack_require__(185);
+	var _profileHtml = __webpack_require__(187);
 	
 	var _profileHtml2 = _interopRequireDefault(_profileHtml);
 	
-	var _profileController = __webpack_require__(186);
+	var _profileController = __webpack_require__(188);
 	
 	var _profileController2 = _interopRequireDefault(_profileController);
 	
-	__webpack_require__(187);
+	__webpack_require__(189);
 	
 	var profileComponent = function profileComponent() {
 	  return {
@@ -83211,13 +83223,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 185 */
+/* 187 */
 /***/ function(module, exports) {
 
-	module.exports = "<ion-content class=\"has-tabs\">\n    <hero></hero>\n\n    <user-header></user-header>\n\n    <badges></badges>\n\n    <div class=\"row\">\n        <button class=\"create-button padding-object\">\n            Request a dinner!\n        </button>\n    </div>\n\n    <div class=\"row\">\n        <h2 class=\"padding-object\" style=\"margin-bottom:0;\"><strong>Reviews</strong></h2>\n    </div>\n\n    <div class=\"discover-item\">\n        <div class=\"row\">\n            <div class=\"col col-20\">\n                <img class=\"image\" ng-src=\"{{ vm.data.image }}\" alt=\"\"/>\n            </div>\n            <div class=\"col col-80\">\n                <div class=\"item-information\">\n                    <div class=\"clearfix\">\n                        <span class=\"title\">Flip van Haaren</span>\n                        <span class=\"timeago\">3 days ago</span>\n                    </div>\n                    <div class=\"clearfix\">\n                        <span class=\"price\">Failed food experiment, great hospitality :D</span>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n\n    <div class=\"discover-item\">\n        <div class=\"row\">\n            <div class=\"col col-20\">\n                <img class=\"image\" ng-src=\"{{ vm.data.image }}\" alt=\"\"/>\n            </div>\n            <div class=\"col col-80\">\n                <div class=\"item-information\">\n                    <div class=\"clearfix\">\n                        <span class=\"title\">Madhu</span>\n                        <span class=\"timeago\">5 days ago</span>\n                    </div>\n                    <div class=\"clearfix\">\n                        <span class=\"price\">Master of sushi!</span>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n\n    <br>\n\n    <div class=\"padding\">\n      <button class=\"button button-assertive button-block button-outline\" ng-click=\"vm.logout()\" on-tap=\"vm.logout()\">\n        Logout\n      </button>\n    </div>\n\n    &nbsp;<p>\n    &nbsp;<p>\n\n\n</ion-content>\n"
+	module.exports = "<ion-content class=\"has-tabs\">\n    <hero></hero>\n\n    <user-header></user-header>\n\n    <badges></badges>\n\n    <div class=\"row\">\n        <button class=\"create-button padding-object\">\n            Request a dinner!\n        </button>\n    </div>\n\n    <div class=\"row\">\n        <h2 class=\"padding-object\" style=\"margin-bottom:0;\"><strong>Reviews</strong></h2>\n    </div>\n\n    <div class=\"discover-item\">\n        <div class=\"row\">\n            <div class=\"col col-20\">\n                <img class=\"image\" ng-src=\"{{ vm.data.image }}\" alt=\"\"/>\n            </div>\n            <div class=\"col col-80\">\n                <div class=\"item-information\">\n                    <div class=\"clearfix\">\n                        <span class=\"title\">Flip van Haaren</span>\n                        <span class=\"timeago\">3 days ago</span>\n                    </div>\n                    <div class=\"clearfix\">\n                        <span class=\"price\">Failed food experiment, great hospitality :D</span>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n\n    <div class=\"discover-item\">\n        <div class=\"row\">\n            <div class=\"col col-20\">\n                <img class=\"image\" ng-src=\"{{ vm.data.image }}\" alt=\"\"/>\n            </div>\n            <div class=\"col col-80\">\n                <div class=\"item-information\">\n                    <div class=\"clearfix\">\n                        <span class=\"title\">Madhu</span>\n                        <span class=\"timeago\">5 days ago</span>\n                    </div>\n                    <div class=\"clearfix\">\n                        <span class=\"price\">Master of sushi!</span>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n\n    <br>\n\n    <div class=\"padding\">\n      <button class=\"button button-assertive button-block button-outline\" style=\"border-radius: 40px;margin: 0 auto; width: 54%;\" ng-click=\"vm.logout()\" on-tap=\"vm.logout()\">\n        Logout\n      </button>\n    </div>\n\n    &nbsp;<p>\n    &nbsp;<p>\n\n\n</ion-content>\n"
 
 /***/ },
-/* 186 */
+/* 188 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -83239,13 +83251,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 187 */
+/* 189 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(188);
+	var content = __webpack_require__(190);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(13)(content, {});
@@ -83265,7 +83277,7 @@
 	}
 
 /***/ },
-/* 188 */
+/* 190 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(12)();
@@ -83279,7 +83291,7 @@
 
 
 /***/ },
-/* 189 */
+/* 191 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -83298,7 +83310,7 @@
 	
 	var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
 	
-	var _notificationsComponent = __webpack_require__(190);
+	var _notificationsComponent = __webpack_require__(192);
 	
 	var _notificationsComponent2 = _interopRequireDefault(_notificationsComponent);
 	
@@ -83313,7 +83325,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 190 */
+/* 192 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -83324,15 +83336,15 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _notificationsHtml = __webpack_require__(191);
+	var _notificationsHtml = __webpack_require__(193);
 	
 	var _notificationsHtml2 = _interopRequireDefault(_notificationsHtml);
 	
-	var _notificationsController = __webpack_require__(192);
+	var _notificationsController = __webpack_require__(194);
 	
 	var _notificationsController2 = _interopRequireDefault(_notificationsController);
 	
-	__webpack_require__(193);
+	__webpack_require__(195);
 	
 	var notificationsComponent = function notificationsComponent() {
 	  return {
@@ -83349,13 +83361,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 191 */
+/* 193 */
 /***/ function(module, exports) {
 
 	module.exports = "<ion-content class=\"has-tabs\">\n\n</ion-content>\n"
 
 /***/ },
-/* 192 */
+/* 194 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -83376,13 +83388,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 193 */
+/* 195 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(194);
+	var content = __webpack_require__(196);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(13)(content, {});
@@ -83402,7 +83414,7 @@
 	}
 
 /***/ },
-/* 194 */
+/* 196 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(12)();
@@ -83416,7 +83428,7 @@
 
 
 /***/ },
-/* 195 */
+/* 197 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -83435,7 +83447,7 @@
 	
 	var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
 	
-	var _reviewComponent = __webpack_require__(196);
+	var _reviewComponent = __webpack_require__(198);
 	
 	var _reviewComponent2 = _interopRequireDefault(_reviewComponent);
 	
@@ -83450,7 +83462,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 196 */
+/* 198 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -83461,15 +83473,15 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _reviewHtml = __webpack_require__(197);
+	var _reviewHtml = __webpack_require__(199);
 	
 	var _reviewHtml2 = _interopRequireDefault(_reviewHtml);
 	
-	var _reviewController = __webpack_require__(198);
+	var _reviewController = __webpack_require__(200);
 	
 	var _reviewController2 = _interopRequireDefault(_reviewController);
 	
-	__webpack_require__(199);
+	__webpack_require__(201);
 	
 	var reviewComponent = function reviewComponent() {
 	  return {
@@ -83486,13 +83498,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 197 */
+/* 199 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"bar bar-header bar-positive\">\n  <h1 class=\"title\">{{ vm.name }}</h1>\n</div>\n\n<ion-content class=\"has-header has-tabs\">\n\n</ion-content>"
 
 /***/ },
-/* 198 */
+/* 200 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -83513,13 +83525,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 199 */
+/* 201 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(200);
+	var content = __webpack_require__(202);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(13)(content, {});
@@ -83539,7 +83551,7 @@
 	}
 
 /***/ },
-/* 200 */
+/* 202 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(12)();
@@ -83553,7 +83565,7 @@
 
 
 /***/ },
-/* 201 */
+/* 203 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -83572,7 +83584,7 @@
 	
 	var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
 	
-	var _badgesComponent = __webpack_require__(202);
+	var _badgesComponent = __webpack_require__(204);
 	
 	var _badgesComponent2 = _interopRequireDefault(_badgesComponent);
 	
@@ -83582,7 +83594,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 202 */
+/* 204 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -83593,15 +83605,15 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _badgesHtml = __webpack_require__(203);
+	var _badgesHtml = __webpack_require__(205);
 	
 	var _badgesHtml2 = _interopRequireDefault(_badgesHtml);
 	
-	var _badgesController = __webpack_require__(204);
+	var _badgesController = __webpack_require__(206);
 	
 	var _badgesController2 = _interopRequireDefault(_badgesController);
 	
-	__webpack_require__(205);
+	__webpack_require__(207);
 	
 	var badgesComponent = function badgesComponent() {
 	  return {
@@ -83618,13 +83630,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 203 */
+/* 205 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"row\">\n  <div class=\"col-25\">\n    <h3 style=\"margin: 12px 0 0 0; font-size: 20px;\">\n      <strong>Badges</strong>\n    </h3>\n  </div>\n\n  <div class=\"col-75\">\n    <div class=\"button-bar\">\n      <a class=\"button\"><div class=\"dbadge badge-1\"></div></a>\n      <a class=\"button\"><div class=\"dbadge badge-2\"></div></a>\n      <a class=\"button\"><div class=\"dbadge badge-3\"></div></a>\n      <a class=\"button\"><div class=\"dbadge badge-4\"></div></a>\n    </div>\n  </div>\n\n</div>"
 
 /***/ },
-/* 204 */
+/* 206 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -83645,13 +83657,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 205 */
+/* 207 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(206);
+	var content = __webpack_require__(208);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(13)(content, {});
@@ -83671,7 +83683,7 @@
 	}
 
 /***/ },
-/* 206 */
+/* 208 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(12)();
@@ -83679,37 +83691,37 @@
 	
 	
 	// module
-	exports.push([module.id, "badges {\n  display: block;\n  padding: 45px 15px 15px 25px;\n  background: #E4D4AD;\n  border-top: 6px solid #D6C296;\n}\n\nbadges .button-bar .button {\n  background: none;\n  border: none;\n  padding: 0 !important;\n}\n\n.dbadge {\n  width: 50px;\n  height: 50px;\n  background-repeat: no-repeat;\n}\n\n.badge-1 {\n  background-image: url(" + __webpack_require__(207) + ");\n}\n\n.badge-2 {\n  background-image: url(" + __webpack_require__(208) + ");\n}\n\n.badge-3 {\n  background-image: url(" + __webpack_require__(209) + ");\n}\n\n.badge-4 {\n  background-image: url(" + __webpack_require__(210) + ");\n}", ""]);
+	exports.push([module.id, "badges {\n  display: block;\n  padding: 45px 15px 15px 25px;\n  background: #E4D4AD;\n  border-top: 6px solid #D6C296;\n}\n\nbadges .button-bar .button {\n  background: none;\n  border: none;\n  padding: 0 !important;\n}\n\n.dbadge {\n  width: 50px;\n  height: 50px;\n  background-repeat: no-repeat;\n}\n\n.badge-1 {\n  background-image: url(" + __webpack_require__(209) + ");\n}\n\n.badge-2 {\n  background-image: url(" + __webpack_require__(210) + ");\n}\n\n.badge-3 {\n  background-image: url(" + __webpack_require__(211) + ");\n}\n\n.badge-4 {\n  background-image: url(" + __webpack_require__(212) + ");\n}", ""]);
 	
 	// exports
 
 
 /***/ },
-/* 207 */
+/* 209 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "b45d11e00282aed27cc3a4b585e89afd.svg"
 
 /***/ },
-/* 208 */
+/* 210 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "ff23ef1a03f75389e84e18dd9973d831.svg"
 
 /***/ },
-/* 209 */
+/* 211 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "98a8a609a090d8401c5de970766054f1.svg"
 
 /***/ },
-/* 210 */
+/* 212 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "29c662ce06b39be6486b616cc0ad4758.svg"
 
 /***/ },
-/* 211 */
+/* 213 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -83728,7 +83740,7 @@
 	
 	var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
 	
-	var _userHeaderComponent = __webpack_require__(212);
+	var _userHeaderComponent = __webpack_require__(214);
 	
 	var _userHeaderComponent2 = _interopRequireDefault(_userHeaderComponent);
 	
@@ -83738,7 +83750,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 212 */
+/* 214 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -83749,15 +83761,15 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _userHeaderHtml = __webpack_require__(213);
+	var _userHeaderHtml = __webpack_require__(215);
 	
 	var _userHeaderHtml2 = _interopRequireDefault(_userHeaderHtml);
 	
-	var _userHeaderController = __webpack_require__(214);
+	var _userHeaderController = __webpack_require__(216);
 	
 	var _userHeaderController2 = _interopRequireDefault(_userHeaderController);
 	
-	__webpack_require__(215);
+	__webpack_require__(217);
 	
 	var userHeaderComponent = function userHeaderComponent() {
 	  return {
@@ -83774,13 +83786,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 213 */
+/* 215 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"user-card\">\n\n  <div class=\"item item-avatar\">\n    <div class=\"user-image\" ng-style=\"{'background-image': 'url(' + vm.user.profileImageURL + ')'}\"></div>\n    <div class=\"user-content\">\n      <h1>{{vm.user.displayName}}</h1>\n      <p>Table Rookie</p>\n    </div>\n  </div>\n\n</div>\n"
 
 /***/ },
-/* 214 */
+/* 216 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -83803,13 +83815,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 215 */
+/* 217 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(216);
+	var content = __webpack_require__(218);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(13)(content, {});
@@ -83829,7 +83841,7 @@
 	}
 
 /***/ },
-/* 216 */
+/* 218 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(12)();
@@ -83843,7 +83855,7 @@
 
 
 /***/ },
-/* 217 */
+/* 219 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -83858,7 +83870,7 @@
 	
 	var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
 	
-	var _slidersComponent = __webpack_require__(218);
+	var _slidersComponent = __webpack_require__(220);
 	
 	var _slidersComponent2 = _interopRequireDefault(_slidersComponent);
 	
@@ -83868,7 +83880,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 218 */
+/* 220 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -83877,7 +83889,7 @@
 	  value: true
 	});
 	
-	__webpack_require__(219);
+	__webpack_require__(221);
 	
 	exports['default'] = function () {
 	  return {
@@ -83909,13 +83921,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 219 */
+/* 221 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(220);
+	var content = __webpack_require__(222);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(13)(content, {});
@@ -83935,7 +83947,7 @@
 	}
 
 /***/ },
-/* 220 */
+/* 222 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(12)();
@@ -83943,37 +83955,37 @@
 	
 	
 	// module
-	exports.push([module.id, ".dq-slider {\n  padding-left: 0 !important;\n  padding-right: 0 !important;\n}\n\n.dq-slider .person {\n  display: inline-block;\n  height: 60px;\n  width: 23px;\n  background-image: url(" + __webpack_require__(221) + ");\n  background-repeat: no-repeat;\n}\n\n.dq-slider .person.active {\n  background-image: url(" + __webpack_require__(222) + ");\n}\n\n.dq-slider .coin {\n  display: inline-block;\n  height: 35px;\n  width: 35px;\n  background-image: url(" + __webpack_require__(223) + ");\n  background-repeat: no-repeat;\n}\n\n.dq-slider .coin.active {\n  background-image: url(" + __webpack_require__(224) + ");\n}", ""]);
+	exports.push([module.id, ".dq-slider {\n  padding-left: 0 !important;\n  padding-right: 0 !important;\n}\n\n.dq-slider .person {\n  display: inline-block;\n  height: 60px;\n  width: 23px;\n  background-image: url(" + __webpack_require__(223) + ");\n  background-repeat: no-repeat;\n}\n\n.dq-slider .person.active {\n  background-image: url(" + __webpack_require__(224) + ");\n}\n\n.dq-slider .coin {\n  display: inline-block;\n  height: 35px;\n  width: 35px;\n  background-image: url(" + __webpack_require__(225) + ");\n  background-repeat: no-repeat;\n}\n\n.dq-slider .coin.active {\n  background-image: url(" + __webpack_require__(226) + ");\n}", ""]);
 	
 	// exports
 
 
 /***/ },
-/* 221 */
+/* 223 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "4eab9c82aa3aedece7c160414665bf1d.svg"
 
 /***/ },
-/* 222 */
+/* 224 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "72523de905d3ccff3a644765075cb21b.svg"
 
 /***/ },
-/* 223 */
+/* 225 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "2c4ed27b562a72609325353737ea404f.svg"
 
 /***/ },
-/* 224 */
+/* 226 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "986cc1b65170d48109edd4f37c0fd071.svg"
 
 /***/ },
-/* 225 */
+/* 227 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -83992,7 +84004,7 @@
 	
 	var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
 	
-	var _searchBarComponent = __webpack_require__(226);
+	var _searchBarComponent = __webpack_require__(228);
 	
 	var _searchBarComponent2 = _interopRequireDefault(_searchBarComponent);
 	
@@ -84002,7 +84014,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 226 */
+/* 228 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -84013,15 +84025,15 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _searchBarHtml = __webpack_require__(227);
+	var _searchBarHtml = __webpack_require__(229);
 	
 	var _searchBarHtml2 = _interopRequireDefault(_searchBarHtml);
 	
-	var _searchBarController = __webpack_require__(228);
+	var _searchBarController = __webpack_require__(230);
 	
 	var _searchBarController2 = _interopRequireDefault(_searchBarController);
 	
-	__webpack_require__(229);
+	__webpack_require__(231);
 	
 	var searchBarComponent = function searchBarComponent() {
 	  return {
@@ -84038,13 +84050,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 227 */
+/* 229 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"search-container\">\n  <div class=\"search-wrapper\" ng-class=\"{'activated': vm.activated}\">\n    <input class=\"search-input\" ng-model=\"vm.search\" ng-click=\"vm.activateSearch()\" ng-class=\"{'activated': vm.activated}\" placeholder=\"Search Recipes\" type=\"text\" data-tap-disabled=\"true\"/>\n    <div class=\"search-results\" ng-show=\"vm.activated\">\n      <ul>\n        <li ng-repeat=\"recipy in vm.recipies | filter:vm.search | limitTo: 100\" ng-click=\"vm.showPopup(recipy)\">\n          <div class=\"row\">\n            <div class=\"col-25\">\n              <img class=\"recipy-image\" ng-src=\"{{ recipy.receptafbeelding }}\" alt=\"\"/>\n            </div>\n            <div class=\"col\"></div>\n            <div class=\"col-66\">\n              <span class=\"recipy-title\" ng-bind=\"recipy.recepttitel\"></span>\n              <span class=\"recipy-time\">{{ recipy.receptbereidingstijd }} minutes</span>\n            </div>\n          </div>\n        </li>\n      </ul>\n    </div>\n  </div>\n</div>\n"
 
 /***/ },
-/* 228 */
+/* 230 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -84094,13 +84106,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 229 */
+/* 231 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(230);
+	var content = __webpack_require__(232);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(13)(content, {});
@@ -84120,7 +84132,7 @@
 	}
 
 /***/ },
-/* 230 */
+/* 232 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(12)();
@@ -84128,13 +84140,13 @@
 	
 	
 	// module
-	exports.push([module.id, ".search-input {\n  width: 100%;\n  background-color: #DBCFB1;\n  border: 3px solid #C4BA9E !important;\n  padding: 4px !important;\n  border-radius: 50px;\n  line-height: normal !important;\n  height: auto !important;\n  color: #968D78 !important;\n  font-size: 18px !important;\n  transition: all 0.25s;\n  background-image: url(" + __webpack_require__(76) + ");\n  background-repeat: no-repeat;\n  background-position-x: 10px;\n  background-size: 22px;\n  background-position-y: 6px;\n  padding-left: 45px !important;\n  padding-right: 45px !important;\n}\n\n.search-input.activated {\n  background-color: #fff;\n  color: #5D5D5D;\n  border-color: #D7C393;\n  border-radius: 15px 15px 0 0;\n  padding: 10px 4px !important;\n  transition: all 0.25s;\n  font-weight: 600;\n  border-bottom: 0 !important;\n  background-position-y: 13px;\n  padding-left: 45px !important;\n  padding-right: 45px !important;\n}\n\n.search-input.activated::-webkit-input-placeholder {\n  color: #968D78 !important;\n  text-align: left;\n}\n\n.search-input::-webkit-input-placeholder {\n  color: #968D78 !important;\n  text-align: center;\n}\n\n.search-wrapper {\n  position: relative;\n  width: inherit;\n  box-shadow: 0 0 0 4px #968D78;\n  border-radius: 50px;\n}\n\n.search-wrapper.activated {\n  box-shadow: 0 0 0 4px #F2E7C2;\n  border-radius: 15px 15px 0 0;\n}\n\n.search-results {\n  overflow: scroll;\n  position: absolute;\n  height: 300px;\n  width: 100%;\n  box-shadow: 0 3px 0 3px #F2E7C2;\n  border-radius: 0 0 15px 15px;\n  border: 3px solid #C4BA9E !important;\n  border-top: none !important;\n  padding: 15px;\n  background-color: #F2E5C4;\n}\n\n.search-container {\n  width: 100%;\n}\n\n.recipy-title {\n  font-weight: 600;\n  margin-top: 15px;\n  display: block;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n\n.recipy-time {\n  display: block;\n}\n\n.recipy-image {\n  border-radius: 100%;\n  width: 100%;\n  border: 5px solid #fff;\n}\n\n.popup-container .popup {\n  width: 300px !important;\n  border-radius: 15px !important;\n  background-color: #fff !important;\n}\n\nh3.popup-title {\n  color: #5D5D5D;\n  font-size: 20px;\n  font-weight: 600;\n}\n\n.bold-title-thing {\n  font-weight: 600;\n  margin-bottom: 5px;\n  display: block;\n}\n\n.choose-button {\n  padding: 4px;\n  background-color: #DBCFB1;\n  box-shadow: 0 0 0 4px #968D78;\n  border: 3px solid #C4BA9E !important;\n  border-radius: 50px;\n  font-size: 18px !important;\n  font-weight: 600;\n  width: 100%;\n  margin-top: 30px;\n}\n\n.choose-button.activated,\n.choose-button:active,\n.choose-button:hover {\n  color: #676363;\n  background-color: rgba(0, 0, 0, 0.28);\n}\n\n.popup-body {\n  padding: 20px !important;\n}\n\n.center-dot {\n  margin-left: 5px;\n  margin-right: 5px;\n}", ""]);
+	exports.push([module.id, ".search-input {\n  width: 100%;\n  background-color: #DBCFB1;\n  border: 3px solid #C4BA9E !important;\n  padding: 4px !important;\n  border-radius: 50px;\n  line-height: normal !important;\n  height: auto !important;\n  color: #968D78 !important;\n  font-size: 18px !important;\n  transition: all 0.25s;\n  background-image: url(" + __webpack_require__(78) + ");\n  background-repeat: no-repeat;\n  background-position-x: 10px;\n  background-size: 22px;\n  background-position-y: 6px;\n  padding-left: 45px !important;\n  padding-right: 45px !important;\n}\n\n.search-input.activated {\n  background-color: #fff;\n  color: #5D5D5D;\n  border-color: #D7C393;\n  border-radius: 15px 15px 0 0;\n  padding: 10px 4px !important;\n  transition: all 0.25s;\n  font-weight: 600;\n  border-bottom: 0 !important;\n  background-position-y: 13px;\n  padding-left: 45px !important;\n  padding-right: 45px !important;\n}\n\n.search-input.activated::-webkit-input-placeholder {\n  color: #968D78 !important;\n  text-align: left;\n}\n\n.search-input::-webkit-input-placeholder {\n  color: #968D78 !important;\n  text-align: center;\n}\n\n.search-wrapper {\n  position: relative;\n  width: inherit;\n  box-shadow: 0 0 0 4px #968D78;\n  border-radius: 50px;\n}\n\n.search-wrapper.activated {\n  box-shadow: 0 0 0 4px #F2E7C2;\n  border-radius: 15px 15px 0 0;\n}\n\n.search-results {\n  overflow: scroll;\n  position: absolute;\n  height: 300px;\n  width: 100%;\n  box-shadow: 0 3px 0 3px #F2E7C2;\n  border-radius: 0 0 15px 15px;\n  border: 3px solid #C4BA9E !important;\n  border-top: none !important;\n  padding: 15px;\n  background-color: #F2E5C4;\n}\n\n.search-container {\n  width: 100%;\n}\n\n.recipy-title {\n  font-weight: 600;\n  margin-top: 15px;\n  display: block;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n\n.recipy-time {\n  display: block;\n}\n\n.recipy-image {\n  border-radius: 100%;\n  width: 100%;\n  border: 5px solid #fff;\n}\n\n.popup-container .popup {\n  width: 300px !important;\n  border-radius: 15px !important;\n  background-color: #fff !important;\n}\n\nh3.popup-title {\n  color: #5D5D5D;\n  font-size: 20px;\n  font-weight: 600;\n}\n\n.bold-title-thing {\n  font-weight: 600;\n  margin-bottom: 5px;\n  display: block;\n}\n\n.choose-button {\n  padding: 4px;\n  background-color: #DBCFB1;\n  box-shadow: 0 0 0 4px #968D78;\n  border: 3px solid #C4BA9E !important;\n  border-radius: 50px;\n  font-size: 18px !important;\n  font-weight: 600;\n  width: 100%;\n  margin-top: 30px;\n}\n\n.choose-button.activated,\n.choose-button:active,\n.choose-button:hover {\n  color: #676363;\n  background-color: rgba(0, 0, 0, 0.28);\n}\n\n.popup-body {\n  padding: 20px !important;\n}\n\n.center-dot {\n  margin-left: 5px;\n  margin-right: 5px;\n}", ""]);
 	
 	// exports
 
 
 /***/ },
-/* 231 */
+/* 233 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -84145,7 +84157,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _appHtml = __webpack_require__(232);
+	var _appHtml = __webpack_require__(234);
 	
 	var _appHtml2 = _interopRequireDefault(_appHtml);
 	
@@ -84167,19 +84179,19 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 232 */
+/* 234 */
 /***/ function(module, exports) {
 
 	module.exports = "<!-- Place all UI elements intended to be present across all routes in this file -->\n<div class=\"app\">\n  <ion-nav-view>\n    <ion-view></ion-view>\n  </ion-nav-view>\n  <footer-nav ng-if=\"currentUser\"></footer-nav>\n</div>\n"
 
 /***/ },
-/* 233 */
+/* 235 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(234);
+	var content = __webpack_require__(236);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(13)(content, {});
@@ -84199,7 +84211,7 @@
 	}
 
 /***/ },
-/* 234 */
+/* 236 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(12)();
@@ -84213,13 +84225,13 @@
 
 
 /***/ },
-/* 235 */
+/* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(236);
+	var content = __webpack_require__(238);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(13)(content, {});
@@ -84239,21 +84251,21 @@
 	}
 
 /***/ },
-/* 236 */
+/* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(12)();
 	// imports
-	exports.i(__webpack_require__(237), "");
+	exports.i(__webpack_require__(239), "");
 	
 	// module
-	exports.push([module.id, "@charset \"UTF-8\";\n\n.button-pill {\n  border: 2px solid #000;\n  background: #eee;\n  border-radius: 50px !important;\n}\n\n/*!\n  Ionicons, v2.0.1\n  Created by Ben Sperry for the Ionic Framework, http://ionicons.com/\n  https://twitter.com/benjsperry  https://twitter.com/ionicframework\n  MIT License: https://github.com/driftyco/ionicons\n\n  Android-style icons originally built by Google’s\n  Material Design Icons: https://github.com/google/material-design-icons\n  used under CC BY http://creativecommons.org/licenses/by/4.0/\n  Modified icons to fit ionicon’s grid from original.\n*/\n\n@font-face {\n  font-family: \"Ionicons\";\n  src: url(" + __webpack_require__(238) + ");\n  src: url(" + __webpack_require__(238) + ") format(\"embedded-opentype\"), url(" + __webpack_require__(239) + ") format(\"truetype\"), url(" + __webpack_require__(240) + ") format(\"woff\"), url(" + __webpack_require__(240) + ") format(\"woff\"), url(" + __webpack_require__(241) + ") format(\"svg\");\n  font-weight: normal;\n  font-style: normal;\n}\n\n.ion,\n.ionicons,\n.ion-alert:before,\n.ion-alert-circled:before,\n.ion-android-add:before,\n.ion-android-add-circle:before,\n.ion-android-alarm-clock:before,\n.ion-android-alert:before,\n.ion-android-apps:before,\n.ion-android-archive:before,\n.ion-android-arrow-back:before,\n.ion-android-arrow-down:before,\n.ion-android-arrow-dropdown:before,\n.ion-android-arrow-dropdown-circle:before,\n.ion-android-arrow-dropleft:before,\n.ion-android-arrow-dropleft-circle:before,\n.ion-android-arrow-dropright:before,\n.ion-android-arrow-dropright-circle:before,\n.ion-android-arrow-dropup:before,\n.ion-android-arrow-dropup-circle:before,\n.ion-android-arrow-forward:before,\n.ion-android-arrow-up:before,\n.ion-android-attach:before,\n.ion-android-bar:before,\n.ion-android-bicycle:before,\n.ion-android-boat:before,\n.ion-android-bookmark:before,\n.ion-android-bulb:before,\n.ion-android-bus:before,\n.ion-android-calendar:before,\n.ion-android-call:before,\n.ion-android-camera:before,\n.ion-android-cancel:before,\n.ion-android-car:before,\n.ion-android-cart:before,\n.ion-android-chat:before,\n.ion-android-checkbox:before,\n.ion-android-checkbox-blank:before,\n.ion-android-checkbox-outline:before,\n.ion-android-checkbox-outline-blank:before,\n.ion-android-checkmark-circle:before,\n.ion-android-clipboard:before,\n.ion-android-close:before,\n.ion-android-cloud:before,\n.ion-android-cloud-circle:before,\n.ion-android-cloud-done:before,\n.ion-android-cloud-outline:before,\n.ion-android-color-palette:before,\n.ion-android-compass:before,\n.ion-android-contact:before,\n.ion-android-contacts:before,\n.ion-android-contract:before,\n.ion-android-create:before,\n.ion-android-delete:before,\n.ion-android-desktop:before,\n.ion-android-document:before,\n.ion-android-done:before,\n.ion-android-done-all:before,\n.ion-android-download:before,\n.ion-android-drafts:before,\n.ion-android-exit:before,\n.ion-android-expand:before,\n.ion-android-favorite:before,\n.ion-android-favorite-outline:before,\n.ion-android-film:before,\n.ion-android-folder:before,\n.ion-android-folder-open:before,\n.ion-android-funnel:before,\n.ion-android-globe:before,\n.ion-android-hand:before,\n.ion-android-hangout:before,\n.ion-android-happy:before,\n.ion-android-home:before,\n.ion-android-image:before,\n.ion-android-laptop:before,\n.ion-android-list:before,\n.ion-android-locate:before,\n.ion-android-lock:before,\n.ion-android-mail:before,\n.ion-android-map:before,\n.ion-android-menu:before,\n.ion-android-microphone:before,\n.ion-android-microphone-off:before,\n.ion-android-more-horizontal:before,\n.ion-android-more-vertical:before,\n.ion-android-navigate:before,\n.ion-android-notifications:before,\n.ion-android-notifications-none:before,\n.ion-android-notifications-off:before,\n.ion-android-open:before,\n.ion-android-options:before,\n.ion-android-people:before,\n.ion-android-person:before,\n.ion-android-person-add:before,\n.ion-android-phone-landscape:before,\n.ion-android-phone-portrait:before,\n.ion-android-pin:before,\n.ion-android-plane:before,\n.ion-android-playstore:before,\n.ion-android-print:before,\n.ion-android-radio-button-off:before,\n.ion-android-radio-button-on:before,\n.ion-android-refresh:before,\n.ion-android-remove:before,\n.ion-android-remove-circle:before,\n.ion-android-restaurant:before,\n.ion-android-sad:before,\n.ion-android-search:before,\n.ion-android-send:before,\n.ion-android-settings:before,\n.ion-android-share:before,\n.ion-android-share-alt:before,\n.ion-android-star:before,\n.ion-android-star-half:before,\n.ion-android-star-outline:before,\n.ion-android-stopwatch:before,\n.ion-android-subway:before,\n.ion-android-sunny:before,\n.ion-android-sync:before,\n.ion-android-textsms:before,\n.ion-android-time:before,\n.ion-android-train:before,\n.ion-android-unlock:before,\n.ion-android-upload:before,\n.ion-android-volume-down:before,\n.ion-android-volume-mute:before,\n.ion-android-volume-off:before,\n.ion-android-volume-up:before,\n.ion-android-walk:before,\n.ion-android-warning:before,\n.ion-android-watch:before,\n.ion-android-wifi:before,\n.ion-aperture:before,\n.ion-archive:before,\n.ion-arrow-down-a:before,\n.ion-arrow-down-b:before,\n.ion-arrow-down-c:before,\n.ion-arrow-expand:before,\n.ion-arrow-graph-down-left:before,\n.ion-arrow-graph-down-right:before,\n.ion-arrow-graph-up-left:before,\n.ion-arrow-graph-up-right:before,\n.ion-arrow-left-a:before,\n.ion-arrow-left-b:before,\n.ion-arrow-left-c:before,\n.ion-arrow-move:before,\n.ion-arrow-resize:before,\n.ion-arrow-return-left:before,\n.ion-arrow-return-right:before,\n.ion-arrow-right-a:before,\n.ion-arrow-right-b:before,\n.ion-arrow-right-c:before,\n.ion-arrow-shrink:before,\n.ion-arrow-swap:before,\n.ion-arrow-up-a:before,\n.ion-arrow-up-b:before,\n.ion-arrow-up-c:before,\n.ion-asterisk:before,\n.ion-at:before,\n.ion-backspace:before,\n.ion-backspace-outline:before,\n.ion-bag:before,\n.ion-battery-charging:before,\n.ion-battery-empty:before,\n.ion-battery-full:before,\n.ion-battery-half:before,\n.ion-battery-low:before,\n.ion-beaker:before,\n.ion-beer:before,\n.ion-bluetooth:before,\n.ion-bonfire:before,\n.ion-bookmark:before,\n.ion-bowtie:before,\n.ion-briefcase:before,\n.ion-bug:before,\n.ion-calculator:before,\n.ion-calendar:before,\n.ion-camera:before,\n.ion-card:before,\n.ion-cash:before,\n.ion-chatbox:before,\n.ion-chatbox-working:before,\n.ion-chatboxes:before,\n.ion-chatbubble:before,\n.ion-chatbubble-working:before,\n.ion-chatbubbles:before,\n.ion-checkmark:before,\n.ion-checkmark-circled:before,\n.ion-checkmark-round:before,\n.ion-chevron-down:before,\n.ion-chevron-left:before,\n.ion-chevron-right:before,\n.ion-chevron-up:before,\n.ion-clipboard:before,\n.ion-clock:before,\n.ion-close:before,\n.ion-close-circled:before,\n.ion-close-round:before,\n.ion-closed-captioning:before,\n.ion-cloud:before,\n.ion-code:before,\n.ion-code-download:before,\n.ion-code-working:before,\n.ion-coffee:before,\n.ion-compass:before,\n.ion-compose:before,\n.ion-connection-bars:before,\n.ion-contrast:before,\n.ion-crop:before,\n.ion-cube:before,\n.ion-disc:before,\n.ion-document:before,\n.ion-document-text:before,\n.ion-drag:before,\n.ion-earth:before,\n.ion-easel:before,\n.ion-edit:before,\n.ion-egg:before,\n.ion-eject:before,\n.ion-email:before,\n.ion-email-unread:before,\n.ion-erlenmeyer-flask:before,\n.ion-erlenmeyer-flask-bubbles:before,\n.ion-eye:before,\n.ion-eye-disabled:before,\n.ion-female:before,\n.ion-filing:before,\n.ion-film-marker:before,\n.ion-fireball:before,\n.ion-flag:before,\n.ion-flame:before,\n.ion-flash:before,\n.ion-flash-off:before,\n.ion-folder:before,\n.ion-fork:before,\n.ion-fork-repo:before,\n.ion-forward:before,\n.ion-funnel:before,\n.ion-gear-a:before,\n.ion-gear-b:before,\n.ion-grid:before,\n.ion-hammer:before,\n.ion-happy:before,\n.ion-happy-outline:before,\n.ion-headphone:before,\n.ion-heart:before,\n.ion-heart-broken:before,\n.ion-help:before,\n.ion-help-buoy:before,\n.ion-help-circled:before,\n.ion-home:before,\n.ion-icecream:before,\n.ion-image:before,\n.ion-images:before,\n.ion-information:before,\n.ion-information-circled:before,\n.ion-ionic:before,\n.ion-ios-alarm:before,\n.ion-ios-alarm-outline:before,\n.ion-ios-albums:before,\n.ion-ios-albums-outline:before,\n.ion-ios-americanfootball:before,\n.ion-ios-americanfootball-outline:before,\n.ion-ios-analytics:before,\n.ion-ios-analytics-outline:before,\n.ion-ios-arrow-back:before,\n.ion-ios-arrow-down:before,\n.ion-ios-arrow-forward:before,\n.ion-ios-arrow-left:before,\n.ion-ios-arrow-right:before,\n.ion-ios-arrow-thin-down:before,\n.ion-ios-arrow-thin-left:before,\n.ion-ios-arrow-thin-right:before,\n.ion-ios-arrow-thin-up:before,\n.ion-ios-arrow-up:before,\n.ion-ios-at:before,\n.ion-ios-at-outline:before,\n.ion-ios-barcode:before,\n.ion-ios-barcode-outline:before,\n.ion-ios-baseball:before,\n.ion-ios-baseball-outline:before,\n.ion-ios-basketball:before,\n.ion-ios-basketball-outline:before,\n.ion-ios-bell:before,\n.ion-ios-bell-outline:before,\n.ion-ios-body:before,\n.ion-ios-body-outline:before,\n.ion-ios-bolt:before,\n.ion-ios-bolt-outline:before,\n.ion-ios-book:before,\n.ion-ios-book-outline:before,\n.ion-ios-bookmarks:before,\n.ion-ios-bookmarks-outline:before,\n.ion-ios-box:before,\n.ion-ios-box-outline:before,\n.ion-ios-briefcase:before,\n.ion-ios-briefcase-outline:before,\n.ion-ios-browsers:before,\n.ion-ios-browsers-outline:before,\n.ion-ios-calculator:before,\n.ion-ios-calculator-outline:before,\n.ion-ios-calendar:before,\n.ion-ios-calendar-outline:before,\n.ion-ios-camera:before,\n.ion-ios-camera-outline:before,\n.ion-ios-cart:before,\n.ion-ios-cart-outline:before,\n.ion-ios-chatboxes:before,\n.ion-ios-chatboxes-outline:before,\n.ion-ios-chatbubble:before,\n.ion-ios-chatbubble-outline:before,\n.ion-ios-checkmark:before,\n.ion-ios-checkmark-empty:before,\n.ion-ios-checkmark-outline:before,\n.ion-ios-circle-filled:before,\n.ion-ios-circle-outline:before,\n.ion-ios-clock:before,\n.ion-ios-clock-outline:before,\n.ion-ios-close:before,\n.ion-ios-close-empty:before,\n.ion-ios-close-outline:before,\n.ion-ios-cloud:before,\n.ion-ios-cloud-download:before,\n.ion-ios-cloud-download-outline:before,\n.ion-ios-cloud-outline:before,\n.ion-ios-cloud-upload:before,\n.ion-ios-cloud-upload-outline:before,\n.ion-ios-cloudy:before,\n.ion-ios-cloudy-night:before,\n.ion-ios-cloudy-night-outline:before,\n.ion-ios-cloudy-outline:before,\n.ion-ios-cog:before,\n.ion-ios-cog-outline:before,\n.ion-ios-color-filter:before,\n.ion-ios-color-filter-outline:before,\n.ion-ios-color-wand:before,\n.ion-ios-color-wand-outline:before,\n.ion-ios-compose:before,\n.ion-ios-compose-outline:before,\n.ion-ios-contact:before,\n.ion-ios-contact-outline:before,\n.ion-ios-copy:before,\n.ion-ios-copy-outline:before,\n.ion-ios-crop:before,\n.ion-ios-crop-strong:before,\n.ion-ios-download:before,\n.ion-ios-download-outline:before,\n.ion-ios-drag:before,\n.ion-ios-email:before,\n.ion-ios-email-outline:before,\n.ion-ios-eye:before,\n.ion-ios-eye-outline:before,\n.ion-ios-fastforward:before,\n.ion-ios-fastforward-outline:before,\n.ion-ios-filing:before,\n.ion-ios-filing-outline:before,\n.ion-ios-film:before,\n.ion-ios-film-outline:before,\n.ion-ios-flag:before,\n.ion-ios-flag-outline:before,\n.ion-ios-flame:before,\n.ion-ios-flame-outline:before,\n.ion-ios-flask:before,\n.ion-ios-flask-outline:before,\n.ion-ios-flower:before,\n.ion-ios-flower-outline:before,\n.ion-ios-folder:before,\n.ion-ios-folder-outline:before,\n.ion-ios-football:before,\n.ion-ios-football-outline:before,\n.ion-ios-game-controller-a:before,\n.ion-ios-game-controller-a-outline:before,\n.ion-ios-game-controller-b:before,\n.ion-ios-game-controller-b-outline:before,\n.ion-ios-gear:before,\n.ion-ios-gear-outline:before,\n.ion-ios-glasses:before,\n.ion-ios-glasses-outline:before,\n.ion-ios-grid-view:before,\n.ion-ios-grid-view-outline:before,\n.ion-ios-heart:before,\n.ion-ios-heart-outline:before,\n.ion-ios-help:before,\n.ion-ios-help-empty:before,\n.ion-ios-help-outline:before,\n.ion-ios-home:before,\n.ion-ios-home-outline:before,\n.ion-ios-infinite:before,\n.ion-ios-infinite-outline:before,\n.ion-ios-information:before,\n.ion-ios-information-empty:before,\n.ion-ios-information-outline:before,\n.ion-ios-ionic-outline:before,\n.ion-ios-keypad:before,\n.ion-ios-keypad-outline:before,\n.ion-ios-lightbulb:before,\n.ion-ios-lightbulb-outline:before,\n.ion-ios-list:before,\n.ion-ios-list-outline:before,\n.ion-ios-location:before,\n.ion-ios-location-outline:before,\n.ion-ios-locked:before,\n.ion-ios-locked-outline:before,\n.ion-ios-loop:before,\n.ion-ios-loop-strong:before,\n.ion-ios-medical:before,\n.ion-ios-medical-outline:before,\n.ion-ios-medkit:before,\n.ion-ios-medkit-outline:before,\n.ion-ios-mic:before,\n.ion-ios-mic-off:before,\n.ion-ios-mic-outline:before,\n.ion-ios-minus:before,\n.ion-ios-minus-empty:before,\n.ion-ios-minus-outline:before,\n.ion-ios-monitor:before,\n.ion-ios-monitor-outline:before,\n.ion-ios-moon:before,\n.ion-ios-moon-outline:before,\n.ion-ios-more:before,\n.ion-ios-more-outline:before,\n.ion-ios-musical-note:before,\n.ion-ios-musical-notes:before,\n.ion-ios-navigate:before,\n.ion-ios-navigate-outline:before,\n.ion-ios-nutrition:before,\n.ion-ios-nutrition-outline:before,\n.ion-ios-paper:before,\n.ion-ios-paper-outline:before,\n.ion-ios-paperplane:before,\n.ion-ios-paperplane-outline:before,\n.ion-ios-partlysunny:before,\n.ion-ios-partlysunny-outline:before,\n.ion-ios-pause:before,\n.ion-ios-pause-outline:before,\n.ion-ios-paw:before,\n.ion-ios-paw-outline:before,\n.ion-ios-people:before,\n.ion-ios-people-outline:before,\n.ion-ios-person:before,\n.ion-ios-person-outline:before,\n.ion-ios-personadd:before,\n.ion-ios-personadd-outline:before,\n.ion-ios-photos:before,\n.ion-ios-photos-outline:before,\n.ion-ios-pie:before,\n.ion-ios-pie-outline:before,\n.ion-ios-pint:before,\n.ion-ios-pint-outline:before,\n.ion-ios-play:before,\n.ion-ios-play-outline:before,\n.ion-ios-plus:before,\n.ion-ios-plus-empty:before,\n.ion-ios-plus-outline:before,\n.ion-ios-pricetag:before,\n.ion-ios-pricetag-outline:before,\n.ion-ios-pricetags:before,\n.ion-ios-pricetags-outline:before,\n.ion-ios-printer:before,\n.ion-ios-printer-outline:before,\n.ion-ios-pulse:before,\n.ion-ios-pulse-strong:before,\n.ion-ios-rainy:before,\n.ion-ios-rainy-outline:before,\n.ion-ios-recording:before,\n.ion-ios-recording-outline:before,\n.ion-ios-redo:before,\n.ion-ios-redo-outline:before,\n.ion-ios-refresh:before,\n.ion-ios-refresh-empty:before,\n.ion-ios-refresh-outline:before,\n.ion-ios-reload:before,\n.ion-ios-reverse-camera:before,\n.ion-ios-reverse-camera-outline:before,\n.ion-ios-rewind:before,\n.ion-ios-rewind-outline:before,\n.ion-ios-rose:before,\n.ion-ios-rose-outline:before,\n.ion-ios-search:before,\n.ion-ios-search-strong:before,\n.ion-ios-settings:before,\n.ion-ios-settings-strong:before,\n.ion-ios-shuffle:before,\n.ion-ios-shuffle-strong:before,\n.ion-ios-skipbackward:before,\n.ion-ios-skipbackward-outline:before,\n.ion-ios-skipforward:before,\n.ion-ios-skipforward-outline:before,\n.ion-ios-snowy:before,\n.ion-ios-speedometer:before,\n.ion-ios-speedometer-outline:before,\n.ion-ios-star:before,\n.ion-ios-star-half:before,\n.ion-ios-star-outline:before,\n.ion-ios-stopwatch:before,\n.ion-ios-stopwatch-outline:before,\n.ion-ios-sunny:before,\n.ion-ios-sunny-outline:before,\n.ion-ios-telephone:before,\n.ion-ios-telephone-outline:before,\n.ion-ios-tennisball:before,\n.ion-ios-tennisball-outline:before,\n.ion-ios-thunderstorm:before,\n.ion-ios-thunderstorm-outline:before,\n.ion-ios-time:before,\n.ion-ios-time-outline:before,\n.ion-ios-timer:before,\n.ion-ios-timer-outline:before,\n.ion-ios-toggle:before,\n.ion-ios-toggle-outline:before,\n.ion-ios-trash:before,\n.ion-ios-trash-outline:before,\n.ion-ios-undo:before,\n.ion-ios-undo-outline:before,\n.ion-ios-unlocked:before,\n.ion-ios-unlocked-outline:before,\n.ion-ios-upload:before,\n.ion-ios-upload-outline:before,\n.ion-ios-videocam:before,\n.ion-ios-videocam-outline:before,\n.ion-ios-volume-high:before,\n.ion-ios-volume-low:before,\n.ion-ios-wineglass:before,\n.ion-ios-wineglass-outline:before,\n.ion-ios-world:before,\n.ion-ios-world-outline:before,\n.ion-ipad:before,\n.ion-iphone:before,\n.ion-ipod:before,\n.ion-jet:before,\n.ion-key:before,\n.ion-knife:before,\n.ion-laptop:before,\n.ion-leaf:before,\n.ion-levels:before,\n.ion-lightbulb:before,\n.ion-link:before,\n.ion-load-a:before,\n.ion-load-b:before,\n.ion-load-c:before,\n.ion-load-d:before,\n.ion-location:before,\n.ion-lock-combination:before,\n.ion-locked:before,\n.ion-log-in:before,\n.ion-log-out:before,\n.ion-loop:before,\n.ion-magnet:before,\n.ion-male:before,\n.ion-man:before,\n.ion-map:before,\n.ion-medkit:before,\n.ion-merge:before,\n.ion-mic-a:before,\n.ion-mic-b:before,\n.ion-mic-c:before,\n.ion-minus:before,\n.ion-minus-circled:before,\n.ion-minus-round:before,\n.ion-model-s:before,\n.ion-monitor:before,\n.ion-more:before,\n.ion-mouse:before,\n.ion-music-note:before,\n.ion-navicon:before,\n.ion-navicon-round:before,\n.ion-navigate:before,\n.ion-network:before,\n.ion-no-smoking:before,\n.ion-nuclear:before,\n.ion-outlet:before,\n.ion-paintbrush:before,\n.ion-paintbucket:before,\n.ion-paper-airplane:before,\n.ion-paperclip:before,\n.ion-pause:before,\n.ion-person:before,\n.ion-person-add:before,\n.ion-person-stalker:before,\n.ion-pie-graph:before,\n.ion-pin:before,\n.ion-pinpoint:before,\n.ion-pizza:before,\n.ion-plane:before,\n.ion-planet:before,\n.ion-play:before,\n.ion-playstation:before,\n.ion-plus:before,\n.ion-plus-circled:before,\n.ion-plus-round:before,\n.ion-podium:before,\n.ion-pound:before,\n.ion-power:before,\n.ion-pricetag:before,\n.ion-pricetags:before,\n.ion-printer:before,\n.ion-pull-request:before,\n.ion-qr-scanner:before,\n.ion-quote:before,\n.ion-radio-waves:before,\n.ion-record:before,\n.ion-refresh:before,\n.ion-reply:before,\n.ion-reply-all:before,\n.ion-ribbon-a:before,\n.ion-ribbon-b:before,\n.ion-sad:before,\n.ion-sad-outline:before,\n.ion-scissors:before,\n.ion-search:before,\n.ion-settings:before,\n.ion-share:before,\n.ion-shuffle:before,\n.ion-skip-backward:before,\n.ion-skip-forward:before,\n.ion-social-android:before,\n.ion-social-android-outline:before,\n.ion-social-angular:before,\n.ion-social-angular-outline:before,\n.ion-social-apple:before,\n.ion-social-apple-outline:before,\n.ion-social-bitcoin:before,\n.ion-social-bitcoin-outline:before,\n.ion-social-buffer:before,\n.ion-social-buffer-outline:before,\n.ion-social-chrome:before,\n.ion-social-chrome-outline:before,\n.ion-social-codepen:before,\n.ion-social-codepen-outline:before,\n.ion-social-css3:before,\n.ion-social-css3-outline:before,\n.ion-social-designernews:before,\n.ion-social-designernews-outline:before,\n.ion-social-dribbble:before,\n.ion-social-dribbble-outline:before,\n.ion-social-dropbox:before,\n.ion-social-dropbox-outline:before,\n.ion-social-euro:before,\n.ion-social-euro-outline:before,\n.ion-social-facebook:before,\n.ion-social-facebook-outline:before,\n.ion-social-foursquare:before,\n.ion-social-foursquare-outline:before,\n.ion-social-freebsd-devil:before,\n.ion-social-github:before,\n.ion-social-github-outline:before,\n.ion-social-google:before,\n.ion-social-google-outline:before,\n.ion-social-googleplus:before,\n.ion-social-googleplus-outline:before,\n.ion-social-hackernews:before,\n.ion-social-hackernews-outline:before,\n.ion-social-html5:before,\n.ion-social-html5-outline:before,\n.ion-social-instagram:before,\n.ion-social-instagram-outline:before,\n.ion-social-javascript:before,\n.ion-social-javascript-outline:before,\n.ion-social-linkedin:before,\n.ion-social-linkedin-outline:before,\n.ion-social-markdown:before,\n.ion-social-nodejs:before,\n.ion-social-octocat:before,\n.ion-social-pinterest:before,\n.ion-social-pinterest-outline:before,\n.ion-social-python:before,\n.ion-social-reddit:before,\n.ion-social-reddit-outline:before,\n.ion-social-rss:before,\n.ion-social-rss-outline:before,\n.ion-social-sass:before,\n.ion-social-skype:before,\n.ion-social-skype-outline:before,\n.ion-social-snapchat:before,\n.ion-social-snapchat-outline:before,\n.ion-social-tumblr:before,\n.ion-social-tumblr-outline:before,\n.ion-social-tux:before,\n.ion-social-twitch:before,\n.ion-social-twitch-outline:before,\n.ion-social-twitter:before,\n.ion-social-twitter-outline:before,\n.ion-social-usd:before,\n.ion-social-usd-outline:before,\n.ion-social-vimeo:before,\n.ion-social-vimeo-outline:before,\n.ion-social-whatsapp:before,\n.ion-social-whatsapp-outline:before,\n.ion-social-windows:before,\n.ion-social-windows-outline:before,\n.ion-social-wordpress:before,\n.ion-social-wordpress-outline:before,\n.ion-social-yahoo:before,\n.ion-social-yahoo-outline:before,\n.ion-social-yen:before,\n.ion-social-yen-outline:before,\n.ion-social-youtube:before,\n.ion-social-youtube-outline:before,\n.ion-soup-can:before,\n.ion-soup-can-outline:before,\n.ion-speakerphone:before,\n.ion-speedometer:before,\n.ion-spoon:before,\n.ion-star:before,\n.ion-stats-bars:before,\n.ion-steam:before,\n.ion-stop:before,\n.ion-thermometer:before,\n.ion-thumbsdown:before,\n.ion-thumbsup:before,\n.ion-toggle:before,\n.ion-toggle-filled:before,\n.ion-transgender:before,\n.ion-trash-a:before,\n.ion-trash-b:before,\n.ion-trophy:before,\n.ion-tshirt:before,\n.ion-tshirt-outline:before,\n.ion-umbrella:before,\n.ion-university:before,\n.ion-unlocked:before,\n.ion-upload:before,\n.ion-usb:before,\n.ion-videocamera:before,\n.ion-volume-high:before,\n.ion-volume-low:before,\n.ion-volume-medium:before,\n.ion-volume-mute:before,\n.ion-wand:before,\n.ion-waterdrop:before,\n.ion-wifi:before,\n.ion-wineglass:before,\n.ion-woman:before,\n.ion-wrench:before,\n.ion-xbox:before {\n  display: inline-block;\n  font-family: \"Ionicons\";\n  speak: none;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  text-rendering: auto;\n  line-height: 1;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n\n.ion-alert:before {\n  content: \"\\F101\";\n}\n\n.ion-alert-circled:before {\n  content: \"\\F100\";\n}\n\n.ion-android-add:before {\n  content: \"\\F2C7\";\n}\n\n.ion-android-add-circle:before {\n  content: \"\\F359\";\n}\n\n.ion-android-alarm-clock:before {\n  content: \"\\F35A\";\n}\n\n.ion-android-alert:before {\n  content: \"\\F35B\";\n}\n\n.ion-android-apps:before {\n  content: \"\\F35C\";\n}\n\n.ion-android-archive:before {\n  content: \"\\F2C9\";\n}\n\n.ion-android-arrow-back:before {\n  content: \"\\F2CA\";\n}\n\n.ion-android-arrow-down:before {\n  content: \"\\F35D\";\n}\n\n.ion-android-arrow-dropdown:before {\n  content: \"\\F35F\";\n}\n\n.ion-android-arrow-dropdown-circle:before {\n  content: \"\\F35E\";\n}\n\n.ion-android-arrow-dropleft:before {\n  content: \"\\F361\";\n}\n\n.ion-android-arrow-dropleft-circle:before {\n  content: \"\\F360\";\n}\n\n.ion-android-arrow-dropright:before {\n  content: \"\\F363\";\n}\n\n.ion-android-arrow-dropright-circle:before {\n  content: \"\\F362\";\n}\n\n.ion-android-arrow-dropup:before {\n  content: \"\\F365\";\n}\n\n.ion-android-arrow-dropup-circle:before {\n  content: \"\\F364\";\n}\n\n.ion-android-arrow-forward:before {\n  content: \"\\F30F\";\n}\n\n.ion-android-arrow-up:before {\n  content: \"\\F366\";\n}\n\n.ion-android-attach:before {\n  content: \"\\F367\";\n}\n\n.ion-android-bar:before {\n  content: \"\\F368\";\n}\n\n.ion-android-bicycle:before {\n  content: \"\\F369\";\n}\n\n.ion-android-boat:before {\n  content: \"\\F36A\";\n}\n\n.ion-android-bookmark:before {\n  content: \"\\F36B\";\n}\n\n.ion-android-bulb:before {\n  content: \"\\F36C\";\n}\n\n.ion-android-bus:before {\n  content: \"\\F36D\";\n}\n\n.ion-android-calendar:before {\n  content: \"\\F2D1\";\n}\n\n.ion-android-call:before {\n  content: \"\\F2D2\";\n}\n\n.ion-android-camera:before {\n  content: \"\\F2D3\";\n}\n\n.ion-android-cancel:before {\n  content: \"\\F36E\";\n}\n\n.ion-android-car:before {\n  content: \"\\F36F\";\n}\n\n.ion-android-cart:before {\n  content: \"\\F370\";\n}\n\n.ion-android-chat:before {\n  content: \"\\F2D4\";\n}\n\n.ion-android-checkbox:before {\n  content: \"\\F374\";\n}\n\n.ion-android-checkbox-blank:before {\n  content: \"\\F371\";\n}\n\n.ion-android-checkbox-outline:before {\n  content: \"\\F373\";\n}\n\n.ion-android-checkbox-outline-blank:before {\n  content: \"\\F372\";\n}\n\n.ion-android-checkmark-circle:before {\n  content: \"\\F375\";\n}\n\n.ion-android-clipboard:before {\n  content: \"\\F376\";\n}\n\n.ion-android-close:before {\n  content: \"\\F2D7\";\n}\n\n.ion-android-cloud:before {\n  content: \"\\F37A\";\n}\n\n.ion-android-cloud-circle:before {\n  content: \"\\F377\";\n}\n\n.ion-android-cloud-done:before {\n  content: \"\\F378\";\n}\n\n.ion-android-cloud-outline:before {\n  content: \"\\F379\";\n}\n\n.ion-android-color-palette:before {\n  content: \"\\F37B\";\n}\n\n.ion-android-compass:before {\n  content: \"\\F37C\";\n}\n\n.ion-android-contact:before {\n  content: \"\\F2D8\";\n}\n\n.ion-android-contacts:before {\n  content: \"\\F2D9\";\n}\n\n.ion-android-contract:before {\n  content: \"\\F37D\";\n}\n\n.ion-android-create:before {\n  content: \"\\F37E\";\n}\n\n.ion-android-delete:before {\n  content: \"\\F37F\";\n}\n\n.ion-android-desktop:before {\n  content: \"\\F380\";\n}\n\n.ion-android-document:before {\n  content: \"\\F381\";\n}\n\n.ion-android-done:before {\n  content: \"\\F383\";\n}\n\n.ion-android-done-all:before {\n  content: \"\\F382\";\n}\n\n.ion-android-download:before {\n  content: \"\\F2DD\";\n}\n\n.ion-android-drafts:before {\n  content: \"\\F384\";\n}\n\n.ion-android-exit:before {\n  content: \"\\F385\";\n}\n\n.ion-android-expand:before {\n  content: \"\\F386\";\n}\n\n.ion-android-favorite:before {\n  content: \"\\F388\";\n}\n\n.ion-android-favorite-outline:before {\n  content: \"\\F387\";\n}\n\n.ion-android-film:before {\n  content: \"\\F389\";\n}\n\n.ion-android-folder:before {\n  content: \"\\F2E0\";\n}\n\n.ion-android-folder-open:before {\n  content: \"\\F38A\";\n}\n\n.ion-android-funnel:before {\n  content: \"\\F38B\";\n}\n\n.ion-android-globe:before {\n  content: \"\\F38C\";\n}\n\n.ion-android-hand:before {\n  content: \"\\F2E3\";\n}\n\n.ion-android-hangout:before {\n  content: \"\\F38D\";\n}\n\n.ion-android-happy:before {\n  content: \"\\F38E\";\n}\n\n.ion-android-home:before {\n  content: \"\\F38F\";\n}\n\n.ion-android-image:before {\n  content: \"\\F2E4\";\n}\n\n.ion-android-laptop:before {\n  content: \"\\F390\";\n}\n\n.ion-android-list:before {\n  content: \"\\F391\";\n}\n\n.ion-android-locate:before {\n  content: \"\\F2E9\";\n}\n\n.ion-android-lock:before {\n  content: \"\\F392\";\n}\n\n.ion-android-mail:before {\n  content: \"\\F2EB\";\n}\n\n.ion-android-map:before {\n  content: \"\\F393\";\n}\n\n.ion-android-menu:before {\n  content: \"\\F394\";\n}\n\n.ion-android-microphone:before {\n  content: \"\\F2EC\";\n}\n\n.ion-android-microphone-off:before {\n  content: \"\\F395\";\n}\n\n.ion-android-more-horizontal:before {\n  content: \"\\F396\";\n}\n\n.ion-android-more-vertical:before {\n  content: \"\\F397\";\n}\n\n.ion-android-navigate:before {\n  content: \"\\F398\";\n}\n\n.ion-android-notifications:before {\n  content: \"\\F39B\";\n}\n\n.ion-android-notifications-none:before {\n  content: \"\\F399\";\n}\n\n.ion-android-notifications-off:before {\n  content: \"\\F39A\";\n}\n\n.ion-android-open:before {\n  content: \"\\F39C\";\n}\n\n.ion-android-options:before {\n  content: \"\\F39D\";\n}\n\n.ion-android-people:before {\n  content: \"\\F39E\";\n}\n\n.ion-android-person:before {\n  content: \"\\F3A0\";\n}\n\n.ion-android-person-add:before {\n  content: \"\\F39F\";\n}\n\n.ion-android-phone-landscape:before {\n  content: \"\\F3A1\";\n}\n\n.ion-android-phone-portrait:before {\n  content: \"\\F3A2\";\n}\n\n.ion-android-pin:before {\n  content: \"\\F3A3\";\n}\n\n.ion-android-plane:before {\n  content: \"\\F3A4\";\n}\n\n.ion-android-playstore:before {\n  content: \"\\F2F0\";\n}\n\n.ion-android-print:before {\n  content: \"\\F3A5\";\n}\n\n.ion-android-radio-button-off:before {\n  content: \"\\F3A6\";\n}\n\n.ion-android-radio-button-on:before {\n  content: \"\\F3A7\";\n}\n\n.ion-android-refresh:before {\n  content: \"\\F3A8\";\n}\n\n.ion-android-remove:before {\n  content: \"\\F2F4\";\n}\n\n.ion-android-remove-circle:before {\n  content: \"\\F3A9\";\n}\n\n.ion-android-restaurant:before {\n  content: \"\\F3AA\";\n}\n\n.ion-android-sad:before {\n  content: \"\\F3AB\";\n}\n\n.ion-android-search:before {\n  content: \"\\F2F5\";\n}\n\n.ion-android-send:before {\n  content: \"\\F2F6\";\n}\n\n.ion-android-settings:before {\n  content: \"\\F2F7\";\n}\n\n.ion-android-share:before {\n  content: \"\\F2F8\";\n}\n\n.ion-android-share-alt:before {\n  content: \"\\F3AC\";\n}\n\n.ion-android-star:before {\n  content: \"\\F2FC\";\n}\n\n.ion-android-star-half:before {\n  content: \"\\F3AD\";\n}\n\n.ion-android-star-outline:before {\n  content: \"\\F3AE\";\n}\n\n.ion-android-stopwatch:before {\n  content: \"\\F2FD\";\n}\n\n.ion-android-subway:before {\n  content: \"\\F3AF\";\n}\n\n.ion-android-sunny:before {\n  content: \"\\F3B0\";\n}\n\n.ion-android-sync:before {\n  content: \"\\F3B1\";\n}\n\n.ion-android-textsms:before {\n  content: \"\\F3B2\";\n}\n\n.ion-android-time:before {\n  content: \"\\F3B3\";\n}\n\n.ion-android-train:before {\n  content: \"\\F3B4\";\n}\n\n.ion-android-unlock:before {\n  content: \"\\F3B5\";\n}\n\n.ion-android-upload:before {\n  content: \"\\F3B6\";\n}\n\n.ion-android-volume-down:before {\n  content: \"\\F3B7\";\n}\n\n.ion-android-volume-mute:before {\n  content: \"\\F3B8\";\n}\n\n.ion-android-volume-off:before {\n  content: \"\\F3B9\";\n}\n\n.ion-android-volume-up:before {\n  content: \"\\F3BA\";\n}\n\n.ion-android-walk:before {\n  content: \"\\F3BB\";\n}\n\n.ion-android-warning:before {\n  content: \"\\F3BC\";\n}\n\n.ion-android-watch:before {\n  content: \"\\F3BD\";\n}\n\n.ion-android-wifi:before {\n  content: \"\\F305\";\n}\n\n.ion-aperture:before {\n  content: \"\\F313\";\n}\n\n.ion-archive:before {\n  content: \"\\F102\";\n}\n\n.ion-arrow-down-a:before {\n  content: \"\\F103\";\n}\n\n.ion-arrow-down-b:before {\n  content: \"\\F104\";\n}\n\n.ion-arrow-down-c:before {\n  content: \"\\F105\";\n}\n\n.ion-arrow-expand:before {\n  content: \"\\F25E\";\n}\n\n.ion-arrow-graph-down-left:before {\n  content: \"\\F25F\";\n}\n\n.ion-arrow-graph-down-right:before {\n  content: \"\\F260\";\n}\n\n.ion-arrow-graph-up-left:before {\n  content: \"\\F261\";\n}\n\n.ion-arrow-graph-up-right:before {\n  content: \"\\F262\";\n}\n\n.ion-arrow-left-a:before {\n  content: \"\\F106\";\n}\n\n.ion-arrow-left-b:before {\n  content: \"\\F107\";\n}\n\n.ion-arrow-left-c:before {\n  content: \"\\F108\";\n}\n\n.ion-arrow-move:before {\n  content: \"\\F263\";\n}\n\n.ion-arrow-resize:before {\n  content: \"\\F264\";\n}\n\n.ion-arrow-return-left:before {\n  content: \"\\F265\";\n}\n\n.ion-arrow-return-right:before {\n  content: \"\\F266\";\n}\n\n.ion-arrow-right-a:before {\n  content: \"\\F109\";\n}\n\n.ion-arrow-right-b:before {\n  content: \"\\F10A\";\n}\n\n.ion-arrow-right-c:before {\n  content: \"\\F10B\";\n}\n\n.ion-arrow-shrink:before {\n  content: \"\\F267\";\n}\n\n.ion-arrow-swap:before {\n  content: \"\\F268\";\n}\n\n.ion-arrow-up-a:before {\n  content: \"\\F10C\";\n}\n\n.ion-arrow-up-b:before {\n  content: \"\\F10D\";\n}\n\n.ion-arrow-up-c:before {\n  content: \"\\F10E\";\n}\n\n.ion-asterisk:before {\n  content: \"\\F314\";\n}\n\n.ion-at:before {\n  content: \"\\F10F\";\n}\n\n.ion-backspace:before {\n  content: \"\\F3BF\";\n}\n\n.ion-backspace-outline:before {\n  content: \"\\F3BE\";\n}\n\n.ion-bag:before {\n  content: \"\\F110\";\n}\n\n.ion-battery-charging:before {\n  content: \"\\F111\";\n}\n\n.ion-battery-empty:before {\n  content: \"\\F112\";\n}\n\n.ion-battery-full:before {\n  content: \"\\F113\";\n}\n\n.ion-battery-half:before {\n  content: \"\\F114\";\n}\n\n.ion-battery-low:before {\n  content: \"\\F115\";\n}\n\n.ion-beaker:before {\n  content: \"\\F269\";\n}\n\n.ion-beer:before {\n  content: \"\\F26A\";\n}\n\n.ion-bluetooth:before {\n  content: \"\\F116\";\n}\n\n.ion-bonfire:before {\n  content: \"\\F315\";\n}\n\n.ion-bookmark:before {\n  content: \"\\F26B\";\n}\n\n.ion-bowtie:before {\n  content: \"\\F3C0\";\n}\n\n.ion-briefcase:before {\n  content: \"\\F26C\";\n}\n\n.ion-bug:before {\n  content: \"\\F2BE\";\n}\n\n.ion-calculator:before {\n  content: \"\\F26D\";\n}\n\n.ion-calendar:before {\n  content: \"\\F117\";\n}\n\n.ion-camera:before {\n  content: \"\\F118\";\n}\n\n.ion-card:before {\n  content: \"\\F119\";\n}\n\n.ion-cash:before {\n  content: \"\\F316\";\n}\n\n.ion-chatbox:before {\n  content: \"\\F11B\";\n}\n\n.ion-chatbox-working:before {\n  content: \"\\F11A\";\n}\n\n.ion-chatboxes:before {\n  content: \"\\F11C\";\n}\n\n.ion-chatbubble:before {\n  content: \"\\F11E\";\n}\n\n.ion-chatbubble-working:before {\n  content: \"\\F11D\";\n}\n\n.ion-chatbubbles:before {\n  content: \"\\F11F\";\n}\n\n.ion-checkmark:before {\n  content: \"\\F122\";\n}\n\n.ion-checkmark-circled:before {\n  content: \"\\F120\";\n}\n\n.ion-checkmark-round:before {\n  content: \"\\F121\";\n}\n\n.ion-chevron-down:before {\n  content: \"\\F123\";\n}\n\n.ion-chevron-left:before {\n  content: \"\\F124\";\n}\n\n.ion-chevron-right:before {\n  content: \"\\F125\";\n}\n\n.ion-chevron-up:before {\n  content: \"\\F126\";\n}\n\n.ion-clipboard:before {\n  content: \"\\F127\";\n}\n\n.ion-clock:before {\n  content: \"\\F26E\";\n}\n\n.ion-close:before {\n  content: \"\\F12A\";\n}\n\n.ion-close-circled:before {\n  content: \"\\F128\";\n}\n\n.ion-close-round:before {\n  content: \"\\F129\";\n}\n\n.ion-closed-captioning:before {\n  content: \"\\F317\";\n}\n\n.ion-cloud:before {\n  content: \"\\F12B\";\n}\n\n.ion-code:before {\n  content: \"\\F271\";\n}\n\n.ion-code-download:before {\n  content: \"\\F26F\";\n}\n\n.ion-code-working:before {\n  content: \"\\F270\";\n}\n\n.ion-coffee:before {\n  content: \"\\F272\";\n}\n\n.ion-compass:before {\n  content: \"\\F273\";\n}\n\n.ion-compose:before {\n  content: \"\\F12C\";\n}\n\n.ion-connection-bars:before {\n  content: \"\\F274\";\n}\n\n.ion-contrast:before {\n  content: \"\\F275\";\n}\n\n.ion-crop:before {\n  content: \"\\F3C1\";\n}\n\n.ion-cube:before {\n  content: \"\\F318\";\n}\n\n.ion-disc:before {\n  content: \"\\F12D\";\n}\n\n.ion-document:before {\n  content: \"\\F12F\";\n}\n\n.ion-document-text:before {\n  content: \"\\F12E\";\n}\n\n.ion-drag:before {\n  content: \"\\F130\";\n}\n\n.ion-earth:before {\n  content: \"\\F276\";\n}\n\n.ion-easel:before {\n  content: \"\\F3C2\";\n}\n\n.ion-edit:before {\n  content: \"\\F2BF\";\n}\n\n.ion-egg:before {\n  content: \"\\F277\";\n}\n\n.ion-eject:before {\n  content: \"\\F131\";\n}\n\n.ion-email:before {\n  content: \"\\F132\";\n}\n\n.ion-email-unread:before {\n  content: \"\\F3C3\";\n}\n\n.ion-erlenmeyer-flask:before {\n  content: \"\\F3C5\";\n}\n\n.ion-erlenmeyer-flask-bubbles:before {\n  content: \"\\F3C4\";\n}\n\n.ion-eye:before {\n  content: \"\\F133\";\n}\n\n.ion-eye-disabled:before {\n  content: \"\\F306\";\n}\n\n.ion-female:before {\n  content: \"\\F278\";\n}\n\n.ion-filing:before {\n  content: \"\\F134\";\n}\n\n.ion-film-marker:before {\n  content: \"\\F135\";\n}\n\n.ion-fireball:before {\n  content: \"\\F319\";\n}\n\n.ion-flag:before {\n  content: \"\\F279\";\n}\n\n.ion-flame:before {\n  content: \"\\F31A\";\n}\n\n.ion-flash:before {\n  content: \"\\F137\";\n}\n\n.ion-flash-off:before {\n  content: \"\\F136\";\n}\n\n.ion-folder:before {\n  content: \"\\F139\";\n}\n\n.ion-fork:before {\n  content: \"\\F27A\";\n}\n\n.ion-fork-repo:before {\n  content: \"\\F2C0\";\n}\n\n.ion-forward:before {\n  content: \"\\F13A\";\n}\n\n.ion-funnel:before {\n  content: \"\\F31B\";\n}\n\n.ion-gear-a:before {\n  content: \"\\F13D\";\n}\n\n.ion-gear-b:before {\n  content: \"\\F13E\";\n}\n\n.ion-grid:before {\n  content: \"\\F13F\";\n}\n\n.ion-hammer:before {\n  content: \"\\F27B\";\n}\n\n.ion-happy:before {\n  content: \"\\F31C\";\n}\n\n.ion-happy-outline:before {\n  content: \"\\F3C6\";\n}\n\n.ion-headphone:before {\n  content: \"\\F140\";\n}\n\n.ion-heart:before {\n  content: \"\\F141\";\n}\n\n.ion-heart-broken:before {\n  content: \"\\F31D\";\n}\n\n.ion-help:before {\n  content: \"\\F143\";\n}\n\n.ion-help-buoy:before {\n  content: \"\\F27C\";\n}\n\n.ion-help-circled:before {\n  content: \"\\F142\";\n}\n\n.ion-home:before {\n  content: \"\\F144\";\n}\n\n.ion-icecream:before {\n  content: \"\\F27D\";\n}\n\n.ion-image:before {\n  content: \"\\F147\";\n}\n\n.ion-images:before {\n  content: \"\\F148\";\n}\n\n.ion-information:before {\n  content: \"\\F14A\";\n}\n\n.ion-information-circled:before {\n  content: \"\\F149\";\n}\n\n.ion-ionic:before {\n  content: \"\\F14B\";\n}\n\n.ion-ios-alarm:before {\n  content: \"\\F3C8\";\n}\n\n.ion-ios-alarm-outline:before {\n  content: \"\\F3C7\";\n}\n\n.ion-ios-albums:before {\n  content: \"\\F3CA\";\n}\n\n.ion-ios-albums-outline:before {\n  content: \"\\F3C9\";\n}\n\n.ion-ios-americanfootball:before {\n  content: \"\\F3CC\";\n}\n\n.ion-ios-americanfootball-outline:before {\n  content: \"\\F3CB\";\n}\n\n.ion-ios-analytics:before {\n  content: \"\\F3CE\";\n}\n\n.ion-ios-analytics-outline:before {\n  content: \"\\F3CD\";\n}\n\n.ion-ios-arrow-back:before {\n  content: \"\\F3CF\";\n}\n\n.ion-ios-arrow-down:before {\n  content: \"\\F3D0\";\n}\n\n.ion-ios-arrow-forward:before {\n  content: \"\\F3D1\";\n}\n\n.ion-ios-arrow-left:before {\n  content: \"\\F3D2\";\n}\n\n.ion-ios-arrow-right:before {\n  content: \"\\F3D3\";\n}\n\n.ion-ios-arrow-thin-down:before {\n  content: \"\\F3D4\";\n}\n\n.ion-ios-arrow-thin-left:before {\n  content: \"\\F3D5\";\n}\n\n.ion-ios-arrow-thin-right:before {\n  content: \"\\F3D6\";\n}\n\n.ion-ios-arrow-thin-up:before {\n  content: \"\\F3D7\";\n}\n\n.ion-ios-arrow-up:before {\n  content: \"\\F3D8\";\n}\n\n.ion-ios-at:before {\n  content: \"\\F3DA\";\n}\n\n.ion-ios-at-outline:before {\n  content: \"\\F3D9\";\n}\n\n.ion-ios-barcode:before {\n  content: \"\\F3DC\";\n}\n\n.ion-ios-barcode-outline:before {\n  content: \"\\F3DB\";\n}\n\n.ion-ios-baseball:before {\n  content: \"\\F3DE\";\n}\n\n.ion-ios-baseball-outline:before {\n  content: \"\\F3DD\";\n}\n\n.ion-ios-basketball:before {\n  content: \"\\F3E0\";\n}\n\n.ion-ios-basketball-outline:before {\n  content: \"\\F3DF\";\n}\n\n.ion-ios-bell:before {\n  content: \"\\F3E2\";\n}\n\n.ion-ios-bell-outline:before {\n  content: \"\\F3E1\";\n}\n\n.ion-ios-body:before {\n  content: \"\\F3E4\";\n}\n\n.ion-ios-body-outline:before {\n  content: \"\\F3E3\";\n}\n\n.ion-ios-bolt:before {\n  content: \"\\F3E6\";\n}\n\n.ion-ios-bolt-outline:before {\n  content: \"\\F3E5\";\n}\n\n.ion-ios-book:before {\n  content: \"\\F3E8\";\n}\n\n.ion-ios-book-outline:before {\n  content: \"\\F3E7\";\n}\n\n.ion-ios-bookmarks:before {\n  content: \"\\F3EA\";\n}\n\n.ion-ios-bookmarks-outline:before {\n  content: \"\\F3E9\";\n}\n\n.ion-ios-box:before {\n  content: \"\\F3EC\";\n}\n\n.ion-ios-box-outline:before {\n  content: \"\\F3EB\";\n}\n\n.ion-ios-briefcase:before {\n  content: \"\\F3EE\";\n}\n\n.ion-ios-briefcase-outline:before {\n  content: \"\\F3ED\";\n}\n\n.ion-ios-browsers:before {\n  content: \"\\F3F0\";\n}\n\n.ion-ios-browsers-outline:before {\n  content: \"\\F3EF\";\n}\n\n.ion-ios-calculator:before {\n  content: \"\\F3F2\";\n}\n\n.ion-ios-calculator-outline:before {\n  content: \"\\F3F1\";\n}\n\n.ion-ios-calendar:before {\n  content: \"\\F3F4\";\n}\n\n.ion-ios-calendar-outline:before {\n  content: \"\\F3F3\";\n}\n\n.ion-ios-camera:before {\n  content: \"\\F3F6\";\n}\n\n.ion-ios-camera-outline:before {\n  content: \"\\F3F5\";\n}\n\n.ion-ios-cart:before {\n  content: \"\\F3F8\";\n}\n\n.ion-ios-cart-outline:before {\n  content: \"\\F3F7\";\n}\n\n.ion-ios-chatboxes:before {\n  content: \"\\F3FA\";\n}\n\n.ion-ios-chatboxes-outline:before {\n  content: \"\\F3F9\";\n}\n\n.ion-ios-chatbubble:before {\n  content: \"\\F3FC\";\n}\n\n.ion-ios-chatbubble-outline:before {\n  content: \"\\F3FB\";\n}\n\n.ion-ios-checkmark:before {\n  content: \"\\F3FF\";\n}\n\n.ion-ios-checkmark-empty:before {\n  content: \"\\F3FD\";\n}\n\n.ion-ios-checkmark-outline:before {\n  content: \"\\F3FE\";\n}\n\n.ion-ios-circle-filled:before {\n  content: \"\\F400\";\n}\n\n.ion-ios-circle-outline:before {\n  content: \"\\F401\";\n}\n\n.ion-ios-clock:before {\n  content: \"\\F403\";\n}\n\n.ion-ios-clock-outline:before {\n  content: \"\\F402\";\n}\n\n.ion-ios-close:before {\n  content: \"\\F406\";\n}\n\n.ion-ios-close-empty:before {\n  content: \"\\F404\";\n}\n\n.ion-ios-close-outline:before {\n  content: \"\\F405\";\n}\n\n.ion-ios-cloud:before {\n  content: \"\\F40C\";\n}\n\n.ion-ios-cloud-download:before {\n  content: \"\\F408\";\n}\n\n.ion-ios-cloud-download-outline:before {\n  content: \"\\F407\";\n}\n\n.ion-ios-cloud-outline:before {\n  content: \"\\F409\";\n}\n\n.ion-ios-cloud-upload:before {\n  content: \"\\F40B\";\n}\n\n.ion-ios-cloud-upload-outline:before {\n  content: \"\\F40A\";\n}\n\n.ion-ios-cloudy:before {\n  content: \"\\F410\";\n}\n\n.ion-ios-cloudy-night:before {\n  content: \"\\F40E\";\n}\n\n.ion-ios-cloudy-night-outline:before {\n  content: \"\\F40D\";\n}\n\n.ion-ios-cloudy-outline:before {\n  content: \"\\F40F\";\n}\n\n.ion-ios-cog:before {\n  content: \"\\F412\";\n}\n\n.ion-ios-cog-outline:before {\n  content: \"\\F411\";\n}\n\n.ion-ios-color-filter:before {\n  content: \"\\F414\";\n}\n\n.ion-ios-color-filter-outline:before {\n  content: \"\\F413\";\n}\n\n.ion-ios-color-wand:before {\n  content: \"\\F416\";\n}\n\n.ion-ios-color-wand-outline:before {\n  content: \"\\F415\";\n}\n\n.ion-ios-compose:before {\n  content: \"\\F418\";\n}\n\n.ion-ios-compose-outline:before {\n  content: \"\\F417\";\n}\n\n.ion-ios-contact:before {\n  content: \"\\F41A\";\n}\n\n.ion-ios-contact-outline:before {\n  content: \"\\F419\";\n}\n\n.ion-ios-copy:before {\n  content: \"\\F41C\";\n}\n\n.ion-ios-copy-outline:before {\n  content: \"\\F41B\";\n}\n\n.ion-ios-crop:before {\n  content: \"\\F41E\";\n}\n\n.ion-ios-crop-strong:before {\n  content: \"\\F41D\";\n}\n\n.ion-ios-download:before {\n  content: \"\\F420\";\n}\n\n.ion-ios-download-outline:before {\n  content: \"\\F41F\";\n}\n\n.ion-ios-drag:before {\n  content: \"\\F421\";\n}\n\n.ion-ios-email:before {\n  content: \"\\F423\";\n}\n\n.ion-ios-email-outline:before {\n  content: \"\\F422\";\n}\n\n.ion-ios-eye:before {\n  content: \"\\F425\";\n}\n\n.ion-ios-eye-outline:before {\n  content: \"\\F424\";\n}\n\n.ion-ios-fastforward:before {\n  content: \"\\F427\";\n}\n\n.ion-ios-fastforward-outline:before {\n  content: \"\\F426\";\n}\n\n.ion-ios-filing:before {\n  content: \"\\F429\";\n}\n\n.ion-ios-filing-outline:before {\n  content: \"\\F428\";\n}\n\n.ion-ios-film:before {\n  content: \"\\F42B\";\n}\n\n.ion-ios-film-outline:before {\n  content: \"\\F42A\";\n}\n\n.ion-ios-flag:before {\n  content: \"\\F42D\";\n}\n\n.ion-ios-flag-outline:before {\n  content: \"\\F42C\";\n}\n\n.ion-ios-flame:before {\n  content: \"\\F42F\";\n}\n\n.ion-ios-flame-outline:before {\n  content: \"\\F42E\";\n}\n\n.ion-ios-flask:before {\n  content: \"\\F431\";\n}\n\n.ion-ios-flask-outline:before {\n  content: \"\\F430\";\n}\n\n.ion-ios-flower:before {\n  content: \"\\F433\";\n}\n\n.ion-ios-flower-outline:before {\n  content: \"\\F432\";\n}\n\n.ion-ios-folder:before {\n  content: \"\\F435\";\n}\n\n.ion-ios-folder-outline:before {\n  content: \"\\F434\";\n}\n\n.ion-ios-football:before {\n  content: \"\\F437\";\n}\n\n.ion-ios-football-outline:before {\n  content: \"\\F436\";\n}\n\n.ion-ios-game-controller-a:before {\n  content: \"\\F439\";\n}\n\n.ion-ios-game-controller-a-outline:before {\n  content: \"\\F438\";\n}\n\n.ion-ios-game-controller-b:before {\n  content: \"\\F43B\";\n}\n\n.ion-ios-game-controller-b-outline:before {\n  content: \"\\F43A\";\n}\n\n.ion-ios-gear:before {\n  content: \"\\F43D\";\n}\n\n.ion-ios-gear-outline:before {\n  content: \"\\F43C\";\n}\n\n.ion-ios-glasses:before {\n  content: \"\\F43F\";\n}\n\n.ion-ios-glasses-outline:before {\n  content: \"\\F43E\";\n}\n\n.ion-ios-grid-view:before {\n  content: \"\\F441\";\n}\n\n.ion-ios-grid-view-outline:before {\n  content: \"\\F440\";\n}\n\n.ion-ios-heart:before {\n  content: \"\\F443\";\n}\n\n.ion-ios-heart-outline:before {\n  content: \"\\F442\";\n}\n\n.ion-ios-help:before {\n  content: \"\\F446\";\n}\n\n.ion-ios-help-empty:before {\n  content: \"\\F444\";\n}\n\n.ion-ios-help-outline:before {\n  content: \"\\F445\";\n}\n\n.ion-ios-home:before {\n  content: \"\\F448\";\n}\n\n.ion-ios-home-outline:before {\n  content: \"\\F447\";\n}\n\n.ion-ios-infinite:before {\n  content: \"\\F44A\";\n}\n\n.ion-ios-infinite-outline:before {\n  content: \"\\F449\";\n}\n\n.ion-ios-information:before {\n  content: \"\\F44D\";\n}\n\n.ion-ios-information-empty:before {\n  content: \"\\F44B\";\n}\n\n.ion-ios-information-outline:before {\n  content: \"\\F44C\";\n}\n\n.ion-ios-ionic-outline:before {\n  content: \"\\F44E\";\n}\n\n.ion-ios-keypad:before {\n  content: \"\\F450\";\n}\n\n.ion-ios-keypad-outline:before {\n  content: \"\\F44F\";\n}\n\n.ion-ios-lightbulb:before {\n  content: \"\\F452\";\n}\n\n.ion-ios-lightbulb-outline:before {\n  content: \"\\F451\";\n}\n\n.ion-ios-list:before {\n  content: \"\\F454\";\n}\n\n.ion-ios-list-outline:before {\n  content: \"\\F453\";\n}\n\n.ion-ios-location:before {\n  content: \"\\F456\";\n}\n\n.ion-ios-location-outline:before {\n  content: \"\\F455\";\n}\n\n.ion-ios-locked:before {\n  content: \"\\F458\";\n}\n\n.ion-ios-locked-outline:before {\n  content: \"\\F457\";\n}\n\n.ion-ios-loop:before {\n  content: \"\\F45A\";\n}\n\n.ion-ios-loop-strong:before {\n  content: \"\\F459\";\n}\n\n.ion-ios-medical:before {\n  content: \"\\F45C\";\n}\n\n.ion-ios-medical-outline:before {\n  content: \"\\F45B\";\n}\n\n.ion-ios-medkit:before {\n  content: \"\\F45E\";\n}\n\n.ion-ios-medkit-outline:before {\n  content: \"\\F45D\";\n}\n\n.ion-ios-mic:before {\n  content: \"\\F461\";\n}\n\n.ion-ios-mic-off:before {\n  content: \"\\F45F\";\n}\n\n.ion-ios-mic-outline:before {\n  content: \"\\F460\";\n}\n\n.ion-ios-minus:before {\n  content: \"\\F464\";\n}\n\n.ion-ios-minus-empty:before {\n  content: \"\\F462\";\n}\n\n.ion-ios-minus-outline:before {\n  content: \"\\F463\";\n}\n\n.ion-ios-monitor:before {\n  content: \"\\F466\";\n}\n\n.ion-ios-monitor-outline:before {\n  content: \"\\F465\";\n}\n\n.ion-ios-moon:before {\n  content: \"\\F468\";\n}\n\n.ion-ios-moon-outline:before {\n  content: \"\\F467\";\n}\n\n.ion-ios-more:before {\n  content: \"\\F46A\";\n}\n\n.ion-ios-more-outline:before {\n  content: \"\\F469\";\n}\n\n.ion-ios-musical-note:before {\n  content: \"\\F46B\";\n}\n\n.ion-ios-musical-notes:before {\n  content: \"\\F46C\";\n}\n\n.ion-ios-navigate:before {\n  content: \"\\F46E\";\n}\n\n.ion-ios-navigate-outline:before {\n  content: \"\\F46D\";\n}\n\n.ion-ios-nutrition:before {\n  content: \"\\F470\";\n}\n\n.ion-ios-nutrition-outline:before {\n  content: \"\\F46F\";\n}\n\n.ion-ios-paper:before {\n  content: \"\\F472\";\n}\n\n.ion-ios-paper-outline:before {\n  content: \"\\F471\";\n}\n\n.ion-ios-paperplane:before {\n  content: \"\\F474\";\n}\n\n.ion-ios-paperplane-outline:before {\n  content: \"\\F473\";\n}\n\n.ion-ios-partlysunny:before {\n  content: \"\\F476\";\n}\n\n.ion-ios-partlysunny-outline:before {\n  content: \"\\F475\";\n}\n\n.ion-ios-pause:before {\n  content: \"\\F478\";\n}\n\n.ion-ios-pause-outline:before {\n  content: \"\\F477\";\n}\n\n.ion-ios-paw:before {\n  content: \"\\F47A\";\n}\n\n.ion-ios-paw-outline:before {\n  content: \"\\F479\";\n}\n\n.ion-ios-people:before {\n  content: \"\\F47C\";\n}\n\n.ion-ios-people-outline:before {\n  content: \"\\F47B\";\n}\n\n.ion-ios-person:before {\n  content: \"\\F47E\";\n}\n\n.ion-ios-person-outline:before {\n  content: \"\\F47D\";\n}\n\n.ion-ios-personadd:before {\n  content: \"\\F480\";\n}\n\n.ion-ios-personadd-outline:before {\n  content: \"\\F47F\";\n}\n\n.ion-ios-photos:before {\n  content: \"\\F482\";\n}\n\n.ion-ios-photos-outline:before {\n  content: \"\\F481\";\n}\n\n.ion-ios-pie:before {\n  content: \"\\F484\";\n}\n\n.ion-ios-pie-outline:before {\n  content: \"\\F483\";\n}\n\n.ion-ios-pint:before {\n  content: \"\\F486\";\n}\n\n.ion-ios-pint-outline:before {\n  content: \"\\F485\";\n}\n\n.ion-ios-play:before {\n  content: \"\\F488\";\n}\n\n.ion-ios-play-outline:before {\n  content: \"\\F487\";\n}\n\n.ion-ios-plus:before {\n  content: \"\\F48B\";\n}\n\n.ion-ios-plus-empty:before {\n  content: \"\\F489\";\n}\n\n.ion-ios-plus-outline:before {\n  content: \"\\F48A\";\n}\n\n.ion-ios-pricetag:before {\n  content: \"\\F48D\";\n}\n\n.ion-ios-pricetag-outline:before {\n  content: \"\\F48C\";\n}\n\n.ion-ios-pricetags:before {\n  content: \"\\F48F\";\n}\n\n.ion-ios-pricetags-outline:before {\n  content: \"\\F48E\";\n}\n\n.ion-ios-printer:before {\n  content: \"\\F491\";\n}\n\n.ion-ios-printer-outline:before {\n  content: \"\\F490\";\n}\n\n.ion-ios-pulse:before {\n  content: \"\\F493\";\n}\n\n.ion-ios-pulse-strong:before {\n  content: \"\\F492\";\n}\n\n.ion-ios-rainy:before {\n  content: \"\\F495\";\n}\n\n.ion-ios-rainy-outline:before {\n  content: \"\\F494\";\n}\n\n.ion-ios-recording:before {\n  content: \"\\F497\";\n}\n\n.ion-ios-recording-outline:before {\n  content: \"\\F496\";\n}\n\n.ion-ios-redo:before {\n  content: \"\\F499\";\n}\n\n.ion-ios-redo-outline:before {\n  content: \"\\F498\";\n}\n\n.ion-ios-refresh:before {\n  content: \"\\F49C\";\n}\n\n.ion-ios-refresh-empty:before {\n  content: \"\\F49A\";\n}\n\n.ion-ios-refresh-outline:before {\n  content: \"\\F49B\";\n}\n\n.ion-ios-reload:before {\n  content: \"\\F49D\";\n}\n\n.ion-ios-reverse-camera:before {\n  content: \"\\F49F\";\n}\n\n.ion-ios-reverse-camera-outline:before {\n  content: \"\\F49E\";\n}\n\n.ion-ios-rewind:before {\n  content: \"\\F4A1\";\n}\n\n.ion-ios-rewind-outline:before {\n  content: \"\\F4A0\";\n}\n\n.ion-ios-rose:before {\n  content: \"\\F4A3\";\n}\n\n.ion-ios-rose-outline:before {\n  content: \"\\F4A2\";\n}\n\n.ion-ios-search:before {\n  content: \"\\F4A5\";\n}\n\n.ion-ios-search-strong:before {\n  content: \"\\F4A4\";\n}\n\n.ion-ios-settings:before {\n  content: \"\\F4A7\";\n}\n\n.ion-ios-settings-strong:before {\n  content: \"\\F4A6\";\n}\n\n.ion-ios-shuffle:before {\n  content: \"\\F4A9\";\n}\n\n.ion-ios-shuffle-strong:before {\n  content: \"\\F4A8\";\n}\n\n.ion-ios-skipbackward:before {\n  content: \"\\F4AB\";\n}\n\n.ion-ios-skipbackward-outline:before {\n  content: \"\\F4AA\";\n}\n\n.ion-ios-skipforward:before {\n  content: \"\\F4AD\";\n}\n\n.ion-ios-skipforward-outline:before {\n  content: \"\\F4AC\";\n}\n\n.ion-ios-snowy:before {\n  content: \"\\F4AE\";\n}\n\n.ion-ios-speedometer:before {\n  content: \"\\F4B0\";\n}\n\n.ion-ios-speedometer-outline:before {\n  content: \"\\F4AF\";\n}\n\n.ion-ios-star:before {\n  content: \"\\F4B3\";\n}\n\n.ion-ios-star-half:before {\n  content: \"\\F4B1\";\n}\n\n.ion-ios-star-outline:before {\n  content: \"\\F4B2\";\n}\n\n.ion-ios-stopwatch:before {\n  content: \"\\F4B5\";\n}\n\n.ion-ios-stopwatch-outline:before {\n  content: \"\\F4B4\";\n}\n\n.ion-ios-sunny:before {\n  content: \"\\F4B7\";\n}\n\n.ion-ios-sunny-outline:before {\n  content: \"\\F4B6\";\n}\n\n.ion-ios-telephone:before {\n  content: \"\\F4B9\";\n}\n\n.ion-ios-telephone-outline:before {\n  content: \"\\F4B8\";\n}\n\n.ion-ios-tennisball:before {\n  content: \"\\F4BB\";\n}\n\n.ion-ios-tennisball-outline:before {\n  content: \"\\F4BA\";\n}\n\n.ion-ios-thunderstorm:before {\n  content: \"\\F4BD\";\n}\n\n.ion-ios-thunderstorm-outline:before {\n  content: \"\\F4BC\";\n}\n\n.ion-ios-time:before {\n  content: \"\\F4BF\";\n}\n\n.ion-ios-time-outline:before {\n  content: \"\\F4BE\";\n}\n\n.ion-ios-timer:before {\n  content: \"\\F4C1\";\n}\n\n.ion-ios-timer-outline:before {\n  content: \"\\F4C0\";\n}\n\n.ion-ios-toggle:before {\n  content: \"\\F4C3\";\n}\n\n.ion-ios-toggle-outline:before {\n  content: \"\\F4C2\";\n}\n\n.ion-ios-trash:before {\n  content: \"\\F4C5\";\n}\n\n.ion-ios-trash-outline:before {\n  content: \"\\F4C4\";\n}\n\n.ion-ios-undo:before {\n  content: \"\\F4C7\";\n}\n\n.ion-ios-undo-outline:before {\n  content: \"\\F4C6\";\n}\n\n.ion-ios-unlocked:before {\n  content: \"\\F4C9\";\n}\n\n.ion-ios-unlocked-outline:before {\n  content: \"\\F4C8\";\n}\n\n.ion-ios-upload:before {\n  content: \"\\F4CB\";\n}\n\n.ion-ios-upload-outline:before {\n  content: \"\\F4CA\";\n}\n\n.ion-ios-videocam:before {\n  content: \"\\F4CD\";\n}\n\n.ion-ios-videocam-outline:before {\n  content: \"\\F4CC\";\n}\n\n.ion-ios-volume-high:before {\n  content: \"\\F4CE\";\n}\n\n.ion-ios-volume-low:before {\n  content: \"\\F4CF\";\n}\n\n.ion-ios-wineglass:before {\n  content: \"\\F4D1\";\n}\n\n.ion-ios-wineglass-outline:before {\n  content: \"\\F4D0\";\n}\n\n.ion-ios-world:before {\n  content: \"\\F4D3\";\n}\n\n.ion-ios-world-outline:before {\n  content: \"\\F4D2\";\n}\n\n.ion-ipad:before {\n  content: \"\\F1F9\";\n}\n\n.ion-iphone:before {\n  content: \"\\F1FA\";\n}\n\n.ion-ipod:before {\n  content: \"\\F1FB\";\n}\n\n.ion-jet:before {\n  content: \"\\F295\";\n}\n\n.ion-key:before {\n  content: \"\\F296\";\n}\n\n.ion-knife:before {\n  content: \"\\F297\";\n}\n\n.ion-laptop:before {\n  content: \"\\F1FC\";\n}\n\n.ion-leaf:before {\n  content: \"\\F1FD\";\n}\n\n.ion-levels:before {\n  content: \"\\F298\";\n}\n\n.ion-lightbulb:before {\n  content: \"\\F299\";\n}\n\n.ion-link:before {\n  content: \"\\F1FE\";\n}\n\n.ion-load-a:before {\n  content: \"\\F29A\";\n}\n\n.ion-load-b:before {\n  content: \"\\F29B\";\n}\n\n.ion-load-c:before {\n  content: \"\\F29C\";\n}\n\n.ion-load-d:before {\n  content: \"\\F29D\";\n}\n\n.ion-location:before {\n  content: \"\\F1FF\";\n}\n\n.ion-lock-combination:before {\n  content: \"\\F4D4\";\n}\n\n.ion-locked:before {\n  content: \"\\F200\";\n}\n\n.ion-log-in:before {\n  content: \"\\F29E\";\n}\n\n.ion-log-out:before {\n  content: \"\\F29F\";\n}\n\n.ion-loop:before {\n  content: \"\\F201\";\n}\n\n.ion-magnet:before {\n  content: \"\\F2A0\";\n}\n\n.ion-male:before {\n  content: \"\\F2A1\";\n}\n\n.ion-man:before {\n  content: \"\\F202\";\n}\n\n.ion-map:before {\n  content: \"\\F203\";\n}\n\n.ion-medkit:before {\n  content: \"\\F2A2\";\n}\n\n.ion-merge:before {\n  content: \"\\F33F\";\n}\n\n.ion-mic-a:before {\n  content: \"\\F204\";\n}\n\n.ion-mic-b:before {\n  content: \"\\F205\";\n}\n\n.ion-mic-c:before {\n  content: \"\\F206\";\n}\n\n.ion-minus:before {\n  content: \"\\F209\";\n}\n\n.ion-minus-circled:before {\n  content: \"\\F207\";\n}\n\n.ion-minus-round:before {\n  content: \"\\F208\";\n}\n\n.ion-model-s:before {\n  content: \"\\F2C1\";\n}\n\n.ion-monitor:before {\n  content: \"\\F20A\";\n}\n\n.ion-more:before {\n  content: \"\\F20B\";\n}\n\n.ion-mouse:before {\n  content: \"\\F340\";\n}\n\n.ion-music-note:before {\n  content: \"\\F20C\";\n}\n\n.ion-navicon:before {\n  content: \"\\F20E\";\n}\n\n.ion-navicon-round:before {\n  content: \"\\F20D\";\n}\n\n.ion-navigate:before {\n  content: \"\\F2A3\";\n}\n\n.ion-network:before {\n  content: \"\\F341\";\n}\n\n.ion-no-smoking:before {\n  content: \"\\F2C2\";\n}\n\n.ion-nuclear:before {\n  content: \"\\F2A4\";\n}\n\n.ion-outlet:before {\n  content: \"\\F342\";\n}\n\n.ion-paintbrush:before {\n  content: \"\\F4D5\";\n}\n\n.ion-paintbucket:before {\n  content: \"\\F4D6\";\n}\n\n.ion-paper-airplane:before {\n  content: \"\\F2C3\";\n}\n\n.ion-paperclip:before {\n  content: \"\\F20F\";\n}\n\n.ion-pause:before {\n  content: \"\\F210\";\n}\n\n.ion-person:before {\n  content: \"\\F213\";\n}\n\n.ion-person-add:before {\n  content: \"\\F211\";\n}\n\n.ion-person-stalker:before {\n  content: \"\\F212\";\n}\n\n.ion-pie-graph:before {\n  content: \"\\F2A5\";\n}\n\n.ion-pin:before {\n  content: \"\\F2A6\";\n}\n\n.ion-pinpoint:before {\n  content: \"\\F2A7\";\n}\n\n.ion-pizza:before {\n  content: \"\\F2A8\";\n}\n\n.ion-plane:before {\n  content: \"\\F214\";\n}\n\n.ion-planet:before {\n  content: \"\\F343\";\n}\n\n.ion-play:before {\n  content: \"\\F215\";\n}\n\n.ion-playstation:before {\n  content: \"\\F30A\";\n}\n\n.ion-plus:before {\n  content: \"\\F218\";\n}\n\n.ion-plus-circled:before {\n  content: \"\\F216\";\n}\n\n.ion-plus-round:before {\n  content: \"\\F217\";\n}\n\n.ion-podium:before {\n  content: \"\\F344\";\n}\n\n.ion-pound:before {\n  content: \"\\F219\";\n}\n\n.ion-power:before {\n  content: \"\\F2A9\";\n}\n\n.ion-pricetag:before {\n  content: \"\\F2AA\";\n}\n\n.ion-pricetags:before {\n  content: \"\\F2AB\";\n}\n\n.ion-printer:before {\n  content: \"\\F21A\";\n}\n\n.ion-pull-request:before {\n  content: \"\\F345\";\n}\n\n.ion-qr-scanner:before {\n  content: \"\\F346\";\n}\n\n.ion-quote:before {\n  content: \"\\F347\";\n}\n\n.ion-radio-waves:before {\n  content: \"\\F2AC\";\n}\n\n.ion-record:before {\n  content: \"\\F21B\";\n}\n\n.ion-refresh:before {\n  content: \"\\F21C\";\n}\n\n.ion-reply:before {\n  content: \"\\F21E\";\n}\n\n.ion-reply-all:before {\n  content: \"\\F21D\";\n}\n\n.ion-ribbon-a:before {\n  content: \"\\F348\";\n}\n\n.ion-ribbon-b:before {\n  content: \"\\F349\";\n}\n\n.ion-sad:before {\n  content: \"\\F34A\";\n}\n\n.ion-sad-outline:before {\n  content: \"\\F4D7\";\n}\n\n.ion-scissors:before {\n  content: \"\\F34B\";\n}\n\n.ion-search:before {\n  content: \"\\F21F\";\n}\n\n.ion-settings:before {\n  content: \"\\F2AD\";\n}\n\n.ion-share:before {\n  content: \"\\F220\";\n}\n\n.ion-shuffle:before {\n  content: \"\\F221\";\n}\n\n.ion-skip-backward:before {\n  content: \"\\F222\";\n}\n\n.ion-skip-forward:before {\n  content: \"\\F223\";\n}\n\n.ion-social-android:before {\n  content: \"\\F225\";\n}\n\n.ion-social-android-outline:before {\n  content: \"\\F224\";\n}\n\n.ion-social-angular:before {\n  content: \"\\F4D9\";\n}\n\n.ion-social-angular-outline:before {\n  content: \"\\F4D8\";\n}\n\n.ion-social-apple:before {\n  content: \"\\F227\";\n}\n\n.ion-social-apple-outline:before {\n  content: \"\\F226\";\n}\n\n.ion-social-bitcoin:before {\n  content: \"\\F2AF\";\n}\n\n.ion-social-bitcoin-outline:before {\n  content: \"\\F2AE\";\n}\n\n.ion-social-buffer:before {\n  content: \"\\F229\";\n}\n\n.ion-social-buffer-outline:before {\n  content: \"\\F228\";\n}\n\n.ion-social-chrome:before {\n  content: \"\\F4DB\";\n}\n\n.ion-social-chrome-outline:before {\n  content: \"\\F4DA\";\n}\n\n.ion-social-codepen:before {\n  content: \"\\F4DD\";\n}\n\n.ion-social-codepen-outline:before {\n  content: \"\\F4DC\";\n}\n\n.ion-social-css3:before {\n  content: \"\\F4DF\";\n}\n\n.ion-social-css3-outline:before {\n  content: \"\\F4DE\";\n}\n\n.ion-social-designernews:before {\n  content: \"\\F22B\";\n}\n\n.ion-social-designernews-outline:before {\n  content: \"\\F22A\";\n}\n\n.ion-social-dribbble:before {\n  content: \"\\F22D\";\n}\n\n.ion-social-dribbble-outline:before {\n  content: \"\\F22C\";\n}\n\n.ion-social-dropbox:before {\n  content: \"\\F22F\";\n}\n\n.ion-social-dropbox-outline:before {\n  content: \"\\F22E\";\n}\n\n.ion-social-euro:before {\n  content: \"\\F4E1\";\n}\n\n.ion-social-euro-outline:before {\n  content: \"\\F4E0\";\n}\n\n.ion-social-facebook:before {\n  content: \"\\F231\";\n}\n\n.ion-social-facebook-outline:before {\n  content: \"\\F230\";\n}\n\n.ion-social-foursquare:before {\n  content: \"\\F34D\";\n}\n\n.ion-social-foursquare-outline:before {\n  content: \"\\F34C\";\n}\n\n.ion-social-freebsd-devil:before {\n  content: \"\\F2C4\";\n}\n\n.ion-social-github:before {\n  content: \"\\F233\";\n}\n\n.ion-social-github-outline:before {\n  content: \"\\F232\";\n}\n\n.ion-social-google:before {\n  content: \"\\F34F\";\n}\n\n.ion-social-google-outline:before {\n  content: \"\\F34E\";\n}\n\n.ion-social-googleplus:before {\n  content: \"\\F235\";\n}\n\n.ion-social-googleplus-outline:before {\n  content: \"\\F234\";\n}\n\n.ion-social-hackernews:before {\n  content: \"\\F237\";\n}\n\n.ion-social-hackernews-outline:before {\n  content: \"\\F236\";\n}\n\n.ion-social-html5:before {\n  content: \"\\F4E3\";\n}\n\n.ion-social-html5-outline:before {\n  content: \"\\F4E2\";\n}\n\n.ion-social-instagram:before {\n  content: \"\\F351\";\n}\n\n.ion-social-instagram-outline:before {\n  content: \"\\F350\";\n}\n\n.ion-social-javascript:before {\n  content: \"\\F4E5\";\n}\n\n.ion-social-javascript-outline:before {\n  content: \"\\F4E4\";\n}\n\n.ion-social-linkedin:before {\n  content: \"\\F239\";\n}\n\n.ion-social-linkedin-outline:before {\n  content: \"\\F238\";\n}\n\n.ion-social-markdown:before {\n  content: \"\\F4E6\";\n}\n\n.ion-social-nodejs:before {\n  content: \"\\F4E7\";\n}\n\n.ion-social-octocat:before {\n  content: \"\\F4E8\";\n}\n\n.ion-social-pinterest:before {\n  content: \"\\F2B1\";\n}\n\n.ion-social-pinterest-outline:before {\n  content: \"\\F2B0\";\n}\n\n.ion-social-python:before {\n  content: \"\\F4E9\";\n}\n\n.ion-social-reddit:before {\n  content: \"\\F23B\";\n}\n\n.ion-social-reddit-outline:before {\n  content: \"\\F23A\";\n}\n\n.ion-social-rss:before {\n  content: \"\\F23D\";\n}\n\n.ion-social-rss-outline:before {\n  content: \"\\F23C\";\n}\n\n.ion-social-sass:before {\n  content: \"\\F4EA\";\n}\n\n.ion-social-skype:before {\n  content: \"\\F23F\";\n}\n\n.ion-social-skype-outline:before {\n  content: \"\\F23E\";\n}\n\n.ion-social-snapchat:before {\n  content: \"\\F4EC\";\n}\n\n.ion-social-snapchat-outline:before {\n  content: \"\\F4EB\";\n}\n\n.ion-social-tumblr:before {\n  content: \"\\F241\";\n}\n\n.ion-social-tumblr-outline:before {\n  content: \"\\F240\";\n}\n\n.ion-social-tux:before {\n  content: \"\\F2C5\";\n}\n\n.ion-social-twitch:before {\n  content: \"\\F4EE\";\n}\n\n.ion-social-twitch-outline:before {\n  content: \"\\F4ED\";\n}\n\n.ion-social-twitter:before {\n  content: \"\\F243\";\n}\n\n.ion-social-twitter-outline:before {\n  content: \"\\F242\";\n}\n\n.ion-social-usd:before {\n  content: \"\\F353\";\n}\n\n.ion-social-usd-outline:before {\n  content: \"\\F352\";\n}\n\n.ion-social-vimeo:before {\n  content: \"\\F245\";\n}\n\n.ion-social-vimeo-outline:before {\n  content: \"\\F244\";\n}\n\n.ion-social-whatsapp:before {\n  content: \"\\F4F0\";\n}\n\n.ion-social-whatsapp-outline:before {\n  content: \"\\F4EF\";\n}\n\n.ion-social-windows:before {\n  content: \"\\F247\";\n}\n\n.ion-social-windows-outline:before {\n  content: \"\\F246\";\n}\n\n.ion-social-wordpress:before {\n  content: \"\\F249\";\n}\n\n.ion-social-wordpress-outline:before {\n  content: \"\\F248\";\n}\n\n.ion-social-yahoo:before {\n  content: \"\\F24B\";\n}\n\n.ion-social-yahoo-outline:before {\n  content: \"\\F24A\";\n}\n\n.ion-social-yen:before {\n  content: \"\\F4F2\";\n}\n\n.ion-social-yen-outline:before {\n  content: \"\\F4F1\";\n}\n\n.ion-social-youtube:before {\n  content: \"\\F24D\";\n}\n\n.ion-social-youtube-outline:before {\n  content: \"\\F24C\";\n}\n\n.ion-soup-can:before {\n  content: \"\\F4F4\";\n}\n\n.ion-soup-can-outline:before {\n  content: \"\\F4F3\";\n}\n\n.ion-speakerphone:before {\n  content: \"\\F2B2\";\n}\n\n.ion-speedometer:before {\n  content: \"\\F2B3\";\n}\n\n.ion-spoon:before {\n  content: \"\\F2B4\";\n}\n\n.ion-star:before {\n  content: \"\\F24E\";\n}\n\n.ion-stats-bars:before {\n  content: \"\\F2B5\";\n}\n\n.ion-steam:before {\n  content: \"\\F30B\";\n}\n\n.ion-stop:before {\n  content: \"\\F24F\";\n}\n\n.ion-thermometer:before {\n  content: \"\\F2B6\";\n}\n\n.ion-thumbsdown:before {\n  content: \"\\F250\";\n}\n\n.ion-thumbsup:before {\n  content: \"\\F251\";\n}\n\n.ion-toggle:before {\n  content: \"\\F355\";\n}\n\n.ion-toggle-filled:before {\n  content: \"\\F354\";\n}\n\n.ion-transgender:before {\n  content: \"\\F4F5\";\n}\n\n.ion-trash-a:before {\n  content: \"\\F252\";\n}\n\n.ion-trash-b:before {\n  content: \"\\F253\";\n}\n\n.ion-trophy:before {\n  content: \"\\F356\";\n}\n\n.ion-tshirt:before {\n  content: \"\\F4F7\";\n}\n\n.ion-tshirt-outline:before {\n  content: \"\\F4F6\";\n}\n\n.ion-umbrella:before {\n  content: \"\\F2B7\";\n}\n\n.ion-university:before {\n  content: \"\\F357\";\n}\n\n.ion-unlocked:before {\n  content: \"\\F254\";\n}\n\n.ion-upload:before {\n  content: \"\\F255\";\n}\n\n.ion-usb:before {\n  content: \"\\F2B8\";\n}\n\n.ion-videocamera:before {\n  content: \"\\F256\";\n}\n\n.ion-volume-high:before {\n  content: \"\\F257\";\n}\n\n.ion-volume-low:before {\n  content: \"\\F258\";\n}\n\n.ion-volume-medium:before {\n  content: \"\\F259\";\n}\n\n.ion-volume-mute:before {\n  content: \"\\F25A\";\n}\n\n.ion-wand:before {\n  content: \"\\F358\";\n}\n\n.ion-waterdrop:before {\n  content: \"\\F25B\";\n}\n\n.ion-wifi:before {\n  content: \"\\F25C\";\n}\n\n.ion-wineglass:before {\n  content: \"\\F2B9\";\n}\n\n.ion-woman:before {\n  content: \"\\F25D\";\n}\n\n.ion-wrench:before {\n  content: \"\\F2BA\";\n}\n\n.ion-xbox:before {\n  content: \"\\F30C\";\n}\n\n/**\n * Resets\n * --------------------------------------------------\n * Adapted from normalize.css and some reset.css. We don't care even one\n * bit about old IE, so we don't need any hacks for that in here.\n *\n * There are probably other things we could remove here, as well.\n *\n * normalize.css v2.1.2 | MIT License | git.io/normalize\n\n * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)\n * http://cssreset.com\n */\n\nhtml,\nbody,\ndiv,\nspan,\napplet,\nobject,\niframe,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\np,\nblockquote,\npre,\na,\nabbr,\nacronym,\naddress,\nbig,\ncite,\ncode,\ndel,\ndfn,\nem,\nimg,\nins,\nkbd,\nq,\ns,\nsamp,\nsmall,\nstrike,\nstrong,\nsub,\nsup,\ntt,\nvar,\nb,\ni,\nu,\ncenter,\ndl,\ndt,\ndd,\nol,\nul,\nli,\nfieldset,\nform,\nlabel,\nlegend,\ntable,\ncaption,\ntbody,\ntfoot,\nthead,\ntr,\nth,\ntd,\narticle,\naside,\ncanvas,\ndetails,\nembed,\nfieldset,\nfigure,\nfigcaption,\nfooter,\nheader,\nhgroup,\nmenu,\nnav,\noutput,\nruby,\nsection,\nsummary,\ntime,\nmark,\naudio,\nvideo {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  vertical-align: baseline;\n  font: inherit;\n  font-size: 100%;\n}\n\nol,\nul {\n  list-style: none;\n}\n\nblockquote,\nq {\n  quotes: none;\n}\n\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: '';\n  content: none;\n}\n\n/**\n * Prevent modern browsers from displaying `audio` without controls.\n * Remove excess height in iOS 5 devices.\n */\n\naudio:not([controls]) {\n  display: none;\n  height: 0;\n}\n\n/**\n * Hide the `template` element in IE, Safari, and Firefox < 22.\n */\n\n[hidden],\ntemplate {\n  display: none;\n}\n\nscript {\n  display: none !important;\n}\n\n/* ==========================================================================\n   Base\n   ========================================================================== */\n\n/**\n * 1. Set default font family to sans-serif.\n * 2. Prevent iOS text size adjust after orientation change, without disabling\n *  user zoom.\n */\n\nhtml {\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  font-family: sans-serif;\n  /* 1 */\n  -webkit-text-size-adjust: 100%;\n  -ms-text-size-adjust: 100%;\n  /* 2 */\n  -webkit-text-size-adjust: 100%;\n  /* 2 */\n}\n\n/**\n * Remove default margin.\n */\n\nbody {\n  margin: 0;\n  line-height: 1;\n}\n\n/**\n * Remove default outlines.\n */\n\na,\nbutton,\n:focus,\na:focus,\nbutton:focus,\na:active,\na:hover {\n  outline: 0;\n}\n\n/* *\n * Remove tap highlight color\n */\n\na {\n  -webkit-user-drag: none;\n  -webkit-tap-highlight-color: transparent;\n  -webkit-tap-highlight-color: transparent;\n}\n\na[href]:hover {\n  cursor: pointer;\n}\n\n/* ==========================================================================\n   Typography\n   ========================================================================== */\n\n/**\n * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.\n */\n\nb,\nstrong {\n  font-weight: bold;\n}\n\n/**\n * Address styling not present in Safari 5 and Chrome.\n */\n\ndfn {\n  font-style: italic;\n}\n\n/**\n * Address differences between Firefox and other browsers.\n */\n\nhr {\n  -moz-box-sizing: content-box;\n  box-sizing: content-box;\n  height: 0;\n}\n\n/**\n * Correct font family set oddly in Safari 5 and Chrome.\n */\n\ncode,\nkbd,\npre,\nsamp {\n  font-size: 1em;\n  font-family: monospace, serif;\n}\n\n/**\n * Improve readability of pre-formatted text in all browsers.\n */\n\npre {\n  white-space: pre-wrap;\n}\n\n/**\n * Set consistent quote types.\n */\n\nq {\n  quotes: \"\\201C\" \"\\201D\" \"\\2018\" \"\\2019\";\n}\n\n/**\n * Address inconsistent and variable font size in all browsers.\n */\n\nsmall {\n  font-size: 80%;\n}\n\n/**\n * Prevent `sub` and `sup` affecting `line-height` in all browsers.\n */\n\nsub,\nsup {\n  position: relative;\n  vertical-align: baseline;\n  font-size: 75%;\n  line-height: 0;\n}\n\nsup {\n  top: -0.5em;\n}\n\nsub {\n  bottom: -0.25em;\n}\n\n/**\n * Define consistent border, margin, and padding.\n */\n\nfieldset {\n  margin: 0 2px;\n  padding: 0.35em 0.625em 0.75em;\n  border: 1px solid #c0c0c0;\n}\n\n/**\n * 1. Correct `color` not being inherited in IE 8/9.\n * 2. Remove padding so people aren't caught out if they zero out fieldsets.\n */\n\nlegend {\n  padding: 0;\n  /* 2 */\n  border: 0;\n  /* 1 */\n}\n\n/**\n * 1. Correct font family not being inherited in all browsers.\n * 2. Correct font size not being inherited in all browsers.\n * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.\n * 4. Remove any default :focus styles\n * 5. Make sure webkit font smoothing is being inherited\n * 6. Remove default gradient in Android Firefox / FirefoxOS\n */\n\nbutton,\ninput,\nselect,\ntextarea {\n  margin: 0;\n  /* 3 */\n  font-size: 100%;\n  /* 2 */\n  font-family: inherit;\n  /* 1 */\n  outline-offset: 0;\n  /* 4 */\n  outline-style: none;\n  /* 4 */\n  outline-width: 0;\n  /* 4 */\n  -webkit-font-smoothing: inherit;\n  /* 5 */\n  background-image: none;\n  /* 6 */\n}\n\n/**\n * Address Firefox 4+ setting `line-height` on `input` using `importnt` in\n * the UA stylesheet.\n */\n\nbutton,\ninput {\n  line-height: normal;\n}\n\n/**\n * Address inconsistent `text-transform` inheritance for `button` and `select`.\n * All other form control elements do not inherit `text-transform` values.\n * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.\n * Correct `select` style inheritance in Firefox 4+ and Opera.\n */\n\nbutton,\nselect {\n  text-transform: none;\n}\n\n/**\n * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`\n *  and `video` controls.\n * 2. Correct inability to style clickable `input` types in iOS.\n * 3. Improve usability and consistency of cursor style between image-type\n *  `input` and others.\n */\n\nbutton,\nhtml input[type=\"button\"],\ninput[type=\"reset\"],\ninput[type=\"submit\"] {\n  cursor: pointer;\n  /* 3 */\n  -webkit-appearance: button;\n  /* 2 */\n}\n\n/**\n * Re-set default cursor for disabled elements.\n */\n\nbutton[disabled],\nhtml input[disabled] {\n  cursor: default;\n}\n\n/**\n * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.\n * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome\n *  (include `-moz` to future-proof).\n */\n\ninput[type=\"search\"] {\n  -webkit-box-sizing: content-box;\n  /* 2 */\n  -moz-box-sizing: content-box;\n  box-sizing: content-box;\n  -webkit-appearance: textfield;\n  /* 1 */\n}\n\n/**\n * Remove inner padding and search cancel button in Safari 5 and Chrome\n * on OS X.\n */\n\ninput[type=\"search\"]::-webkit-search-cancel-button,\ninput[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\n\n/**\n * Remove inner padding and border in Firefox 4+.\n */\n\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  padding: 0;\n  border: 0;\n}\n\n/**\n * 1. Remove default vertical scrollbar in IE 8/9.\n * 2. Improve readability and alignment in all browsers.\n */\n\ntextarea {\n  overflow: auto;\n  /* 1 */\n  vertical-align: top;\n  /* 2 */\n}\n\nimg {\n  -webkit-user-drag: none;\n}\n\n/* ==========================================================================\n   Tables\n   ========================================================================== */\n\n/**\n * Remove most spacing between table cells.\n */\n\ntable {\n  border-spacing: 0;\n  border-collapse: collapse;\n}\n\n/**\n * Scaffolding\n * --------------------------------------------------\n */\n\n*,\n*:before,\n*:after {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\nhtml {\n  overflow: hidden;\n  -ms-touch-action: pan-y;\n  touch-action: pan-y;\n}\n\nbody,\n.ionic-body {\n  -webkit-touch-callout: none;\n  -webkit-font-smoothing: antialiased;\n  font-smoothing: antialiased;\n  -webkit-text-size-adjust: none;\n  -moz-text-size-adjust: none;\n  text-size-adjust: none;\n  -webkit-tap-highlight-color: transparent;\n  -webkit-tap-highlight-color: transparent;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  overflow: hidden;\n  margin: 0;\n  padding: 0;\n  color: #968D78;\n  word-wrap: break-word;\n  font-size: 16px;\n  font-family: \"Titillium Web\", sans-serif;\n  line-height: 22px;\n  text-rendering: optimizeLegibility;\n  -webkit-backface-visibility: hidden;\n  -webkit-user-drag: none;\n  -ms-content-zooming: none;\n}\n\nbody.grade-b,\nbody.grade-c {\n  text-rendering: auto;\n}\n\n.content {\n  position: relative;\n}\n\n.scroll-content {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  overflow: hidden;\n  margin-top: -1px;\n  padding-top: 1px;\n  margin-bottom: -1px;\n  width: auto;\n  height: auto;\n}\n\n.menu .scroll-content.scroll-content-false {\n  z-index: 11;\n}\n\n.scroll-view {\n  position: relative;\n  display: block;\n  overflow: hidden;\n  margin-top: -1px;\n}\n\n/**\n * Scroll is the scroll view component available for complex and custom\n * scroll view functionality.\n */\n\n.scroll {\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  -webkit-touch-callout: none;\n  -webkit-text-size-adjust: none;\n  -moz-text-size-adjust: none;\n  text-size-adjust: none;\n  -webkit-transform-origin: left top;\n  transform-origin: left top;\n}\n\n/**\n * Set ms-viewport to prevent MS \"page squish\" and allow fluid scrolling\n * https://msdn.microsoft.com/en-us/library/ie/hh869615(v=vs.85).aspx\n */\n\n@-ms-viewport {\n  width: device-width;\n}\n\n.scroll-bar {\n  position: absolute;\n  z-index: 9999;\n}\n\n.ng-animate .scroll-bar {\n  visibility: hidden;\n}\n\n.scroll-bar-h {\n  right: 2px;\n  bottom: 3px;\n  left: 2px;\n  height: 3px;\n}\n\n.scroll-bar-h .scroll-bar-indicator {\n  height: 100%;\n}\n\n.scroll-bar-v {\n  top: 2px;\n  right: 3px;\n  bottom: 2px;\n  width: 3px;\n}\n\n.scroll-bar-v .scroll-bar-indicator {\n  width: 100%;\n}\n\n.scroll-bar-indicator {\n  position: absolute;\n  border-radius: 4px;\n  background: rgba(0, 0, 0, 0.3);\n  opacity: 1;\n  -webkit-transition: opacity 0.3s linear;\n  transition: opacity 0.3s linear;\n}\n\n.scroll-bar-indicator.scroll-bar-fade-out {\n  opacity: 0;\n}\n\n.platform-android .scroll-bar-indicator {\n  border-radius: 0;\n}\n\n.grade-b .scroll-bar-indicator,\n.grade-c .scroll-bar-indicator {\n  background: #aaa;\n}\n\n.grade-b .scroll-bar-indicator.scroll-bar-fade-out,\n.grade-c .scroll-bar-indicator.scroll-bar-fade-out {\n  -webkit-transition: none;\n  transition: none;\n}\n\nion-infinite-scroll {\n  height: 60px;\n  width: 100%;\n  display: block;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-direction: normal;\n  -webkit-box-orient: horizontal;\n  -webkit-flex-direction: row;\n  -moz-flex-direction: row;\n  -ms-flex-direction: row;\n  flex-direction: row;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  -webkit-justify-content: center;\n  -moz-justify-content: center;\n  justify-content: center;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  -webkit-align-items: center;\n  -moz-align-items: center;\n  align-items: center;\n}\n\nion-infinite-scroll .icon {\n  color: #666666;\n  font-size: 30px;\n  color: #666666;\n}\n\nion-infinite-scroll:not(.active) .spinner,\nion-infinite-scroll:not(.active) .icon:before {\n  display: none;\n}\n\n.overflow-scroll {\n  overflow-x: hidden;\n  overflow-y: scroll;\n  -webkit-overflow-scrolling: touch;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  position: absolute;\n}\n\n.overflow-scroll .scroll {\n  position: static;\n  height: 100%;\n  -webkit-transform: translate3d(0, 0, 0);\n}\n\n/* If you change these, change platform.scss as well */\n\n.has-header {\n  top: 44px;\n}\n\n.no-header {\n  top: 0;\n}\n\n.has-subheader {\n  top: 88px;\n}\n\n.has-tabs-top {\n  top: 93px;\n}\n\n.has-header.has-subheader.has-tabs-top {\n  top: 137px;\n}\n\n.has-footer {\n  bottom: 44px;\n}\n\n.has-subfooter {\n  bottom: 88px;\n}\n\n.has-tabs,\n.bar-footer.has-tabs {\n  bottom: 49px;\n}\n\n.has-tabs.pane,\n.bar-footer.has-tabs.pane {\n  bottom: 49px;\n  height: auto;\n}\n\n.has-footer.has-tabs {\n  bottom: 93px;\n}\n\n.pane {\n  -webkit-transform: translate3d(0, 0, 0);\n  transform: translate3d(0, 0, 0);\n  -webkit-transition-duration: 0;\n  transition-duration: 0;\n  z-index: 1;\n}\n\n.view {\n  z-index: 1;\n}\n\n.pane,\n.view {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: #fff;\n  overflow: hidden;\n}\n\n.view-container {\n  position: absolute;\n  display: block;\n  width: 100%;\n  height: 100%;\n}\n\n/**\n * Typography\n * --------------------------------------------------\n */\n\np {\n  margin: 0 0 11px;\n}\n\nsmall {\n  font-size: 85%;\n}\n\ncite {\n  font-style: normal;\n}\n\n.text-left {\n  text-align: left;\n}\n\n.text-right {\n  text-align: right;\n}\n\n.text-center {\n  text-align: center;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\n.h1,\n.h2,\n.h3,\n.h4,\n.h5,\n.h6 {\n  color: #968D78;\n  font-weight: 500;\n  font-family: \"Titillium Web\", sans-serif;\n  line-height: 1.2;\n}\n\nh1 small,\nh2 small,\nh3 small,\nh4 small,\nh5 small,\nh6 small,\n.h1 small,\n.h2 small,\n.h3 small,\n.h4 small,\n.h5 small,\n.h6 small {\n  font-weight: normal;\n  line-height: 1;\n}\n\nh1,\n.h1,\nh2,\n.h2,\nh3,\n.h3 {\n  margin-top: 22px;\n  margin-bottom: 11px;\n}\n\nh1:first-child,\n.h1:first-child,\nh2:first-child,\n.h2:first-child,\nh3:first-child,\n.h3:first-child {\n  margin-top: 0;\n}\n\nh1 + h1,\nh1 + .h1,\nh1 + h2,\nh1 + .h2,\nh1 + h3,\nh1 + .h3,\n.h1 + h1,\n.h1 + .h1,\n.h1 + h2,\n.h1 + .h2,\n.h1 + h3,\n.h1 + .h3,\nh2 + h1,\nh2 + .h1,\nh2 + h2,\nh2 + .h2,\nh2 + h3,\nh2 + .h3,\n.h2 + h1,\n.h2 + .h1,\n.h2 + h2,\n.h2 + .h2,\n.h2 + h3,\n.h2 + .h3,\nh3 + h1,\nh3 + .h1,\nh3 + h2,\nh3 + .h2,\nh3 + h3,\nh3 + .h3,\n.h3 + h1,\n.h3 + .h1,\n.h3 + h2,\n.h3 + .h2,\n.h3 + h3,\n.h3 + .h3 {\n  margin-top: 11px;\n}\n\nh4,\n.h4,\nh5,\n.h5,\nh6,\n.h6 {\n  margin-top: 11px;\n  margin-bottom: 11px;\n}\n\nh1,\n.h1 {\n  font-size: 41px;\n}\n\nh2,\n.h2 {\n  font-size: 34px;\n}\n\nh3,\n.h3 {\n  font-size: 28px;\n}\n\nh4,\n.h4 {\n  font-size: 20px;\n}\n\nh5,\n.h5 {\n  font-size: 16px;\n}\n\nh6,\n.h6 {\n  font-size: 14px;\n}\n\nh1 small,\n.h1 small {\n  font-size: 28px;\n}\n\nh2 small,\n.h2 small {\n  font-size: 20px;\n}\n\nh3 small,\n.h3 small,\nh4 small,\n.h4 small {\n  font-size: 16px;\n}\n\ndl {\n  margin-bottom: 22px;\n}\n\ndt,\ndd {\n  line-height: 1.42857;\n}\n\ndt {\n  font-weight: bold;\n}\n\nblockquote {\n  margin: 0 0 22px;\n  padding: 11px 22px;\n  border-left: 5px solid gray;\n}\n\nblockquote p {\n  font-weight: 300;\n  font-size: 20px;\n  line-height: 1.25;\n}\n\nblockquote p:last-child {\n  margin-bottom: 0;\n}\n\nblockquote small {\n  display: block;\n  line-height: 1.42857;\n}\n\nblockquote small:before {\n  content: '\\2014   \\A0';\n}\n\nq:before,\nq:after,\nblockquote:before,\nblockquote:after {\n  content: \"\";\n}\n\naddress {\n  display: block;\n  margin-bottom: 22px;\n  font-style: normal;\n  line-height: 1.42857;\n}\n\na.subdued {\n  padding-right: 10px;\n  color: #888;\n  text-decoration: none;\n}\n\na.subdued:hover {\n  text-decoration: none;\n}\n\na.subdued:last-child {\n  padding-right: 0;\n}\n\n/**\n * Action Sheets\n * --------------------------------------------------\n */\n\n.action-sheet-backdrop {\n  -webkit-transition: background-color 150ms ease-in-out;\n  transition: background-color 150ms ease-in-out;\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 11;\n  width: 100%;\n  height: 100%;\n  background-color: transparent;\n}\n\n.action-sheet-backdrop.active {\n  background-color: rgba(0, 0, 0, 0.4);\n}\n\n.action-sheet-wrapper {\n  -webkit-transform: translate3d(0, 100%, 0);\n  transform: translate3d(0, 100%, 0);\n  -webkit-transition: all cubic-bezier(0.36, 0.66, 0.04, 1) 500ms;\n  transition: all cubic-bezier(0.36, 0.66, 0.04, 1) 500ms;\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  width: 100%;\n  max-width: 500px;\n  margin: auto;\n}\n\n.action-sheet-up {\n  -webkit-transform: translate3d(0, 0, 0);\n  transform: translate3d(0, 0, 0);\n}\n\n.action-sheet {\n  margin-left: 8px;\n  margin-right: 8px;\n  width: auto;\n  z-index: 11;\n  overflow: hidden;\n}\n\n.action-sheet .button,\n.action-sheet .button-pill {\n  display: block;\n  padding: 1px;\n  width: 100%;\n  border-radius: 0;\n  border-color: #d1d3d6;\n  background-color: transparent;\n  color: #007aff;\n  font-size: 21px;\n}\n\n.action-sheet .button:hover,\n.action-sheet .button-pill:hover {\n  color: #007aff;\n}\n\n.action-sheet .button.destructive,\n.action-sheet .destructive.button-pill {\n  color: #ff3b30;\n}\n\n.action-sheet .button.destructive:hover,\n.action-sheet .destructive.button-pill:hover {\n  color: #ff3b30;\n}\n\n.action-sheet .button.active,\n.action-sheet .active.button-pill,\n.action-sheet .button.activated,\n.action-sheet .activated.button-pill {\n  box-shadow: none;\n  border-color: #d1d3d6;\n  color: #007aff;\n  background: #e4e5e7;\n}\n\n.action-sheet-has-icons .icon {\n  position: absolute;\n  left: 16px;\n}\n\n.action-sheet-title {\n  padding: 16px;\n  color: #8f8f8f;\n  text-align: center;\n  font-size: 13px;\n}\n\n.action-sheet-group {\n  margin-bottom: 8px;\n  border-radius: 4px;\n  background-color: #fff;\n  overflow: hidden;\n}\n\n.action-sheet-group .button,\n.action-sheet-group .button-pill {\n  border-width: 1px 0px 0px 0px;\n}\n\n.action-sheet-group .button:first-child:last-child,\n.action-sheet-group .button-pill:first-child:last-child {\n  border-width: 0;\n}\n\n.action-sheet-options {\n  background: #f1f2f3;\n}\n\n.action-sheet-cancel .button,\n.action-sheet-cancel .button-pill {\n  font-weight: 500;\n}\n\n.action-sheet-open {\n  pointer-events: none;\n}\n\n.action-sheet-open.modal-open .modal {\n  pointer-events: none;\n}\n\n.action-sheet-open .action-sheet-backdrop {\n  pointer-events: auto;\n}\n\n.platform-android .action-sheet-backdrop.active {\n  background-color: rgba(0, 0, 0, 0.2);\n}\n\n.platform-android .action-sheet {\n  margin: 0;\n}\n\n.platform-android .action-sheet .action-sheet-title,\n.platform-android .action-sheet .button,\n.platform-android .action-sheet .button-pill {\n  text-align: left;\n  border-color: transparent;\n  font-size: 16px;\n  color: inherit;\n}\n\n.platform-android .action-sheet .action-sheet-title {\n  font-size: 14px;\n  padding: 16px;\n  color: #666;\n}\n\n.platform-android .action-sheet .button.active,\n.platform-android .action-sheet .active.button-pill,\n.platform-android .action-sheet .button.activated,\n.platform-android .action-sheet .activated.button-pill {\n  background: #e8e8e8;\n}\n\n.platform-android .action-sheet-group {\n  margin: 0;\n  border-radius: 0;\n  background-color: #fafafa;\n}\n\n.platform-android .action-sheet-cancel {\n  display: none;\n}\n\n.platform-android .action-sheet-has-icons .button,\n.platform-android .action-sheet-has-icons .button-pill {\n  padding-left: 56px;\n}\n\n.backdrop {\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 11;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0, 0, 0, 0.4);\n  visibility: hidden;\n  opacity: 0;\n  -webkit-transition: 0.1s opacity linear;\n  transition: 0.1s opacity linear;\n}\n\n.backdrop.visible {\n  visibility: visible;\n}\n\n.backdrop.active {\n  opacity: 1;\n}\n\n/**\n * Bar (Headers and Footers)\n * --------------------------------------------------\n */\n\n.bar {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-transform: translate3d(0, 0, 0);\n  transform: translate3d(0, 0, 0);\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  position: absolute;\n  right: 0;\n  left: 0;\n  z-index: 9;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n  padding: 5px;\n  width: 100%;\n  height: 44px;\n  border-width: 0;\n  border-style: solid;\n  border-top: 1px solid transparent;\n  border-bottom: 1px solid #ddd;\n  background-color: #00f1d3;\n  /* border-width: 1px will actually create 2 device pixels on retina */\n  /* this nifty trick sets an actual 1px border on hi-res displays */\n  background-size: 0;\n}\n\n@media (min--moz-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {\n  .bar {\n    border: none;\n    background-image: linear-gradient(0deg, #ddd, #ddd 50%, transparent 50%);\n    background-position: bottom;\n    background-size: 100% 1px;\n    background-repeat: no-repeat;\n  }\n}\n\n.bar.bar-clear {\n  border: none;\n  background: none;\n  color: #fff;\n}\n\n.bar.bar-clear .button,\n.bar.bar-clear .button-pill {\n  color: #fff;\n}\n\n.bar.bar-clear .title {\n  color: #fff;\n}\n\n.bar.item-input-inset .item-input-wrapper {\n  margin-top: -1px;\n}\n\n.bar.item-input-inset .item-input-wrapper input {\n  padding-left: 8px;\n  width: 94%;\n  height: 28px;\n  background: transparent;\n}\n\n.bar.bar-light {\n  border-color: #ddd;\n  background-color: #00f1d3;\n  background-image: linear-gradient(0deg, #ddd, #ddd 50%, transparent 50%);\n  color: #444;\n}\n\n.bar.bar-light .title {\n  color: #444;\n}\n\n.bar.bar-light.bar-footer {\n  background-image: linear-gradient(180deg, #ddd, #ddd 50%, transparent 50%);\n}\n\n.bar.bar-stable {\n  border-color: #b2b2b2;\n  background-color: #f8f8f8;\n  background-image: linear-gradient(0deg, #b2b2b2, #b2b2b2 50%, transparent 50%);\n  color: #444;\n}\n\n.bar.bar-stable .title {\n  color: #444;\n}\n\n.bar.bar-stable.bar-footer {\n  background-image: linear-gradient(180deg, #b2b2b2, #b2b2b2 50%, transparent 50%);\n}\n\n.bar.bar-positive {\n  border-color: #007163;\n  background-color: #00a490;\n  background-image: linear-gradient(0deg, #007163, #007163 50%, transparent 50%);\n  color: #fff;\n}\n\n.bar.bar-positive .title {\n  color: #fff;\n}\n\n.bar.bar-positive.bar-footer {\n  background-image: linear-gradient(180deg, #007163, #007163 50%, transparent 50%);\n}\n\n.bar.bar-calm {\n  border-color: #0a9dc7;\n  background-color: #11c1f3;\n  background-image: linear-gradient(0deg, #0a9dc7, #0a9dc7 50%, transparent 50%);\n  color: #fff;\n}\n\n.bar.bar-calm .title {\n  color: #fff;\n}\n\n.bar.bar-calm.bar-footer {\n  background-image: linear-gradient(180deg, #0a9dc7, #0a9dc7 50%, transparent 50%);\n}\n\n.bar.bar-assertive {\n  border-color: #e42112;\n  background-color: #ef473a;\n  background-image: linear-gradient(0deg, #e42112, #e42112 50%, transparent 50%);\n  color: #fff;\n}\n\n.bar.bar-assertive .title {\n  color: #fff;\n}\n\n.bar.bar-assertive.bar-footer {\n  background-image: linear-gradient(180deg, #e42112, #e42112 50%, transparent 50%);\n}\n\n.bar.bar-balanced {\n  border-color: #28a54c;\n  background-color: #33cd5f;\n  background-image: linear-gradient(0deg, #28a54c, #28a54c 50%, transparent 50%);\n  color: #fff;\n}\n\n.bar.bar-balanced .title {\n  color: #fff;\n}\n\n.bar.bar-balanced.bar-footer {\n  background-image: linear-gradient(180deg, #28a54c, #007163 50%, transparent 50%);\n}\n\n.bar.bar-energized {\n  border-color: #e6b500;\n  background-color: #ffc900;\n  background-image: linear-gradient(0deg, #e6b500, #e6b500 50%, transparent 50%);\n  color: #fff;\n}\n\n.bar.bar-energized .title {\n  color: #fff;\n}\n\n.bar.bar-energized.bar-footer {\n  background-image: linear-gradient(180deg, #e6b500, #e6b500 50%, transparent 50%);\n}\n\n.bar.bar-royal {\n  border-color: #6b46e5;\n  background-color: #886aea;\n  background-image: linear-gradient(0deg, #6b46e5, #6b46e5 50%, transparent 50%);\n  color: #fff;\n}\n\n.bar.bar-royal .title {\n  color: #fff;\n}\n\n.bar.bar-royal.bar-footer {\n  background-image: linear-gradient(180deg, #6b46e5, #6b46e5 50%, transparent 50%);\n}\n\n.bar.bar-dark {\n  border-color: #111;\n  background-color: #444444;\n  background-image: linear-gradient(0deg, #111, #111 50%, transparent 50%);\n  color: #fff;\n}\n\n.bar.bar-dark .title {\n  color: #fff;\n}\n\n.bar.bar-dark.bar-footer {\n  background-image: linear-gradient(180deg, #111, #111 50%, transparent 50%);\n}\n\n.bar .title {\n  position: absolute;\n  top: 0;\n  right: 0;\n  left: 0;\n  z-index: 0;\n  overflow: hidden;\n  margin: 0 10px;\n  min-width: 30px;\n  height: 43px;\n  text-align: center;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  font-size: 17px;\n  font-weight: 500;\n  line-height: 44px;\n}\n\n.bar .title.title-left {\n  text-align: left;\n}\n\n.bar .title.title-right {\n  text-align: right;\n}\n\n.bar .title a {\n  color: inherit;\n}\n\n.bar .button,\n.bar .button-pill {\n  z-index: 1;\n  padding: 0 8px;\n  min-width: initial;\n  min-height: 31px;\n  font-weight: 400;\n  font-size: 13px;\n  line-height: 32px;\n}\n\n.bar .button.button-icon:before,\n.bar .button-icon.button-pill:before,\n.bar .button .icon:before,\n.bar .button-pill .icon:before,\n.bar .button.icon:before,\n.bar .icon.button-pill:before,\n.bar .button.icon-left:before,\n.bar .icon-left.button-pill:before,\n.bar .button.icon-right:before,\n.bar .icon-right.button-pill:before {\n  padding-right: 2px;\n  padding-left: 2px;\n  font-size: 20px;\n  line-height: 32px;\n}\n\n.bar .button.button-icon,\n.bar .button-icon.button-pill {\n  font-size: 17px;\n}\n\n.bar .button.button-icon .icon:before,\n.bar .button-icon.button-pill .icon:before,\n.bar .button.button-icon:before,\n.bar .button-icon.button-pill:before,\n.bar .button.button-icon.icon-left:before,\n.bar .button-icon.icon-left.button-pill:before,\n.bar .button.button-icon.icon-right:before,\n.bar .button-icon.icon-right.button-pill:before {\n  vertical-align: top;\n  font-size: 32px;\n  line-height: 32px;\n}\n\n.bar .button.button-clear,\n.bar .button-clear.button-pill {\n  padding-right: 2px;\n  padding-left: 2px;\n  font-weight: 300;\n  font-size: 17px;\n}\n\n.bar .button.button-clear .icon:before,\n.bar .button-clear.button-pill .icon:before,\n.bar .button.button-clear.icon:before,\n.bar .button-clear.icon.button-pill:before,\n.bar .button.button-clear.icon-left:before,\n.bar .button-clear.icon-left.button-pill:before,\n.bar .button.button-clear.icon-right:before,\n.bar .button-clear.icon-right.button-pill:before {\n  font-size: 32px;\n  line-height: 32px;\n}\n\n.bar .button.back-button,\n.bar .back-button.button-pill {\n  display: block;\n  margin-right: 5px;\n  padding: 0;\n  white-space: nowrap;\n  font-weight: 400;\n}\n\n.bar .button.back-button.active,\n.bar .back-button.active.button-pill,\n.bar .button.back-button.activated,\n.bar .back-button.activated.button-pill {\n  opacity: 0.2;\n}\n\n.bar .button-bar > .button,\n.bar .button-bar > .button-pill,\n.bar .buttons > .button,\n.bar .buttons > .button-pill {\n  min-height: 31px;\n  line-height: 32px;\n}\n\n.bar .button-bar + .button,\n.bar .button-bar + .button-pill,\n.bar .button + .button-bar,\n.bar .button-pill + .button-bar {\n  margin-left: 5px;\n}\n\n.bar .buttons,\n.bar .buttons.primary-buttons,\n.bar .buttons.secondary-buttons {\n  display: inherit;\n}\n\n.bar .buttons span {\n  display: inline-block;\n}\n\n.bar .buttons-left span {\n  margin-right: 5px;\n  display: inherit;\n}\n\n.bar .buttons-right span {\n  margin-left: 5px;\n  display: inherit;\n}\n\n.bar .title + .button:last-child,\n.bar .title + .button-pill:last-child,\n.bar > .button + .button:last-child,\n.bar > .button-pill + .button:last-child,\n.bar > .button + .button-pill:last-child,\n.bar > .button-pill + .button-pill:last-child,\n.bar > .button.pull-right,\n.bar > .pull-right.button-pill,\n.bar .buttons.pull-right,\n.bar .title + .buttons {\n  position: absolute;\n  top: 5px;\n  right: 5px;\n  bottom: 5px;\n}\n\n.platform-android .nav-bar-has-subheader .bar {\n  background-image: none;\n}\n\n.platform-android .bar .back-button .icon:before {\n  font-size: 24px;\n}\n\n.platform-android .bar .title {\n  font-size: 19px;\n  line-height: 44px;\n}\n\n.bar-light .button,\n.bar-light .button-pill {\n  border-color: #ddd;\n  background-color: #00f1d3;\n  color: #444;\n}\n\n.bar-light .button:hover,\n.bar-light .button-pill:hover {\n  color: #444;\n  text-decoration: none;\n}\n\n.bar-light .button.active,\n.bar-light .active.button-pill,\n.bar-light .button.activated,\n.bar-light .activated.button-pill {\n  border-color: #ccc;\n  background-color: #fafafa;\n  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\n.bar-light .button.button-clear,\n.bar-light .button-clear.button-pill {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  color: #444;\n  font-size: 17px;\n}\n\n.bar-light .button.button-icon,\n.bar-light .button-icon.button-pill {\n  border-color: transparent;\n  background: none;\n}\n\n.bar-stable .button,\n.bar-stable .button-pill {\n  border-color: #b2b2b2;\n  background-color: #f8f8f8;\n  color: #444;\n}\n\n.bar-stable .button:hover,\n.bar-stable .button-pill:hover {\n  color: #444;\n  text-decoration: none;\n}\n\n.bar-stable .button.active,\n.bar-stable .active.button-pill,\n.bar-stable .button.activated,\n.bar-stable .activated.button-pill {\n  border-color: #a2a2a2;\n  background-color: #e5e5e5;\n  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\n.bar-stable .button.button-clear,\n.bar-stable .button-clear.button-pill {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  color: #444;\n  font-size: 17px;\n}\n\n.bar-stable .button.button-icon,\n.bar-stable .button-icon.button-pill {\n  border-color: transparent;\n  background: none;\n}\n\n.bar-positive .button,\n.bar-positive .button-pill {\n  border-color: #007163;\n  background-color: #00a490;\n  color: #fff;\n}\n\n.bar-positive .button:hover,\n.bar-positive .button-pill:hover {\n  color: #fff;\n  text-decoration: none;\n}\n\n.bar-positive .button.active,\n.bar-positive .active.button-pill,\n.bar-positive .button.activated,\n.bar-positive .activated.button-pill {\n  border-color: #007163;\n  background-color: #007163;\n  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\n.bar-positive .button.button-clear,\n.bar-positive .button-clear.button-pill {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  color: #fff;\n  font-size: 17px;\n}\n\n.bar-positive .button.button-icon,\n.bar-positive .button-icon.button-pill {\n  border-color: transparent;\n  background: none;\n}\n\n.bar-calm .button,\n.bar-calm .button-pill {\n  border-color: #0a9dc7;\n  background-color: #11c1f3;\n  color: #fff;\n}\n\n.bar-calm .button:hover,\n.bar-calm .button-pill:hover {\n  color: #fff;\n  text-decoration: none;\n}\n\n.bar-calm .button.active,\n.bar-calm .active.button-pill,\n.bar-calm .button.activated,\n.bar-calm .activated.button-pill {\n  border-color: #0a9dc7;\n  background-color: #0a9dc7;\n  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\n.bar-calm .button.button-clear,\n.bar-calm .button-clear.button-pill {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  color: #fff;\n  font-size: 17px;\n}\n\n.bar-calm .button.button-icon,\n.bar-calm .button-icon.button-pill {\n  border-color: transparent;\n  background: none;\n}\n\n.bar-assertive .button,\n.bar-assertive .button-pill {\n  border-color: #e42112;\n  background-color: #ef473a;\n  color: #fff;\n}\n\n.bar-assertive .button:hover,\n.bar-assertive .button-pill:hover {\n  color: #fff;\n  text-decoration: none;\n}\n\n.bar-assertive .button.active,\n.bar-assertive .active.button-pill,\n.bar-assertive .button.activated,\n.bar-assertive .activated.button-pill {\n  border-color: #e42112;\n  background-color: #e42112;\n  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\n.bar-assertive .button.button-clear,\n.bar-assertive .button-clear.button-pill {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  color: #fff;\n  font-size: 17px;\n}\n\n.bar-assertive .button.button-icon,\n.bar-assertive .button-icon.button-pill {\n  border-color: transparent;\n  background: none;\n}\n\n.bar-balanced .button,\n.bar-balanced .button-pill {\n  border-color: #28a54c;\n  background-color: #33cd5f;\n  color: #fff;\n}\n\n.bar-balanced .button:hover,\n.bar-balanced .button-pill:hover {\n  color: #fff;\n  text-decoration: none;\n}\n\n.bar-balanced .button.active,\n.bar-balanced .active.button-pill,\n.bar-balanced .button.activated,\n.bar-balanced .activated.button-pill {\n  border-color: #28a54c;\n  background-color: #28a54c;\n  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\n.bar-balanced .button.button-clear,\n.bar-balanced .button-clear.button-pill {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  color: #fff;\n  font-size: 17px;\n}\n\n.bar-balanced .button.button-icon,\n.bar-balanced .button-icon.button-pill {\n  border-color: transparent;\n  background: none;\n}\n\n.bar-energized .button,\n.bar-energized .button-pill {\n  border-color: #e6b500;\n  background-color: #ffc900;\n  color: #fff;\n}\n\n.bar-energized .button:hover,\n.bar-energized .button-pill:hover {\n  color: #fff;\n  text-decoration: none;\n}\n\n.bar-energized .button.active,\n.bar-energized .active.button-pill,\n.bar-energized .button.activated,\n.bar-energized .activated.button-pill {\n  border-color: #e6b500;\n  background-color: #e6b500;\n  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\n.bar-energized .button.button-clear,\n.bar-energized .button-clear.button-pill {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  color: #fff;\n  font-size: 17px;\n}\n\n.bar-energized .button.button-icon,\n.bar-energized .button-icon.button-pill {\n  border-color: transparent;\n  background: none;\n}\n\n.bar-royal .button,\n.bar-royal .button-pill {\n  border-color: #6b46e5;\n  background-color: #886aea;\n  color: #fff;\n}\n\n.bar-royal .button:hover,\n.bar-royal .button-pill:hover {\n  color: #fff;\n  text-decoration: none;\n}\n\n.bar-royal .button.active,\n.bar-royal .active.button-pill,\n.bar-royal .button.activated,\n.bar-royal .activated.button-pill {\n  border-color: #6b46e5;\n  background-color: #6b46e5;\n  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\n.bar-royal .button.button-clear,\n.bar-royal .button-clear.button-pill {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  color: #fff;\n  font-size: 17px;\n}\n\n.bar-royal .button.button-icon,\n.bar-royal .button-icon.button-pill {\n  border-color: transparent;\n  background: none;\n}\n\n.bar-dark .button,\n.bar-dark .button-pill {\n  border-color: #111;\n  background-color: #444444;\n  color: #fff;\n}\n\n.bar-dark .button:hover,\n.bar-dark .button-pill:hover {\n  color: #fff;\n  text-decoration: none;\n}\n\n.bar-dark .button.active,\n.bar-dark .active.button-pill,\n.bar-dark .button.activated,\n.bar-dark .activated.button-pill {\n  border-color: #000;\n  background-color: #262626;\n  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\n.bar-dark .button.button-clear,\n.bar-dark .button-clear.button-pill {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  color: #fff;\n  font-size: 17px;\n}\n\n.bar-dark .button.button-icon,\n.bar-dark .button-icon.button-pill {\n  border-color: transparent;\n  background: none;\n}\n\n.bar-header {\n  top: 0;\n  border-top-width: 0;\n  border-bottom-width: 1px;\n}\n\n.bar-header.has-tabs-top {\n  border-bottom-width: 0px;\n  background-image: none;\n}\n\n.tabs-top .bar-header {\n  border-bottom-width: 0px;\n  background-image: none;\n}\n\n.bar-footer {\n  bottom: 0;\n  border-top-width: 1px;\n  border-bottom-width: 0;\n  background-position: top;\n  height: 44px;\n}\n\n.bar-footer.item-input-inset {\n  position: absolute;\n}\n\n.bar-tabs {\n  padding: 0;\n}\n\n.bar-subheader {\n  top: 44px;\n  display: block;\n  height: 44px;\n}\n\n.bar-subfooter {\n  bottom: 44px;\n  display: block;\n  height: 44px;\n}\n\n.nav-bar-block {\n  position: absolute;\n  top: 0;\n  right: 0;\n  left: 0;\n  z-index: 9;\n}\n\n.bar .back-button.hide,\n.bar .buttons .hide {\n  display: none;\n}\n\n.nav-bar-tabs-top .bar {\n  background-image: none;\n}\n\n/**\n * Tabs\n * --------------------------------------------------\n * A navigation bar with any number of tab items supported.\n */\n\n.tabs {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-direction: normal;\n  -webkit-box-orient: horizontal;\n  -webkit-flex-direction: horizontal;\n  -moz-flex-direction: horizontal;\n  -ms-flex-direction: horizontal;\n  flex-direction: horizontal;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  -webkit-justify-content: center;\n  -moz-justify-content: center;\n  justify-content: center;\n  -webkit-transform: translate3d(0, 0, 0);\n  transform: translate3d(0, 0, 0);\n  border-color: #b2b2b2;\n  background-color: #f8f8f8;\n  background-image: linear-gradient(0deg, #b2b2b2, #b2b2b2 50%, transparent 50%);\n  color: #444;\n  position: absolute;\n  bottom: 0;\n  z-index: 5;\n  width: 100%;\n  height: 49px;\n  border-style: solid;\n  border-top-width: 1px;\n  background-size: 0;\n  line-height: 49px;\n}\n\n.tabs .tab-item .badge {\n  background-color: #444;\n  color: #f8f8f8;\n}\n\n@media (min--moz-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {\n  .tabs {\n    padding-top: 2px;\n    border-top: none !important;\n    border-bottom: none;\n    background-position: top;\n    background-size: 100% 1px;\n    background-repeat: no-repeat;\n  }\n}\n\n/* Allow parent element of tabs to define color, or just the tab itself */\n\n.tabs-light > .tabs,\n.tabs.tabs-light {\n  border-color: #ddd;\n  background-color: #00F1D3;\n  background-image: linear-gradient(0deg, #ddd, #ddd 50%, transparent 50%);\n  color: #444;\n}\n\n.tabs-light > .tabs .tab-item .badge,\n.tabs.tabs-light .tab-item .badge {\n  background-color: #444;\n  color: #00F1D3;\n}\n\n.tabs-stable > .tabs,\n.tabs.tabs-stable {\n  border-color: #b2b2b2;\n  background-color: #f8f8f8;\n  background-image: linear-gradient(0deg, #b2b2b2, #b2b2b2 50%, transparent 50%);\n  color: #444;\n}\n\n.tabs-stable > .tabs .tab-item .badge,\n.tabs.tabs-stable .tab-item .badge {\n  background-color: #444;\n  color: #f8f8f8;\n}\n\n.tabs-positive > .tabs,\n.tabs.tabs-positive {\n  border-color: #007163;\n  background-color: #00A490;\n  background-image: linear-gradient(0deg, #007163, #007163 50%, transparent 50%);\n  color: #fff;\n}\n\n.tabs-positive > .tabs .tab-item .badge,\n.tabs.tabs-positive .tab-item .badge {\n  background-color: #fff;\n  color: #00A490;\n}\n\n.tabs-calm > .tabs,\n.tabs.tabs-calm {\n  border-color: #0a9dc7;\n  background-color: #11c1f3;\n  background-image: linear-gradient(0deg, #0a9dc7, #0a9dc7 50%, transparent 50%);\n  color: #fff;\n}\n\n.tabs-calm > .tabs .tab-item .badge,\n.tabs.tabs-calm .tab-item .badge {\n  background-color: #fff;\n  color: #11c1f3;\n}\n\n.tabs-assertive > .tabs,\n.tabs.tabs-assertive {\n  border-color: #e42112;\n  background-color: #ef473a;\n  background-image: linear-gradient(0deg, #e42112, #e42112 50%, transparent 50%);\n  color: #fff;\n}\n\n.tabs-assertive > .tabs .tab-item .badge,\n.tabs.tabs-assertive .tab-item .badge {\n  background-color: #fff;\n  color: #ef473a;\n}\n\n.tabs-balanced > .tabs,\n.tabs.tabs-balanced {\n  border-color: #28a54c;\n  background-color: #33cd5f;\n  background-image: linear-gradient(0deg, #28a54c, #28a54c 50%, transparent 50%);\n  color: #fff;\n}\n\n.tabs-balanced > .tabs .tab-item .badge,\n.tabs.tabs-balanced .tab-item .badge {\n  background-color: #fff;\n  color: #33cd5f;\n}\n\n.tabs-energized > .tabs,\n.tabs.tabs-energized {\n  border-color: #e6b500;\n  background-color: #ffc900;\n  background-image: linear-gradient(0deg, #e6b500, #e6b500 50%, transparent 50%);\n  color: #fff;\n}\n\n.tabs-energized > .tabs .tab-item .badge,\n.tabs.tabs-energized .tab-item .badge {\n  background-color: #fff;\n  color: #ffc900;\n}\n\n.tabs-royal > .tabs,\n.tabs.tabs-royal {\n  border-color: #6b46e5;\n  background-color: #886aea;\n  background-image: linear-gradient(0deg, #6b46e5, #6b46e5 50%, transparent 50%);\n  color: #fff;\n}\n\n.tabs-royal > .tabs .tab-item .badge,\n.tabs.tabs-royal .tab-item .badge {\n  background-color: #fff;\n  color: #886aea;\n}\n\n.tabs-dark > .tabs,\n.tabs.tabs-dark {\n  border-color: #111;\n  background-color: #444;\n  background-image: linear-gradient(0deg, #111, #111 50%, transparent 50%);\n  color: #fff;\n}\n\n.tabs-dark > .tabs .tab-item .badge,\n.tabs.tabs-dark .tab-item .badge {\n  background-color: #fff;\n  color: #444;\n}\n\n.tabs-striped .tabs {\n  background-color: white;\n  background-image: none;\n  border: none;\n  border-bottom: 1px solid #ddd;\n  padding-top: 2px;\n}\n\n.tabs-striped .tab-item.tab-item-active,\n.tabs-striped .tab-item.active,\n.tabs-striped .tab-item.activated {\n  margin-top: -2px;\n  border-style: solid;\n  border-width: 2px 0 0 0;\n  border-color: #444;\n}\n\n.tabs-striped .tab-item.tab-item-active .badge,\n.tabs-striped .tab-item.active .badge,\n.tabs-striped .tab-item.activated .badge {\n  top: 2px;\n  opacity: 1;\n}\n\n.tabs-striped.tabs-light .tabs {\n  background-color: #00F1D3;\n}\n\n.tabs-striped.tabs-light .tab-item {\n  color: rgba(68, 68, 68, 0.4);\n  opacity: 1;\n}\n\n.tabs-striped.tabs-light .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-striped.tabs-light .tab-item.tab-item-active,\n.tabs-striped.tabs-light .tab-item.active,\n.tabs-striped.tabs-light .tab-item.activated {\n  margin-top: -2px;\n  color: #444;\n  border-style: solid;\n  border-width: 2px 0 0 0;\n  border-color: #444;\n}\n\n.tabs-striped.tabs-top .tab-item.tab-item-active .badge,\n.tabs-striped.tabs-top .tab-item.active .badge,\n.tabs-striped.tabs-top .tab-item.activated .badge {\n  top: 4%;\n}\n\n.tabs-striped.tabs-stable .tabs {\n  background-color: #f8f8f8;\n}\n\n.tabs-striped.tabs-stable .tab-item {\n  color: rgba(68, 68, 68, 0.4);\n  opacity: 1;\n}\n\n.tabs-striped.tabs-stable .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-striped.tabs-stable .tab-item.tab-item-active,\n.tabs-striped.tabs-stable .tab-item.active,\n.tabs-striped.tabs-stable .tab-item.activated {\n  margin-top: -2px;\n  color: #444;\n  border-style: solid;\n  border-width: 2px 0 0 0;\n  border-color: #444;\n}\n\n.tabs-striped.tabs-top .tab-item.tab-item-active .badge,\n.tabs-striped.tabs-top .tab-item.active .badge,\n.tabs-striped.tabs-top .tab-item.activated .badge {\n  top: 4%;\n}\n\n.tabs-striped.tabs-positive .tabs {\n  background-color: #00A490;\n}\n\n.tabs-striped.tabs-positive .tab-item {\n  color: rgba(0, 241, 211, 0.4);\n  opacity: 1;\n}\n\n.tabs-striped.tabs-positive .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-striped.tabs-positive .tab-item.tab-item-active,\n.tabs-striped.tabs-positive .tab-item.active,\n.tabs-striped.tabs-positive .tab-item.activated {\n  margin-top: -2px;\n  color: #00F1D3;\n  border-style: solid;\n  border-width: 2px 0 0 0;\n  border-color: #00F1D3;\n}\n\n.tabs-striped.tabs-top .tab-item.tab-item-active .badge,\n.tabs-striped.tabs-top .tab-item.active .badge,\n.tabs-striped.tabs-top .tab-item.activated .badge {\n  top: 4%;\n}\n\n.tabs-striped.tabs-calm .tabs {\n  background-color: #11c1f3;\n}\n\n.tabs-striped.tabs-calm .tab-item {\n  color: rgba(0, 241, 211, 0.4);\n  opacity: 1;\n}\n\n.tabs-striped.tabs-calm .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-striped.tabs-calm .tab-item.tab-item-active,\n.tabs-striped.tabs-calm .tab-item.active,\n.tabs-striped.tabs-calm .tab-item.activated {\n  margin-top: -2px;\n  color: #00F1D3;\n  border-style: solid;\n  border-width: 2px 0 0 0;\n  border-color: #00F1D3;\n}\n\n.tabs-striped.tabs-top .tab-item.tab-item-active .badge,\n.tabs-striped.tabs-top .tab-item.active .badge,\n.tabs-striped.tabs-top .tab-item.activated .badge {\n  top: 4%;\n}\n\n.tabs-striped.tabs-assertive .tabs {\n  background-color: #ef473a;\n}\n\n.tabs-striped.tabs-assertive .tab-item {\n  color: rgba(0, 241, 211, 0.4);\n  opacity: 1;\n}\n\n.tabs-striped.tabs-assertive .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-striped.tabs-assertive .tab-item.tab-item-active,\n.tabs-striped.tabs-assertive .tab-item.active,\n.tabs-striped.tabs-assertive .tab-item.activated {\n  margin-top: -2px;\n  color: #00F1D3;\n  border-style: solid;\n  border-width: 2px 0 0 0;\n  border-color: #00F1D3;\n}\n\n.tabs-striped.tabs-top .tab-item.tab-item-active .badge,\n.tabs-striped.tabs-top .tab-item.active .badge,\n.tabs-striped.tabs-top .tab-item.activated .badge {\n  top: 4%;\n}\n\n.tabs-striped.tabs-balanced .tabs {\n  background-color: #33cd5f;\n}\n\n.tabs-striped.tabs-balanced .tab-item {\n  color: rgba(0, 241, 211, 0.4);\n  opacity: 1;\n}\n\n.tabs-striped.tabs-balanced .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-striped.tabs-balanced .tab-item.tab-item-active,\n.tabs-striped.tabs-balanced .tab-item.active,\n.tabs-striped.tabs-balanced .tab-item.activated {\n  margin-top: -2px;\n  color: #00F1D3;\n  border-style: solid;\n  border-width: 2px 0 0 0;\n  border-color: #00F1D3;\n}\n\n.tabs-striped.tabs-top .tab-item.tab-item-active .badge,\n.tabs-striped.tabs-top .tab-item.active .badge,\n.tabs-striped.tabs-top .tab-item.activated .badge {\n  top: 4%;\n}\n\n.tabs-striped.tabs-energized .tabs {\n  background-color: #ffc900;\n}\n\n.tabs-striped.tabs-energized .tab-item {\n  color: rgba(0, 241, 211, 0.4);\n  opacity: 1;\n}\n\n.tabs-striped.tabs-energized .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-striped.tabs-energized .tab-item.tab-item-active,\n.tabs-striped.tabs-energized .tab-item.active,\n.tabs-striped.tabs-energized .tab-item.activated {\n  margin-top: -2px;\n  color: #00F1D3;\n  border-style: solid;\n  border-width: 2px 0 0 0;\n  border-color: #00F1D3;\n}\n\n.tabs-striped.tabs-top .tab-item.tab-item-active .badge,\n.tabs-striped.tabs-top .tab-item.active .badge,\n.tabs-striped.tabs-top .tab-item.activated .badge {\n  top: 4%;\n}\n\n.tabs-striped.tabs-royal .tabs {\n  background-color: #886aea;\n}\n\n.tabs-striped.tabs-royal .tab-item {\n  color: rgba(0, 241, 211, 0.4);\n  opacity: 1;\n}\n\n.tabs-striped.tabs-royal .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-striped.tabs-royal .tab-item.tab-item-active,\n.tabs-striped.tabs-royal .tab-item.active,\n.tabs-striped.tabs-royal .tab-item.activated {\n  margin-top: -2px;\n  color: #00F1D3;\n  border-style: solid;\n  border-width: 2px 0 0 0;\n  border-color: #00F1D3;\n}\n\n.tabs-striped.tabs-top .tab-item.tab-item-active .badge,\n.tabs-striped.tabs-top .tab-item.active .badge,\n.tabs-striped.tabs-top .tab-item.activated .badge {\n  top: 4%;\n}\n\n.tabs-striped.tabs-dark .tabs {\n  background-color: #444;\n}\n\n.tabs-striped.tabs-dark .tab-item {\n  color: rgba(0, 241, 211, 0.4);\n  opacity: 1;\n}\n\n.tabs-striped.tabs-dark .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-striped.tabs-dark .tab-item.tab-item-active,\n.tabs-striped.tabs-dark .tab-item.active,\n.tabs-striped.tabs-dark .tab-item.activated {\n  margin-top: -2px;\n  color: #00F1D3;\n  border-style: solid;\n  border-width: 2px 0 0 0;\n  border-color: #00F1D3;\n}\n\n.tabs-striped.tabs-top .tab-item.tab-item-active .badge,\n.tabs-striped.tabs-top .tab-item.active .badge,\n.tabs-striped.tabs-top .tab-item.activated .badge {\n  top: 4%;\n}\n\n.tabs-striped.tabs-background-light .tabs {\n  background-color: #00F1D3;\n  background-image: none;\n}\n\n.tabs-striped.tabs-background-stable .tabs {\n  background-color: #f8f8f8;\n  background-image: none;\n}\n\n.tabs-striped.tabs-background-positive .tabs {\n  background-color: #00A490;\n  background-image: none;\n}\n\n.tabs-striped.tabs-background-calm .tabs {\n  background-color: #11c1f3;\n  background-image: none;\n}\n\n.tabs-striped.tabs-background-assertive .tabs {\n  background-color: #ef473a;\n  background-image: none;\n}\n\n.tabs-striped.tabs-background-balanced .tabs {\n  background-color: #33cd5f;\n  background-image: none;\n}\n\n.tabs-striped.tabs-background-energized .tabs {\n  background-color: #ffc900;\n  background-image: none;\n}\n\n.tabs-striped.tabs-background-royal .tabs {\n  background-color: #886aea;\n  background-image: none;\n}\n\n.tabs-striped.tabs-background-dark .tabs {\n  background-color: #444;\n  background-image: none;\n}\n\n.tabs-striped.tabs-color-light .tab-item {\n  color: rgba(0, 241, 211, 0.4);\n  opacity: 1;\n}\n\n.tabs-striped.tabs-color-light .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-striped.tabs-color-light .tab-item.tab-item-active,\n.tabs-striped.tabs-color-light .tab-item.active,\n.tabs-striped.tabs-color-light .tab-item.activated {\n  margin-top: -2px;\n  color: #00F1D3;\n  border: 0 solid #00F1D3;\n  border-top-width: 2px;\n}\n\n.tabs-striped.tabs-color-light .tab-item.tab-item-active .badge,\n.tabs-striped.tabs-color-light .tab-item.active .badge,\n.tabs-striped.tabs-color-light .tab-item.activated .badge {\n  top: 2px;\n  opacity: 1;\n}\n\n.tabs-striped.tabs-color-stable .tab-item {\n  color: rgba(248, 248, 248, 0.4);\n  opacity: 1;\n}\n\n.tabs-striped.tabs-color-stable .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-striped.tabs-color-stable .tab-item.tab-item-active,\n.tabs-striped.tabs-color-stable .tab-item.active,\n.tabs-striped.tabs-color-stable .tab-item.activated {\n  margin-top: -2px;\n  color: #f8f8f8;\n  border: 0 solid #f8f8f8;\n  border-top-width: 2px;\n}\n\n.tabs-striped.tabs-color-stable .tab-item.tab-item-active .badge,\n.tabs-striped.tabs-color-stable .tab-item.active .badge,\n.tabs-striped.tabs-color-stable .tab-item.activated .badge {\n  top: 2px;\n  opacity: 1;\n}\n\n.tabs-striped.tabs-color-positive .tab-item {\n  color: rgba(0, 164, 144, 0.4);\n  opacity: 1;\n}\n\n.tabs-striped.tabs-color-positive .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-striped.tabs-color-positive .tab-item.tab-item-active,\n.tabs-striped.tabs-color-positive .tab-item.active,\n.tabs-striped.tabs-color-positive .tab-item.activated {\n  margin-top: -2px;\n  color: #00A490;\n  border: 0 solid #00A490;\n  border-top-width: 2px;\n}\n\n.tabs-striped.tabs-color-positive .tab-item.tab-item-active .badge,\n.tabs-striped.tabs-color-positive .tab-item.active .badge,\n.tabs-striped.tabs-color-positive .tab-item.activated .badge {\n  top: 2px;\n  opacity: 1;\n}\n\n.tabs-striped.tabs-color-calm .tab-item {\n  color: rgba(17, 193, 243, 0.4);\n  opacity: 1;\n}\n\n.tabs-striped.tabs-color-calm .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-striped.tabs-color-calm .tab-item.tab-item-active,\n.tabs-striped.tabs-color-calm .tab-item.active,\n.tabs-striped.tabs-color-calm .tab-item.activated {\n  margin-top: -2px;\n  color: #11c1f3;\n  border: 0 solid #11c1f3;\n  border-top-width: 2px;\n}\n\n.tabs-striped.tabs-color-calm .tab-item.tab-item-active .badge,\n.tabs-striped.tabs-color-calm .tab-item.active .badge,\n.tabs-striped.tabs-color-calm .tab-item.activated .badge {\n  top: 2px;\n  opacity: 1;\n}\n\n.tabs-striped.tabs-color-assertive .tab-item {\n  color: rgba(239, 71, 58, 0.4);\n  opacity: 1;\n}\n\n.tabs-striped.tabs-color-assertive .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-striped.tabs-color-assertive .tab-item.tab-item-active,\n.tabs-striped.tabs-color-assertive .tab-item.active,\n.tabs-striped.tabs-color-assertive .tab-item.activated {\n  margin-top: -2px;\n  color: #ef473a;\n  border: 0 solid #ef473a;\n  border-top-width: 2px;\n}\n\n.tabs-striped.tabs-color-assertive .tab-item.tab-item-active .badge,\n.tabs-striped.tabs-color-assertive .tab-item.active .badge,\n.tabs-striped.tabs-color-assertive .tab-item.activated .badge {\n  top: 2px;\n  opacity: 1;\n}\n\n.tabs-striped.tabs-color-balanced .tab-item {\n  color: rgba(51, 205, 95, 0.4);\n  opacity: 1;\n}\n\n.tabs-striped.tabs-color-balanced .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-striped.tabs-color-balanced .tab-item.tab-item-active,\n.tabs-striped.tabs-color-balanced .tab-item.active,\n.tabs-striped.tabs-color-balanced .tab-item.activated {\n  margin-top: -2px;\n  color: #33cd5f;\n  border: 0 solid #33cd5f;\n  border-top-width: 2px;\n}\n\n.tabs-striped.tabs-color-balanced .tab-item.tab-item-active .badge,\n.tabs-striped.tabs-color-balanced .tab-item.active .badge,\n.tabs-striped.tabs-color-balanced .tab-item.activated .badge {\n  top: 2px;\n  opacity: 1;\n}\n\n.tabs-striped.tabs-color-energized .tab-item {\n  color: rgba(255, 201, 0, 0.4);\n  opacity: 1;\n}\n\n.tabs-striped.tabs-color-energized .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-striped.tabs-color-energized .tab-item.tab-item-active,\n.tabs-striped.tabs-color-energized .tab-item.active,\n.tabs-striped.tabs-color-energized .tab-item.activated {\n  margin-top: -2px;\n  color: #ffc900;\n  border: 0 solid #ffc900;\n  border-top-width: 2px;\n}\n\n.tabs-striped.tabs-color-energized .tab-item.tab-item-active .badge,\n.tabs-striped.tabs-color-energized .tab-item.active .badge,\n.tabs-striped.tabs-color-energized .tab-item.activated .badge {\n  top: 2px;\n  opacity: 1;\n}\n\n.tabs-striped.tabs-color-royal .tab-item {\n  color: rgba(136, 106, 234, 0.4);\n  opacity: 1;\n}\n\n.tabs-striped.tabs-color-royal .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-striped.tabs-color-royal .tab-item.tab-item-active,\n.tabs-striped.tabs-color-royal .tab-item.active,\n.tabs-striped.tabs-color-royal .tab-item.activated {\n  margin-top: -2px;\n  color: #886aea;\n  border: 0 solid #886aea;\n  border-top-width: 2px;\n}\n\n.tabs-striped.tabs-color-royal .tab-item.tab-item-active .badge,\n.tabs-striped.tabs-color-royal .tab-item.active .badge,\n.tabs-striped.tabs-color-royal .tab-item.activated .badge {\n  top: 2px;\n  opacity: 1;\n}\n\n.tabs-striped.tabs-color-dark .tab-item {\n  color: rgba(68, 68, 68, 0.4);\n  opacity: 1;\n}\n\n.tabs-striped.tabs-color-dark .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-striped.tabs-color-dark .tab-item.tab-item-active,\n.tabs-striped.tabs-color-dark .tab-item.active,\n.tabs-striped.tabs-color-dark .tab-item.activated {\n  margin-top: -2px;\n  color: #444;\n  border: 0 solid #444;\n  border-top-width: 2px;\n}\n\n.tabs-striped.tabs-color-dark .tab-item.tab-item-active .badge,\n.tabs-striped.tabs-color-dark .tab-item.active .badge,\n.tabs-striped.tabs-color-dark .tab-item.activated .badge {\n  top: 2px;\n  opacity: 1;\n}\n\n.tabs-background-light .tabs,\n.tabs-background-light > .tabs {\n  background-color: #00F1D3;\n  background-image: linear-gradient(0deg, #ddd, #ddd 50%, transparent 50%);\n  border-color: #ddd;\n}\n\n.tabs-background-stable .tabs,\n.tabs-background-stable > .tabs {\n  background-color: #f8f8f8;\n  background-image: linear-gradient(0deg, #b2b2b2, #b2b2b2 50%, transparent 50%);\n  border-color: #b2b2b2;\n}\n\n.tabs-background-positive .tabs,\n.tabs-background-positive > .tabs {\n  background-color: #00A490;\n  background-image: linear-gradient(0deg, #007163, #007163 50%, transparent 50%);\n  border-color: #007163;\n}\n\n.tabs-background-calm .tabs,\n.tabs-background-calm > .tabs {\n  background-color: #11c1f3;\n  background-image: linear-gradient(0deg, #0a9dc7, #0a9dc7 50%, transparent 50%);\n  border-color: #0a9dc7;\n}\n\n.tabs-background-assertive .tabs,\n.tabs-background-assertive > .tabs {\n  background-color: #ef473a;\n  background-image: linear-gradient(0deg, #e42112, #e42112 50%, transparent 50%);\n  border-color: #e42112;\n}\n\n.tabs-background-balanced .tabs,\n.tabs-background-balanced > .tabs {\n  background-color: #33cd5f;\n  background-image: linear-gradient(0deg, #28a54c, #28a54c 50%, transparent 50%);\n  border-color: #28a54c;\n}\n\n.tabs-background-energized .tabs,\n.tabs-background-energized > .tabs {\n  background-color: #ffc900;\n  background-image: linear-gradient(0deg, #e6b500, #e6b500 50%, transparent 50%);\n  border-color: #e6b500;\n}\n\n.tabs-background-royal .tabs,\n.tabs-background-royal > .tabs {\n  background-color: #886aea;\n  background-image: linear-gradient(0deg, #6b46e5, #6b46e5 50%, transparent 50%);\n  border-color: #6b46e5;\n}\n\n.tabs-background-dark .tabs,\n.tabs-background-dark > .tabs {\n  background-color: #444;\n  background-image: linear-gradient(0deg, #111, #111 50%, transparent 50%);\n  border-color: #111;\n}\n\n.tabs-color-light .tab-item {\n  color: rgba(0, 241, 211, 0.4);\n  opacity: 1;\n}\n\n.tabs-color-light .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-color-light .tab-item.tab-item-active,\n.tabs-color-light .tab-item.active,\n.tabs-color-light .tab-item.activated {\n  color: #00F1D3;\n  border: 0 solid #00F1D3;\n}\n\n.tabs-color-light .tab-item.tab-item-active .badge,\n.tabs-color-light .tab-item.active .badge,\n.tabs-color-light .tab-item.activated .badge {\n  opacity: 1;\n}\n\n.tabs-color-stable .tab-item {\n  color: rgba(248, 248, 248, 0.4);\n  opacity: 1;\n}\n\n.tabs-color-stable .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-color-stable .tab-item.tab-item-active,\n.tabs-color-stable .tab-item.active,\n.tabs-color-stable .tab-item.activated {\n  color: #f8f8f8;\n  border: 0 solid #f8f8f8;\n}\n\n.tabs-color-stable .tab-item.tab-item-active .badge,\n.tabs-color-stable .tab-item.active .badge,\n.tabs-color-stable .tab-item.activated .badge {\n  opacity: 1;\n}\n\n.tabs-color-positive .tab-item {\n  color: rgba(0, 164, 144, 0.4);\n  opacity: 1;\n}\n\n.tabs-color-positive .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-color-positive .tab-item.tab-item-active,\n.tabs-color-positive .tab-item.active,\n.tabs-color-positive .tab-item.activated {\n  color: #00A490;\n  border: 0 solid #00A490;\n}\n\n.tabs-color-positive .tab-item.tab-item-active .badge,\n.tabs-color-positive .tab-item.active .badge,\n.tabs-color-positive .tab-item.activated .badge {\n  opacity: 1;\n}\n\n.tabs-color-calm .tab-item {\n  color: rgba(17, 193, 243, 0.4);\n  opacity: 1;\n}\n\n.tabs-color-calm .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-color-calm .tab-item.tab-item-active,\n.tabs-color-calm .tab-item.active,\n.tabs-color-calm .tab-item.activated {\n  color: #11c1f3;\n  border: 0 solid #11c1f3;\n}\n\n.tabs-color-calm .tab-item.tab-item-active .badge,\n.tabs-color-calm .tab-item.active .badge,\n.tabs-color-calm .tab-item.activated .badge {\n  opacity: 1;\n}\n\n.tabs-color-assertive .tab-item {\n  color: rgba(239, 71, 58, 0.4);\n  opacity: 1;\n}\n\n.tabs-color-assertive .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-color-assertive .tab-item.tab-item-active,\n.tabs-color-assertive .tab-item.active,\n.tabs-color-assertive .tab-item.activated {\n  color: #ef473a;\n  border: 0 solid #ef473a;\n}\n\n.tabs-color-assertive .tab-item.tab-item-active .badge,\n.tabs-color-assertive .tab-item.active .badge,\n.tabs-color-assertive .tab-item.activated .badge {\n  opacity: 1;\n}\n\n.tabs-color-balanced .tab-item {\n  color: rgba(51, 205, 95, 0.4);\n  opacity: 1;\n}\n\n.tabs-color-balanced .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-color-balanced .tab-item.tab-item-active,\n.tabs-color-balanced .tab-item.active,\n.tabs-color-balanced .tab-item.activated {\n  color: #33cd5f;\n  border: 0 solid #33cd5f;\n}\n\n.tabs-color-balanced .tab-item.tab-item-active .badge,\n.tabs-color-balanced .tab-item.active .badge,\n.tabs-color-balanced .tab-item.activated .badge {\n  opacity: 1;\n}\n\n.tabs-color-energized .tab-item {\n  color: rgba(255, 201, 0, 0.4);\n  opacity: 1;\n}\n\n.tabs-color-energized .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-color-energized .tab-item.tab-item-active,\n.tabs-color-energized .tab-item.active,\n.tabs-color-energized .tab-item.activated {\n  color: #ffc900;\n  border: 0 solid #ffc900;\n}\n\n.tabs-color-energized .tab-item.tab-item-active .badge,\n.tabs-color-energized .tab-item.active .badge,\n.tabs-color-energized .tab-item.activated .badge {\n  opacity: 1;\n}\n\n.tabs-color-royal .tab-item {\n  color: rgba(136, 106, 234, 0.4);\n  opacity: 1;\n}\n\n.tabs-color-royal .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-color-royal .tab-item.tab-item-active,\n.tabs-color-royal .tab-item.active,\n.tabs-color-royal .tab-item.activated {\n  color: #886aea;\n  border: 0 solid #886aea;\n}\n\n.tabs-color-royal .tab-item.tab-item-active .badge,\n.tabs-color-royal .tab-item.active .badge,\n.tabs-color-royal .tab-item.activated .badge {\n  opacity: 1;\n}\n\n.tabs-color-dark .tab-item {\n  color: rgba(68, 68, 68, 0.4);\n  opacity: 1;\n}\n\n.tabs-color-dark .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-color-dark .tab-item.tab-item-active,\n.tabs-color-dark .tab-item.active,\n.tabs-color-dark .tab-item.activated {\n  color: #444;\n  border: 0 solid #444;\n}\n\n.tabs-color-dark .tab-item.tab-item-active .badge,\n.tabs-color-dark .tab-item.active .badge,\n.tabs-color-dark .tab-item.activated .badge {\n  opacity: 1;\n}\n\nion-tabs.tabs-color-active-light .tab-item {\n  color: #444;\n}\n\nion-tabs.tabs-color-active-light .tab-item.tab-item-active,\nion-tabs.tabs-color-active-light .tab-item.active,\nion-tabs.tabs-color-active-light .tab-item.activated {\n  color: #00F1D3;\n}\n\nion-tabs.tabs-color-active-stable .tab-item {\n  color: #444;\n}\n\nion-tabs.tabs-color-active-stable .tab-item.tab-item-active,\nion-tabs.tabs-color-active-stable .tab-item.active,\nion-tabs.tabs-color-active-stable .tab-item.activated {\n  color: #f8f8f8;\n}\n\nion-tabs.tabs-color-active-positive .tab-item {\n  color: #444;\n}\n\nion-tabs.tabs-color-active-positive .tab-item.tab-item-active,\nion-tabs.tabs-color-active-positive .tab-item.active,\nion-tabs.tabs-color-active-positive .tab-item.activated {\n  color: #00A490;\n}\n\nion-tabs.tabs-color-active-calm .tab-item {\n  color: #444;\n}\n\nion-tabs.tabs-color-active-calm .tab-item.tab-item-active,\nion-tabs.tabs-color-active-calm .tab-item.active,\nion-tabs.tabs-color-active-calm .tab-item.activated {\n  color: #11c1f3;\n}\n\nion-tabs.tabs-color-active-assertive .tab-item {\n  color: #444;\n}\n\nion-tabs.tabs-color-active-assertive .tab-item.tab-item-active,\nion-tabs.tabs-color-active-assertive .tab-item.active,\nion-tabs.tabs-color-active-assertive .tab-item.activated {\n  color: #ef473a;\n}\n\nion-tabs.tabs-color-active-balanced .tab-item {\n  color: #444;\n}\n\nion-tabs.tabs-color-active-balanced .tab-item.tab-item-active,\nion-tabs.tabs-color-active-balanced .tab-item.active,\nion-tabs.tabs-color-active-balanced .tab-item.activated {\n  color: #33cd5f;\n}\n\nion-tabs.tabs-color-active-energized .tab-item {\n  color: #444;\n}\n\nion-tabs.tabs-color-active-energized .tab-item.tab-item-active,\nion-tabs.tabs-color-active-energized .tab-item.active,\nion-tabs.tabs-color-active-energized .tab-item.activated {\n  color: #ffc900;\n}\n\nion-tabs.tabs-color-active-royal .tab-item {\n  color: #444;\n}\n\nion-tabs.tabs-color-active-royal .tab-item.tab-item-active,\nion-tabs.tabs-color-active-royal .tab-item.active,\nion-tabs.tabs-color-active-royal .tab-item.activated {\n  color: #886aea;\n}\n\nion-tabs.tabs-color-active-dark .tab-item {\n  color: #00F1D3;\n}\n\nion-tabs.tabs-color-active-dark .tab-item.tab-item-active,\nion-tabs.tabs-color-active-dark .tab-item.active,\nion-tabs.tabs-color-active-dark .tab-item.activated {\n  color: #444;\n}\n\n.tabs-top.tabs-striped {\n  padding-bottom: 0;\n}\n\n.tabs-top.tabs-striped .tab-item {\n  background: transparent;\n  -webkit-transition: color .1s ease;\n  -moz-transition: color .1s ease;\n  -ms-transition: color .1s ease;\n  -o-transition: color .1s ease;\n  transition: color .1s ease;\n}\n\n.tabs-top.tabs-striped .tab-item.tab-item-active,\n.tabs-top.tabs-striped .tab-item.active,\n.tabs-top.tabs-striped .tab-item.activated {\n  margin-top: 1px;\n  border-width: 0px 0px 2px 0px !important;\n  border-style: solid;\n}\n\n.tabs-top.tabs-striped .tab-item.tab-item-active > .badge,\n.tabs-top.tabs-striped .tab-item.tab-item-active > i,\n.tabs-top.tabs-striped .tab-item.active > .badge,\n.tabs-top.tabs-striped .tab-item.active > i,\n.tabs-top.tabs-striped .tab-item.activated > .badge,\n.tabs-top.tabs-striped .tab-item.activated > i {\n  margin-top: -1px;\n}\n\n.tabs-top.tabs-striped .tab-item .badge {\n  -webkit-transition: color .2s ease;\n  -moz-transition: color .2s ease;\n  -ms-transition: color .2s ease;\n  -o-transition: color .2s ease;\n  transition: color .2s ease;\n}\n\n.tabs-top.tabs-striped:not(.tabs-icon-left):not(.tabs-icon-top) .tab-item.tab-item-active .tab-title,\n.tabs-top.tabs-striped:not(.tabs-icon-left):not(.tabs-icon-top) .tab-item.tab-item-active i,\n.tabs-top.tabs-striped:not(.tabs-icon-left):not(.tabs-icon-top) .tab-item.active .tab-title,\n.tabs-top.tabs-striped:not(.tabs-icon-left):not(.tabs-icon-top) .tab-item.active i,\n.tabs-top.tabs-striped:not(.tabs-icon-left):not(.tabs-icon-top) .tab-item.activated .tab-title,\n.tabs-top.tabs-striped:not(.tabs-icon-left):not(.tabs-icon-top) .tab-item.activated i {\n  display: block;\n  margin-top: -1px;\n}\n\n.tabs-top.tabs-striped.tabs-icon-left .tab-item {\n  margin-top: 1px;\n}\n\n.tabs-top.tabs-striped.tabs-icon-left .tab-item.tab-item-active .tab-title,\n.tabs-top.tabs-striped.tabs-icon-left .tab-item.tab-item-active i,\n.tabs-top.tabs-striped.tabs-icon-left .tab-item.active .tab-title,\n.tabs-top.tabs-striped.tabs-icon-left .tab-item.active i,\n.tabs-top.tabs-striped.tabs-icon-left .tab-item.activated .tab-title,\n.tabs-top.tabs-striped.tabs-icon-left .tab-item.activated i {\n  margin-top: -0.1em;\n}\n\n/* Allow parent element to have tabs-top */\n\n/* If you change this, change platform.scss as well */\n\n.tabs-top > .tabs,\n.tabs.tabs-top {\n  top: 44px;\n  padding-top: 0;\n  background-position: bottom;\n  border-top-width: 0;\n  border-bottom-width: 1px;\n}\n\n.tabs-top > .tabs .tab-item.tab-item-active .badge,\n.tabs-top > .tabs .tab-item.active .badge,\n.tabs-top > .tabs .tab-item.activated .badge,\n.tabs.tabs-top .tab-item.tab-item-active .badge,\n.tabs.tabs-top .tab-item.active .badge,\n.tabs.tabs-top .tab-item.activated .badge {\n  top: 4%;\n}\n\n.tabs-top ~ .bar-header {\n  border-bottom-width: 0;\n}\n\n.tab-item {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n  -moz-box-flex: 1;\n  -moz-flex: 1;\n  -ms-flex: 1;\n  flex: 1;\n  display: block;\n  overflow: hidden;\n  max-width: 150px;\n  height: 100%;\n  color: inherit;\n  text-align: center;\n  text-decoration: none;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  font-weight: 400;\n  font-size: 14px;\n  font-family: \"Helvetica Neue\", \"Roboto\", \"Segoe UI\", sans-serif;\n  opacity: 0.7;\n}\n\n.tab-item:hover {\n  cursor: pointer;\n}\n\n.tab-item.tab-hidden {\n  display: none;\n}\n\n.tabs-item-hide > .tabs,\n.tabs.tabs-item-hide {\n  display: none;\n}\n\n.tabs-icon-top > .tabs .tab-item,\n.tabs-icon-top.tabs .tab-item,\n.tabs-icon-bottom > .tabs .tab-item,\n.tabs-icon-bottom.tabs .tab-item {\n  font-size: 10px;\n  line-height: 14px;\n}\n\n.tab-item .icon {\n  display: block;\n  margin: 0 auto;\n  height: 32px;\n  font-size: 32px;\n}\n\n.tabs-icon-left.tabs .tab-item,\n.tabs-icon-left > .tabs .tab-item,\n.tabs-icon-right.tabs .tab-item,\n.tabs-icon-right > .tabs .tab-item {\n  font-size: 10px;\n}\n\n.tabs-icon-left.tabs .tab-item .icon,\n.tabs-icon-left.tabs .tab-item .tab-title,\n.tabs-icon-left > .tabs .tab-item .icon,\n.tabs-icon-left > .tabs .tab-item .tab-title,\n.tabs-icon-right.tabs .tab-item .icon,\n.tabs-icon-right.tabs .tab-item .tab-title,\n.tabs-icon-right > .tabs .tab-item .icon,\n.tabs-icon-right > .tabs .tab-item .tab-title {\n  display: inline-block;\n  vertical-align: top;\n  margin-top: -.1em;\n}\n\n.tabs-icon-left.tabs .tab-item .icon:before,\n.tabs-icon-left.tabs .tab-item .tab-title:before,\n.tabs-icon-left > .tabs .tab-item .icon:before,\n.tabs-icon-left > .tabs .tab-item .tab-title:before,\n.tabs-icon-right.tabs .tab-item .icon:before,\n.tabs-icon-right.tabs .tab-item .tab-title:before,\n.tabs-icon-right > .tabs .tab-item .icon:before,\n.tabs-icon-right > .tabs .tab-item .tab-title:before {\n  font-size: 24px;\n  line-height: 49px;\n}\n\n.tabs-icon-left > .tabs .tab-item .icon,\n.tabs-icon-left.tabs .tab-item .icon {\n  padding-right: 3px;\n}\n\n.tabs-icon-right > .tabs .tab-item .icon,\n.tabs-icon-right.tabs .tab-item .icon {\n  padding-left: 3px;\n}\n\n.tabs-icon-only > .tabs .icon,\n.tabs-icon-only.tabs .icon {\n  line-height: inherit;\n}\n\n.tab-item.has-badge {\n  position: relative;\n}\n\n.tab-item .badge {\n  position: absolute;\n  top: 4%;\n  right: 33%;\n  right: calc(50% - 26px);\n  padding: 1px 6px;\n  height: auto;\n  font-size: 12px;\n  line-height: 16px;\n}\n\n/* Navigational tab */\n\n/* Active state for tab */\n\n.tab-item.tab-item-active,\n.tab-item.active,\n.tab-item.activated {\n  opacity: 1;\n}\n\n.tab-item.tab-item-active.tab-item-light,\n.tab-item.active.tab-item-light,\n.tab-item.activated.tab-item-light {\n  color: #00F1D3;\n}\n\n.tab-item.tab-item-active.tab-item-stable,\n.tab-item.active.tab-item-stable,\n.tab-item.activated.tab-item-stable {\n  color: #f8f8f8;\n}\n\n.tab-item.tab-item-active.tab-item-positive,\n.tab-item.active.tab-item-positive,\n.tab-item.activated.tab-item-positive {\n  color: #00A490;\n}\n\n.tab-item.tab-item-active.tab-item-calm,\n.tab-item.active.tab-item-calm,\n.tab-item.activated.tab-item-calm {\n  color: #11c1f3;\n}\n\n.tab-item.tab-item-active.tab-item-assertive,\n.tab-item.active.tab-item-assertive,\n.tab-item.activated.tab-item-assertive {\n  color: #ef473a;\n}\n\n.tab-item.tab-item-active.tab-item-balanced,\n.tab-item.active.tab-item-balanced,\n.tab-item.activated.tab-item-balanced {\n  color: #33cd5f;\n}\n\n.tab-item.tab-item-active.tab-item-energized,\n.tab-item.active.tab-item-energized,\n.tab-item.activated.tab-item-energized {\n  color: #ffc900;\n}\n\n.tab-item.tab-item-active.tab-item-royal,\n.tab-item.active.tab-item-royal,\n.tab-item.activated.tab-item-royal {\n  color: #886aea;\n}\n\n.tab-item.tab-item-active.tab-item-dark,\n.tab-item.active.tab-item-dark,\n.tab-item.activated.tab-item-dark {\n  color: #444;\n}\n\n.item.tabs {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  padding: 0;\n}\n\n.item.tabs .icon:before {\n  position: relative;\n}\n\n.tab-item.disabled,\n.tab-item[disabled] {\n  opacity: .4;\n  cursor: default;\n  pointer-events: none;\n}\n\n.nav-bar-tabs-top.hide ~ .view-container .tabs-top .tabs {\n  top: 0;\n}\n\n.pane[hide-nav-bar=\"true\"] .has-tabs-top {\n  top: 49px;\n}\n\n/**\n * Menus\n * --------------------------------------------------\n * Side panel structure\n */\n\n.menu {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  z-index: 0;\n  overflow: hidden;\n  min-height: 100%;\n  max-height: 100%;\n  width: 275px;\n  background-color: #fff;\n}\n\n.menu .scroll-content {\n  z-index: 10;\n}\n\n.menu .bar-header {\n  z-index: 11;\n}\n\n.menu-content {\n  -webkit-transform: none;\n  transform: none;\n  box-shadow: -1px 0px 2px rgba(0, 0, 0, 0.2), 1px 0px 2px rgba(0, 0, 0, 0.2);\n}\n\n.menu-open .menu-content .pane,\n.menu-open .menu-content .scroll-content {\n  pointer-events: none;\n  overflow: hidden;\n}\n\n.grade-b .menu-content,\n.grade-c .menu-content {\n  -webkit-box-sizing: content-box;\n  -moz-box-sizing: content-box;\n  box-sizing: content-box;\n  right: -1px;\n  left: -1px;\n  border-right: 1px solid #ccc;\n  border-left: 1px solid #ccc;\n  box-shadow: none;\n}\n\n.menu-left {\n  left: 0;\n}\n\n.menu-right {\n  right: 0;\n}\n\n.aside-open.aside-resizing .menu-right {\n  display: none;\n}\n\n.menu-animated {\n  -webkit-transition: -webkit-transform 200ms ease;\n  transition: transform 200ms ease;\n}\n\n/**\n * Modals\n * --------------------------------------------------\n * Modals are independent windows that slide in from off-screen.\n */\n\n.modal-backdrop,\n.modal-backdrop-bg {\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 10;\n  width: 100%;\n  height: 100%;\n}\n\n.modal-backdrop-bg {\n  pointer-events: none;\n}\n\n.modal {\n  display: block;\n  position: absolute;\n  top: 0;\n  z-index: 10;\n  overflow: hidden;\n  min-height: 100%;\n  width: 100%;\n  background-color: #fff;\n}\n\n@media (min-width: 680px) {\n  .modal {\n    top: 20%;\n    right: 20%;\n    bottom: 20%;\n    left: 20%;\n    min-height: 240px;\n    width: 60%;\n  }\n\n  .modal.ng-leave-active {\n    bottom: 0;\n  }\n\n  .platform-ios.platform-cordova .modal-wrapper .modal .bar-header:not(.bar-subheader) {\n    height: 44px;\n  }\n\n  .platform-ios.platform-cordova .modal-wrapper .modal .bar-header:not(.bar-subheader) > * {\n    margin-top: 0;\n  }\n\n  .platform-ios.platform-cordova .modal-wrapper .modal .tabs-top > .tabs,\n  .platform-ios.platform-cordova .modal-wrapper .modal .tabs.tabs-top {\n    top: 44px;\n  }\n\n  .platform-ios.platform-cordova .modal-wrapper .modal .has-header,\n  .platform-ios.platform-cordova .modal-wrapper .modal .bar-subheader {\n    top: 44px;\n  }\n\n  .platform-ios.platform-cordova .modal-wrapper .modal .has-subheader {\n    top: 88px;\n  }\n\n  .platform-ios.platform-cordova .modal-wrapper .modal .has-header.has-tabs-top {\n    top: 93px;\n  }\n\n  .platform-ios.platform-cordova .modal-wrapper .modal .has-header.has-subheader.has-tabs-top {\n    top: 137px;\n  }\n\n  .modal-backdrop-bg {\n    -webkit-transition: opacity 300ms ease-in-out;\n    transition: opacity 300ms ease-in-out;\n    background-color: #000;\n    opacity: 0;\n  }\n\n  .active .modal-backdrop-bg {\n    opacity: 0.5;\n  }\n}\n\n.modal-open {\n  pointer-events: none;\n}\n\n.modal-open .modal,\n.modal-open .modal-backdrop {\n  pointer-events: auto;\n}\n\n.modal-open.loading-active .modal,\n.modal-open.loading-active .modal-backdrop {\n  pointer-events: none;\n}\n\n/**\n * Popovers\n * --------------------------------------------------\n * Popovers are independent views which float over content\n */\n\n.popover-backdrop {\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 10;\n  width: 100%;\n  height: 100%;\n  background-color: transparent;\n}\n\n.popover-backdrop.active {\n  background-color: rgba(0, 0, 0, 0.1);\n}\n\n.popover {\n  position: absolute;\n  top: 25%;\n  left: 50%;\n  z-index: 10;\n  display: block;\n  margin-top: 12px;\n  margin-left: -110px;\n  height: 280px;\n  width: 220px;\n  background-color: #00F1D3;\n  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);\n  opacity: 0;\n}\n\n.popover .item:first-child {\n  border-top: 0;\n}\n\n.popover .item:last-child {\n  border-bottom: 0;\n}\n\n.popover.popover-bottom {\n  margin-top: -12px;\n}\n\n.popover,\n.popover .bar-header {\n  border-radius: 2px;\n}\n\n.popover .scroll-content {\n  z-index: 1;\n  margin: 2px 0;\n}\n\n.popover .bar-header {\n  border-bottom-right-radius: 0;\n  border-bottom-left-radius: 0;\n}\n\n.popover .has-header {\n  border-top-right-radius: 0;\n  border-top-left-radius: 0;\n}\n\n.popover-arrow {\n  display: none;\n}\n\n.platform-ios .popover {\n  box-shadow: 0 0 40px rgba(0, 0, 0, 0.08);\n  border-radius: 10px;\n}\n\n.platform-ios .popover .bar-header {\n  -webkit-border-top-right-radius: 10px;\n  border-top-right-radius: 10px;\n  -webkit-border-top-left-radius: 10px;\n  border-top-left-radius: 10px;\n}\n\n.platform-ios .popover .scroll-content {\n  margin: 8px 0;\n  border-radius: 10px;\n}\n\n.platform-ios .popover .scroll-content.has-header {\n  margin-top: 0;\n}\n\n.platform-ios .popover-arrow {\n  position: absolute;\n  display: block;\n  top: -17px;\n  width: 30px;\n  height: 19px;\n  overflow: hidden;\n}\n\n.platform-ios .popover-arrow:after {\n  position: absolute;\n  top: 12px;\n  left: 5px;\n  width: 20px;\n  height: 20px;\n  background-color: #00F1D3;\n  border-radius: 3px;\n  content: '';\n  -webkit-transform: rotate(-45deg);\n  transform: rotate(-45deg);\n}\n\n.platform-ios .popover-bottom .popover-arrow {\n  top: auto;\n  bottom: -10px;\n}\n\n.platform-ios .popover-bottom .popover-arrow:after {\n  top: -6px;\n}\n\n.platform-android .popover {\n  margin-top: -32px;\n  background-color: #fafafa;\n  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);\n}\n\n.platform-android .popover .item {\n  border-color: #fafafa;\n  background-color: #fafafa;\n  color: #4d4d4d;\n}\n\n.platform-android .popover.popover-bottom {\n  margin-top: 32px;\n}\n\n.platform-android .popover-backdrop,\n.platform-android .popover-backdrop.active {\n  background-color: transparent;\n}\n\n.popover-open {\n  pointer-events: none;\n}\n\n.popover-open .popover,\n.popover-open .popover-backdrop {\n  pointer-events: auto;\n}\n\n.popover-open.loading-active .popover,\n.popover-open.loading-active .popover-backdrop {\n  pointer-events: none;\n}\n\n@media (min-width: 680px) {\n  .popover {\n    width: 360px;\n  }\n}\n\n/**\n * Popups\n * --------------------------------------------------\n */\n\n.popup-container {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  background: transparent;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  -webkit-justify-content: center;\n  -moz-justify-content: center;\n  justify-content: center;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  -webkit-align-items: center;\n  -moz-align-items: center;\n  align-items: center;\n  z-index: 12;\n  visibility: hidden;\n}\n\n.popup-container.popup-showing {\n  visibility: visible;\n}\n\n.popup-container.popup-hidden .popup {\n  -webkit-animation-name: scaleOut;\n  animation-name: scaleOut;\n  -webkit-animation-duration: 0.1s;\n  animation-duration: 0.1s;\n  -webkit-animation-timing-function: ease-in-out;\n  animation-timing-function: ease-in-out;\n  -webkit-animation-fill-mode: both;\n  animation-fill-mode: both;\n}\n\n.popup-container.active .popup {\n  -webkit-animation-name: superScaleIn;\n  animation-name: superScaleIn;\n  -webkit-animation-duration: 0.2s;\n  animation-duration: 0.2s;\n  -webkit-animation-timing-function: ease-in-out;\n  animation-timing-function: ease-in-out;\n  -webkit-animation-fill-mode: both;\n  animation-fill-mode: both;\n}\n\n.popup-container .popup {\n  width: 250px;\n  max-width: 100%;\n  max-height: 90%;\n  border-radius: 0px;\n  background-color: rgba(255, 255, 255, 0.9);\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-direction: normal;\n  -webkit-box-orient: vertical;\n  -webkit-flex-direction: column;\n  -moz-flex-direction: column;\n  -ms-flex-direction: column;\n  flex-direction: column;\n}\n\n.popup-container input,\n.popup-container textarea {\n  width: 100%;\n}\n\n.popup-head {\n  padding: 15px 10px;\n  border-bottom: 1px solid #eee;\n  text-align: center;\n}\n\n.popup-title {\n  margin: 0;\n  padding: 0;\n  font-size: 15px;\n}\n\n.popup-sub-title {\n  margin: 5px 0 0 0;\n  padding: 0;\n  font-weight: normal;\n  font-size: 11px;\n}\n\n.popup-body {\n  padding: 10px;\n  overflow: auto;\n}\n\n.popup-buttons {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-direction: normal;\n  -webkit-box-orient: horizontal;\n  -webkit-flex-direction: row;\n  -moz-flex-direction: row;\n  -ms-flex-direction: row;\n  flex-direction: row;\n  padding: 10px;\n  min-height: 65px;\n}\n\n.popup-buttons .button,\n.popup-buttons .button-pill {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n  -moz-box-flex: 1;\n  -moz-flex: 1;\n  -ms-flex: 1;\n  flex: 1;\n  display: block;\n  min-height: 45px;\n  border-radius: 2px;\n  line-height: 20px;\n  margin-right: 5px;\n}\n\n.popup-buttons .button:last-child,\n.popup-buttons .button-pill:last-child {\n  margin-right: 0px;\n}\n\n.popup-open {\n  pointer-events: none;\n}\n\n.popup-open.modal-open .modal {\n  pointer-events: none;\n}\n\n.popup-open .popup-backdrop,\n.popup-open .popup {\n  pointer-events: auto;\n}\n\n/**\n * Loading\n * --------------------------------------------------\n */\n\n.loading-container {\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  z-index: 13;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  -webkit-justify-content: center;\n  -moz-justify-content: center;\n  justify-content: center;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  -webkit-align-items: center;\n  -moz-align-items: center;\n  align-items: center;\n  -webkit-transition: 0.2s opacity linear;\n  transition: 0.2s opacity linear;\n  visibility: hidden;\n  opacity: 0;\n}\n\n.loading-container:not(.visible) .icon,\n.loading-container:not(.visible) .spinner {\n  display: none;\n}\n\n.loading-container.visible {\n  visibility: visible;\n}\n\n.loading-container.active {\n  opacity: 1;\n}\n\n.loading-container .loading {\n  padding: 20px;\n  border-radius: 5px;\n  background-color: rgba(0, 0, 0, 0.7);\n  color: #fff;\n  text-align: center;\n  text-overflow: ellipsis;\n  font-size: 15px;\n}\n\n.loading-container .loading h1,\n.loading-container .loading h2,\n.loading-container .loading h3,\n.loading-container .loading h4,\n.loading-container .loading h5,\n.loading-container .loading h6 {\n  color: #fff;\n}\n\n/**\n * Items\n * --------------------------------------------------\n */\n\n.item {\n  border-color: #ddd;\n  background-color: #00F1D3;\n  color: #444;\n  position: relative;\n  z-index: 2;\n  display: block;\n  margin: -1px;\n  padding: 16px;\n  border-width: 1px;\n  border-style: solid;\n  font-size: 16px;\n}\n\n.item h2 {\n  margin: 0 0 2px 0;\n  font-size: 16px;\n  font-weight: normal;\n}\n\n.item h3 {\n  margin: 0 0 4px 0;\n  font-size: 14px;\n}\n\n.item h4 {\n  margin: 0 0 4px 0;\n  font-size: 12px;\n}\n\n.item h5,\n.item h6 {\n  margin: 0 0 3px 0;\n  font-size: 10px;\n}\n\n.item p {\n  color: #666;\n  font-size: 14px;\n  margin-bottom: 2px;\n}\n\n.item h1:last-child,\n.item h2:last-child,\n.item h3:last-child,\n.item h4:last-child,\n.item h5:last-child,\n.item h6:last-child,\n.item p:last-child {\n  margin-bottom: 0;\n}\n\n.item .badge {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  position: absolute;\n  top: 16px;\n  right: 32px;\n}\n\n.item.item-button-right .badge {\n  right: 67px;\n}\n\n.item.item-divider .badge {\n  top: 8px;\n}\n\n.item .badge + .badge {\n  margin-right: 5px;\n}\n\n.item.item-light {\n  border-color: #ddd;\n  background-color: #00F1D3;\n  color: #444;\n}\n\n.item.item-stable {\n  border-color: #b2b2b2;\n  background-color: #f8f8f8;\n  color: #444;\n}\n\n.item.item-positive {\n  border-color: #007163;\n  background-color: #00A490;\n  color: #fff;\n}\n\n.item.item-calm {\n  border-color: #0a9dc7;\n  background-color: #11c1f3;\n  color: #fff;\n}\n\n.item.item-assertive {\n  border-color: #e42112;\n  background-color: #ef473a;\n  color: #fff;\n}\n\n.item.item-balanced {\n  border-color: #28a54c;\n  background-color: #33cd5f;\n  color: #fff;\n}\n\n.item.item-energized {\n  border-color: #e6b500;\n  background-color: #ffc900;\n  color: #fff;\n}\n\n.item.item-royal {\n  border-color: #6b46e5;\n  background-color: #886aea;\n  color: #fff;\n}\n\n.item.item-dark {\n  border-color: #111;\n  background-color: #444;\n  color: #fff;\n}\n\n.item[ng-click]:hover {\n  cursor: pointer;\n}\n\n.list-borderless .item,\n.item-borderless {\n  border-width: 0;\n}\n\n.item.active,\n.item.activated,\n.item-complex.active .item-content,\n.item-complex.activated .item-content,\n.item .item-content.active,\n.item .item-content.activated {\n  border-color: #ccc;\n  background-color: #D9D9D9;\n}\n\n.item.active.item-light,\n.item.activated.item-light,\n.item-complex.active .item-content.item-light,\n.item-complex.activated .item-content.item-light,\n.item .item-content.active.item-light,\n.item .item-content.activated.item-light {\n  border-color: #ccc;\n  background-color: #fafafa;\n}\n\n.item.active.item-stable,\n.item.activated.item-stable,\n.item-complex.active .item-content.item-stable,\n.item-complex.activated .item-content.item-stable,\n.item .item-content.active.item-stable,\n.item .item-content.activated.item-stable {\n  border-color: #a2a2a2;\n  background-color: #e5e5e5;\n}\n\n.item.active.item-positive,\n.item.activated.item-positive,\n.item-complex.active .item-content.item-positive,\n.item-complex.activated .item-content.item-positive,\n.item .item-content.active.item-positive,\n.item .item-content.activated.item-positive {\n  border-color: #007163;\n  background-color: #007163;\n}\n\n.item.active.item-calm,\n.item.activated.item-calm,\n.item-complex.active .item-content.item-calm,\n.item-complex.activated .item-content.item-calm,\n.item .item-content.active.item-calm,\n.item .item-content.activated.item-calm {\n  border-color: #0a9dc7;\n  background-color: #0a9dc7;\n}\n\n.item.active.item-assertive,\n.item.activated.item-assertive,\n.item-complex.active .item-content.item-assertive,\n.item-complex.activated .item-content.item-assertive,\n.item .item-content.active.item-assertive,\n.item .item-content.activated.item-assertive {\n  border-color: #e42112;\n  background-color: #e42112;\n}\n\n.item.active.item-balanced,\n.item.activated.item-balanced,\n.item-complex.active .item-content.item-balanced,\n.item-complex.activated .item-content.item-balanced,\n.item .item-content.active.item-balanced,\n.item .item-content.activated.item-balanced {\n  border-color: #28a54c;\n  background-color: #28a54c;\n}\n\n.item.active.item-energized,\n.item.activated.item-energized,\n.item-complex.active .item-content.item-energized,\n.item-complex.activated .item-content.item-energized,\n.item .item-content.active.item-energized,\n.item .item-content.activated.item-energized {\n  border-color: #e6b500;\n  background-color: #e6b500;\n}\n\n.item.active.item-royal,\n.item.activated.item-royal,\n.item-complex.active .item-content.item-royal,\n.item-complex.activated .item-content.item-royal,\n.item .item-content.active.item-royal,\n.item .item-content.activated.item-royal {\n  border-color: #6b46e5;\n  background-color: #6b46e5;\n}\n\n.item.active.item-dark,\n.item.activated.item-dark,\n.item-complex.active .item-content.item-dark,\n.item-complex.activated .item-content.item-dark,\n.item .item-content.active.item-dark,\n.item .item-content.activated.item-dark {\n  border-color: #000;\n  background-color: #262626;\n}\n\n.item,\n.item h1,\n.item h2,\n.item h3,\n.item h4,\n.item h5,\n.item h6,\n.item p,\n.item-content,\n.item-content h1,\n.item-content h2,\n.item-content h3,\n.item-content h4,\n.item-content h5,\n.item-content h6,\n.item-content p {\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n}\n\na.item {\n  color: inherit;\n  text-decoration: none;\n}\n\na.item:hover,\na.item:focus {\n  text-decoration: none;\n}\n\n/**\n * Complex Items\n * --------------------------------------------------\n * Adding .item-complex allows the .item to be slidable and\n * have options underneath the button, but also requires an\n * additional .item-content element inside .item.\n * Basically .item-complex removes any default settings which\n * .item added, so that .item-content looks them as just .item.\n */\n\n.item-complex,\na.item.item-complex,\nbutton.item.item-complex {\n  padding: 0;\n}\n\n.item-complex .item-content,\n.item-radio .item-content {\n  position: relative;\n  z-index: 2;\n  padding: 16px 49px 16px 16px;\n  border: none;\n  background-color: #00F1D3;\n}\n\na.item-content {\n  display: block;\n  color: inherit;\n  text-decoration: none;\n}\n\n.item-text-wrap .item,\n.item-text-wrap .item-content,\n.item-text-wrap,\n.item-text-wrap h1,\n.item-text-wrap h2,\n.item-text-wrap h3,\n.item-text-wrap h4,\n.item-text-wrap h5,\n.item-text-wrap h6,\n.item-text-wrap p,\n.item-complex.item-text-wrap .item-content,\n.item-body h1,\n.item-body h2,\n.item-body h3,\n.item-body h4,\n.item-body h5,\n.item-body h6,\n.item-body p {\n  overflow: visible;\n  white-space: normal;\n}\n\n.item-complex.item-text-wrap,\n.item-complex.item-text-wrap h1,\n.item-complex.item-text-wrap h2,\n.item-complex.item-text-wrap h3,\n.item-complex.item-text-wrap h4,\n.item-complex.item-text-wrap h5,\n.item-complex.item-text-wrap h6,\n.item-complex.item-text-wrap p {\n  overflow: visible;\n  white-space: normal;\n}\n\n.item-complex.item-light > .item-content {\n  border-color: #ddd;\n  background-color: #00F1D3;\n  color: #444;\n}\n\n.item-complex.item-light > .item-content.active,\n.item-complex.item-light > .item-content:active {\n  border-color: #ccc;\n  background-color: #fafafa;\n}\n\n.item-complex.item-stable > .item-content {\n  border-color: #b2b2b2;\n  background-color: #f8f8f8;\n  color: #444;\n}\n\n.item-complex.item-stable > .item-content.active,\n.item-complex.item-stable > .item-content:active {\n  border-color: #a2a2a2;\n  background-color: #e5e5e5;\n}\n\n.item-complex.item-positive > .item-content {\n  border-color: #007163;\n  background-color: #00A490;\n  color: #fff;\n}\n\n.item-complex.item-positive > .item-content.active,\n.item-complex.item-positive > .item-content:active {\n  border-color: #007163;\n  background-color: #007163;\n}\n\n.item-complex.item-calm > .item-content {\n  border-color: #0a9dc7;\n  background-color: #11c1f3;\n  color: #fff;\n}\n\n.item-complex.item-calm > .item-content.active,\n.item-complex.item-calm > .item-content:active {\n  border-color: #0a9dc7;\n  background-color: #0a9dc7;\n}\n\n.item-complex.item-assertive > .item-content {\n  border-color: #e42112;\n  background-color: #ef473a;\n  color: #fff;\n}\n\n.item-complex.item-assertive > .item-content.active,\n.item-complex.item-assertive > .item-content:active {\n  border-color: #e42112;\n  background-color: #e42112;\n}\n\n.item-complex.item-balanced > .item-content {\n  border-color: #28a54c;\n  background-color: #33cd5f;\n  color: #fff;\n}\n\n.item-complex.item-balanced > .item-content.active,\n.item-complex.item-balanced > .item-content:active {\n  border-color: #28a54c;\n  background-color: #28a54c;\n}\n\n.item-complex.item-energized > .item-content {\n  border-color: #e6b500;\n  background-color: #ffc900;\n  color: #fff;\n}\n\n.item-complex.item-energized > .item-content.active,\n.item-complex.item-energized > .item-content:active {\n  border-color: #e6b500;\n  background-color: #e6b500;\n}\n\n.item-complex.item-royal > .item-content {\n  border-color: #6b46e5;\n  background-color: #886aea;\n  color: #fff;\n}\n\n.item-complex.item-royal > .item-content.active,\n.item-complex.item-royal > .item-content:active {\n  border-color: #6b46e5;\n  background-color: #6b46e5;\n}\n\n.item-complex.item-dark > .item-content {\n  border-color: #111;\n  background-color: #444;\n  color: #fff;\n}\n\n.item-complex.item-dark > .item-content.active,\n.item-complex.item-dark > .item-content:active {\n  border-color: #000;\n  background-color: #262626;\n}\n\n/**\n * Item Icons\n * --------------------------------------------------\n */\n\n.item-icon-left .icon,\n.item-icon-right .icon {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  -webkit-align-items: center;\n  -moz-align-items: center;\n  align-items: center;\n  position: absolute;\n  top: 0;\n  height: 100%;\n  font-size: 32px;\n}\n\n.item-icon-left .icon:before,\n.item-icon-right .icon:before {\n  display: block;\n  width: 32px;\n  text-align: center;\n}\n\n.item .fill-icon {\n  min-width: 30px;\n  min-height: 30px;\n  font-size: 28px;\n}\n\n.item-icon-left {\n  padding-left: 54px;\n}\n\n.item-icon-left .icon {\n  left: 11px;\n}\n\n.item-complex.item-icon-left {\n  padding-left: 0;\n}\n\n.item-complex.item-icon-left .item-content {\n  padding-left: 54px;\n}\n\n.item-icon-right {\n  padding-right: 54px;\n}\n\n.item-icon-right .icon {\n  right: 11px;\n}\n\n.item-complex.item-icon-right {\n  padding-right: 0;\n}\n\n.item-complex.item-icon-right .item-content {\n  padding-right: 54px;\n}\n\n.item-icon-left.item-icon-right .icon:first-child {\n  right: auto;\n}\n\n.item-icon-left.item-icon-right .icon:last-child,\n.item-icon-left .item-delete .icon {\n  left: auto;\n}\n\n.item-icon-left .icon-accessory,\n.item-icon-right .icon-accessory {\n  color: #ccc;\n  font-size: 16px;\n}\n\n.item-icon-left .icon-accessory {\n  left: 3px;\n}\n\n.item-icon-right .icon-accessory {\n  right: 3px;\n}\n\n/**\n * Item Button\n * --------------------------------------------------\n * An item button is a child button inside an .item (not the entire .item)\n */\n\n.item-button-left {\n  padding-left: 72px;\n}\n\n.item-button-left > .button,\n.item-button-left > .button-pill,\n.item-button-left .item-content > .button,\n.item-button-left .item-content > .button-pill {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  -webkit-align-items: center;\n  -moz-align-items: center;\n  align-items: center;\n  position: absolute;\n  top: 8px;\n  left: 11px;\n  min-width: 34px;\n  min-height: 34px;\n  font-size: 18px;\n  line-height: 32px;\n}\n\n.item-button-left > .button .icon:before,\n.item-button-left > .button-pill .icon:before,\n.item-button-left .item-content > .button .icon:before,\n.item-button-left .item-content > .button-pill .icon:before {\n  position: relative;\n  left: auto;\n  width: auto;\n  line-height: 31px;\n}\n\n.item-button-left > .button > .button,\n.item-button-left > .button-pill > .button,\n.item-button-left > .button > .button-pill,\n.item-button-left > .button-pill > .button-pill,\n.item-button-left .item-content > .button > .button,\n.item-button-left .item-content > .button-pill > .button,\n.item-button-left .item-content > .button > .button-pill,\n.item-button-left .item-content > .button-pill > .button-pill {\n  margin: 0px 2px;\n  min-height: 34px;\n  font-size: 18px;\n  line-height: 32px;\n}\n\n.item-button-right,\na.item.item-button-right,\nbutton.item.item-button-right {\n  padding-right: 80px;\n}\n\n.item-button-right > .button,\n.item-button-right > .button-pill,\n.item-button-right .item-content > .button,\n.item-button-right .item-content > .button-pill,\n.item-button-right > .buttons,\n.item-button-right .item-content > .buttons {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  -webkit-align-items: center;\n  -moz-align-items: center;\n  align-items: center;\n  position: absolute;\n  top: 8px;\n  right: 16px;\n  min-width: 34px;\n  min-height: 34px;\n  font-size: 18px;\n  line-height: 32px;\n}\n\n.item-button-right > .button .icon:before,\n.item-button-right > .button-pill .icon:before,\n.item-button-right .item-content > .button .icon:before,\n.item-button-right .item-content > .button-pill .icon:before,\n.item-button-right > .buttons .icon:before,\n.item-button-right .item-content > .buttons .icon:before {\n  position: relative;\n  left: auto;\n  width: auto;\n  line-height: 31px;\n}\n\n.item-button-right > .button > .button,\n.item-button-right > .button-pill > .button,\n.item-button-right > .button > .button-pill,\n.item-button-right > .button-pill > .button-pill,\n.item-button-right .item-content > .button > .button,\n.item-button-right .item-content > .button-pill > .button,\n.item-button-right .item-content > .button > .button-pill,\n.item-button-right .item-content > .button-pill > .button-pill,\n.item-button-right > .buttons > .button,\n.item-button-right > .buttons > .button-pill,\n.item-button-right .item-content > .buttons > .button,\n.item-button-right .item-content > .buttons > .button-pill {\n  margin: 0px 2px;\n  min-width: 34px;\n  min-height: 34px;\n  font-size: 18px;\n  line-height: 32px;\n}\n\n.item-avatar,\n.item-avatar .item-content,\n.item-avatar-left,\n.item-avatar-left .item-content {\n  padding-left: 72px;\n  min-height: 72px;\n}\n\n.item-avatar > img:first-child,\n.item-avatar .item-image,\n.item-avatar .item-content > img:first-child,\n.item-avatar .item-content .item-image,\n.item-avatar-left > img:first-child,\n.item-avatar-left .item-image,\n.item-avatar-left .item-content > img:first-child,\n.item-avatar-left .item-content .item-image {\n  position: absolute;\n  top: 16px;\n  left: 16px;\n  max-width: 40px;\n  max-height: 40px;\n  width: 100%;\n  height: 100%;\n  border-radius: 50%;\n}\n\n.item-avatar-right,\n.item-avatar-right .item-content {\n  padding-right: 72px;\n  min-height: 72px;\n}\n\n.item-avatar-right > img:first-child,\n.item-avatar-right .item-image,\n.item-avatar-right .item-content > img:first-child,\n.item-avatar-right .item-content .item-image {\n  position: absolute;\n  top: 16px;\n  right: 16px;\n  max-width: 40px;\n  max-height: 40px;\n  width: 100%;\n  height: 100%;\n  border-radius: 50%;\n}\n\n.item-thumbnail-left,\n.item-thumbnail-left .item-content {\n  padding-top: 8px;\n  padding-left: 106px;\n  min-height: 100px;\n}\n\n.item-thumbnail-left > img:first-child,\n.item-thumbnail-left .item-image,\n.item-thumbnail-left .item-content > img:first-child,\n.item-thumbnail-left .item-content .item-image {\n  position: absolute;\n  top: 10px;\n  left: 10px;\n  max-width: 80px;\n  max-height: 80px;\n  width: 100%;\n  height: 100%;\n}\n\n.item-avatar.item-complex,\n.item-avatar-left.item-complex,\n.item-thumbnail-left.item-complex {\n  padding-top: 0;\n  padding-left: 0;\n}\n\n.item-thumbnail-right,\n.item-thumbnail-right .item-content {\n  padding-top: 8px;\n  padding-right: 106px;\n  min-height: 100px;\n}\n\n.item-thumbnail-right > img:first-child,\n.item-thumbnail-right .item-image,\n.item-thumbnail-right .item-content > img:first-child,\n.item-thumbnail-right .item-content .item-image {\n  position: absolute;\n  top: 10px;\n  right: 10px;\n  max-width: 80px;\n  max-height: 80px;\n  width: 100%;\n  height: 100%;\n}\n\n.item-avatar-right.item-complex,\n.item-thumbnail-right.item-complex {\n  padding-top: 0;\n  padding-right: 0;\n}\n\n.item-image {\n  padding: 0;\n  text-align: center;\n}\n\n.item-image img:first-child,\n.item-image .list-img {\n  width: 100%;\n  vertical-align: middle;\n}\n\n.item-body {\n  overflow: auto;\n  padding: 16px;\n  text-overflow: inherit;\n  white-space: normal;\n}\n\n.item-body h1,\n.item-body h2,\n.item-body h3,\n.item-body h4,\n.item-body h5,\n.item-body h6,\n.item-body p {\n  margin-top: 16px;\n  margin-bottom: 16px;\n}\n\n.item-divider {\n  padding-top: 8px;\n  padding-bottom: 8px;\n  min-height: 30px;\n  background-color: #f5f5f5;\n  color: #222;\n  font-weight: 500;\n}\n\n.platform-ios .item-divider-platform,\n.item-divider-ios {\n  padding-top: 26px;\n  text-transform: uppercase;\n  font-weight: 300;\n  font-size: 13px;\n  background-color: #efeff4;\n  color: #555;\n}\n\n.platform-android .item-divider-platform,\n.item-divider-android {\n  font-weight: 300;\n  font-size: 13px;\n}\n\n.item-note {\n  float: right;\n  color: #aaa;\n  font-size: 14px;\n}\n\n.item-left-editable .item-content,\n.item-right-editable .item-content {\n  -webkit-transition-duration: 250ms;\n  transition-duration: 250ms;\n  -webkit-transition-timing-function: ease-in-out;\n  transition-timing-function: ease-in-out;\n  -webkit-transition-property: -webkit-transform;\n  -moz-transition-property: -moz-transform;\n  transition-property: transform;\n}\n\n.list-left-editing .item-left-editable .item-content,\n.item-left-editing.item-left-editable .item-content {\n  -webkit-transform: translate3d(50px, 0, 0);\n  transform: translate3d(50px, 0, 0);\n}\n\n.item-remove-animate.ng-leave {\n  -webkit-transition-duration: 300ms;\n  transition-duration: 300ms;\n}\n\n.item-remove-animate.ng-leave .item-content,\n.item-remove-animate.ng-leave:last-of-type {\n  -webkit-transition-duration: 300ms;\n  transition-duration: 300ms;\n  -webkit-transition-timing-function: ease-in;\n  transition-timing-function: ease-in;\n  -webkit-transition-property: all;\n  transition-property: all;\n}\n\n.item-remove-animate.ng-leave.ng-leave-active .item-content {\n  opacity: 0;\n  -webkit-transform: translate3d(-100%, 0, 0) !important;\n  transform: translate3d(-100%, 0, 0) !important;\n}\n\n.item-remove-animate.ng-leave.ng-leave-active:last-of-type {\n  opacity: 0;\n}\n\n.item-remove-animate.ng-leave.ng-leave-active ~ ion-item:not(.ng-leave) {\n  -webkit-transform: translate3d(0, -webkit-calc(-100% + 1px), 0);\n  transform: translate3d(0, calc(-100% + 1px), 0);\n  -webkit-transition-duration: 300ms;\n  transition-duration: 300ms;\n  -webkit-transition-timing-function: cubic-bezier(0.25, 0.81, 0.24, 1);\n  transition-timing-function: cubic-bezier(0.25, 0.81, 0.24, 1);\n  -webkit-transition-property: all;\n  transition-property: all;\n}\n\n.item-left-edit {\n  -webkit-transition: all ease-in-out 125ms;\n  transition: all ease-in-out 125ms;\n  position: absolute;\n  top: 0;\n  left: 0;\n  z-index: 0;\n  width: 50px;\n  height: 100%;\n  line-height: 100%;\n  display: none;\n  opacity: 0;\n  -webkit-transform: translate3d(-21px, 0, 0);\n  transform: translate3d(-21px, 0, 0);\n}\n\n.item-left-edit .button,\n.item-left-edit .button-pill {\n  height: 100%;\n}\n\n.item-left-edit .button.icon,\n.item-left-edit .icon.button-pill {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  -webkit-align-items: center;\n  -moz-align-items: center;\n  align-items: center;\n  position: absolute;\n  top: 0;\n  height: 100%;\n}\n\n.item-left-edit.visible {\n  display: block;\n}\n\n.item-left-edit.visible.active {\n  opacity: 1;\n  -webkit-transform: translate3d(8px, 0, 0);\n  transform: translate3d(8px, 0, 0);\n}\n\n.list-left-editing .item-left-edit {\n  -webkit-transition-delay: 125ms;\n  transition-delay: 125ms;\n}\n\n.item-delete .button.icon,\n.item-delete .icon.button-pill {\n  color: #ef473a;\n  font-size: 24px;\n}\n\n.item-delete .button.icon:hover,\n.item-delete .icon.button-pill:hover {\n  opacity: .7;\n}\n\n.item-right-edit {\n  -webkit-transition: all ease-in-out 250ms;\n  transition: all ease-in-out 250ms;\n  position: absolute;\n  top: 0;\n  right: 0;\n  z-index: 3;\n  width: 75px;\n  height: 100%;\n  background: inherit;\n  padding-left: 20px;\n  display: block;\n  opacity: 0;\n  -webkit-transform: translate3d(75px, 0, 0);\n  transform: translate3d(75px, 0, 0);\n}\n\n.item-right-edit .button,\n.item-right-edit .button-pill {\n  min-width: 50px;\n  height: 100%;\n}\n\n.item-right-edit .button.icon,\n.item-right-edit .icon.button-pill {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  -webkit-align-items: center;\n  -moz-align-items: center;\n  align-items: center;\n  position: absolute;\n  top: 0;\n  height: 100%;\n  font-size: 32px;\n}\n\n.item-right-edit.visible {\n  display: block;\n}\n\n.item-right-edit.visible.active {\n  opacity: 1;\n  -webkit-transform: translate3d(0, 0, 0);\n  transform: translate3d(0, 0, 0);\n}\n\n.item-reorder .button.icon,\n.item-reorder .icon.button-pill {\n  color: #444;\n  font-size: 32px;\n}\n\n.item-reordering {\n  position: absolute;\n  left: 0;\n  top: 0;\n  z-index: 9;\n  width: 100%;\n  box-shadow: 0px 0px 10px 0px #aaa;\n}\n\n.item-reordering .item-reorder {\n  z-index: 9;\n}\n\n.item-placeholder {\n  opacity: 0.7;\n}\n\n/**\n * The hidden right-side buttons that can be exposed under a list item\n * with dragging.\n */\n\n.item-options {\n  position: absolute;\n  top: 0;\n  right: 0;\n  z-index: 1;\n  height: 100%;\n}\n\n.item-options .button,\n.item-options .button-pill {\n  height: 100%;\n  border: none;\n  border-radius: 0;\n  display: -webkit-inline-box;\n  display: -webkit-inline-flex;\n  display: -moz-inline-flex;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  -webkit-align-items: center;\n  -moz-align-items: center;\n  align-items: center;\n}\n\n.item-options .button:before,\n.item-options .button-pill:before {\n  margin: 0 auto;\n}\n\n/**\n * Lists\n * --------------------------------------------------\n */\n\n.list {\n  position: relative;\n  padding-top: 1px;\n  padding-bottom: 1px;\n  padding-left: 0;\n  margin-bottom: 20px;\n}\n\n.list:last-child {\n  margin-bottom: 0px;\n}\n\n.list:last-child.card {\n  margin-bottom: 40px;\n}\n\n/**\n * List Header\n * --------------------------------------------------\n */\n\n.list-header {\n  margin-top: 20px;\n  padding: 5px 15px;\n  background-color: transparent;\n  color: #222;\n  font-weight: bold;\n}\n\n.card.list .list-item {\n  padding-right: 1px;\n  padding-left: 1px;\n}\n\n/**\n * Cards and Inset Lists\n * --------------------------------------------------\n * A card and list-inset are close to the same thing, except a card as a box shadow.\n */\n\n.card,\n.list-inset {\n  overflow: hidden;\n  margin: 20px 10px;\n  border-radius: 2px;\n  background-color: #fff;\n}\n\n.card {\n  padding-top: 1px;\n  padding-bottom: 1px;\n  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);\n}\n\n.card .item {\n  border-left: 0;\n  border-right: 0;\n}\n\n.card .item:first-child {\n  border-top: 0;\n}\n\n.card .item:last-child {\n  border-bottom: 0;\n}\n\n.padding .card,\n.padding .list-inset {\n  margin-left: 0;\n  margin-right: 0;\n}\n\n.card .item:first-child,\n.list-inset .item:first-child,\n.padding > .list .item:first-child {\n  border-top-left-radius: 2px;\n  border-top-right-radius: 2px;\n}\n\n.card .item:first-child .item-content,\n.list-inset .item:first-child .item-content,\n.padding > .list .item:first-child .item-content {\n  border-top-left-radius: 2px;\n  border-top-right-radius: 2px;\n}\n\n.card .item:last-child,\n.list-inset .item:last-child,\n.padding > .list .item:last-child {\n  border-bottom-right-radius: 2px;\n  border-bottom-left-radius: 2px;\n}\n\n.card .item:last-child .item-content,\n.list-inset .item:last-child .item-content,\n.padding > .list .item:last-child .item-content {\n  border-bottom-right-radius: 2px;\n  border-bottom-left-radius: 2px;\n}\n\n.card .item:last-child,\n.list-inset .item:last-child {\n  margin-bottom: -1px;\n}\n\n.card .item,\n.list-inset .item,\n.padding > .list .item,\n.padding-horizontal > .list .item {\n  margin-right: 0;\n  margin-left: 0;\n}\n\n.card .item.item-input input,\n.list-inset .item.item-input input,\n.padding > .list .item.item-input input,\n.padding-horizontal > .list .item.item-input input {\n  padding-right: 44px;\n}\n\n.padding-left > .list .item {\n  margin-left: 0;\n}\n\n.padding-right > .list .item {\n  margin-right: 0;\n}\n\n/**\n * Badges\n * --------------------------------------------------\n */\n\n.badge {\n  background-color: transparent;\n  color: #AAAAAA;\n  z-index: 1;\n  display: inline-block;\n  padding: 3px 8px;\n  min-width: 10px;\n  border-radius: 10px;\n  vertical-align: baseline;\n  text-align: center;\n  white-space: nowrap;\n  font-weight: bold;\n  font-size: 14px;\n  line-height: 16px;\n}\n\n.badge:empty {\n  display: none;\n}\n\n.tabs .tab-item .badge.badge-light,\n.badge.badge-light {\n  background-color: #00F1D3;\n  color: #444;\n}\n\n.tabs .tab-item .badge.badge-stable,\n.badge.badge-stable {\n  background-color: #f8f8f8;\n  color: #444;\n}\n\n.tabs .tab-item .badge.badge-positive,\n.badge.badge-positive {\n  background-color: #00A490;\n  color: #fff;\n}\n\n.tabs .tab-item .badge.badge-calm,\n.badge.badge-calm {\n  background-color: #11c1f3;\n  color: #fff;\n}\n\n.tabs .tab-item .badge.badge-assertive,\n.badge.badge-assertive {\n  background-color: #ef473a;\n  color: #fff;\n}\n\n.tabs .tab-item .badge.badge-balanced,\n.badge.badge-balanced {\n  background-color: #33cd5f;\n  color: #fff;\n}\n\n.tabs .tab-item .badge.badge-energized,\n.badge.badge-energized {\n  background-color: #ffc900;\n  color: #fff;\n}\n\n.tabs .tab-item .badge.badge-royal,\n.badge.badge-royal {\n  background-color: #886aea;\n  color: #fff;\n}\n\n.tabs .tab-item .badge.badge-dark,\n.badge.badge-dark {\n  background-color: #444;\n  color: #fff;\n}\n\n.button .badge,\n.button-pill .badge {\n  position: relative;\n  top: -1px;\n}\n\n/**\n * Slide Box\n * --------------------------------------------------\n */\n\n.slider {\n  position: relative;\n  visibility: hidden;\n  overflow: hidden;\n}\n\n.slider-slides {\n  position: relative;\n  height: 100%;\n}\n\n.slider-slide {\n  position: relative;\n  display: block;\n  float: left;\n  width: 100%;\n  height: 100%;\n  vertical-align: top;\n}\n\n.slider-slide-image > img {\n  width: 100%;\n}\n\n.slider-pager {\n  position: absolute;\n  bottom: 20px;\n  z-index: 1;\n  width: 100%;\n  height: 15px;\n  text-align: center;\n}\n\n.slider-pager .slider-pager-page {\n  display: inline-block;\n  margin: 0px 3px;\n  width: 15px;\n  color: #000;\n  text-decoration: none;\n  opacity: 0.3;\n}\n\n.slider-pager .slider-pager-page.active {\n  -webkit-transition: opacity 0.4s ease-in;\n  transition: opacity 0.4s ease-in;\n  opacity: 1;\n}\n\n.scroll-refresher {\n  position: absolute;\n  top: -60px;\n  right: 0;\n  left: 0;\n  overflow: hidden;\n  margin: auto;\n  height: 60px;\n}\n\n.scroll-refresher .ionic-refresher-content {\n  position: absolute;\n  bottom: 15px;\n  left: 0;\n  width: 100%;\n  color: #666666;\n  text-align: center;\n  font-size: 30px;\n}\n\n.scroll-refresher .ionic-refresher-content .text-refreshing,\n.scroll-refresher .ionic-refresher-content .text-pulling {\n  font-size: 16px;\n  line-height: 16px;\n}\n\n.scroll-refresher .ionic-refresher-content.ionic-refresher-with-text {\n  bottom: 10px;\n}\n\n.scroll-refresher .icon-refreshing,\n.scroll-refresher .icon-pulling {\n  width: 100%;\n  -webkit-backface-visibility: hidden;\n  backface-visibility: hidden;\n  -webkit-transform-style: preserve-3d;\n  transform-style: preserve-3d;\n}\n\n.scroll-refresher .icon-pulling {\n  -webkit-animation-name: refresh-spin-back;\n  animation-name: refresh-spin-back;\n  -webkit-animation-duration: 200ms;\n  animation-duration: 200ms;\n  -webkit-animation-timing-function: linear;\n  animation-timing-function: linear;\n  -webkit-animation-fill-mode: none;\n  animation-fill-mode: none;\n  -webkit-transform: translate3d(0, 0, 0) rotate(0deg);\n  transform: translate3d(0, 0, 0) rotate(0deg);\n}\n\n.scroll-refresher .icon-refreshing,\n.scroll-refresher .text-refreshing {\n  display: none;\n}\n\n.scroll-refresher .icon-refreshing {\n  -webkit-animation-duration: 1.5s;\n  animation-duration: 1.5s;\n}\n\n.scroll-refresher.active .icon-pulling:not(.pulling-rotation-disabled) {\n  -webkit-animation-name: refresh-spin;\n  animation-name: refresh-spin;\n  -webkit-transform: translate3d(0, 0, 0) rotate(-180deg);\n  transform: translate3d(0, 0, 0) rotate(-180deg);\n}\n\n.scroll-refresher.active.refreshing {\n  -webkit-transition: -webkit-transform 0.2s;\n  transition: -webkit-transform 0.2s;\n  -webkit-transition: transform 0.2s;\n  transition: transform 0.2s;\n  -webkit-transform: scale(1, 1);\n  transform: scale(1, 1);\n}\n\n.scroll-refresher.active.refreshing .icon-pulling,\n.scroll-refresher.active.refreshing .text-pulling {\n  display: none;\n}\n\n.scroll-refresher.active.refreshing .icon-refreshing,\n.scroll-refresher.active.refreshing .text-refreshing {\n  display: block;\n}\n\n.scroll-refresher.active.refreshing.refreshing-tail {\n  -webkit-transform: scale(0, 0);\n  transform: scale(0, 0);\n}\n\n.overflow-scroll > .scroll {\n  -webkit-overflow-scrolling: touch;\n  width: 100%;\n}\n\n.overflow-scroll > .scroll.overscroll {\n  position: fixed;\n}\n\n@-webkit-keyframes refresh-spin {\n  0% {\n    -webkit-transform: translate3d(0, 0, 0) rotate(0);\n  }\n\n  100% {\n    -webkit-transform: translate3d(0, 0, 0) rotate(180deg);\n  }\n}\n\n@keyframes refresh-spin {\n  0% {\n    transform: translate3d(0, 0, 0) rotate(0);\n  }\n\n  100% {\n    transform: translate3d(0, 0, 0) rotate(180deg);\n  }\n}\n\n@-webkit-keyframes refresh-spin-back {\n  0% {\n    -webkit-transform: translate3d(0, 0, 0) rotate(180deg);\n  }\n\n  100% {\n    -webkit-transform: translate3d(0, 0, 0) rotate(0);\n  }\n}\n\n@keyframes refresh-spin-back {\n  0% {\n    transform: translate3d(0, 0, 0) rotate(180deg);\n  }\n\n  100% {\n    transform: translate3d(0, 0, 0) rotate(0);\n  }\n}\n\n/**\n * Spinners\n * --------------------------------------------------\n */\n\n.spinner {\n  stroke: #444;\n  fill: #444;\n}\n\n.spinner svg {\n  width: 28px;\n  height: 28px;\n}\n\n.spinner.spinner-light {\n  stroke: #00F1D3;\n  fill: #00F1D3;\n}\n\n.spinner.spinner-stable {\n  stroke: #f8f8f8;\n  fill: #f8f8f8;\n}\n\n.spinner.spinner-positive {\n  stroke: #00A490;\n  fill: #00A490;\n}\n\n.spinner.spinner-calm {\n  stroke: #11c1f3;\n  fill: #11c1f3;\n}\n\n.spinner.spinner-balanced {\n  stroke: #33cd5f;\n  fill: #33cd5f;\n}\n\n.spinner.spinner-assertive {\n  stroke: #ef473a;\n  fill: #ef473a;\n}\n\n.spinner.spinner-energized {\n  stroke: #ffc900;\n  fill: #ffc900;\n}\n\n.spinner.spinner-royal {\n  stroke: #886aea;\n  fill: #886aea;\n}\n\n.spinner.spinner-dark {\n  stroke: #444;\n  fill: #444;\n}\n\n.spinner-android {\n  stroke: #4b8bf4;\n}\n\n.spinner-ios,\n.spinner-ios-small {\n  stroke: #69717d;\n}\n\n.spinner-spiral .stop1 {\n  stop-color: #00F1D3;\n  stop-opacity: 0;\n}\n\n.spinner-spiral.spinner-light .stop1 {\n  stop-color: #444;\n}\n\n.spinner-spiral.spinner-light .stop2 {\n  stop-color: #00F1D3;\n}\n\n.spinner-spiral.spinner-stable .stop2 {\n  stop-color: #f8f8f8;\n}\n\n.spinner-spiral.spinner-positive .stop2 {\n  stop-color: #00A490;\n}\n\n.spinner-spiral.spinner-calm .stop2 {\n  stop-color: #11c1f3;\n}\n\n.spinner-spiral.spinner-balanced .stop2 {\n  stop-color: #33cd5f;\n}\n\n.spinner-spiral.spinner-assertive .stop2 {\n  stop-color: #ef473a;\n}\n\n.spinner-spiral.spinner-energized .stop2 {\n  stop-color: #ffc900;\n}\n\n.spinner-spiral.spinner-royal .stop2 {\n  stop-color: #886aea;\n}\n\n.spinner-spiral.spinner-dark .stop2 {\n  stop-color: #444;\n}\n\n/**\n * Forms\n * --------------------------------------------------\n */\n\nform {\n  margin: 0 0 1.42857;\n}\n\nlegend {\n  display: block;\n  margin-bottom: 1.42857;\n  padding: 0;\n  width: 100%;\n  border: 1px solid #ddd;\n  color: #444;\n  font-size: 24px;\n  line-height: 2.85714;\n}\n\nlegend small {\n  color: #f8f8f8;\n  font-size: 1.07143;\n}\n\nlabel,\ninput,\nbutton,\nselect,\ntextarea {\n  font-weight: normal;\n  font-size: 16px;\n  line-height: 1.42857;\n}\n\ninput,\nbutton,\nselect,\ntextarea {\n  font-family: \"Titillium Web\", sans-serif;\n}\n\n.item-input {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  -webkit-align-items: center;\n  -moz-align-items: center;\n  align-items: center;\n  position: relative;\n  overflow: hidden;\n  padding: 6px 0 5px 16px;\n}\n\n.item-input input {\n  -webkit-border-radius: 0;\n  border-radius: 0;\n  -webkit-box-flex: 1;\n  -webkit-flex: 1 220px;\n  -moz-box-flex: 1;\n  -moz-flex: 1 220px;\n  -ms-flex: 1 220px;\n  flex: 1 220px;\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n  margin: 0;\n  padding-right: 24px;\n  background-color: transparent;\n}\n\n.item-input .button .icon,\n.item-input .button-pill .icon {\n  -webkit-box-flex: 0;\n  -webkit-flex: 0 0 24px;\n  -moz-box-flex: 0;\n  -moz-flex: 0 0 24px;\n  -ms-flex: 0 0 24px;\n  flex: 0 0 24px;\n  position: static;\n  display: inline-block;\n  height: auto;\n  text-align: center;\n  font-size: 16px;\n}\n\n.item-input .button-bar {\n  -webkit-border-radius: 0;\n  border-radius: 0;\n  -webkit-box-flex: 1;\n  -webkit-flex: 1 0 220px;\n  -moz-box-flex: 1;\n  -moz-flex: 1 0 220px;\n  -ms-flex: 1 0 220px;\n  flex: 1 0 220px;\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n}\n\n.item-input .icon {\n  min-width: 14px;\n}\n\n.platform-windowsphone .item-input input {\n  flex-shrink: 1;\n}\n\n.item-input-inset {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  -webkit-align-items: center;\n  -moz-align-items: center;\n  align-items: center;\n  position: relative;\n  overflow: hidden;\n  padding: 10.66667px;\n}\n\n.item-input-wrapper {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-flex: 1;\n  -webkit-flex: 1 0;\n  -moz-box-flex: 1;\n  -moz-flex: 1 0;\n  -ms-flex: 1 0;\n  flex: 1 0;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  -webkit-align-items: center;\n  -moz-align-items: center;\n  align-items: center;\n  -webkit-border-radius: 4px;\n  border-radius: 4px;\n  padding-right: 8px;\n  padding-left: 8px;\n  background: #eee;\n}\n\n.item-input-inset .item-input-wrapper input {\n  padding-left: 4px;\n  height: 29px;\n  background: transparent;\n  line-height: 18px;\n}\n\n.item-input-wrapper ~ .button,\n.item-input-wrapper ~ .button-pill {\n  margin-left: 10.66667px;\n}\n\n.input-label {\n  display: table;\n  padding: 7px 10px 7px 0px;\n  max-width: 200px;\n  width: 35%;\n  color: #444;\n  font-size: 16px;\n}\n\n.placeholder-icon {\n  color: #aaa;\n}\n\n.placeholder-icon:first-child {\n  padding-right: 6px;\n}\n\n.placeholder-icon:last-child {\n  padding-left: 6px;\n}\n\n.item-stacked-label {\n  display: block;\n  background-color: transparent;\n  box-shadow: none;\n}\n\n.item-stacked-label .input-label,\n.item-stacked-label .icon {\n  display: inline-block;\n  padding: 4px 0 0 0px;\n  vertical-align: middle;\n}\n\n.item-stacked-label input,\n.item-stacked-label textarea {\n  -webkit-border-radius: 2px;\n  border-radius: 2px;\n  padding: 4px 8px 3px 0;\n  border: none;\n  background-color: #00F1D3;\n}\n\n.item-stacked-label input {\n  overflow: hidden;\n  height: 50px;\n}\n\n.item-floating-label {\n  display: block;\n  background-color: transparent;\n  box-shadow: none;\n}\n\n.item-floating-label .input-label {\n  position: relative;\n  padding: 5px 0 0 0;\n  opacity: 0;\n  top: 10px;\n  -webkit-transition: opacity 0.15s ease-in, top 0.2s linear;\n  transition: opacity 0.15s ease-in, top 0.2s linear;\n}\n\n.item-floating-label .input-label.has-input {\n  opacity: 1;\n  top: 0;\n  -webkit-transition: opacity 0.15s ease-in, top 0.2s linear;\n  transition: opacity 0.15s ease-in, top 0.2s linear;\n}\n\ntextarea,\ninput[type=\"text\"],\ninput[type=\"password\"],\ninput[type=\"datetime\"],\ninput[type=\"datetime-local\"],\ninput[type=\"date\"],\ninput[type=\"month\"],\ninput[type=\"time\"],\ninput[type=\"week\"],\ninput[type=\"number\"],\ninput[type=\"email\"],\ninput[type=\"url\"],\ninput[type=\"search\"],\ninput[type=\"tel\"],\ninput[type=\"color\"] {\n  display: block;\n  padding-top: 2px;\n  padding-left: 0;\n  height: 38px;\n  color: #111;\n  vertical-align: middle;\n  font-size: 16px;\n  line-height: 18px;\n}\n\n.platform-ios input[type=\"datetime-local\"],\n.platform-ios input[type=\"date\"],\n.platform-ios input[type=\"month\"],\n.platform-ios input[type=\"time\"],\n.platform-ios input[type=\"week\"],\n.platform-android input[type=\"datetime-local\"],\n.platform-android input[type=\"date\"],\n.platform-android input[type=\"month\"],\n.platform-android input[type=\"time\"],\n.platform-android input[type=\"week\"] {\n  padding-top: 8px;\n}\n\n.item-input input,\n.item-input textarea {\n  width: 100%;\n}\n\ntextarea {\n  padding-left: 0;\n}\n\ntextarea::-moz-placeholder {\n  color: #aaaaaa;\n}\n\ntextarea:-ms-input-placeholder {\n  color: #aaaaaa;\n}\n\ntextarea::-webkit-input-placeholder {\n  color: #aaaaaa;\n  text-indent: -3px;\n}\n\ntextarea {\n  height: auto;\n}\n\ntextarea,\ninput[type=\"text\"],\ninput[type=\"password\"],\ninput[type=\"datetime\"],\ninput[type=\"datetime-local\"],\ninput[type=\"date\"],\ninput[type=\"month\"],\ninput[type=\"time\"],\ninput[type=\"week\"],\ninput[type=\"number\"],\ninput[type=\"email\"],\ninput[type=\"url\"],\ninput[type=\"search\"],\ninput[type=\"tel\"],\ninput[type=\"color\"] {\n  border: 0;\n}\n\ninput[type=\"radio\"],\ninput[type=\"checkbox\"] {\n  margin: 0;\n  line-height: normal;\n}\n\n.item-input input[type=\"file\"],\n.item-input input[type=\"image\"],\n.item-input input[type=\"submit\"],\n.item-input input[type=\"reset\"],\n.item-input input[type=\"button\"],\n.item-input input[type=\"radio\"],\n.item-input input[type=\"checkbox\"] {\n  width: auto;\n}\n\ninput[type=\"file\"] {\n  line-height: 36px;\n}\n\n.previous-input-focus,\n.cloned-text-input + input,\n.cloned-text-input + textarea {\n  position: absolute !important;\n  left: -9999px;\n  width: 200px;\n}\n\ninput::-moz-placeholder,\ntextarea::-moz-placeholder {\n  color: #aaaaaa;\n}\n\ninput:-ms-input-placeholder,\ntextarea:-ms-input-placeholder {\n  color: #aaaaaa;\n}\n\ninput::-webkit-input-placeholder,\ntextarea::-webkit-input-placeholder {\n  color: #aaaaaa;\n  text-indent: 0;\n}\n\ninput[disabled],\nselect[disabled],\ntextarea[disabled],\ninput[readonly]:not(.cloned-text-input),\ntextarea[readonly]:not(.cloned-text-input),\nselect[readonly] {\n  background-color: #f8f8f8;\n  cursor: not-allowed;\n}\n\ninput[type=\"radio\"][disabled],\ninput[type=\"checkbox\"][disabled],\ninput[type=\"radio\"][readonly],\ninput[type=\"checkbox\"][readonly] {\n  background-color: transparent;\n}\n\n/**\n * Checkbox\n * --------------------------------------------------\n */\n\n.checkbox {\n  position: relative;\n  display: inline-block;\n  padding: 7px 7px;\n  cursor: pointer;\n}\n\n.checkbox input:before,\n.checkbox .checkbox-icon:before {\n  border-color: #ddd;\n}\n\n.checkbox input:checked:before,\n.checkbox input:checked + .checkbox-icon:before {\n  background: #00A490;\n  border-color: #00A490;\n}\n\n.checkbox-light input:before,\n.checkbox-light .checkbox-icon:before {\n  border-color: #ddd;\n}\n\n.checkbox-light input:checked:before,\n.checkbox-light input:checked + .checkbox-icon:before {\n  background: #ddd;\n  border-color: #ddd;\n}\n\n.checkbox-stable input:before,\n.checkbox-stable .checkbox-icon:before {\n  border-color: #b2b2b2;\n}\n\n.checkbox-stable input:checked:before,\n.checkbox-stable input:checked + .checkbox-icon:before {\n  background: #b2b2b2;\n  border-color: #b2b2b2;\n}\n\n.checkbox-positive input:before,\n.checkbox-positive .checkbox-icon:before {\n  border-color: #00A490;\n}\n\n.checkbox-positive input:checked:before,\n.checkbox-positive input:checked + .checkbox-icon:before {\n  background: #00A490;\n  border-color: #00A490;\n}\n\n.checkbox-calm input:before,\n.checkbox-calm .checkbox-icon:before {\n  border-color: #11c1f3;\n}\n\n.checkbox-calm input:checked:before,\n.checkbox-calm input:checked + .checkbox-icon:before {\n  background: #11c1f3;\n  border-color: #11c1f3;\n}\n\n.checkbox-assertive input:before,\n.checkbox-assertive .checkbox-icon:before {\n  border-color: #ef473a;\n}\n\n.checkbox-assertive input:checked:before,\n.checkbox-assertive input:checked + .checkbox-icon:before {\n  background: #ef473a;\n  border-color: #ef473a;\n}\n\n.checkbox-balanced input:before,\n.checkbox-balanced .checkbox-icon:before {\n  border-color: #33cd5f;\n}\n\n.checkbox-balanced input:checked:before,\n.checkbox-balanced input:checked + .checkbox-icon:before {\n  background: #33cd5f;\n  border-color: #33cd5f;\n}\n\n.checkbox-energized input:before,\n.checkbox-energized .checkbox-icon:before {\n  border-color: #ffc900;\n}\n\n.checkbox-energized input:checked:before,\n.checkbox-energized input:checked + .checkbox-icon:before {\n  background: #ffc900;\n  border-color: #ffc900;\n}\n\n.checkbox-royal input:before,\n.checkbox-royal .checkbox-icon:before {\n  border-color: #886aea;\n}\n\n.checkbox-royal input:checked:before,\n.checkbox-royal input:checked + .checkbox-icon:before {\n  background: #886aea;\n  border-color: #886aea;\n}\n\n.checkbox-dark input:before,\n.checkbox-dark .checkbox-icon:before {\n  border-color: #444;\n}\n\n.checkbox-dark input:checked:before,\n.checkbox-dark input:checked + .checkbox-icon:before {\n  background: #444;\n  border-color: #444;\n}\n\n.checkbox input:disabled:before,\n.checkbox input:disabled + .checkbox-icon:before {\n  border-color: #ddd;\n}\n\n.checkbox input:disabled:checked:before,\n.checkbox input:disabled:checked + .checkbox-icon:before {\n  background: #ddd;\n}\n\n.checkbox.checkbox-input-hidden input {\n  display: none !important;\n}\n\n.checkbox input,\n.checkbox-icon {\n  position: relative;\n  width: 28px;\n  height: 28px;\n  display: block;\n  border: 0;\n  background: transparent;\n  cursor: pointer;\n  -webkit-appearance: none;\n}\n\n.checkbox input:before,\n.checkbox-icon:before {\n  display: table;\n  width: 100%;\n  height: 100%;\n  border-width: 1px;\n  border-style: solid;\n  border-radius: 28px;\n  background: #fff;\n  content: ' ';\n  -webkit-transition: background-color 20ms ease-in-out;\n  transition: background-color 20ms ease-in-out;\n}\n\n.checkbox input:checked:before,\ninput:checked + .checkbox-icon:before {\n  border-width: 2px;\n}\n\n.checkbox input:after,\n.checkbox-icon:after {\n  -webkit-transition: opacity 0.05s ease-in-out;\n  transition: opacity 0.05s ease-in-out;\n  -webkit-transform: rotate(-45deg);\n  transform: rotate(-45deg);\n  position: absolute;\n  top: 33%;\n  left: 25%;\n  display: table;\n  width: 14px;\n  height: 6px;\n  border: 1px solid #fff;\n  border-top: 0;\n  border-right: 0;\n  content: ' ';\n  opacity: 0;\n}\n\n.platform-android .checkbox-platform input:before,\n.platform-android .checkbox-platform .checkbox-icon:before,\n.checkbox-square input:before,\n.checkbox-square .checkbox-icon:before {\n  border-radius: 2px;\n  width: 72%;\n  height: 72%;\n  margin-top: 14%;\n  margin-left: 14%;\n  border-width: 2px;\n}\n\n.platform-android .checkbox-platform input:after,\n.platform-android .checkbox-platform .checkbox-icon:after,\n.checkbox-square input:after,\n.checkbox-square .checkbox-icon:after {\n  border-width: 2px;\n  top: 19%;\n  left: 25%;\n  width: 13px;\n  height: 7px;\n}\n\n.grade-c .checkbox input:after,\n.grade-c .checkbox-icon:after {\n  -webkit-transform: rotate(0);\n  transform: rotate(0);\n  top: 3px;\n  left: 4px;\n  border: none;\n  color: #fff;\n  content: '\\2713';\n  font-weight: bold;\n  font-size: 20px;\n}\n\n.checkbox input:checked:after,\ninput:checked + .checkbox-icon:after {\n  opacity: 1;\n}\n\n.item-checkbox {\n  padding-left: 60px;\n}\n\n.item-checkbox.active {\n  box-shadow: none;\n}\n\n.item-checkbox .checkbox {\n  position: absolute;\n  top: 50%;\n  right: 8px;\n  left: 8px;\n  z-index: 3;\n  margin-top: -21px;\n}\n\n.item-checkbox.item-checkbox-right {\n  padding-right: 60px;\n  padding-left: 16px;\n}\n\n.item-checkbox-right .checkbox input,\n.item-checkbox-right .checkbox-icon {\n  float: right;\n}\n\n/**\n * Toggle\n * --------------------------------------------------\n */\n\n.item-toggle {\n  pointer-events: none;\n}\n\n.toggle {\n  position: relative;\n  display: inline-block;\n  pointer-events: auto;\n  margin: -5px;\n  padding: 5px;\n}\n\n.toggle input:checked + .track {\n  border-color: #4cd964;\n  background-color: #4cd964;\n}\n\n.toggle.dragging .handle {\n  background-color: #f2f2f2 !important;\n}\n\n.toggle.toggle-light input:checked + .track {\n  border-color: #ddd;\n  background-color: #ddd;\n}\n\n.toggle.toggle-stable input:checked + .track {\n  border-color: #b2b2b2;\n  background-color: #b2b2b2;\n}\n\n.toggle.toggle-positive input:checked + .track {\n  border-color: #00A490;\n  background-color: #00A490;\n}\n\n.toggle.toggle-calm input:checked + .track {\n  border-color: #11c1f3;\n  background-color: #11c1f3;\n}\n\n.toggle.toggle-assertive input:checked + .track {\n  border-color: #ef473a;\n  background-color: #ef473a;\n}\n\n.toggle.toggle-balanced input:checked + .track {\n  border-color: #33cd5f;\n  background-color: #33cd5f;\n}\n\n.toggle.toggle-energized input:checked + .track {\n  border-color: #ffc900;\n  background-color: #ffc900;\n}\n\n.toggle.toggle-royal input:checked + .track {\n  border-color: #886aea;\n  background-color: #886aea;\n}\n\n.toggle.toggle-dark input:checked + .track {\n  border-color: #444;\n  background-color: #444;\n}\n\n.toggle input {\n  display: none;\n}\n\n/* the track appearance when the toggle is \"off\" */\n\n.toggle .track {\n  -webkit-transition-timing-function: ease-in-out;\n  transition-timing-function: ease-in-out;\n  -webkit-transition-duration: 0.3s;\n  transition-duration: 0.3s;\n  -webkit-transition-property: background-color, border;\n  transition-property: background-color, border;\n  display: inline-block;\n  box-sizing: border-box;\n  width: 51px;\n  height: 31px;\n  border: solid 2px #e6e6e6;\n  border-radius: 20px;\n  background-color: #fff;\n  content: ' ';\n  cursor: pointer;\n  pointer-events: none;\n}\n\n/* Fix to avoid background color bleeding */\n\n/* (occured on (at least) Android 4.2, Asus MeMO Pad HD7 ME173X) */\n\n.platform-android4_2 .toggle .track {\n  -webkit-background-clip: padding-box;\n}\n\n/* the handle (circle) thats inside the toggle's track area */\n\n/* also the handle's appearance when it is \"off\" */\n\n.toggle .handle {\n  -webkit-transition: 0.3s cubic-bezier(0, 1.1, 1, 1.1);\n  transition: 0.3s cubic-bezier(0, 1.1, 1, 1.1);\n  -webkit-transition-property: background-color, transform;\n  transition-property: background-color, transform;\n  position: absolute;\n  display: block;\n  width: 27px;\n  height: 27px;\n  border-radius: 27px;\n  background-color: #00F1D3;\n  top: 7px;\n  left: 7px;\n  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.35), 0 1px 1px rgba(0, 0, 0, 0.15);\n}\n\n.toggle .handle:before {\n  position: absolute;\n  top: -4px;\n  left: -21.5px;\n  padding: 18.5px 34px;\n  content: \" \";\n}\n\n.toggle input:checked + .track .handle {\n  -webkit-transform: translate3d(20px, 0, 0);\n  transform: translate3d(20px, 0, 0);\n  background-color: #00F1D3;\n}\n\n.item-toggle.active {\n  box-shadow: none;\n}\n\n.item-toggle,\n.item-toggle.item-complex .item-content {\n  padding-right: 99px;\n}\n\n.item-toggle.item-complex {\n  padding-right: 0;\n}\n\n.item-toggle .toggle {\n  position: absolute;\n  top: 10px;\n  right: 16px;\n  z-index: 3;\n}\n\n.toggle input:disabled + .track {\n  opacity: .6;\n}\n\n.toggle-small .track {\n  border: 0;\n  width: 34px;\n  height: 15px;\n  background: #9e9e9e;\n}\n\n.toggle-small input:checked + .track {\n  background: rgba(0, 150, 137, 0.5);\n}\n\n.toggle-small .handle {\n  top: 2px;\n  left: 4px;\n  width: 21px;\n  height: 21px;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);\n}\n\n.toggle-small input:checked + .track .handle {\n  -webkit-transform: translate3d(16px, 0, 0);\n  transform: translate3d(16px, 0, 0);\n  background: #009689;\n}\n\n.toggle-small.item-toggle .toggle {\n  top: 19px;\n}\n\n.toggle-small .toggle-light input:checked + .track {\n  background-color: rgba(221, 221, 221, 0.5);\n}\n\n.toggle-small .toggle-light input:checked + .track .handle {\n  background-color: #ddd;\n}\n\n.toggle-small .toggle-stable input:checked + .track {\n  background-color: rgba(178, 178, 178, 0.5);\n}\n\n.toggle-small .toggle-stable input:checked + .track .handle {\n  background-color: #b2b2b2;\n}\n\n.toggle-small .toggle-positive input:checked + .track {\n  background-color: rgba(0, 164, 144, 0.5);\n}\n\n.toggle-small .toggle-positive input:checked + .track .handle {\n  background-color: #00A490;\n}\n\n.toggle-small .toggle-calm input:checked + .track {\n  background-color: rgba(17, 193, 243, 0.5);\n}\n\n.toggle-small .toggle-calm input:checked + .track .handle {\n  background-color: #11c1f3;\n}\n\n.toggle-small .toggle-assertive input:checked + .track {\n  background-color: rgba(239, 71, 58, 0.5);\n}\n\n.toggle-small .toggle-assertive input:checked + .track .handle {\n  background-color: #ef473a;\n}\n\n.toggle-small .toggle-balanced input:checked + .track {\n  background-color: rgba(51, 205, 95, 0.5);\n}\n\n.toggle-small .toggle-balanced input:checked + .track .handle {\n  background-color: #33cd5f;\n}\n\n.toggle-small .toggle-energized input:checked + .track {\n  background-color: rgba(255, 201, 0, 0.5);\n}\n\n.toggle-small .toggle-energized input:checked + .track .handle {\n  background-color: #ffc900;\n}\n\n.toggle-small .toggle-royal input:checked + .track {\n  background-color: rgba(136, 106, 234, 0.5);\n}\n\n.toggle-small .toggle-royal input:checked + .track .handle {\n  background-color: #886aea;\n}\n\n.toggle-small .toggle-dark input:checked + .track {\n  background-color: rgba(68, 68, 68, 0.5);\n}\n\n.toggle-small .toggle-dark input:checked + .track .handle {\n  background-color: #444;\n}\n\n/**\n * Radio Button Inputs\n * --------------------------------------------------\n */\n\n.item-radio {\n  padding: 0;\n}\n\n.item-radio:hover {\n  cursor: pointer;\n}\n\n.item-radio .item-content {\n  /* give some room to the right for the checkmark icon */\n  padding-right: 64px;\n}\n\n.item-radio .radio-icon {\n  /* checkmark icon will be hidden by default */\n  position: absolute;\n  top: 0;\n  right: 0;\n  z-index: 3;\n  visibility: hidden;\n  padding: 14px;\n  height: 100%;\n  font-size: 24px;\n}\n\n.item-radio input {\n  /* hide any radio button inputs elements (the ugly circles) */\n  position: absolute;\n  left: -9999px;\n}\n\n.item-radio input:checked ~ .item-content {\n  /* style the item content when its checked */\n  background: #f7f7f7;\n}\n\n.item-radio input:checked ~ .radio-icon {\n  /* show the checkmark icon when its checked */\n  visibility: visible;\n}\n\n.platform-android.grade-b .item-radio,\n.platform-android.grade-c .item-radio {\n  -webkit-animation: androidCheckedbugfix infinite 1s;\n}\n\n@-webkit-keyframes androidCheckedbugfix {\n  from {\n    padding: 0;\n  }\n\n  to {\n    padding: 0;\n  }\n}\n\n/**\n * Range\n * --------------------------------------------------\n */\n\n.range input {\n  display: inline-block;\n  overflow: hidden;\n  margin-top: 5px;\n  margin-bottom: 5px;\n  padding-right: 2px;\n  padding-left: 1px;\n  width: auto;\n  height: 43px;\n  outline: none;\n  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ccc), color-stop(100%, #ccc));\n  background: linear-gradient(to right, #ccc 0%, #ccc 100%);\n  background-position: center;\n  background-size: 99% 2px;\n  background-repeat: no-repeat;\n  -webkit-appearance: none;\n}\n\n.range input::-webkit-slider-thumb {\n  position: relative;\n  width: 28px;\n  height: 28px;\n  border-radius: 50%;\n  background-color: #00F1D3;\n  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2);\n  cursor: pointer;\n  -webkit-appearance: none;\n  border: 0;\n}\n\n.range input::-webkit-slider-thumb:before {\n  /* what creates the colorful line on the left side of the slider */\n  position: absolute;\n  top: 13px;\n  left: -2001px;\n  width: 2000px;\n  height: 2px;\n  background: #444;\n  content: ' ';\n}\n\n.range input::-webkit-slider-thumb:after {\n  /* create a larger (but hidden) hit area */\n  position: absolute;\n  top: -15px;\n  left: -15px;\n  padding: 30px;\n  content: ' ';\n}\n\n.range input::-ms-track {\n  background: transparent;\n  border-color: transparent;\n  border-width: 11px 0 16px;\n  color: transparent;\n  margin-top: 20px;\n}\n\n.range input::-ms-thumb {\n  width: 28px;\n  height: 28px;\n  border-radius: 50%;\n  background-color: #00F1D3;\n  border-color: #00F1D3;\n  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2);\n  margin-left: 1px;\n  margin-right: 1px;\n  outline: none;\n}\n\n.range input::-ms-fill-lower {\n  height: 2px;\n  background: #444;\n}\n\n.range input::-ms-fill-upper {\n  height: 2px;\n  background: #ccc;\n}\n\n.range {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  -webkit-align-items: center;\n  -moz-align-items: center;\n  align-items: center;\n  padding: 2px 11px;\n}\n\n.range.range-light input::-webkit-slider-thumb:before {\n  background: #ddd;\n}\n\n.range.range-light input::-ms-fill-lower {\n  background: #ddd;\n}\n\n.range.range-stable input::-webkit-slider-thumb:before {\n  background: #b2b2b2;\n}\n\n.range.range-stable input::-ms-fill-lower {\n  background: #b2b2b2;\n}\n\n.range.range-positive input::-webkit-slider-thumb:before {\n  background: #00A490;\n}\n\n.range.range-positive input::-ms-fill-lower {\n  background: #00A490;\n}\n\n.range.range-calm input::-webkit-slider-thumb:before {\n  background: #11c1f3;\n}\n\n.range.range-calm input::-ms-fill-lower {\n  background: #11c1f3;\n}\n\n.range.range-balanced input::-webkit-slider-thumb:before {\n  background: #33cd5f;\n}\n\n.range.range-balanced input::-ms-fill-lower {\n  background: #33cd5f;\n}\n\n.range.range-assertive input::-webkit-slider-thumb:before {\n  background: #ef473a;\n}\n\n.range.range-assertive input::-ms-fill-lower {\n  background: #ef473a;\n}\n\n.range.range-energized input::-webkit-slider-thumb:before {\n  background: #ffc900;\n}\n\n.range.range-energized input::-ms-fill-lower {\n  background: #ffc900;\n}\n\n.range.range-royal input::-webkit-slider-thumb:before {\n  background: #886aea;\n}\n\n.range.range-royal input::-ms-fill-lower {\n  background: #886aea;\n}\n\n.range.range-dark input::-webkit-slider-thumb:before {\n  background: #444;\n}\n\n.range.range-dark input::-ms-fill-lower {\n  background: #444;\n}\n\n.range .icon {\n  -webkit-box-flex: 0;\n  -webkit-flex: 0;\n  -moz-box-flex: 0;\n  -moz-flex: 0;\n  -ms-flex: 0;\n  flex: 0;\n  display: block;\n  min-width: 24px;\n  text-align: center;\n  font-size: 24px;\n}\n\n.range input {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n  -moz-box-flex: 1;\n  -moz-flex: 1;\n  -ms-flex: 1;\n  flex: 1;\n  display: block;\n  margin-right: 10px;\n  margin-left: 10px;\n}\n\n.range-label {\n  -webkit-box-flex: 0;\n  -webkit-flex: 0 0 auto;\n  -moz-box-flex: 0;\n  -moz-flex: 0 0 auto;\n  -ms-flex: 0 0 auto;\n  flex: 0 0 auto;\n  display: block;\n  white-space: nowrap;\n}\n\n.range-label:first-child {\n  padding-left: 5px;\n}\n\n.range input + .range-label {\n  padding-right: 5px;\n  padding-left: 0;\n}\n\n.platform-windowsphone .range input {\n  height: auto;\n}\n\n/**\n * Select\n * --------------------------------------------------\n */\n\n.item-select {\n  position: relative;\n}\n\n.item-select select {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  right: 0;\n  padding: 0 48px 0 16px;\n  max-width: 65%;\n  border: none;\n  background: #00F1D3;\n  color: #333;\n  text-indent: .01px;\n  text-overflow: '';\n  white-space: nowrap;\n  font-size: 16px;\n  cursor: pointer;\n  direction: rtl;\n}\n\n.item-select select::-ms-expand {\n  display: none;\n}\n\n.item-select option {\n  direction: ltr;\n}\n\n.item-select:after {\n  position: absolute;\n  top: 50%;\n  right: 16px;\n  margin-top: -3px;\n  width: 0;\n  height: 0;\n  border-top: 5px solid;\n  border-right: 5px solid transparent;\n  border-left: 5px solid transparent;\n  color: #999;\n  content: \"\";\n  pointer-events: none;\n}\n\n.item-select.item-light select {\n  background: #00F1D3;\n  color: #444;\n}\n\n.item-select.item-stable select {\n  background: #f8f8f8;\n  color: #444;\n}\n\n.item-select.item-stable:after,\n.item-select.item-stable .input-label {\n  color: #656565;\n}\n\n.item-select.item-positive select {\n  background: #00A490;\n  color: #fff;\n}\n\n.item-select.item-positive:after,\n.item-select.item-positive .input-label {\n  color: #fff;\n}\n\n.item-select.item-calm select {\n  background: #11c1f3;\n  color: #fff;\n}\n\n.item-select.item-calm:after,\n.item-select.item-calm .input-label {\n  color: #fff;\n}\n\n.item-select.item-assertive select {\n  background: #ef473a;\n  color: #fff;\n}\n\n.item-select.item-assertive:after,\n.item-select.item-assertive .input-label {\n  color: #fff;\n}\n\n.item-select.item-balanced select {\n  background: #33cd5f;\n  color: #fff;\n}\n\n.item-select.item-balanced:after,\n.item-select.item-balanced .input-label {\n  color: #fff;\n}\n\n.item-select.item-energized select {\n  background: #ffc900;\n  color: #fff;\n}\n\n.item-select.item-energized:after,\n.item-select.item-energized .input-label {\n  color: #fff;\n}\n\n.item-select.item-royal select {\n  background: #886aea;\n  color: #fff;\n}\n\n.item-select.item-royal:after,\n.item-select.item-royal .input-label {\n  color: #fff;\n}\n\n.item-select.item-dark select {\n  background: #444;\n  color: #fff;\n}\n\n.item-select.item-dark:after,\n.item-select.item-dark .input-label {\n  color: #fff;\n}\n\nselect[multiple],\nselect[size] {\n  height: auto;\n}\n\n/**\n * Progress\n * --------------------------------------------------\n */\n\nprogress {\n  display: block;\n  margin: 15px auto;\n  width: 100%;\n}\n\n/**\n * Buttons\n * --------------------------------------------------\n */\n\n.button,\n.button-pill {\n  border-color: #b2b2b2;\n  background-color: #f8f8f8;\n  color: #444;\n  position: relative;\n  display: inline-block;\n  margin: 0;\n  padding: 0 12px;\n  min-width: 52px;\n  min-height: 47px;\n  border-width: 1px;\n  border-style: solid;\n  border-radius: 2px;\n  vertical-align: top;\n  text-align: center;\n  text-overflow: ellipsis;\n  font-size: 16px;\n  line-height: 42px;\n  cursor: pointer;\n}\n\n.button:hover,\n.button-pill:hover {\n  color: #444;\n  text-decoration: none;\n}\n\n.button.active,\n.active.button-pill,\n.button.activated,\n.activated.button-pill {\n  border-color: #a2a2a2;\n  background-color: #e5e5e5;\n  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\n.button:after,\n.button-pill:after {\n  position: absolute;\n  top: -6px;\n  right: -6px;\n  bottom: -6px;\n  left: -6px;\n  content: ' ';\n}\n\n.button .icon,\n.button-pill .icon {\n  vertical-align: top;\n  pointer-events: none;\n}\n\n.button .icon:before,\n.button-pill .icon:before,\n.button.icon:before,\n.icon.button-pill:before,\n.button.icon-left:before,\n.icon-left.button-pill:before,\n.button.icon-right:before,\n.icon-right.button-pill:before {\n  display: inline-block;\n  padding: 0 0 1px 0;\n  vertical-align: inherit;\n  font-size: 24px;\n  line-height: 41px;\n  pointer-events: none;\n}\n\n.button.icon-left:before,\n.icon-left.button-pill:before {\n  float: left;\n  padding-right: .2em;\n  padding-left: 0;\n}\n\n.button.icon-right:before,\n.icon-right.button-pill:before {\n  float: right;\n  padding-right: 0;\n  padding-left: .2em;\n}\n\n.button.button-block,\n.button-block.button-pill,\n.button.button-full,\n.button-full.button-pill {\n  margin-top: 10px;\n  margin-bottom: 10px;\n}\n\n.button.button-light,\n.button-light.button-pill {\n  border-color: #ddd;\n  background-color: #00F1D3;\n  color: #444;\n}\n\n.button.button-light:hover,\n.button-light.button-pill:hover {\n  color: #444;\n  text-decoration: none;\n}\n\n.button.button-light.active,\n.button-light.active.button-pill,\n.button.button-light.activated,\n.button-light.activated.button-pill {\n  border-color: #ccc;\n  background-color: #fafafa;\n  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\n.button.button-light.button-clear,\n.button-light.button-clear.button-pill {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  color: #ddd;\n}\n\n.button.button-light.button-icon,\n.button-light.button-icon.button-pill {\n  border-color: transparent;\n  background: none;\n}\n\n.button.button-light.button-outline,\n.button-light.button-outline.button-pill {\n  border-color: #ddd;\n  background: transparent;\n  color: #ddd;\n}\n\n.button.button-light.button-outline.active,\n.button-light.button-outline.active.button-pill,\n.button.button-light.button-outline.activated,\n.button-light.button-outline.activated.button-pill {\n  background-color: #ddd;\n  box-shadow: none;\n  color: #fff;\n}\n\n.button.button-stable,\n.button-stable.button-pill {\n  border-color: #b2b2b2;\n  background-color: #f8f8f8;\n  color: #444;\n}\n\n.button.button-stable:hover,\n.button-stable.button-pill:hover {\n  color: #444;\n  text-decoration: none;\n}\n\n.button.button-stable.active,\n.button-stable.active.button-pill,\n.button.button-stable.activated,\n.button-stable.activated.button-pill {\n  border-color: #a2a2a2;\n  background-color: #e5e5e5;\n  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\n.button.button-stable.button-clear,\n.button-stable.button-clear.button-pill {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  color: #b2b2b2;\n}\n\n.button.button-stable.button-icon,\n.button-stable.button-icon.button-pill {\n  border-color: transparent;\n  background: none;\n}\n\n.button.button-stable.button-outline,\n.button-stable.button-outline.button-pill {\n  border-color: #b2b2b2;\n  background: transparent;\n  color: #b2b2b2;\n}\n\n.button.button-stable.button-outline.active,\n.button-stable.button-outline.active.button-pill,\n.button.button-stable.button-outline.activated,\n.button-stable.button-outline.activated.button-pill {\n  background-color: #b2b2b2;\n  box-shadow: none;\n  color: #fff;\n}\n\n.button.button-positive,\n.button-positive.button-pill {\n  border-color: #007163;\n  background-color: #00A490;\n  color: #fff;\n}\n\n.button.button-positive:hover,\n.button-positive.button-pill:hover {\n  color: #fff;\n  text-decoration: none;\n}\n\n.button.button-positive.active,\n.button-positive.active.button-pill,\n.button.button-positive.activated,\n.button-positive.activated.button-pill {\n  border-color: #007163;\n  background-color: #007163;\n  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\n.button.button-positive.button-clear,\n.button-positive.button-clear.button-pill {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  color: #00A490;\n}\n\n.button.button-positive.button-icon,\n.button-positive.button-icon.button-pill {\n  border-color: transparent;\n  background: none;\n}\n\n.button.button-positive.button-outline,\n.button-positive.button-outline.button-pill {\n  border-color: #00A490;\n  background: transparent;\n  color: #00A490;\n}\n\n.button.button-positive.button-outline.active,\n.button-positive.button-outline.active.button-pill,\n.button.button-positive.button-outline.activated,\n.button-positive.button-outline.activated.button-pill {\n  background-color: #00A490;\n  box-shadow: none;\n  color: #fff;\n}\n\n.button.button-calm,\n.button-calm.button-pill {\n  border-color: #0a9dc7;\n  background-color: #11c1f3;\n  color: #fff;\n}\n\n.button.button-calm:hover,\n.button-calm.button-pill:hover {\n  color: #fff;\n  text-decoration: none;\n}\n\n.button.button-calm.active,\n.button-calm.active.button-pill,\n.button.button-calm.activated,\n.button-calm.activated.button-pill {\n  border-color: #0a9dc7;\n  background-color: #0a9dc7;\n  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\n.button.button-calm.button-clear,\n.button-calm.button-clear.button-pill {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  color: #11c1f3;\n}\n\n.button.button-calm.button-icon,\n.button-calm.button-icon.button-pill {\n  border-color: transparent;\n  background: none;\n}\n\n.button.button-calm.button-outline,\n.button-calm.button-outline.button-pill {\n  border-color: #11c1f3;\n  background: transparent;\n  color: #11c1f3;\n}\n\n.button.button-calm.button-outline.active,\n.button-calm.button-outline.active.button-pill,\n.button.button-calm.button-outline.activated,\n.button-calm.button-outline.activated.button-pill {\n  background-color: #11c1f3;\n  box-shadow: none;\n  color: #fff;\n}\n\n.button.button-assertive,\n.button-assertive.button-pill {\n  border-color: #e42112;\n  background-color: #ef473a;\n  color: #fff;\n}\n\n.button.button-assertive:hover,\n.button-assertive.button-pill:hover {\n  color: #fff;\n  text-decoration: none;\n}\n\n.button.button-assertive.active,\n.button-assertive.active.button-pill,\n.button.button-assertive.activated,\n.button-assertive.activated.button-pill {\n  border-color: #e42112;\n  background-color: #e42112;\n  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\n.button.button-assertive.button-clear,\n.button-assertive.button-clear.button-pill {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  color: #ef473a;\n}\n\n.button.button-assertive.button-icon,\n.button-assertive.button-icon.button-pill {\n  border-color: transparent;\n  background: none;\n}\n\n.button.button-assertive.button-outline,\n.button-assertive.button-outline.button-pill {\n  border-color: #ef473a;\n  background: transparent;\n  color: #ef473a;\n}\n\n.button.button-assertive.button-outline.active,\n.button-assertive.button-outline.active.button-pill,\n.button.button-assertive.button-outline.activated,\n.button-assertive.button-outline.activated.button-pill {\n  background-color: #ef473a;\n  box-shadow: none;\n  color: #fff;\n}\n\n.button.button-balanced,\n.button-balanced.button-pill {\n  border-color: #28a54c;\n  background-color: #33cd5f;\n  color: #fff;\n}\n\n.button.button-balanced:hover,\n.button-balanced.button-pill:hover {\n  color: #fff;\n  text-decoration: none;\n}\n\n.button.button-balanced.active,\n.button-balanced.active.button-pill,\n.button.button-balanced.activated,\n.button-balanced.activated.button-pill {\n  border-color: #28a54c;\n  background-color: #28a54c;\n  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\n.button.button-balanced.button-clear,\n.button-balanced.button-clear.button-pill {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  color: #33cd5f;\n}\n\n.button.button-balanced.button-icon,\n.button-balanced.button-icon.button-pill {\n  border-color: transparent;\n  background: none;\n}\n\n.button.button-balanced.button-outline,\n.button-balanced.button-outline.button-pill {\n  border-color: #33cd5f;\n  background: transparent;\n  color: #33cd5f;\n}\n\n.button.button-balanced.button-outline.active,\n.button-balanced.button-outline.active.button-pill,\n.button.button-balanced.button-outline.activated,\n.button-balanced.button-outline.activated.button-pill {\n  background-color: #33cd5f;\n  box-shadow: none;\n  color: #fff;\n}\n\n.button.button-energized,\n.button-energized.button-pill {\n  border-color: #e6b500;\n  background-color: #ffc900;\n  color: #fff;\n}\n\n.button.button-energized:hover,\n.button-energized.button-pill:hover {\n  color: #fff;\n  text-decoration: none;\n}\n\n.button.button-energized.active,\n.button-energized.active.button-pill,\n.button.button-energized.activated,\n.button-energized.activated.button-pill {\n  border-color: #e6b500;\n  background-color: #e6b500;\n  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\n.button.button-energized.button-clear,\n.button-energized.button-clear.button-pill {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  color: #ffc900;\n}\n\n.button.button-energized.button-icon,\n.button-energized.button-icon.button-pill {\n  border-color: transparent;\n  background: none;\n}\n\n.button.button-energized.button-outline,\n.button-energized.button-outline.button-pill {\n  border-color: #ffc900;\n  background: transparent;\n  color: #ffc900;\n}\n\n.button.button-energized.button-outline.active,\n.button-energized.button-outline.active.button-pill,\n.button.button-energized.button-outline.activated,\n.button-energized.button-outline.activated.button-pill {\n  background-color: #ffc900;\n  box-shadow: none;\n  color: #fff;\n}\n\n.button.button-royal,\n.button-royal.button-pill {\n  border-color: #6b46e5;\n  background-color: #886aea;\n  color: #fff;\n}\n\n.button.button-royal:hover,\n.button-royal.button-pill:hover {\n  color: #fff;\n  text-decoration: none;\n}\n\n.button.button-royal.active,\n.button-royal.active.button-pill,\n.button.button-royal.activated,\n.button-royal.activated.button-pill {\n  border-color: #6b46e5;\n  background-color: #6b46e5;\n  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\n.button.button-royal.button-clear,\n.button-royal.button-clear.button-pill {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  color: #886aea;\n}\n\n.button.button-royal.button-icon,\n.button-royal.button-icon.button-pill {\n  border-color: transparent;\n  background: none;\n}\n\n.button.button-royal.button-outline,\n.button-royal.button-outline.button-pill {\n  border-color: #886aea;\n  background: transparent;\n  color: #886aea;\n}\n\n.button.button-royal.button-outline.active,\n.button-royal.button-outline.active.button-pill,\n.button.button-royal.button-outline.activated,\n.button-royal.button-outline.activated.button-pill {\n  background-color: #886aea;\n  box-shadow: none;\n  color: #fff;\n}\n\n.button.button-dark,\n.button-dark.button-pill {\n  border-color: #111;\n  background-color: #444;\n  color: #fff;\n}\n\n.button.button-dark:hover,\n.button-dark.button-pill:hover {\n  color: #fff;\n  text-decoration: none;\n}\n\n.button.button-dark.active,\n.button-dark.active.button-pill,\n.button.button-dark.activated,\n.button-dark.activated.button-pill {\n  border-color: #000;\n  background-color: #262626;\n  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\n.button.button-dark.button-clear,\n.button-dark.button-clear.button-pill {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  color: #444;\n}\n\n.button.button-dark.button-icon,\n.button-dark.button-icon.button-pill {\n  border-color: transparent;\n  background: none;\n}\n\n.button.button-dark.button-outline,\n.button-dark.button-outline.button-pill {\n  border-color: #444;\n  background: transparent;\n  color: #444;\n}\n\n.button.button-dark.button-outline.active,\n.button-dark.button-outline.active.button-pill,\n.button.button-dark.button-outline.activated,\n.button-dark.button-outline.activated.button-pill {\n  background-color: #444;\n  box-shadow: none;\n  color: #fff;\n}\n\n.button-small {\n  padding: 2px 4px 1px;\n  min-width: 28px;\n  min-height: 30px;\n  font-size: 12px;\n  line-height: 26px;\n}\n\n.button-small .icon:before,\n.button-small.icon:before,\n.button-small.icon-left:before,\n.button-small.icon-right:before {\n  font-size: 16px;\n  line-height: 19px;\n  margin-top: 3px;\n}\n\n.button-large {\n  padding: 0 16px;\n  min-width: 68px;\n  min-height: 59px;\n  font-size: 20px;\n  line-height: 53px;\n}\n\n.button-large .icon:before,\n.button-large.icon:before,\n.button-large.icon-left:before,\n.button-large.icon-right:before {\n  padding-bottom: 2px;\n  font-size: 32px;\n  line-height: 51px;\n}\n\n.button-icon {\n  -webkit-transition: opacity 0.1s;\n  transition: opacity 0.1s;\n  padding: 0 6px;\n  min-width: initial;\n  border-color: transparent;\n  background: none;\n}\n\n.button-icon.button.active,\n.button-icon.active.button-pill,\n.button-icon.button.activated,\n.button-icon.activated.button-pill {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  opacity: 0.3;\n}\n\n.button-icon .icon:before,\n.button-icon.icon:before {\n  font-size: 32px;\n}\n\n.button-clear {\n  -webkit-transition: opacity 0.1s;\n  transition: opacity 0.1s;\n  padding: 0 6px;\n  max-height: 42px;\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n}\n\n.button-clear.button-clear {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  color: #b2b2b2;\n}\n\n.button-clear.button-icon {\n  border-color: transparent;\n  background: none;\n}\n\n.button-clear.active,\n.button-clear.activated {\n  opacity: 0.3;\n}\n\n.button-outline {\n  -webkit-transition: opacity 0.1s;\n  transition: opacity 0.1s;\n  background: none;\n  box-shadow: none;\n}\n\n.button-outline.button-outline {\n  border-color: #b2b2b2;\n  background: transparent;\n  color: #b2b2b2;\n}\n\n.button-outline.button-outline.active,\n.button-outline.button-outline.activated {\n  background-color: #b2b2b2;\n  box-shadow: none;\n  color: #fff;\n}\n\n.padding > .button.button-block:first-child,\n.padding > .button-block.button-pill:first-child {\n  margin-top: 0;\n}\n\n.button-block {\n  display: block;\n  clear: both;\n}\n\n.button-block:after {\n  clear: both;\n}\n\n.button-full,\n.button-full > .button,\n.button-full > .button-pill {\n  display: block;\n  margin-right: 0;\n  margin-left: 0;\n  border-right-width: 0;\n  border-left-width: 0;\n  border-radius: 0;\n}\n\nbutton.button-block,\nbutton.button-full,\n.button-full > button.button,\n.button-full > button.button-pill,\ninput.button.button-block,\ninput.button-block.button-pill {\n  width: 100%;\n}\n\na.button,\na.button-pill {\n  text-decoration: none;\n}\n\na.button .icon:before,\na.button-pill .icon:before,\na.button.icon:before,\na.icon.button-pill:before,\na.button.icon-left:before,\na.icon-left.button-pill:before,\na.button.icon-right:before,\na.icon-right.button-pill:before {\n  margin-top: 2px;\n}\n\n.button.disabled,\n.disabled.button-pill,\n.button[disabled],\n[disabled].button-pill {\n  opacity: .4;\n  cursor: default !important;\n  pointer-events: none;\n}\n\n/**\n * Button Bar\n * --------------------------------------------------\n */\n\n.button-bar {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n  -moz-box-flex: 1;\n  -moz-flex: 1;\n  -ms-flex: 1;\n  flex: 1;\n  width: 100%;\n}\n\n.button-bar.button-bar-inline {\n  display: block;\n  width: auto;\n  *zoom: 1;\n}\n\n.button-bar.button-bar-inline:before,\n.button-bar.button-bar-inline:after {\n  display: table;\n  content: \"\";\n  line-height: 0;\n}\n\n.button-bar.button-bar-inline:after {\n  clear: both;\n}\n\n.button-bar.button-bar-inline > .button,\n.button-bar.button-bar-inline > .button-pill {\n  width: auto;\n  display: inline-block;\n  float: left;\n}\n\n.button-bar > .button,\n.button-bar > .button-pill {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n  -moz-box-flex: 1;\n  -moz-flex: 1;\n  -ms-flex: 1;\n  flex: 1;\n  display: block;\n  overflow: hidden;\n  padding: 0 16px;\n  width: 0;\n  border-width: 1px 0px 1px 1px;\n  border-radius: 0;\n  text-align: center;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n}\n\n.button-bar > .button:before,\n.button-bar > .button-pill:before,\n.button-bar > .button .icon:before,\n.button-bar > .button-pill .icon:before {\n  line-height: 44px;\n}\n\n.button-bar > .button:first-child,\n.button-bar > .button-pill:first-child {\n  border-radius: 2px 0px 0px 2px;\n}\n\n.button-bar > .button:last-child,\n.button-bar > .button-pill:last-child {\n  border-right-width: 1px;\n  border-radius: 0px 2px 2px 0px;\n}\n\n.button-bar > .button-small:before,\n.button-bar > .button-small .icon:before {\n  line-height: 28px;\n}\n\n/**\n * Grid\n * --------------------------------------------------\n * Using flexbox for the grid, inspired by Philip Walton:\n * http://philipwalton.github.io/solved-by-flexbox/demos/grids/\n * By default each .col within a .row will evenly take up\n * available width, and the height of each .col with take\n * up the height of the tallest .col in the same .row.\n */\n\n.row {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  padding: 5px;\n  width: 100%;\n}\n\n.row-wrap {\n  -webkit-flex-wrap: wrap;\n  -moz-flex-wrap: wrap;\n  -ms-flex-wrap: wrap;\n  flex-wrap: wrap;\n}\n\n.row-no-padding {\n  padding: 0;\n}\n\n.row-no-padding > .col {\n  padding: 0;\n}\n\n.row + .row {\n  margin-top: -5px;\n  padding-top: 0;\n}\n\n.col {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n  -moz-box-flex: 1;\n  -moz-flex: 1;\n  -ms-flex: 1;\n  flex: 1;\n  display: block;\n  padding: 5px;\n  width: 100%;\n}\n\n/* Vertically Align Columns */\n\n/* .row-* vertically aligns every .col in the .row */\n\n.row-top {\n  -webkit-box-align: start;\n  -ms-flex-align: start;\n  -webkit-align-items: flex-start;\n  -moz-align-items: flex-start;\n  align-items: flex-start;\n}\n\n.row-bottom {\n  -webkit-box-align: end;\n  -ms-flex-align: end;\n  -webkit-align-items: flex-end;\n  -moz-align-items: flex-end;\n  align-items: flex-end;\n}\n\n.row-center {\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  -webkit-align-items: center;\n  -moz-align-items: center;\n  align-items: center;\n}\n\n.row-stretch {\n  -webkit-box-align: stretch;\n  -ms-flex-align: stretch;\n  -webkit-align-items: stretch;\n  -moz-align-items: stretch;\n  align-items: stretch;\n}\n\n.row-baseline {\n  -webkit-box-align: baseline;\n  -ms-flex-align: baseline;\n  -webkit-align-items: baseline;\n  -moz-align-items: baseline;\n  align-items: baseline;\n}\n\n/* .col-* vertically aligns an individual .col */\n\n.col-top {\n  -webkit-align-self: flex-start;\n  -moz-align-self: flex-start;\n  -ms-flex-item-align: start;\n  align-self: flex-start;\n}\n\n.col-bottom {\n  -webkit-align-self: flex-end;\n  -moz-align-self: flex-end;\n  -ms-flex-item-align: end;\n  align-self: flex-end;\n}\n\n.col-center {\n  -webkit-align-self: center;\n  -moz-align-self: center;\n  -ms-flex-item-align: center;\n  align-self: center;\n}\n\n/* Column Offsets */\n\n.col-offset-10 {\n  margin-left: 10%;\n}\n\n.col-offset-20 {\n  margin-left: 20%;\n}\n\n.col-offset-25 {\n  margin-left: 25%;\n}\n\n.col-offset-33,\n.col-offset-34 {\n  margin-left: 33.3333%;\n}\n\n.col-offset-50 {\n  margin-left: 50%;\n}\n\n.col-offset-66,\n.col-offset-67 {\n  margin-left: 66.6666%;\n}\n\n.col-offset-75 {\n  margin-left: 75%;\n}\n\n.col-offset-80 {\n  margin-left: 80%;\n}\n\n.col-offset-90 {\n  margin-left: 90%;\n}\n\n/* Explicit Column Percent Sizes */\n\n/* By default each grid column will evenly distribute */\n\n/* across the grid. However, you can specify individual */\n\n/* columns to take up a certain size of the available area */\n\n.col-10 {\n  -webkit-box-flex: 0;\n  -webkit-flex: 0 0 10%;\n  -moz-box-flex: 0;\n  -moz-flex: 0 0 10%;\n  -ms-flex: 0 0 10%;\n  flex: 0 0 10%;\n  max-width: 10%;\n}\n\n.col-20 {\n  -webkit-box-flex: 0;\n  -webkit-flex: 0 0 20%;\n  -moz-box-flex: 0;\n  -moz-flex: 0 0 20%;\n  -ms-flex: 0 0 20%;\n  flex: 0 0 20%;\n  max-width: 20%;\n}\n\n.col-25 {\n  -webkit-box-flex: 0;\n  -webkit-flex: 0 0 25%;\n  -moz-box-flex: 0;\n  -moz-flex: 0 0 25%;\n  -ms-flex: 0 0 25%;\n  flex: 0 0 25%;\n  max-width: 25%;\n}\n\n.col-33,\n.col-34 {\n  -webkit-box-flex: 0;\n  -webkit-flex: 0 0 33.3333%;\n  -moz-box-flex: 0;\n  -moz-flex: 0 0 33.3333%;\n  -ms-flex: 0 0 33.3333%;\n  flex: 0 0 33.3333%;\n  max-width: 33.3333%;\n}\n\n.col-50 {\n  -webkit-box-flex: 0;\n  -webkit-flex: 0 0 50%;\n  -moz-box-flex: 0;\n  -moz-flex: 0 0 50%;\n  -ms-flex: 0 0 50%;\n  flex: 0 0 50%;\n  max-width: 50%;\n}\n\n.col-66,\n.col-67 {\n  -webkit-box-flex: 0;\n  -webkit-flex: 0 0 66.6666%;\n  -moz-box-flex: 0;\n  -moz-flex: 0 0 66.6666%;\n  -ms-flex: 0 0 66.6666%;\n  flex: 0 0 66.6666%;\n  max-width: 66.6666%;\n}\n\n.col-75 {\n  -webkit-box-flex: 0;\n  -webkit-flex: 0 0 75%;\n  -moz-box-flex: 0;\n  -moz-flex: 0 0 75%;\n  -ms-flex: 0 0 75%;\n  flex: 0 0 75%;\n  max-width: 75%;\n}\n\n.col-80 {\n  -webkit-box-flex: 0;\n  -webkit-flex: 0 0 80%;\n  -moz-box-flex: 0;\n  -moz-flex: 0 0 80%;\n  -ms-flex: 0 0 80%;\n  flex: 0 0 80%;\n  max-width: 80%;\n}\n\n.col-90 {\n  -webkit-box-flex: 0;\n  -webkit-flex: 0 0 90%;\n  -moz-box-flex: 0;\n  -moz-flex: 0 0 90%;\n  -ms-flex: 0 0 90%;\n  flex: 0 0 90%;\n  max-width: 90%;\n}\n\n/* Responsive Grid Classes */\n\n/* Adding a class of responsive-X to a row */\n\n/* will trigger the flex-direction to */\n\n/* change to column and add some margin */\n\n/* to any columns in the row for clearity */\n\n@media (max-width: 567px) {\n  .responsive-sm {\n    -webkit-box-direction: normal;\n    -moz-box-direction: normal;\n    -webkit-box-orient: vertical;\n    -moz-box-orient: vertical;\n    -webkit-flex-direction: column;\n    -ms-flex-direction: column;\n    flex-direction: column;\n  }\n\n  .responsive-sm .col,\n  .responsive-sm .col-10,\n  .responsive-sm .col-20,\n  .responsive-sm .col-25,\n  .responsive-sm .col-33,\n  .responsive-sm .col-34,\n  .responsive-sm .col-50,\n  .responsive-sm .col-66,\n  .responsive-sm .col-67,\n  .responsive-sm .col-75,\n  .responsive-sm .col-80,\n  .responsive-sm .col-90 {\n    -webkit-box-flex: 1;\n    -webkit-flex: 1;\n    -moz-box-flex: 1;\n    -moz-flex: 1;\n    -ms-flex: 1;\n    flex: 1;\n    margin-bottom: 15px;\n    margin-left: 0;\n    max-width: 100%;\n    width: 100%;\n  }\n}\n\n@media (max-width: 767px) {\n  .responsive-md {\n    -webkit-box-direction: normal;\n    -moz-box-direction: normal;\n    -webkit-box-orient: vertical;\n    -moz-box-orient: vertical;\n    -webkit-flex-direction: column;\n    -ms-flex-direction: column;\n    flex-direction: column;\n  }\n\n  .responsive-md .col,\n  .responsive-md .col-10,\n  .responsive-md .col-20,\n  .responsive-md .col-25,\n  .responsive-md .col-33,\n  .responsive-md .col-34,\n  .responsive-md .col-50,\n  .responsive-md .col-66,\n  .responsive-md .col-67,\n  .responsive-md .col-75,\n  .responsive-md .col-80,\n  .responsive-md .col-90 {\n    -webkit-box-flex: 1;\n    -webkit-flex: 1;\n    -moz-box-flex: 1;\n    -moz-flex: 1;\n    -ms-flex: 1;\n    flex: 1;\n    margin-bottom: 15px;\n    margin-left: 0;\n    max-width: 100%;\n    width: 100%;\n  }\n}\n\n@media (max-width: 1023px) {\n  .responsive-lg {\n    -webkit-box-direction: normal;\n    -moz-box-direction: normal;\n    -webkit-box-orient: vertical;\n    -moz-box-orient: vertical;\n    -webkit-flex-direction: column;\n    -ms-flex-direction: column;\n    flex-direction: column;\n  }\n\n  .responsive-lg .col,\n  .responsive-lg .col-10,\n  .responsive-lg .col-20,\n  .responsive-lg .col-25,\n  .responsive-lg .col-33,\n  .responsive-lg .col-34,\n  .responsive-lg .col-50,\n  .responsive-lg .col-66,\n  .responsive-lg .col-67,\n  .responsive-lg .col-75,\n  .responsive-lg .col-80,\n  .responsive-lg .col-90 {\n    -webkit-box-flex: 1;\n    -webkit-flex: 1;\n    -moz-box-flex: 1;\n    -moz-flex: 1;\n    -ms-flex: 1;\n    flex: 1;\n    margin-bottom: 15px;\n    margin-left: 0;\n    max-width: 100%;\n    width: 100%;\n  }\n}\n\n/**\n * Utility Classes\n * --------------------------------------------------\n */\n\n.hide {\n  display: none;\n}\n\n.opacity-hide {\n  opacity: 0;\n}\n\n.grade-b .opacity-hide,\n.grade-c .opacity-hide {\n  opacity: 1;\n  display: none;\n}\n\n.show {\n  display: block;\n}\n\n.opacity-show {\n  opacity: 1;\n}\n\n.invisible {\n  visibility: hidden;\n}\n\n.keyboard-open .hide-on-keyboard-open {\n  display: none;\n}\n\n.keyboard-open .tabs.hide-on-keyboard-open + .pane .has-tabs,\n.keyboard-open .bar-footer.hide-on-keyboard-open + .pane .has-footer {\n  bottom: 0;\n}\n\n.inline {\n  display: inline-block;\n}\n\n.disable-pointer-events {\n  pointer-events: none;\n}\n\n.enable-pointer-events {\n  pointer-events: auto;\n}\n\n.disable-user-behavior {\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  -webkit-touch-callout: none;\n  -webkit-tap-highlight-color: transparent;\n  -webkit-tap-highlight-color: transparent;\n  -webkit-user-drag: none;\n  -ms-touch-action: none;\n  -ms-content-zooming: none;\n}\n\n.click-block {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  opacity: 0;\n  z-index: 99999;\n  -webkit-transform: translate3d(0, 0, 0);\n  transform: translate3d(0, 0, 0);\n  overflow: hidden;\n}\n\n.click-block-hide {\n  -webkit-transform: translate3d(-9999px, 0, 0);\n  transform: translate3d(-9999px, 0, 0);\n}\n\n.no-resize {\n  resize: none;\n}\n\n.block {\n  display: block;\n  clear: both;\n}\n\n.block:after {\n  display: block;\n  visibility: hidden;\n  clear: both;\n  height: 0;\n  content: \".\";\n}\n\n.full-image {\n  width: 100%;\n}\n\n.clearfix {\n  *zoom: 1;\n}\n\n.clearfix:before,\n.clearfix:after {\n  display: table;\n  content: \"\";\n  line-height: 0;\n}\n\n.clearfix:after {\n  clear: both;\n}\n\n/**\n * Content Padding\n * --------------------------------------------------\n */\n\n.padding {\n  padding: 10px;\n}\n\n.padding-top,\n.padding-vertical {\n  padding-top: 10px;\n}\n\n.padding-right,\n.padding-horizontal {\n  padding-right: 10px;\n}\n\n.padding-bottom,\n.padding-vertical {\n  padding-bottom: 10px;\n}\n\n.padding-left,\n.padding-horizontal {\n  padding-left: 10px;\n}\n\n/**\n * Scrollable iFrames\n * --------------------------------------------------\n */\n\n.iframe-wrapper {\n  position: fixed;\n  -webkit-overflow-scrolling: touch;\n  overflow: scroll;\n}\n\n.iframe-wrapper iframe {\n  height: 100%;\n  width: 100%;\n}\n\n/**\n * Rounded\n * --------------------------------------------------\n */\n\n.rounded {\n  border-radius: 4px;\n}\n\n/**\n * Utility Colors\n * --------------------------------------------------\n * Utility colors are added to help set a naming convention. You'll\n * notice we purposely do not use words like \"red\" or \"blue\", but\n * instead have colors which represent an emotion or generic theme.\n */\n\n.light,\na.light {\n  color: #00F1D3;\n}\n\n.light-bg {\n  background-color: #00F1D3;\n}\n\n.light-border {\n  border-color: #ddd;\n}\n\n.stable,\na.stable {\n  color: #f8f8f8;\n}\n\n.stable-bg {\n  background-color: #f8f8f8;\n}\n\n.stable-border {\n  border-color: #b2b2b2;\n}\n\n.positive,\na.positive {\n  color: #00A490;\n}\n\n.positive-bg {\n  background-color: #00A490;\n}\n\n.positive-border {\n  border-color: #007163;\n}\n\n.calm,\na.calm {\n  color: #11c1f3;\n}\n\n.calm-bg {\n  background-color: #11c1f3;\n}\n\n.calm-border {\n  border-color: #0a9dc7;\n}\n\n.assertive,\na.assertive {\n  color: #ef473a;\n}\n\n.assertive-bg {\n  background-color: #ef473a;\n}\n\n.assertive-border {\n  border-color: #e42112;\n}\n\n.balanced,\na.balanced {\n  color: #33cd5f;\n}\n\n.balanced-bg {\n  background-color: #33cd5f;\n}\n\n.balanced-border {\n  border-color: #28a54c;\n}\n\n.energized,\na.energized {\n  color: #ffc900;\n}\n\n.energized-bg {\n  background-color: #ffc900;\n}\n\n.energized-border {\n  border-color: #e6b500;\n}\n\n.royal,\na.royal {\n  color: #886aea;\n}\n\n.royal-bg {\n  background-color: #886aea;\n}\n\n.royal-border {\n  border-color: #6b46e5;\n}\n\n.dark,\na.dark {\n  color: #444;\n}\n\n.dark-bg {\n  background-color: #444;\n}\n\n.dark-border {\n  border-color: #111;\n}\n\n[collection-repeat] {\n  /* Position is set by transforms */\n  left: 0 !important;\n  top: 0 !important;\n  position: absolute !important;\n  z-index: 1;\n}\n\n.collection-repeat-container {\n  position: relative;\n  z-index: 1;\n}\n\n.collection-repeat-after-container {\n  z-index: 0;\n  display: block;\n  /* when scrolling horizontally, make sure the after container doesn't take up 100% width */\n}\n\n.collection-repeat-after-container.horizontal {\n  display: inline-block;\n}\n\n[ng\\:cloak],\n[ng-cloak],\n[data-ng-cloak],\n[x-ng-cloak],\n.ng-cloak,\n.x-ng-cloak,\n.ng-hide:not(.ng-hide-animate) {\n  display: none !important;\n}\n\n/**\n * Platform\n * --------------------------------------------------\n * Platform specific tweaks\n */\n\n.platform-ios.platform-cordova:not(.fullscreen) .bar-header:not(.bar-subheader) {\n  height: 64px;\n}\n\n.platform-ios.platform-cordova:not(.fullscreen) .bar-header:not(.bar-subheader).item-input-inset .item-input-wrapper {\n  margin-top: 19px !important;\n}\n\n.platform-ios.platform-cordova:not(.fullscreen) .bar-header:not(.bar-subheader) > * {\n  margin-top: 20px;\n}\n\n.platform-ios.platform-cordova:not(.fullscreen) .tabs-top > .tabs,\n.platform-ios.platform-cordova:not(.fullscreen) .tabs.tabs-top {\n  top: 64px;\n}\n\n.platform-ios.platform-cordova:not(.fullscreen) .has-header,\n.platform-ios.platform-cordova:not(.fullscreen) .bar-subheader {\n  top: 64px;\n}\n\n.platform-ios.platform-cordova:not(.fullscreen) .has-subheader {\n  top: 108px;\n}\n\n.platform-ios.platform-cordova:not(.fullscreen) .has-header.has-tabs-top {\n  top: 113px;\n}\n\n.platform-ios.platform-cordova:not(.fullscreen) .has-header.has-subheader.has-tabs-top {\n  top: 157px;\n}\n\n.platform-ios.platform-cordova .popover .bar-header:not(.bar-subheader) {\n  height: 44px;\n}\n\n.platform-ios.platform-cordova .popover .bar-header:not(.bar-subheader).item-input-inset .item-input-wrapper {\n  margin-top: -1px;\n}\n\n.platform-ios.platform-cordova .popover .bar-header:not(.bar-subheader) > * {\n  margin-top: 0;\n}\n\n.platform-ios.platform-cordova .popover .has-header,\n.platform-ios.platform-cordova .popover .bar-subheader {\n  top: 44px;\n}\n\n.platform-ios.platform-cordova .popover .has-subheader {\n  top: 88px;\n}\n\n.platform-ios.platform-cordova.status-bar-hide {\n  margin-bottom: 20px;\n}\n\n@media (orientation: landscape) {\n  .platform-ios.platform-browser.platform-ipad {\n    position: fixed;\n  }\n}\n\n.platform-c:not(.enable-transitions) * {\n  -webkit-transition: none !important;\n  transition: none !important;\n}\n\n.slide-in-up {\n  -webkit-transform: translate3d(0, 100%, 0);\n  transform: translate3d(0, 100%, 0);\n}\n\n.slide-in-up.ng-enter,\n.slide-in-up > .ng-enter {\n  -webkit-transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;\n  transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;\n}\n\n.slide-in-up.ng-enter-active,\n.slide-in-up > .ng-enter-active {\n  -webkit-transform: translate3d(0, 0, 0);\n  transform: translate3d(0, 0, 0);\n}\n\n.slide-in-up.ng-leave,\n.slide-in-up > .ng-leave {\n  -webkit-transition: all ease-in-out 250ms;\n  transition: all ease-in-out 250ms;\n}\n\n@-webkit-keyframes scaleOut {\n  from {\n    -webkit-transform: scale(1);\n    opacity: 1;\n  }\n\n  to {\n    -webkit-transform: scale(0.8);\n    opacity: 0;\n  }\n}\n\n@keyframes scaleOut {\n  from {\n    transform: scale(1);\n    opacity: 1;\n  }\n\n  to {\n    transform: scale(0.8);\n    opacity: 0;\n  }\n}\n\n@-webkit-keyframes superScaleIn {\n  from {\n    -webkit-transform: scale(1.2);\n    opacity: 0;\n  }\n\n  to {\n    -webkit-transform: scale(1);\n    opacity: 1;\n  }\n}\n\n@keyframes superScaleIn {\n  from {\n    transform: scale(1.2);\n    opacity: 0;\n  }\n\n  to {\n    transform: scale(1);\n    opacity: 1;\n  }\n}\n\n[nav-view-transition=\"ios\"] [nav-view=\"entering\"],\n[nav-view-transition=\"ios\"] [nav-view=\"leaving\"] {\n  -webkit-transition-duration: 500ms;\n  transition-duration: 500ms;\n  -webkit-transition-timing-function: cubic-bezier(0.36, 0.66, 0.04, 1);\n  transition-timing-function: cubic-bezier(0.36, 0.66, 0.04, 1);\n  -webkit-transition-property: opacity, -webkit-transform, box-shadow;\n  transition-property: opacity, transform, box-shadow;\n}\n\n[nav-view-transition=\"ios\"][nav-view-direction=\"forward\"],\n[nav-view-transition=\"ios\"][nav-view-direction=\"back\"] {\n  background-color: #000;\n}\n\n[nav-view-transition=\"ios\"] [nav-view=\"active\"],\n[nav-view-transition=\"ios\"][nav-view-direction=\"forward\"] [nav-view=\"entering\"],\n[nav-view-transition=\"ios\"][nav-view-direction=\"back\"] [nav-view=\"leaving\"] {\n  z-index: 3;\n}\n\n[nav-view-transition=\"ios\"][nav-view-direction=\"back\"] [nav-view=\"entering\"],\n[nav-view-transition=\"ios\"][nav-view-direction=\"forward\"] [nav-view=\"leaving\"] {\n  z-index: 2;\n}\n\n[nav-bar-transition=\"ios\"] .title,\n[nav-bar-transition=\"ios\"] .buttons,\n[nav-bar-transition=\"ios\"] .back-text {\n  -webkit-transition-duration: 500ms;\n  transition-duration: 500ms;\n  -webkit-transition-timing-function: cubic-bezier(0.36, 0.66, 0.04, 1);\n  transition-timing-function: cubic-bezier(0.36, 0.66, 0.04, 1);\n  -webkit-transition-property: opacity, -webkit-transform;\n  transition-property: opacity, transform;\n}\n\n[nav-bar-transition=\"ios\"] [nav-bar=\"active\"],\n[nav-bar-transition=\"ios\"] [nav-bar=\"entering\"] {\n  z-index: 10;\n}\n\n[nav-bar-transition=\"ios\"] [nav-bar=\"active\"] .bar,\n[nav-bar-transition=\"ios\"] [nav-bar=\"entering\"] .bar {\n  background: transparent;\n}\n\n[nav-bar-transition=\"ios\"] [nav-bar=\"cached\"] {\n  display: block;\n}\n\n[nav-bar-transition=\"ios\"] [nav-bar=\"cached\"] .header-item {\n  display: none;\n}\n\n[nav-view-transition=\"android\"] [nav-view=\"entering\"],\n[nav-view-transition=\"android\"] [nav-view=\"leaving\"] {\n  -webkit-transition-duration: 200ms;\n  transition-duration: 200ms;\n  -webkit-transition-timing-function: cubic-bezier(0.4, 0.6, 0.2, 1);\n  transition-timing-function: cubic-bezier(0.4, 0.6, 0.2, 1);\n  -webkit-transition-property: -webkit-transform;\n  transition-property: transform;\n}\n\n[nav-view-transition=\"android\"] [nav-view=\"active\"],\n[nav-view-transition=\"android\"][nav-view-direction=\"forward\"] [nav-view=\"entering\"],\n[nav-view-transition=\"android\"][nav-view-direction=\"back\"] [nav-view=\"leaving\"] {\n  z-index: 3;\n}\n\n[nav-view-transition=\"android\"][nav-view-direction=\"back\"] [nav-view=\"entering\"],\n[nav-view-transition=\"android\"][nav-view-direction=\"forward\"] [nav-view=\"leaving\"] {\n  z-index: 2;\n}\n\n[nav-bar-transition=\"android\"] .title,\n[nav-bar-transition=\"android\"] .buttons {\n  -webkit-transition-duration: 200ms;\n  transition-duration: 200ms;\n  -webkit-transition-timing-function: cubic-bezier(0.4, 0.6, 0.2, 1);\n  transition-timing-function: cubic-bezier(0.4, 0.6, 0.2, 1);\n  -webkit-transition-property: opacity;\n  transition-property: opacity;\n}\n\n[nav-bar-transition=\"android\"] [nav-bar=\"active\"],\n[nav-bar-transition=\"android\"] [nav-bar=\"entering\"] {\n  z-index: 10;\n}\n\n[nav-bar-transition=\"android\"] [nav-bar=\"active\"] .bar,\n[nav-bar-transition=\"android\"] [nav-bar=\"entering\"] .bar {\n  background: transparent;\n}\n\n[nav-bar-transition=\"android\"] [nav-bar=\"cached\"] {\n  display: block;\n}\n\n[nav-bar-transition=\"android\"] [nav-bar=\"cached\"] .header-item {\n  display: none;\n}\n\n[nav-swipe=\"fast\"] [nav-view],\n[nav-swipe=\"fast\"] .title,\n[nav-swipe=\"fast\"] .buttons,\n[nav-swipe=\"fast\"] .back-text {\n  -webkit-transition-duration: 50ms;\n  transition-duration: 50ms;\n  -webkit-transition-timing-function: linear;\n  transition-timing-function: linear;\n}\n\n[nav-swipe=\"slow\"] [nav-view],\n[nav-swipe=\"slow\"] .title,\n[nav-swipe=\"slow\"] .buttons,\n[nav-swipe=\"slow\"] .back-text {\n  -webkit-transition-duration: 160ms;\n  transition-duration: 160ms;\n  -webkit-transition-timing-function: linear;\n  transition-timing-function: linear;\n}\n\n[nav-view=\"cached\"],\n[nav-bar=\"cached\"] {\n  display: none;\n}\n\n[nav-view=\"stage\"] {\n  opacity: 0;\n  -webkit-transition-duration: 0;\n  transition-duration: 0;\n}\n\n[nav-bar=\"stage\"] .title,\n[nav-bar=\"stage\"] .buttons,\n[nav-bar=\"stage\"] .back-text {\n  position: absolute;\n  opacity: 0;\n  -webkit-transition-duration: 0s;\n  transition-duration: 0s;\n}\n\n.tabs {\n  border-top: 5px solid #D6C296 !important;\n  height: 80px !important;\n  background: #00A490 !important;\n}\n\n.tab-nav .tab-item .icon {\n  color: #00F1D3;\n  margin-top: 20px !important;\n}\n\n.tab-nav .tab-item.tab-item-active .icon {\n  color: #a4fff2;\n}\n\n.header-parallax {\n  position: absolute;\n  top: 0;\n  width: 100%;\n  height: 208px;\n}\n\n.demo-iframe-holder {\n  position: absolute;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  top: 0;\n  -webkit-overflow-scrolling: touch;\n  overflow-y: scroll;\n  width: 100%;\n}\n\n.demo-iframe-holder iframe {\n  height: 100%;\n  width: 100%;\n}", ""]);
+	exports.push([module.id, "@charset \"UTF-8\";\n\n.button-pill {\n  border: 2px solid #000;\n  background: #eee;\n  border-radius: 50px !important;\n}\n\n/*!\n  Ionicons, v2.0.1\n  Created by Ben Sperry for the Ionic Framework, http://ionicons.com/\n  https://twitter.com/benjsperry  https://twitter.com/ionicframework\n  MIT License: https://github.com/driftyco/ionicons\n\n  Android-style icons originally built by Google’s\n  Material Design Icons: https://github.com/google/material-design-icons\n  used under CC BY http://creativecommons.org/licenses/by/4.0/\n  Modified icons to fit ionicon’s grid from original.\n*/\n\n@font-face {\n  font-family: \"Ionicons\";\n  src: url(" + __webpack_require__(240) + ");\n  src: url(" + __webpack_require__(240) + ") format(\"embedded-opentype\"), url(" + __webpack_require__(241) + ") format(\"truetype\"), url(" + __webpack_require__(242) + ") format(\"woff\"), url(" + __webpack_require__(242) + ") format(\"woff\"), url(" + __webpack_require__(243) + ") format(\"svg\");\n  font-weight: normal;\n  font-style: normal;\n}\n\n.ion,\n.ionicons,\n.ion-alert:before,\n.ion-alert-circled:before,\n.ion-android-add:before,\n.ion-android-add-circle:before,\n.ion-android-alarm-clock:before,\n.ion-android-alert:before,\n.ion-android-apps:before,\n.ion-android-archive:before,\n.ion-android-arrow-back:before,\n.ion-android-arrow-down:before,\n.ion-android-arrow-dropdown:before,\n.ion-android-arrow-dropdown-circle:before,\n.ion-android-arrow-dropleft:before,\n.ion-android-arrow-dropleft-circle:before,\n.ion-android-arrow-dropright:before,\n.ion-android-arrow-dropright-circle:before,\n.ion-android-arrow-dropup:before,\n.ion-android-arrow-dropup-circle:before,\n.ion-android-arrow-forward:before,\n.ion-android-arrow-up:before,\n.ion-android-attach:before,\n.ion-android-bar:before,\n.ion-android-bicycle:before,\n.ion-android-boat:before,\n.ion-android-bookmark:before,\n.ion-android-bulb:before,\n.ion-android-bus:before,\n.ion-android-calendar:before,\n.ion-android-call:before,\n.ion-android-camera:before,\n.ion-android-cancel:before,\n.ion-android-car:before,\n.ion-android-cart:before,\n.ion-android-chat:before,\n.ion-android-checkbox:before,\n.ion-android-checkbox-blank:before,\n.ion-android-checkbox-outline:before,\n.ion-android-checkbox-outline-blank:before,\n.ion-android-checkmark-circle:before,\n.ion-android-clipboard:before,\n.ion-android-close:before,\n.ion-android-cloud:before,\n.ion-android-cloud-circle:before,\n.ion-android-cloud-done:before,\n.ion-android-cloud-outline:before,\n.ion-android-color-palette:before,\n.ion-android-compass:before,\n.ion-android-contact:before,\n.ion-android-contacts:before,\n.ion-android-contract:before,\n.ion-android-create:before,\n.ion-android-delete:before,\n.ion-android-desktop:before,\n.ion-android-document:before,\n.ion-android-done:before,\n.ion-android-done-all:before,\n.ion-android-download:before,\n.ion-android-drafts:before,\n.ion-android-exit:before,\n.ion-android-expand:before,\n.ion-android-favorite:before,\n.ion-android-favorite-outline:before,\n.ion-android-film:before,\n.ion-android-folder:before,\n.ion-android-folder-open:before,\n.ion-android-funnel:before,\n.ion-android-globe:before,\n.ion-android-hand:before,\n.ion-android-hangout:before,\n.ion-android-happy:before,\n.ion-android-home:before,\n.ion-android-image:before,\n.ion-android-laptop:before,\n.ion-android-list:before,\n.ion-android-locate:before,\n.ion-android-lock:before,\n.ion-android-mail:before,\n.ion-android-map:before,\n.ion-android-menu:before,\n.ion-android-microphone:before,\n.ion-android-microphone-off:before,\n.ion-android-more-horizontal:before,\n.ion-android-more-vertical:before,\n.ion-android-navigate:before,\n.ion-android-notifications:before,\n.ion-android-notifications-none:before,\n.ion-android-notifications-off:before,\n.ion-android-open:before,\n.ion-android-options:before,\n.ion-android-people:before,\n.ion-android-person:before,\n.ion-android-person-add:before,\n.ion-android-phone-landscape:before,\n.ion-android-phone-portrait:before,\n.ion-android-pin:before,\n.ion-android-plane:before,\n.ion-android-playstore:before,\n.ion-android-print:before,\n.ion-android-radio-button-off:before,\n.ion-android-radio-button-on:before,\n.ion-android-refresh:before,\n.ion-android-remove:before,\n.ion-android-remove-circle:before,\n.ion-android-restaurant:before,\n.ion-android-sad:before,\n.ion-android-search:before,\n.ion-android-send:before,\n.ion-android-settings:before,\n.ion-android-share:before,\n.ion-android-share-alt:before,\n.ion-android-star:before,\n.ion-android-star-half:before,\n.ion-android-star-outline:before,\n.ion-android-stopwatch:before,\n.ion-android-subway:before,\n.ion-android-sunny:before,\n.ion-android-sync:before,\n.ion-android-textsms:before,\n.ion-android-time:before,\n.ion-android-train:before,\n.ion-android-unlock:before,\n.ion-android-upload:before,\n.ion-android-volume-down:before,\n.ion-android-volume-mute:before,\n.ion-android-volume-off:before,\n.ion-android-volume-up:before,\n.ion-android-walk:before,\n.ion-android-warning:before,\n.ion-android-watch:before,\n.ion-android-wifi:before,\n.ion-aperture:before,\n.ion-archive:before,\n.ion-arrow-down-a:before,\n.ion-arrow-down-b:before,\n.ion-arrow-down-c:before,\n.ion-arrow-expand:before,\n.ion-arrow-graph-down-left:before,\n.ion-arrow-graph-down-right:before,\n.ion-arrow-graph-up-left:before,\n.ion-arrow-graph-up-right:before,\n.ion-arrow-left-a:before,\n.ion-arrow-left-b:before,\n.ion-arrow-left-c:before,\n.ion-arrow-move:before,\n.ion-arrow-resize:before,\n.ion-arrow-return-left:before,\n.ion-arrow-return-right:before,\n.ion-arrow-right-a:before,\n.ion-arrow-right-b:before,\n.ion-arrow-right-c:before,\n.ion-arrow-shrink:before,\n.ion-arrow-swap:before,\n.ion-arrow-up-a:before,\n.ion-arrow-up-b:before,\n.ion-arrow-up-c:before,\n.ion-asterisk:before,\n.ion-at:before,\n.ion-backspace:before,\n.ion-backspace-outline:before,\n.ion-bag:before,\n.ion-battery-charging:before,\n.ion-battery-empty:before,\n.ion-battery-full:before,\n.ion-battery-half:before,\n.ion-battery-low:before,\n.ion-beaker:before,\n.ion-beer:before,\n.ion-bluetooth:before,\n.ion-bonfire:before,\n.ion-bookmark:before,\n.ion-bowtie:before,\n.ion-briefcase:before,\n.ion-bug:before,\n.ion-calculator:before,\n.ion-calendar:before,\n.ion-camera:before,\n.ion-card:before,\n.ion-cash:before,\n.ion-chatbox:before,\n.ion-chatbox-working:before,\n.ion-chatboxes:before,\n.ion-chatbubble:before,\n.ion-chatbubble-working:before,\n.ion-chatbubbles:before,\n.ion-checkmark:before,\n.ion-checkmark-circled:before,\n.ion-checkmark-round:before,\n.ion-chevron-down:before,\n.ion-chevron-left:before,\n.ion-chevron-right:before,\n.ion-chevron-up:before,\n.ion-clipboard:before,\n.ion-clock:before,\n.ion-close:before,\n.ion-close-circled:before,\n.ion-close-round:before,\n.ion-closed-captioning:before,\n.ion-cloud:before,\n.ion-code:before,\n.ion-code-download:before,\n.ion-code-working:before,\n.ion-coffee:before,\n.ion-compass:before,\n.ion-compose:before,\n.ion-connection-bars:before,\n.ion-contrast:before,\n.ion-crop:before,\n.ion-cube:before,\n.ion-disc:before,\n.ion-document:before,\n.ion-document-text:before,\n.ion-drag:before,\n.ion-earth:before,\n.ion-easel:before,\n.ion-edit:before,\n.ion-egg:before,\n.ion-eject:before,\n.ion-email:before,\n.ion-email-unread:before,\n.ion-erlenmeyer-flask:before,\n.ion-erlenmeyer-flask-bubbles:before,\n.ion-eye:before,\n.ion-eye-disabled:before,\n.ion-female:before,\n.ion-filing:before,\n.ion-film-marker:before,\n.ion-fireball:before,\n.ion-flag:before,\n.ion-flame:before,\n.ion-flash:before,\n.ion-flash-off:before,\n.ion-folder:before,\n.ion-fork:before,\n.ion-fork-repo:before,\n.ion-forward:before,\n.ion-funnel:before,\n.ion-gear-a:before,\n.ion-gear-b:before,\n.ion-grid:before,\n.ion-hammer:before,\n.ion-happy:before,\n.ion-happy-outline:before,\n.ion-headphone:before,\n.ion-heart:before,\n.ion-heart-broken:before,\n.ion-help:before,\n.ion-help-buoy:before,\n.ion-help-circled:before,\n.ion-home:before,\n.ion-icecream:before,\n.ion-image:before,\n.ion-images:before,\n.ion-information:before,\n.ion-information-circled:before,\n.ion-ionic:before,\n.ion-ios-alarm:before,\n.ion-ios-alarm-outline:before,\n.ion-ios-albums:before,\n.ion-ios-albums-outline:before,\n.ion-ios-americanfootball:before,\n.ion-ios-americanfootball-outline:before,\n.ion-ios-analytics:before,\n.ion-ios-analytics-outline:before,\n.ion-ios-arrow-back:before,\n.ion-ios-arrow-down:before,\n.ion-ios-arrow-forward:before,\n.ion-ios-arrow-left:before,\n.ion-ios-arrow-right:before,\n.ion-ios-arrow-thin-down:before,\n.ion-ios-arrow-thin-left:before,\n.ion-ios-arrow-thin-right:before,\n.ion-ios-arrow-thin-up:before,\n.ion-ios-arrow-up:before,\n.ion-ios-at:before,\n.ion-ios-at-outline:before,\n.ion-ios-barcode:before,\n.ion-ios-barcode-outline:before,\n.ion-ios-baseball:before,\n.ion-ios-baseball-outline:before,\n.ion-ios-basketball:before,\n.ion-ios-basketball-outline:before,\n.ion-ios-bell:before,\n.ion-ios-bell-outline:before,\n.ion-ios-body:before,\n.ion-ios-body-outline:before,\n.ion-ios-bolt:before,\n.ion-ios-bolt-outline:before,\n.ion-ios-book:before,\n.ion-ios-book-outline:before,\n.ion-ios-bookmarks:before,\n.ion-ios-bookmarks-outline:before,\n.ion-ios-box:before,\n.ion-ios-box-outline:before,\n.ion-ios-briefcase:before,\n.ion-ios-briefcase-outline:before,\n.ion-ios-browsers:before,\n.ion-ios-browsers-outline:before,\n.ion-ios-calculator:before,\n.ion-ios-calculator-outline:before,\n.ion-ios-calendar:before,\n.ion-ios-calendar-outline:before,\n.ion-ios-camera:before,\n.ion-ios-camera-outline:before,\n.ion-ios-cart:before,\n.ion-ios-cart-outline:before,\n.ion-ios-chatboxes:before,\n.ion-ios-chatboxes-outline:before,\n.ion-ios-chatbubble:before,\n.ion-ios-chatbubble-outline:before,\n.ion-ios-checkmark:before,\n.ion-ios-checkmark-empty:before,\n.ion-ios-checkmark-outline:before,\n.ion-ios-circle-filled:before,\n.ion-ios-circle-outline:before,\n.ion-ios-clock:before,\n.ion-ios-clock-outline:before,\n.ion-ios-close:before,\n.ion-ios-close-empty:before,\n.ion-ios-close-outline:before,\n.ion-ios-cloud:before,\n.ion-ios-cloud-download:before,\n.ion-ios-cloud-download-outline:before,\n.ion-ios-cloud-outline:before,\n.ion-ios-cloud-upload:before,\n.ion-ios-cloud-upload-outline:before,\n.ion-ios-cloudy:before,\n.ion-ios-cloudy-night:before,\n.ion-ios-cloudy-night-outline:before,\n.ion-ios-cloudy-outline:before,\n.ion-ios-cog:before,\n.ion-ios-cog-outline:before,\n.ion-ios-color-filter:before,\n.ion-ios-color-filter-outline:before,\n.ion-ios-color-wand:before,\n.ion-ios-color-wand-outline:before,\n.ion-ios-compose:before,\n.ion-ios-compose-outline:before,\n.ion-ios-contact:before,\n.ion-ios-contact-outline:before,\n.ion-ios-copy:before,\n.ion-ios-copy-outline:before,\n.ion-ios-crop:before,\n.ion-ios-crop-strong:before,\n.ion-ios-download:before,\n.ion-ios-download-outline:before,\n.ion-ios-drag:before,\n.ion-ios-email:before,\n.ion-ios-email-outline:before,\n.ion-ios-eye:before,\n.ion-ios-eye-outline:before,\n.ion-ios-fastforward:before,\n.ion-ios-fastforward-outline:before,\n.ion-ios-filing:before,\n.ion-ios-filing-outline:before,\n.ion-ios-film:before,\n.ion-ios-film-outline:before,\n.ion-ios-flag:before,\n.ion-ios-flag-outline:before,\n.ion-ios-flame:before,\n.ion-ios-flame-outline:before,\n.ion-ios-flask:before,\n.ion-ios-flask-outline:before,\n.ion-ios-flower:before,\n.ion-ios-flower-outline:before,\n.ion-ios-folder:before,\n.ion-ios-folder-outline:before,\n.ion-ios-football:before,\n.ion-ios-football-outline:before,\n.ion-ios-game-controller-a:before,\n.ion-ios-game-controller-a-outline:before,\n.ion-ios-game-controller-b:before,\n.ion-ios-game-controller-b-outline:before,\n.ion-ios-gear:before,\n.ion-ios-gear-outline:before,\n.ion-ios-glasses:before,\n.ion-ios-glasses-outline:before,\n.ion-ios-grid-view:before,\n.ion-ios-grid-view-outline:before,\n.ion-ios-heart:before,\n.ion-ios-heart-outline:before,\n.ion-ios-help:before,\n.ion-ios-help-empty:before,\n.ion-ios-help-outline:before,\n.ion-ios-home:before,\n.ion-ios-home-outline:before,\n.ion-ios-infinite:before,\n.ion-ios-infinite-outline:before,\n.ion-ios-information:before,\n.ion-ios-information-empty:before,\n.ion-ios-information-outline:before,\n.ion-ios-ionic-outline:before,\n.ion-ios-keypad:before,\n.ion-ios-keypad-outline:before,\n.ion-ios-lightbulb:before,\n.ion-ios-lightbulb-outline:before,\n.ion-ios-list:before,\n.ion-ios-list-outline:before,\n.ion-ios-location:before,\n.ion-ios-location-outline:before,\n.ion-ios-locked:before,\n.ion-ios-locked-outline:before,\n.ion-ios-loop:before,\n.ion-ios-loop-strong:before,\n.ion-ios-medical:before,\n.ion-ios-medical-outline:before,\n.ion-ios-medkit:before,\n.ion-ios-medkit-outline:before,\n.ion-ios-mic:before,\n.ion-ios-mic-off:before,\n.ion-ios-mic-outline:before,\n.ion-ios-minus:before,\n.ion-ios-minus-empty:before,\n.ion-ios-minus-outline:before,\n.ion-ios-monitor:before,\n.ion-ios-monitor-outline:before,\n.ion-ios-moon:before,\n.ion-ios-moon-outline:before,\n.ion-ios-more:before,\n.ion-ios-more-outline:before,\n.ion-ios-musical-note:before,\n.ion-ios-musical-notes:before,\n.ion-ios-navigate:before,\n.ion-ios-navigate-outline:before,\n.ion-ios-nutrition:before,\n.ion-ios-nutrition-outline:before,\n.ion-ios-paper:before,\n.ion-ios-paper-outline:before,\n.ion-ios-paperplane:before,\n.ion-ios-paperplane-outline:before,\n.ion-ios-partlysunny:before,\n.ion-ios-partlysunny-outline:before,\n.ion-ios-pause:before,\n.ion-ios-pause-outline:before,\n.ion-ios-paw:before,\n.ion-ios-paw-outline:before,\n.ion-ios-people:before,\n.ion-ios-people-outline:before,\n.ion-ios-person:before,\n.ion-ios-person-outline:before,\n.ion-ios-personadd:before,\n.ion-ios-personadd-outline:before,\n.ion-ios-photos:before,\n.ion-ios-photos-outline:before,\n.ion-ios-pie:before,\n.ion-ios-pie-outline:before,\n.ion-ios-pint:before,\n.ion-ios-pint-outline:before,\n.ion-ios-play:before,\n.ion-ios-play-outline:before,\n.ion-ios-plus:before,\n.ion-ios-plus-empty:before,\n.ion-ios-plus-outline:before,\n.ion-ios-pricetag:before,\n.ion-ios-pricetag-outline:before,\n.ion-ios-pricetags:before,\n.ion-ios-pricetags-outline:before,\n.ion-ios-printer:before,\n.ion-ios-printer-outline:before,\n.ion-ios-pulse:before,\n.ion-ios-pulse-strong:before,\n.ion-ios-rainy:before,\n.ion-ios-rainy-outline:before,\n.ion-ios-recording:before,\n.ion-ios-recording-outline:before,\n.ion-ios-redo:before,\n.ion-ios-redo-outline:before,\n.ion-ios-refresh:before,\n.ion-ios-refresh-empty:before,\n.ion-ios-refresh-outline:before,\n.ion-ios-reload:before,\n.ion-ios-reverse-camera:before,\n.ion-ios-reverse-camera-outline:before,\n.ion-ios-rewind:before,\n.ion-ios-rewind-outline:before,\n.ion-ios-rose:before,\n.ion-ios-rose-outline:before,\n.ion-ios-search:before,\n.ion-ios-search-strong:before,\n.ion-ios-settings:before,\n.ion-ios-settings-strong:before,\n.ion-ios-shuffle:before,\n.ion-ios-shuffle-strong:before,\n.ion-ios-skipbackward:before,\n.ion-ios-skipbackward-outline:before,\n.ion-ios-skipforward:before,\n.ion-ios-skipforward-outline:before,\n.ion-ios-snowy:before,\n.ion-ios-speedometer:before,\n.ion-ios-speedometer-outline:before,\n.ion-ios-star:before,\n.ion-ios-star-half:before,\n.ion-ios-star-outline:before,\n.ion-ios-stopwatch:before,\n.ion-ios-stopwatch-outline:before,\n.ion-ios-sunny:before,\n.ion-ios-sunny-outline:before,\n.ion-ios-telephone:before,\n.ion-ios-telephone-outline:before,\n.ion-ios-tennisball:before,\n.ion-ios-tennisball-outline:before,\n.ion-ios-thunderstorm:before,\n.ion-ios-thunderstorm-outline:before,\n.ion-ios-time:before,\n.ion-ios-time-outline:before,\n.ion-ios-timer:before,\n.ion-ios-timer-outline:before,\n.ion-ios-toggle:before,\n.ion-ios-toggle-outline:before,\n.ion-ios-trash:before,\n.ion-ios-trash-outline:before,\n.ion-ios-undo:before,\n.ion-ios-undo-outline:before,\n.ion-ios-unlocked:before,\n.ion-ios-unlocked-outline:before,\n.ion-ios-upload:before,\n.ion-ios-upload-outline:before,\n.ion-ios-videocam:before,\n.ion-ios-videocam-outline:before,\n.ion-ios-volume-high:before,\n.ion-ios-volume-low:before,\n.ion-ios-wineglass:before,\n.ion-ios-wineglass-outline:before,\n.ion-ios-world:before,\n.ion-ios-world-outline:before,\n.ion-ipad:before,\n.ion-iphone:before,\n.ion-ipod:before,\n.ion-jet:before,\n.ion-key:before,\n.ion-knife:before,\n.ion-laptop:before,\n.ion-leaf:before,\n.ion-levels:before,\n.ion-lightbulb:before,\n.ion-link:before,\n.ion-load-a:before,\n.ion-load-b:before,\n.ion-load-c:before,\n.ion-load-d:before,\n.ion-location:before,\n.ion-lock-combination:before,\n.ion-locked:before,\n.ion-log-in:before,\n.ion-log-out:before,\n.ion-loop:before,\n.ion-magnet:before,\n.ion-male:before,\n.ion-man:before,\n.ion-map:before,\n.ion-medkit:before,\n.ion-merge:before,\n.ion-mic-a:before,\n.ion-mic-b:before,\n.ion-mic-c:before,\n.ion-minus:before,\n.ion-minus-circled:before,\n.ion-minus-round:before,\n.ion-model-s:before,\n.ion-monitor:before,\n.ion-more:before,\n.ion-mouse:before,\n.ion-music-note:before,\n.ion-navicon:before,\n.ion-navicon-round:before,\n.ion-navigate:before,\n.ion-network:before,\n.ion-no-smoking:before,\n.ion-nuclear:before,\n.ion-outlet:before,\n.ion-paintbrush:before,\n.ion-paintbucket:before,\n.ion-paper-airplane:before,\n.ion-paperclip:before,\n.ion-pause:before,\n.ion-person:before,\n.ion-person-add:before,\n.ion-person-stalker:before,\n.ion-pie-graph:before,\n.ion-pin:before,\n.ion-pinpoint:before,\n.ion-pizza:before,\n.ion-plane:before,\n.ion-planet:before,\n.ion-play:before,\n.ion-playstation:before,\n.ion-plus:before,\n.ion-plus-circled:before,\n.ion-plus-round:before,\n.ion-podium:before,\n.ion-pound:before,\n.ion-power:before,\n.ion-pricetag:before,\n.ion-pricetags:before,\n.ion-printer:before,\n.ion-pull-request:before,\n.ion-qr-scanner:before,\n.ion-quote:before,\n.ion-radio-waves:before,\n.ion-record:before,\n.ion-refresh:before,\n.ion-reply:before,\n.ion-reply-all:before,\n.ion-ribbon-a:before,\n.ion-ribbon-b:before,\n.ion-sad:before,\n.ion-sad-outline:before,\n.ion-scissors:before,\n.ion-search:before,\n.ion-settings:before,\n.ion-share:before,\n.ion-shuffle:before,\n.ion-skip-backward:before,\n.ion-skip-forward:before,\n.ion-social-android:before,\n.ion-social-android-outline:before,\n.ion-social-angular:before,\n.ion-social-angular-outline:before,\n.ion-social-apple:before,\n.ion-social-apple-outline:before,\n.ion-social-bitcoin:before,\n.ion-social-bitcoin-outline:before,\n.ion-social-buffer:before,\n.ion-social-buffer-outline:before,\n.ion-social-chrome:before,\n.ion-social-chrome-outline:before,\n.ion-social-codepen:before,\n.ion-social-codepen-outline:before,\n.ion-social-css3:before,\n.ion-social-css3-outline:before,\n.ion-social-designernews:before,\n.ion-social-designernews-outline:before,\n.ion-social-dribbble:before,\n.ion-social-dribbble-outline:before,\n.ion-social-dropbox:before,\n.ion-social-dropbox-outline:before,\n.ion-social-euro:before,\n.ion-social-euro-outline:before,\n.ion-social-facebook:before,\n.ion-social-facebook-outline:before,\n.ion-social-foursquare:before,\n.ion-social-foursquare-outline:before,\n.ion-social-freebsd-devil:before,\n.ion-social-github:before,\n.ion-social-github-outline:before,\n.ion-social-google:before,\n.ion-social-google-outline:before,\n.ion-social-googleplus:before,\n.ion-social-googleplus-outline:before,\n.ion-social-hackernews:before,\n.ion-social-hackernews-outline:before,\n.ion-social-html5:before,\n.ion-social-html5-outline:before,\n.ion-social-instagram:before,\n.ion-social-instagram-outline:before,\n.ion-social-javascript:before,\n.ion-social-javascript-outline:before,\n.ion-social-linkedin:before,\n.ion-social-linkedin-outline:before,\n.ion-social-markdown:before,\n.ion-social-nodejs:before,\n.ion-social-octocat:before,\n.ion-social-pinterest:before,\n.ion-social-pinterest-outline:before,\n.ion-social-python:before,\n.ion-social-reddit:before,\n.ion-social-reddit-outline:before,\n.ion-social-rss:before,\n.ion-social-rss-outline:before,\n.ion-social-sass:before,\n.ion-social-skype:before,\n.ion-social-skype-outline:before,\n.ion-social-snapchat:before,\n.ion-social-snapchat-outline:before,\n.ion-social-tumblr:before,\n.ion-social-tumblr-outline:before,\n.ion-social-tux:before,\n.ion-social-twitch:before,\n.ion-social-twitch-outline:before,\n.ion-social-twitter:before,\n.ion-social-twitter-outline:before,\n.ion-social-usd:before,\n.ion-social-usd-outline:before,\n.ion-social-vimeo:before,\n.ion-social-vimeo-outline:before,\n.ion-social-whatsapp:before,\n.ion-social-whatsapp-outline:before,\n.ion-social-windows:before,\n.ion-social-windows-outline:before,\n.ion-social-wordpress:before,\n.ion-social-wordpress-outline:before,\n.ion-social-yahoo:before,\n.ion-social-yahoo-outline:before,\n.ion-social-yen:before,\n.ion-social-yen-outline:before,\n.ion-social-youtube:before,\n.ion-social-youtube-outline:before,\n.ion-soup-can:before,\n.ion-soup-can-outline:before,\n.ion-speakerphone:before,\n.ion-speedometer:before,\n.ion-spoon:before,\n.ion-star:before,\n.ion-stats-bars:before,\n.ion-steam:before,\n.ion-stop:before,\n.ion-thermometer:before,\n.ion-thumbsdown:before,\n.ion-thumbsup:before,\n.ion-toggle:before,\n.ion-toggle-filled:before,\n.ion-transgender:before,\n.ion-trash-a:before,\n.ion-trash-b:before,\n.ion-trophy:before,\n.ion-tshirt:before,\n.ion-tshirt-outline:before,\n.ion-umbrella:before,\n.ion-university:before,\n.ion-unlocked:before,\n.ion-upload:before,\n.ion-usb:before,\n.ion-videocamera:before,\n.ion-volume-high:before,\n.ion-volume-low:before,\n.ion-volume-medium:before,\n.ion-volume-mute:before,\n.ion-wand:before,\n.ion-waterdrop:before,\n.ion-wifi:before,\n.ion-wineglass:before,\n.ion-woman:before,\n.ion-wrench:before,\n.ion-xbox:before {\n  display: inline-block;\n  font-family: \"Ionicons\";\n  speak: none;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  text-rendering: auto;\n  line-height: 1;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n\n.ion-alert:before {\n  content: \"\\F101\";\n}\n\n.ion-alert-circled:before {\n  content: \"\\F100\";\n}\n\n.ion-android-add:before {\n  content: \"\\F2C7\";\n}\n\n.ion-android-add-circle:before {\n  content: \"\\F359\";\n}\n\n.ion-android-alarm-clock:before {\n  content: \"\\F35A\";\n}\n\n.ion-android-alert:before {\n  content: \"\\F35B\";\n}\n\n.ion-android-apps:before {\n  content: \"\\F35C\";\n}\n\n.ion-android-archive:before {\n  content: \"\\F2C9\";\n}\n\n.ion-android-arrow-back:before {\n  content: \"\\F2CA\";\n}\n\n.ion-android-arrow-down:before {\n  content: \"\\F35D\";\n}\n\n.ion-android-arrow-dropdown:before {\n  content: \"\\F35F\";\n}\n\n.ion-android-arrow-dropdown-circle:before {\n  content: \"\\F35E\";\n}\n\n.ion-android-arrow-dropleft:before {\n  content: \"\\F361\";\n}\n\n.ion-android-arrow-dropleft-circle:before {\n  content: \"\\F360\";\n}\n\n.ion-android-arrow-dropright:before {\n  content: \"\\F363\";\n}\n\n.ion-android-arrow-dropright-circle:before {\n  content: \"\\F362\";\n}\n\n.ion-android-arrow-dropup:before {\n  content: \"\\F365\";\n}\n\n.ion-android-arrow-dropup-circle:before {\n  content: \"\\F364\";\n}\n\n.ion-android-arrow-forward:before {\n  content: \"\\F30F\";\n}\n\n.ion-android-arrow-up:before {\n  content: \"\\F366\";\n}\n\n.ion-android-attach:before {\n  content: \"\\F367\";\n}\n\n.ion-android-bar:before {\n  content: \"\\F368\";\n}\n\n.ion-android-bicycle:before {\n  content: \"\\F369\";\n}\n\n.ion-android-boat:before {\n  content: \"\\F36A\";\n}\n\n.ion-android-bookmark:before {\n  content: \"\\F36B\";\n}\n\n.ion-android-bulb:before {\n  content: \"\\F36C\";\n}\n\n.ion-android-bus:before {\n  content: \"\\F36D\";\n}\n\n.ion-android-calendar:before {\n  content: \"\\F2D1\";\n}\n\n.ion-android-call:before {\n  content: \"\\F2D2\";\n}\n\n.ion-android-camera:before {\n  content: \"\\F2D3\";\n}\n\n.ion-android-cancel:before {\n  content: \"\\F36E\";\n}\n\n.ion-android-car:before {\n  content: \"\\F36F\";\n}\n\n.ion-android-cart:before {\n  content: \"\\F370\";\n}\n\n.ion-android-chat:before {\n  content: \"\\F2D4\";\n}\n\n.ion-android-checkbox:before {\n  content: \"\\F374\";\n}\n\n.ion-android-checkbox-blank:before {\n  content: \"\\F371\";\n}\n\n.ion-android-checkbox-outline:before {\n  content: \"\\F373\";\n}\n\n.ion-android-checkbox-outline-blank:before {\n  content: \"\\F372\";\n}\n\n.ion-android-checkmark-circle:before {\n  content: \"\\F375\";\n}\n\n.ion-android-clipboard:before {\n  content: \"\\F376\";\n}\n\n.ion-android-close:before {\n  content: \"\\F2D7\";\n}\n\n.ion-android-cloud:before {\n  content: \"\\F37A\";\n}\n\n.ion-android-cloud-circle:before {\n  content: \"\\F377\";\n}\n\n.ion-android-cloud-done:before {\n  content: \"\\F378\";\n}\n\n.ion-android-cloud-outline:before {\n  content: \"\\F379\";\n}\n\n.ion-android-color-palette:before {\n  content: \"\\F37B\";\n}\n\n.ion-android-compass:before {\n  content: \"\\F37C\";\n}\n\n.ion-android-contact:before {\n  content: \"\\F2D8\";\n}\n\n.ion-android-contacts:before {\n  content: \"\\F2D9\";\n}\n\n.ion-android-contract:before {\n  content: \"\\F37D\";\n}\n\n.ion-android-create:before {\n  content: \"\\F37E\";\n}\n\n.ion-android-delete:before {\n  content: \"\\F37F\";\n}\n\n.ion-android-desktop:before {\n  content: \"\\F380\";\n}\n\n.ion-android-document:before {\n  content: \"\\F381\";\n}\n\n.ion-android-done:before {\n  content: \"\\F383\";\n}\n\n.ion-android-done-all:before {\n  content: \"\\F382\";\n}\n\n.ion-android-download:before {\n  content: \"\\F2DD\";\n}\n\n.ion-android-drafts:before {\n  content: \"\\F384\";\n}\n\n.ion-android-exit:before {\n  content: \"\\F385\";\n}\n\n.ion-android-expand:before {\n  content: \"\\F386\";\n}\n\n.ion-android-favorite:before {\n  content: \"\\F388\";\n}\n\n.ion-android-favorite-outline:before {\n  content: \"\\F387\";\n}\n\n.ion-android-film:before {\n  content: \"\\F389\";\n}\n\n.ion-android-folder:before {\n  content: \"\\F2E0\";\n}\n\n.ion-android-folder-open:before {\n  content: \"\\F38A\";\n}\n\n.ion-android-funnel:before {\n  content: \"\\F38B\";\n}\n\n.ion-android-globe:before {\n  content: \"\\F38C\";\n}\n\n.ion-android-hand:before {\n  content: \"\\F2E3\";\n}\n\n.ion-android-hangout:before {\n  content: \"\\F38D\";\n}\n\n.ion-android-happy:before {\n  content: \"\\F38E\";\n}\n\n.ion-android-home:before {\n  content: \"\\F38F\";\n}\n\n.ion-android-image:before {\n  content: \"\\F2E4\";\n}\n\n.ion-android-laptop:before {\n  content: \"\\F390\";\n}\n\n.ion-android-list:before {\n  content: \"\\F391\";\n}\n\n.ion-android-locate:before {\n  content: \"\\F2E9\";\n}\n\n.ion-android-lock:before {\n  content: \"\\F392\";\n}\n\n.ion-android-mail:before {\n  content: \"\\F2EB\";\n}\n\n.ion-android-map:before {\n  content: \"\\F393\";\n}\n\n.ion-android-menu:before {\n  content: \"\\F394\";\n}\n\n.ion-android-microphone:before {\n  content: \"\\F2EC\";\n}\n\n.ion-android-microphone-off:before {\n  content: \"\\F395\";\n}\n\n.ion-android-more-horizontal:before {\n  content: \"\\F396\";\n}\n\n.ion-android-more-vertical:before {\n  content: \"\\F397\";\n}\n\n.ion-android-navigate:before {\n  content: \"\\F398\";\n}\n\n.ion-android-notifications:before {\n  content: \"\\F39B\";\n}\n\n.ion-android-notifications-none:before {\n  content: \"\\F399\";\n}\n\n.ion-android-notifications-off:before {\n  content: \"\\F39A\";\n}\n\n.ion-android-open:before {\n  content: \"\\F39C\";\n}\n\n.ion-android-options:before {\n  content: \"\\F39D\";\n}\n\n.ion-android-people:before {\n  content: \"\\F39E\";\n}\n\n.ion-android-person:before {\n  content: \"\\F3A0\";\n}\n\n.ion-android-person-add:before {\n  content: \"\\F39F\";\n}\n\n.ion-android-phone-landscape:before {\n  content: \"\\F3A1\";\n}\n\n.ion-android-phone-portrait:before {\n  content: \"\\F3A2\";\n}\n\n.ion-android-pin:before {\n  content: \"\\F3A3\";\n}\n\n.ion-android-plane:before {\n  content: \"\\F3A4\";\n}\n\n.ion-android-playstore:before {\n  content: \"\\F2F0\";\n}\n\n.ion-android-print:before {\n  content: \"\\F3A5\";\n}\n\n.ion-android-radio-button-off:before {\n  content: \"\\F3A6\";\n}\n\n.ion-android-radio-button-on:before {\n  content: \"\\F3A7\";\n}\n\n.ion-android-refresh:before {\n  content: \"\\F3A8\";\n}\n\n.ion-android-remove:before {\n  content: \"\\F2F4\";\n}\n\n.ion-android-remove-circle:before {\n  content: \"\\F3A9\";\n}\n\n.ion-android-restaurant:before {\n  content: \"\\F3AA\";\n}\n\n.ion-android-sad:before {\n  content: \"\\F3AB\";\n}\n\n.ion-android-search:before {\n  content: \"\\F2F5\";\n}\n\n.ion-android-send:before {\n  content: \"\\F2F6\";\n}\n\n.ion-android-settings:before {\n  content: \"\\F2F7\";\n}\n\n.ion-android-share:before {\n  content: \"\\F2F8\";\n}\n\n.ion-android-share-alt:before {\n  content: \"\\F3AC\";\n}\n\n.ion-android-star:before {\n  content: \"\\F2FC\";\n}\n\n.ion-android-star-half:before {\n  content: \"\\F3AD\";\n}\n\n.ion-android-star-outline:before {\n  content: \"\\F3AE\";\n}\n\n.ion-android-stopwatch:before {\n  content: \"\\F2FD\";\n}\n\n.ion-android-subway:before {\n  content: \"\\F3AF\";\n}\n\n.ion-android-sunny:before {\n  content: \"\\F3B0\";\n}\n\n.ion-android-sync:before {\n  content: \"\\F3B1\";\n}\n\n.ion-android-textsms:before {\n  content: \"\\F3B2\";\n}\n\n.ion-android-time:before {\n  content: \"\\F3B3\";\n}\n\n.ion-android-train:before {\n  content: \"\\F3B4\";\n}\n\n.ion-android-unlock:before {\n  content: \"\\F3B5\";\n}\n\n.ion-android-upload:before {\n  content: \"\\F3B6\";\n}\n\n.ion-android-volume-down:before {\n  content: \"\\F3B7\";\n}\n\n.ion-android-volume-mute:before {\n  content: \"\\F3B8\";\n}\n\n.ion-android-volume-off:before {\n  content: \"\\F3B9\";\n}\n\n.ion-android-volume-up:before {\n  content: \"\\F3BA\";\n}\n\n.ion-android-walk:before {\n  content: \"\\F3BB\";\n}\n\n.ion-android-warning:before {\n  content: \"\\F3BC\";\n}\n\n.ion-android-watch:before {\n  content: \"\\F3BD\";\n}\n\n.ion-android-wifi:before {\n  content: \"\\F305\";\n}\n\n.ion-aperture:before {\n  content: \"\\F313\";\n}\n\n.ion-archive:before {\n  content: \"\\F102\";\n}\n\n.ion-arrow-down-a:before {\n  content: \"\\F103\";\n}\n\n.ion-arrow-down-b:before {\n  content: \"\\F104\";\n}\n\n.ion-arrow-down-c:before {\n  content: \"\\F105\";\n}\n\n.ion-arrow-expand:before {\n  content: \"\\F25E\";\n}\n\n.ion-arrow-graph-down-left:before {\n  content: \"\\F25F\";\n}\n\n.ion-arrow-graph-down-right:before {\n  content: \"\\F260\";\n}\n\n.ion-arrow-graph-up-left:before {\n  content: \"\\F261\";\n}\n\n.ion-arrow-graph-up-right:before {\n  content: \"\\F262\";\n}\n\n.ion-arrow-left-a:before {\n  content: \"\\F106\";\n}\n\n.ion-arrow-left-b:before {\n  content: \"\\F107\";\n}\n\n.ion-arrow-left-c:before {\n  content: \"\\F108\";\n}\n\n.ion-arrow-move:before {\n  content: \"\\F263\";\n}\n\n.ion-arrow-resize:before {\n  content: \"\\F264\";\n}\n\n.ion-arrow-return-left:before {\n  content: \"\\F265\";\n}\n\n.ion-arrow-return-right:before {\n  content: \"\\F266\";\n}\n\n.ion-arrow-right-a:before {\n  content: \"\\F109\";\n}\n\n.ion-arrow-right-b:before {\n  content: \"\\F10A\";\n}\n\n.ion-arrow-right-c:before {\n  content: \"\\F10B\";\n}\n\n.ion-arrow-shrink:before {\n  content: \"\\F267\";\n}\n\n.ion-arrow-swap:before {\n  content: \"\\F268\";\n}\n\n.ion-arrow-up-a:before {\n  content: \"\\F10C\";\n}\n\n.ion-arrow-up-b:before {\n  content: \"\\F10D\";\n}\n\n.ion-arrow-up-c:before {\n  content: \"\\F10E\";\n}\n\n.ion-asterisk:before {\n  content: \"\\F314\";\n}\n\n.ion-at:before {\n  content: \"\\F10F\";\n}\n\n.ion-backspace:before {\n  content: \"\\F3BF\";\n}\n\n.ion-backspace-outline:before {\n  content: \"\\F3BE\";\n}\n\n.ion-bag:before {\n  content: \"\\F110\";\n}\n\n.ion-battery-charging:before {\n  content: \"\\F111\";\n}\n\n.ion-battery-empty:before {\n  content: \"\\F112\";\n}\n\n.ion-battery-full:before {\n  content: \"\\F113\";\n}\n\n.ion-battery-half:before {\n  content: \"\\F114\";\n}\n\n.ion-battery-low:before {\n  content: \"\\F115\";\n}\n\n.ion-beaker:before {\n  content: \"\\F269\";\n}\n\n.ion-beer:before {\n  content: \"\\F26A\";\n}\n\n.ion-bluetooth:before {\n  content: \"\\F116\";\n}\n\n.ion-bonfire:before {\n  content: \"\\F315\";\n}\n\n.ion-bookmark:before {\n  content: \"\\F26B\";\n}\n\n.ion-bowtie:before {\n  content: \"\\F3C0\";\n}\n\n.ion-briefcase:before {\n  content: \"\\F26C\";\n}\n\n.ion-bug:before {\n  content: \"\\F2BE\";\n}\n\n.ion-calculator:before {\n  content: \"\\F26D\";\n}\n\n.ion-calendar:before {\n  content: \"\\F117\";\n}\n\n.ion-camera:before {\n  content: \"\\F118\";\n}\n\n.ion-card:before {\n  content: \"\\F119\";\n}\n\n.ion-cash:before {\n  content: \"\\F316\";\n}\n\n.ion-chatbox:before {\n  content: \"\\F11B\";\n}\n\n.ion-chatbox-working:before {\n  content: \"\\F11A\";\n}\n\n.ion-chatboxes:before {\n  content: \"\\F11C\";\n}\n\n.ion-chatbubble:before {\n  content: \"\\F11E\";\n}\n\n.ion-chatbubble-working:before {\n  content: \"\\F11D\";\n}\n\n.ion-chatbubbles:before {\n  content: \"\\F11F\";\n}\n\n.ion-checkmark:before {\n  content: \"\\F122\";\n}\n\n.ion-checkmark-circled:before {\n  content: \"\\F120\";\n}\n\n.ion-checkmark-round:before {\n  content: \"\\F121\";\n}\n\n.ion-chevron-down:before {\n  content: \"\\F123\";\n}\n\n.ion-chevron-left:before {\n  content: \"\\F124\";\n}\n\n.ion-chevron-right:before {\n  content: \"\\F125\";\n}\n\n.ion-chevron-up:before {\n  content: \"\\F126\";\n}\n\n.ion-clipboard:before {\n  content: \"\\F127\";\n}\n\n.ion-clock:before {\n  content: \"\\F26E\";\n}\n\n.ion-close:before {\n  content: \"\\F12A\";\n}\n\n.ion-close-circled:before {\n  content: \"\\F128\";\n}\n\n.ion-close-round:before {\n  content: \"\\F129\";\n}\n\n.ion-closed-captioning:before {\n  content: \"\\F317\";\n}\n\n.ion-cloud:before {\n  content: \"\\F12B\";\n}\n\n.ion-code:before {\n  content: \"\\F271\";\n}\n\n.ion-code-download:before {\n  content: \"\\F26F\";\n}\n\n.ion-code-working:before {\n  content: \"\\F270\";\n}\n\n.ion-coffee:before {\n  content: \"\\F272\";\n}\n\n.ion-compass:before {\n  content: \"\\F273\";\n}\n\n.ion-compose:before {\n  content: \"\\F12C\";\n}\n\n.ion-connection-bars:before {\n  content: \"\\F274\";\n}\n\n.ion-contrast:before {\n  content: \"\\F275\";\n}\n\n.ion-crop:before {\n  content: \"\\F3C1\";\n}\n\n.ion-cube:before {\n  content: \"\\F318\";\n}\n\n.ion-disc:before {\n  content: \"\\F12D\";\n}\n\n.ion-document:before {\n  content: \"\\F12F\";\n}\n\n.ion-document-text:before {\n  content: \"\\F12E\";\n}\n\n.ion-drag:before {\n  content: \"\\F130\";\n}\n\n.ion-earth:before {\n  content: \"\\F276\";\n}\n\n.ion-easel:before {\n  content: \"\\F3C2\";\n}\n\n.ion-edit:before {\n  content: \"\\F2BF\";\n}\n\n.ion-egg:before {\n  content: \"\\F277\";\n}\n\n.ion-eject:before {\n  content: \"\\F131\";\n}\n\n.ion-email:before {\n  content: \"\\F132\";\n}\n\n.ion-email-unread:before {\n  content: \"\\F3C3\";\n}\n\n.ion-erlenmeyer-flask:before {\n  content: \"\\F3C5\";\n}\n\n.ion-erlenmeyer-flask-bubbles:before {\n  content: \"\\F3C4\";\n}\n\n.ion-eye:before {\n  content: \"\\F133\";\n}\n\n.ion-eye-disabled:before {\n  content: \"\\F306\";\n}\n\n.ion-female:before {\n  content: \"\\F278\";\n}\n\n.ion-filing:before {\n  content: \"\\F134\";\n}\n\n.ion-film-marker:before {\n  content: \"\\F135\";\n}\n\n.ion-fireball:before {\n  content: \"\\F319\";\n}\n\n.ion-flag:before {\n  content: \"\\F279\";\n}\n\n.ion-flame:before {\n  content: \"\\F31A\";\n}\n\n.ion-flash:before {\n  content: \"\\F137\";\n}\n\n.ion-flash-off:before {\n  content: \"\\F136\";\n}\n\n.ion-folder:before {\n  content: \"\\F139\";\n}\n\n.ion-fork:before {\n  content: \"\\F27A\";\n}\n\n.ion-fork-repo:before {\n  content: \"\\F2C0\";\n}\n\n.ion-forward:before {\n  content: \"\\F13A\";\n}\n\n.ion-funnel:before {\n  content: \"\\F31B\";\n}\n\n.ion-gear-a:before {\n  content: \"\\F13D\";\n}\n\n.ion-gear-b:before {\n  content: \"\\F13E\";\n}\n\n.ion-grid:before {\n  content: \"\\F13F\";\n}\n\n.ion-hammer:before {\n  content: \"\\F27B\";\n}\n\n.ion-happy:before {\n  content: \"\\F31C\";\n}\n\n.ion-happy-outline:before {\n  content: \"\\F3C6\";\n}\n\n.ion-headphone:before {\n  content: \"\\F140\";\n}\n\n.ion-heart:before {\n  content: \"\\F141\";\n}\n\n.ion-heart-broken:before {\n  content: \"\\F31D\";\n}\n\n.ion-help:before {\n  content: \"\\F143\";\n}\n\n.ion-help-buoy:before {\n  content: \"\\F27C\";\n}\n\n.ion-help-circled:before {\n  content: \"\\F142\";\n}\n\n.ion-home:before {\n  content: \"\\F144\";\n}\n\n.ion-icecream:before {\n  content: \"\\F27D\";\n}\n\n.ion-image:before {\n  content: \"\\F147\";\n}\n\n.ion-images:before {\n  content: \"\\F148\";\n}\n\n.ion-information:before {\n  content: \"\\F14A\";\n}\n\n.ion-information-circled:before {\n  content: \"\\F149\";\n}\n\n.ion-ionic:before {\n  content: \"\\F14B\";\n}\n\n.ion-ios-alarm:before {\n  content: \"\\F3C8\";\n}\n\n.ion-ios-alarm-outline:before {\n  content: \"\\F3C7\";\n}\n\n.ion-ios-albums:before {\n  content: \"\\F3CA\";\n}\n\n.ion-ios-albums-outline:before {\n  content: \"\\F3C9\";\n}\n\n.ion-ios-americanfootball:before {\n  content: \"\\F3CC\";\n}\n\n.ion-ios-americanfootball-outline:before {\n  content: \"\\F3CB\";\n}\n\n.ion-ios-analytics:before {\n  content: \"\\F3CE\";\n}\n\n.ion-ios-analytics-outline:before {\n  content: \"\\F3CD\";\n}\n\n.ion-ios-arrow-back:before {\n  content: \"\\F3CF\";\n}\n\n.ion-ios-arrow-down:before {\n  content: \"\\F3D0\";\n}\n\n.ion-ios-arrow-forward:before {\n  content: \"\\F3D1\";\n}\n\n.ion-ios-arrow-left:before {\n  content: \"\\F3D2\";\n}\n\n.ion-ios-arrow-right:before {\n  content: \"\\F3D3\";\n}\n\n.ion-ios-arrow-thin-down:before {\n  content: \"\\F3D4\";\n}\n\n.ion-ios-arrow-thin-left:before {\n  content: \"\\F3D5\";\n}\n\n.ion-ios-arrow-thin-right:before {\n  content: \"\\F3D6\";\n}\n\n.ion-ios-arrow-thin-up:before {\n  content: \"\\F3D7\";\n}\n\n.ion-ios-arrow-up:before {\n  content: \"\\F3D8\";\n}\n\n.ion-ios-at:before {\n  content: \"\\F3DA\";\n}\n\n.ion-ios-at-outline:before {\n  content: \"\\F3D9\";\n}\n\n.ion-ios-barcode:before {\n  content: \"\\F3DC\";\n}\n\n.ion-ios-barcode-outline:before {\n  content: \"\\F3DB\";\n}\n\n.ion-ios-baseball:before {\n  content: \"\\F3DE\";\n}\n\n.ion-ios-baseball-outline:before {\n  content: \"\\F3DD\";\n}\n\n.ion-ios-basketball:before {\n  content: \"\\F3E0\";\n}\n\n.ion-ios-basketball-outline:before {\n  content: \"\\F3DF\";\n}\n\n.ion-ios-bell:before {\n  content: \"\\F3E2\";\n}\n\n.ion-ios-bell-outline:before {\n  content: \"\\F3E1\";\n}\n\n.ion-ios-body:before {\n  content: \"\\F3E4\";\n}\n\n.ion-ios-body-outline:before {\n  content: \"\\F3E3\";\n}\n\n.ion-ios-bolt:before {\n  content: \"\\F3E6\";\n}\n\n.ion-ios-bolt-outline:before {\n  content: \"\\F3E5\";\n}\n\n.ion-ios-book:before {\n  content: \"\\F3E8\";\n}\n\n.ion-ios-book-outline:before {\n  content: \"\\F3E7\";\n}\n\n.ion-ios-bookmarks:before {\n  content: \"\\F3EA\";\n}\n\n.ion-ios-bookmarks-outline:before {\n  content: \"\\F3E9\";\n}\n\n.ion-ios-box:before {\n  content: \"\\F3EC\";\n}\n\n.ion-ios-box-outline:before {\n  content: \"\\F3EB\";\n}\n\n.ion-ios-briefcase:before {\n  content: \"\\F3EE\";\n}\n\n.ion-ios-briefcase-outline:before {\n  content: \"\\F3ED\";\n}\n\n.ion-ios-browsers:before {\n  content: \"\\F3F0\";\n}\n\n.ion-ios-browsers-outline:before {\n  content: \"\\F3EF\";\n}\n\n.ion-ios-calculator:before {\n  content: \"\\F3F2\";\n}\n\n.ion-ios-calculator-outline:before {\n  content: \"\\F3F1\";\n}\n\n.ion-ios-calendar:before {\n  content: \"\\F3F4\";\n}\n\n.ion-ios-calendar-outline:before {\n  content: \"\\F3F3\";\n}\n\n.ion-ios-camera:before {\n  content: \"\\F3F6\";\n}\n\n.ion-ios-camera-outline:before {\n  content: \"\\F3F5\";\n}\n\n.ion-ios-cart:before {\n  content: \"\\F3F8\";\n}\n\n.ion-ios-cart-outline:before {\n  content: \"\\F3F7\";\n}\n\n.ion-ios-chatboxes:before {\n  content: \"\\F3FA\";\n}\n\n.ion-ios-chatboxes-outline:before {\n  content: \"\\F3F9\";\n}\n\n.ion-ios-chatbubble:before {\n  content: \"\\F3FC\";\n}\n\n.ion-ios-chatbubble-outline:before {\n  content: \"\\F3FB\";\n}\n\n.ion-ios-checkmark:before {\n  content: \"\\F3FF\";\n}\n\n.ion-ios-checkmark-empty:before {\n  content: \"\\F3FD\";\n}\n\n.ion-ios-checkmark-outline:before {\n  content: \"\\F3FE\";\n}\n\n.ion-ios-circle-filled:before {\n  content: \"\\F400\";\n}\n\n.ion-ios-circle-outline:before {\n  content: \"\\F401\";\n}\n\n.ion-ios-clock:before {\n  content: \"\\F403\";\n}\n\n.ion-ios-clock-outline:before {\n  content: \"\\F402\";\n}\n\n.ion-ios-close:before {\n  content: \"\\F406\";\n}\n\n.ion-ios-close-empty:before {\n  content: \"\\F404\";\n}\n\n.ion-ios-close-outline:before {\n  content: \"\\F405\";\n}\n\n.ion-ios-cloud:before {\n  content: \"\\F40C\";\n}\n\n.ion-ios-cloud-download:before {\n  content: \"\\F408\";\n}\n\n.ion-ios-cloud-download-outline:before {\n  content: \"\\F407\";\n}\n\n.ion-ios-cloud-outline:before {\n  content: \"\\F409\";\n}\n\n.ion-ios-cloud-upload:before {\n  content: \"\\F40B\";\n}\n\n.ion-ios-cloud-upload-outline:before {\n  content: \"\\F40A\";\n}\n\n.ion-ios-cloudy:before {\n  content: \"\\F410\";\n}\n\n.ion-ios-cloudy-night:before {\n  content: \"\\F40E\";\n}\n\n.ion-ios-cloudy-night-outline:before {\n  content: \"\\F40D\";\n}\n\n.ion-ios-cloudy-outline:before {\n  content: \"\\F40F\";\n}\n\n.ion-ios-cog:before {\n  content: \"\\F412\";\n}\n\n.ion-ios-cog-outline:before {\n  content: \"\\F411\";\n}\n\n.ion-ios-color-filter:before {\n  content: \"\\F414\";\n}\n\n.ion-ios-color-filter-outline:before {\n  content: \"\\F413\";\n}\n\n.ion-ios-color-wand:before {\n  content: \"\\F416\";\n}\n\n.ion-ios-color-wand-outline:before {\n  content: \"\\F415\";\n}\n\n.ion-ios-compose:before {\n  content: \"\\F418\";\n}\n\n.ion-ios-compose-outline:before {\n  content: \"\\F417\";\n}\n\n.ion-ios-contact:before {\n  content: \"\\F41A\";\n}\n\n.ion-ios-contact-outline:before {\n  content: \"\\F419\";\n}\n\n.ion-ios-copy:before {\n  content: \"\\F41C\";\n}\n\n.ion-ios-copy-outline:before {\n  content: \"\\F41B\";\n}\n\n.ion-ios-crop:before {\n  content: \"\\F41E\";\n}\n\n.ion-ios-crop-strong:before {\n  content: \"\\F41D\";\n}\n\n.ion-ios-download:before {\n  content: \"\\F420\";\n}\n\n.ion-ios-download-outline:before {\n  content: \"\\F41F\";\n}\n\n.ion-ios-drag:before {\n  content: \"\\F421\";\n}\n\n.ion-ios-email:before {\n  content: \"\\F423\";\n}\n\n.ion-ios-email-outline:before {\n  content: \"\\F422\";\n}\n\n.ion-ios-eye:before {\n  content: \"\\F425\";\n}\n\n.ion-ios-eye-outline:before {\n  content: \"\\F424\";\n}\n\n.ion-ios-fastforward:before {\n  content: \"\\F427\";\n}\n\n.ion-ios-fastforward-outline:before {\n  content: \"\\F426\";\n}\n\n.ion-ios-filing:before {\n  content: \"\\F429\";\n}\n\n.ion-ios-filing-outline:before {\n  content: \"\\F428\";\n}\n\n.ion-ios-film:before {\n  content: \"\\F42B\";\n}\n\n.ion-ios-film-outline:before {\n  content: \"\\F42A\";\n}\n\n.ion-ios-flag:before {\n  content: \"\\F42D\";\n}\n\n.ion-ios-flag-outline:before {\n  content: \"\\F42C\";\n}\n\n.ion-ios-flame:before {\n  content: \"\\F42F\";\n}\n\n.ion-ios-flame-outline:before {\n  content: \"\\F42E\";\n}\n\n.ion-ios-flask:before {\n  content: \"\\F431\";\n}\n\n.ion-ios-flask-outline:before {\n  content: \"\\F430\";\n}\n\n.ion-ios-flower:before {\n  content: \"\\F433\";\n}\n\n.ion-ios-flower-outline:before {\n  content: \"\\F432\";\n}\n\n.ion-ios-folder:before {\n  content: \"\\F435\";\n}\n\n.ion-ios-folder-outline:before {\n  content: \"\\F434\";\n}\n\n.ion-ios-football:before {\n  content: \"\\F437\";\n}\n\n.ion-ios-football-outline:before {\n  content: \"\\F436\";\n}\n\n.ion-ios-game-controller-a:before {\n  content: \"\\F439\";\n}\n\n.ion-ios-game-controller-a-outline:before {\n  content: \"\\F438\";\n}\n\n.ion-ios-game-controller-b:before {\n  content: \"\\F43B\";\n}\n\n.ion-ios-game-controller-b-outline:before {\n  content: \"\\F43A\";\n}\n\n.ion-ios-gear:before {\n  content: \"\\F43D\";\n}\n\n.ion-ios-gear-outline:before {\n  content: \"\\F43C\";\n}\n\n.ion-ios-glasses:before {\n  content: \"\\F43F\";\n}\n\n.ion-ios-glasses-outline:before {\n  content: \"\\F43E\";\n}\n\n.ion-ios-grid-view:before {\n  content: \"\\F441\";\n}\n\n.ion-ios-grid-view-outline:before {\n  content: \"\\F440\";\n}\n\n.ion-ios-heart:before {\n  content: \"\\F443\";\n}\n\n.ion-ios-heart-outline:before {\n  content: \"\\F442\";\n}\n\n.ion-ios-help:before {\n  content: \"\\F446\";\n}\n\n.ion-ios-help-empty:before {\n  content: \"\\F444\";\n}\n\n.ion-ios-help-outline:before {\n  content: \"\\F445\";\n}\n\n.ion-ios-home:before {\n  content: \"\\F448\";\n}\n\n.ion-ios-home-outline:before {\n  content: \"\\F447\";\n}\n\n.ion-ios-infinite:before {\n  content: \"\\F44A\";\n}\n\n.ion-ios-infinite-outline:before {\n  content: \"\\F449\";\n}\n\n.ion-ios-information:before {\n  content: \"\\F44D\";\n}\n\n.ion-ios-information-empty:before {\n  content: \"\\F44B\";\n}\n\n.ion-ios-information-outline:before {\n  content: \"\\F44C\";\n}\n\n.ion-ios-ionic-outline:before {\n  content: \"\\F44E\";\n}\n\n.ion-ios-keypad:before {\n  content: \"\\F450\";\n}\n\n.ion-ios-keypad-outline:before {\n  content: \"\\F44F\";\n}\n\n.ion-ios-lightbulb:before {\n  content: \"\\F452\";\n}\n\n.ion-ios-lightbulb-outline:before {\n  content: \"\\F451\";\n}\n\n.ion-ios-list:before {\n  content: \"\\F454\";\n}\n\n.ion-ios-list-outline:before {\n  content: \"\\F453\";\n}\n\n.ion-ios-location:before {\n  content: \"\\F456\";\n}\n\n.ion-ios-location-outline:before {\n  content: \"\\F455\";\n}\n\n.ion-ios-locked:before {\n  content: \"\\F458\";\n}\n\n.ion-ios-locked-outline:before {\n  content: \"\\F457\";\n}\n\n.ion-ios-loop:before {\n  content: \"\\F45A\";\n}\n\n.ion-ios-loop-strong:before {\n  content: \"\\F459\";\n}\n\n.ion-ios-medical:before {\n  content: \"\\F45C\";\n}\n\n.ion-ios-medical-outline:before {\n  content: \"\\F45B\";\n}\n\n.ion-ios-medkit:before {\n  content: \"\\F45E\";\n}\n\n.ion-ios-medkit-outline:before {\n  content: \"\\F45D\";\n}\n\n.ion-ios-mic:before {\n  content: \"\\F461\";\n}\n\n.ion-ios-mic-off:before {\n  content: \"\\F45F\";\n}\n\n.ion-ios-mic-outline:before {\n  content: \"\\F460\";\n}\n\n.ion-ios-minus:before {\n  content: \"\\F464\";\n}\n\n.ion-ios-minus-empty:before {\n  content: \"\\F462\";\n}\n\n.ion-ios-minus-outline:before {\n  content: \"\\F463\";\n}\n\n.ion-ios-monitor:before {\n  content: \"\\F466\";\n}\n\n.ion-ios-monitor-outline:before {\n  content: \"\\F465\";\n}\n\n.ion-ios-moon:before {\n  content: \"\\F468\";\n}\n\n.ion-ios-moon-outline:before {\n  content: \"\\F467\";\n}\n\n.ion-ios-more:before {\n  content: \"\\F46A\";\n}\n\n.ion-ios-more-outline:before {\n  content: \"\\F469\";\n}\n\n.ion-ios-musical-note:before {\n  content: \"\\F46B\";\n}\n\n.ion-ios-musical-notes:before {\n  content: \"\\F46C\";\n}\n\n.ion-ios-navigate:before {\n  content: \"\\F46E\";\n}\n\n.ion-ios-navigate-outline:before {\n  content: \"\\F46D\";\n}\n\n.ion-ios-nutrition:before {\n  content: \"\\F470\";\n}\n\n.ion-ios-nutrition-outline:before {\n  content: \"\\F46F\";\n}\n\n.ion-ios-paper:before {\n  content: \"\\F472\";\n}\n\n.ion-ios-paper-outline:before {\n  content: \"\\F471\";\n}\n\n.ion-ios-paperplane:before {\n  content: \"\\F474\";\n}\n\n.ion-ios-paperplane-outline:before {\n  content: \"\\F473\";\n}\n\n.ion-ios-partlysunny:before {\n  content: \"\\F476\";\n}\n\n.ion-ios-partlysunny-outline:before {\n  content: \"\\F475\";\n}\n\n.ion-ios-pause:before {\n  content: \"\\F478\";\n}\n\n.ion-ios-pause-outline:before {\n  content: \"\\F477\";\n}\n\n.ion-ios-paw:before {\n  content: \"\\F47A\";\n}\n\n.ion-ios-paw-outline:before {\n  content: \"\\F479\";\n}\n\n.ion-ios-people:before {\n  content: \"\\F47C\";\n}\n\n.ion-ios-people-outline:before {\n  content: \"\\F47B\";\n}\n\n.ion-ios-person:before {\n  content: \"\\F47E\";\n}\n\n.ion-ios-person-outline:before {\n  content: \"\\F47D\";\n}\n\n.ion-ios-personadd:before {\n  content: \"\\F480\";\n}\n\n.ion-ios-personadd-outline:before {\n  content: \"\\F47F\";\n}\n\n.ion-ios-photos:before {\n  content: \"\\F482\";\n}\n\n.ion-ios-photos-outline:before {\n  content: \"\\F481\";\n}\n\n.ion-ios-pie:before {\n  content: \"\\F484\";\n}\n\n.ion-ios-pie-outline:before {\n  content: \"\\F483\";\n}\n\n.ion-ios-pint:before {\n  content: \"\\F486\";\n}\n\n.ion-ios-pint-outline:before {\n  content: \"\\F485\";\n}\n\n.ion-ios-play:before {\n  content: \"\\F488\";\n}\n\n.ion-ios-play-outline:before {\n  content: \"\\F487\";\n}\n\n.ion-ios-plus:before {\n  content: \"\\F48B\";\n}\n\n.ion-ios-plus-empty:before {\n  content: \"\\F489\";\n}\n\n.ion-ios-plus-outline:before {\n  content: \"\\F48A\";\n}\n\n.ion-ios-pricetag:before {\n  content: \"\\F48D\";\n}\n\n.ion-ios-pricetag-outline:before {\n  content: \"\\F48C\";\n}\n\n.ion-ios-pricetags:before {\n  content: \"\\F48F\";\n}\n\n.ion-ios-pricetags-outline:before {\n  content: \"\\F48E\";\n}\n\n.ion-ios-printer:before {\n  content: \"\\F491\";\n}\n\n.ion-ios-printer-outline:before {\n  content: \"\\F490\";\n}\n\n.ion-ios-pulse:before {\n  content: \"\\F493\";\n}\n\n.ion-ios-pulse-strong:before {\n  content: \"\\F492\";\n}\n\n.ion-ios-rainy:before {\n  content: \"\\F495\";\n}\n\n.ion-ios-rainy-outline:before {\n  content: \"\\F494\";\n}\n\n.ion-ios-recording:before {\n  content: \"\\F497\";\n}\n\n.ion-ios-recording-outline:before {\n  content: \"\\F496\";\n}\n\n.ion-ios-redo:before {\n  content: \"\\F499\";\n}\n\n.ion-ios-redo-outline:before {\n  content: \"\\F498\";\n}\n\n.ion-ios-refresh:before {\n  content: \"\\F49C\";\n}\n\n.ion-ios-refresh-empty:before {\n  content: \"\\F49A\";\n}\n\n.ion-ios-refresh-outline:before {\n  content: \"\\F49B\";\n}\n\n.ion-ios-reload:before {\n  content: \"\\F49D\";\n}\n\n.ion-ios-reverse-camera:before {\n  content: \"\\F49F\";\n}\n\n.ion-ios-reverse-camera-outline:before {\n  content: \"\\F49E\";\n}\n\n.ion-ios-rewind:before {\n  content: \"\\F4A1\";\n}\n\n.ion-ios-rewind-outline:before {\n  content: \"\\F4A0\";\n}\n\n.ion-ios-rose:before {\n  content: \"\\F4A3\";\n}\n\n.ion-ios-rose-outline:before {\n  content: \"\\F4A2\";\n}\n\n.ion-ios-search:before {\n  content: \"\\F4A5\";\n}\n\n.ion-ios-search-strong:before {\n  content: \"\\F4A4\";\n}\n\n.ion-ios-settings:before {\n  content: \"\\F4A7\";\n}\n\n.ion-ios-settings-strong:before {\n  content: \"\\F4A6\";\n}\n\n.ion-ios-shuffle:before {\n  content: \"\\F4A9\";\n}\n\n.ion-ios-shuffle-strong:before {\n  content: \"\\F4A8\";\n}\n\n.ion-ios-skipbackward:before {\n  content: \"\\F4AB\";\n}\n\n.ion-ios-skipbackward-outline:before {\n  content: \"\\F4AA\";\n}\n\n.ion-ios-skipforward:before {\n  content: \"\\F4AD\";\n}\n\n.ion-ios-skipforward-outline:before {\n  content: \"\\F4AC\";\n}\n\n.ion-ios-snowy:before {\n  content: \"\\F4AE\";\n}\n\n.ion-ios-speedometer:before {\n  content: \"\\F4B0\";\n}\n\n.ion-ios-speedometer-outline:before {\n  content: \"\\F4AF\";\n}\n\n.ion-ios-star:before {\n  content: \"\\F4B3\";\n}\n\n.ion-ios-star-half:before {\n  content: \"\\F4B1\";\n}\n\n.ion-ios-star-outline:before {\n  content: \"\\F4B2\";\n}\n\n.ion-ios-stopwatch:before {\n  content: \"\\F4B5\";\n}\n\n.ion-ios-stopwatch-outline:before {\n  content: \"\\F4B4\";\n}\n\n.ion-ios-sunny:before {\n  content: \"\\F4B7\";\n}\n\n.ion-ios-sunny-outline:before {\n  content: \"\\F4B6\";\n}\n\n.ion-ios-telephone:before {\n  content: \"\\F4B9\";\n}\n\n.ion-ios-telephone-outline:before {\n  content: \"\\F4B8\";\n}\n\n.ion-ios-tennisball:before {\n  content: \"\\F4BB\";\n}\n\n.ion-ios-tennisball-outline:before {\n  content: \"\\F4BA\";\n}\n\n.ion-ios-thunderstorm:before {\n  content: \"\\F4BD\";\n}\n\n.ion-ios-thunderstorm-outline:before {\n  content: \"\\F4BC\";\n}\n\n.ion-ios-time:before {\n  content: \"\\F4BF\";\n}\n\n.ion-ios-time-outline:before {\n  content: \"\\F4BE\";\n}\n\n.ion-ios-timer:before {\n  content: \"\\F4C1\";\n}\n\n.ion-ios-timer-outline:before {\n  content: \"\\F4C0\";\n}\n\n.ion-ios-toggle:before {\n  content: \"\\F4C3\";\n}\n\n.ion-ios-toggle-outline:before {\n  content: \"\\F4C2\";\n}\n\n.ion-ios-trash:before {\n  content: \"\\F4C5\";\n}\n\n.ion-ios-trash-outline:before {\n  content: \"\\F4C4\";\n}\n\n.ion-ios-undo:before {\n  content: \"\\F4C7\";\n}\n\n.ion-ios-undo-outline:before {\n  content: \"\\F4C6\";\n}\n\n.ion-ios-unlocked:before {\n  content: \"\\F4C9\";\n}\n\n.ion-ios-unlocked-outline:before {\n  content: \"\\F4C8\";\n}\n\n.ion-ios-upload:before {\n  content: \"\\F4CB\";\n}\n\n.ion-ios-upload-outline:before {\n  content: \"\\F4CA\";\n}\n\n.ion-ios-videocam:before {\n  content: \"\\F4CD\";\n}\n\n.ion-ios-videocam-outline:before {\n  content: \"\\F4CC\";\n}\n\n.ion-ios-volume-high:before {\n  content: \"\\F4CE\";\n}\n\n.ion-ios-volume-low:before {\n  content: \"\\F4CF\";\n}\n\n.ion-ios-wineglass:before {\n  content: \"\\F4D1\";\n}\n\n.ion-ios-wineglass-outline:before {\n  content: \"\\F4D0\";\n}\n\n.ion-ios-world:before {\n  content: \"\\F4D3\";\n}\n\n.ion-ios-world-outline:before {\n  content: \"\\F4D2\";\n}\n\n.ion-ipad:before {\n  content: \"\\F1F9\";\n}\n\n.ion-iphone:before {\n  content: \"\\F1FA\";\n}\n\n.ion-ipod:before {\n  content: \"\\F1FB\";\n}\n\n.ion-jet:before {\n  content: \"\\F295\";\n}\n\n.ion-key:before {\n  content: \"\\F296\";\n}\n\n.ion-knife:before {\n  content: \"\\F297\";\n}\n\n.ion-laptop:before {\n  content: \"\\F1FC\";\n}\n\n.ion-leaf:before {\n  content: \"\\F1FD\";\n}\n\n.ion-levels:before {\n  content: \"\\F298\";\n}\n\n.ion-lightbulb:before {\n  content: \"\\F299\";\n}\n\n.ion-link:before {\n  content: \"\\F1FE\";\n}\n\n.ion-load-a:before {\n  content: \"\\F29A\";\n}\n\n.ion-load-b:before {\n  content: \"\\F29B\";\n}\n\n.ion-load-c:before {\n  content: \"\\F29C\";\n}\n\n.ion-load-d:before {\n  content: \"\\F29D\";\n}\n\n.ion-location:before {\n  content: \"\\F1FF\";\n}\n\n.ion-lock-combination:before {\n  content: \"\\F4D4\";\n}\n\n.ion-locked:before {\n  content: \"\\F200\";\n}\n\n.ion-log-in:before {\n  content: \"\\F29E\";\n}\n\n.ion-log-out:before {\n  content: \"\\F29F\";\n}\n\n.ion-loop:before {\n  content: \"\\F201\";\n}\n\n.ion-magnet:before {\n  content: \"\\F2A0\";\n}\n\n.ion-male:before {\n  content: \"\\F2A1\";\n}\n\n.ion-man:before {\n  content: \"\\F202\";\n}\n\n.ion-map:before {\n  content: \"\\F203\";\n}\n\n.ion-medkit:before {\n  content: \"\\F2A2\";\n}\n\n.ion-merge:before {\n  content: \"\\F33F\";\n}\n\n.ion-mic-a:before {\n  content: \"\\F204\";\n}\n\n.ion-mic-b:before {\n  content: \"\\F205\";\n}\n\n.ion-mic-c:before {\n  content: \"\\F206\";\n}\n\n.ion-minus:before {\n  content: \"\\F209\";\n}\n\n.ion-minus-circled:before {\n  content: \"\\F207\";\n}\n\n.ion-minus-round:before {\n  content: \"\\F208\";\n}\n\n.ion-model-s:before {\n  content: \"\\F2C1\";\n}\n\n.ion-monitor:before {\n  content: \"\\F20A\";\n}\n\n.ion-more:before {\n  content: \"\\F20B\";\n}\n\n.ion-mouse:before {\n  content: \"\\F340\";\n}\n\n.ion-music-note:before {\n  content: \"\\F20C\";\n}\n\n.ion-navicon:before {\n  content: \"\\F20E\";\n}\n\n.ion-navicon-round:before {\n  content: \"\\F20D\";\n}\n\n.ion-navigate:before {\n  content: \"\\F2A3\";\n}\n\n.ion-network:before {\n  content: \"\\F341\";\n}\n\n.ion-no-smoking:before {\n  content: \"\\F2C2\";\n}\n\n.ion-nuclear:before {\n  content: \"\\F2A4\";\n}\n\n.ion-outlet:before {\n  content: \"\\F342\";\n}\n\n.ion-paintbrush:before {\n  content: \"\\F4D5\";\n}\n\n.ion-paintbucket:before {\n  content: \"\\F4D6\";\n}\n\n.ion-paper-airplane:before {\n  content: \"\\F2C3\";\n}\n\n.ion-paperclip:before {\n  content: \"\\F20F\";\n}\n\n.ion-pause:before {\n  content: \"\\F210\";\n}\n\n.ion-person:before {\n  content: \"\\F213\";\n}\n\n.ion-person-add:before {\n  content: \"\\F211\";\n}\n\n.ion-person-stalker:before {\n  content: \"\\F212\";\n}\n\n.ion-pie-graph:before {\n  content: \"\\F2A5\";\n}\n\n.ion-pin:before {\n  content: \"\\F2A6\";\n}\n\n.ion-pinpoint:before {\n  content: \"\\F2A7\";\n}\n\n.ion-pizza:before {\n  content: \"\\F2A8\";\n}\n\n.ion-plane:before {\n  content: \"\\F214\";\n}\n\n.ion-planet:before {\n  content: \"\\F343\";\n}\n\n.ion-play:before {\n  content: \"\\F215\";\n}\n\n.ion-playstation:before {\n  content: \"\\F30A\";\n}\n\n.ion-plus:before {\n  content: \"\\F218\";\n}\n\n.ion-plus-circled:before {\n  content: \"\\F216\";\n}\n\n.ion-plus-round:before {\n  content: \"\\F217\";\n}\n\n.ion-podium:before {\n  content: \"\\F344\";\n}\n\n.ion-pound:before {\n  content: \"\\F219\";\n}\n\n.ion-power:before {\n  content: \"\\F2A9\";\n}\n\n.ion-pricetag:before {\n  content: \"\\F2AA\";\n}\n\n.ion-pricetags:before {\n  content: \"\\F2AB\";\n}\n\n.ion-printer:before {\n  content: \"\\F21A\";\n}\n\n.ion-pull-request:before {\n  content: \"\\F345\";\n}\n\n.ion-qr-scanner:before {\n  content: \"\\F346\";\n}\n\n.ion-quote:before {\n  content: \"\\F347\";\n}\n\n.ion-radio-waves:before {\n  content: \"\\F2AC\";\n}\n\n.ion-record:before {\n  content: \"\\F21B\";\n}\n\n.ion-refresh:before {\n  content: \"\\F21C\";\n}\n\n.ion-reply:before {\n  content: \"\\F21E\";\n}\n\n.ion-reply-all:before {\n  content: \"\\F21D\";\n}\n\n.ion-ribbon-a:before {\n  content: \"\\F348\";\n}\n\n.ion-ribbon-b:before {\n  content: \"\\F349\";\n}\n\n.ion-sad:before {\n  content: \"\\F34A\";\n}\n\n.ion-sad-outline:before {\n  content: \"\\F4D7\";\n}\n\n.ion-scissors:before {\n  content: \"\\F34B\";\n}\n\n.ion-search:before {\n  content: \"\\F21F\";\n}\n\n.ion-settings:before {\n  content: \"\\F2AD\";\n}\n\n.ion-share:before {\n  content: \"\\F220\";\n}\n\n.ion-shuffle:before {\n  content: \"\\F221\";\n}\n\n.ion-skip-backward:before {\n  content: \"\\F222\";\n}\n\n.ion-skip-forward:before {\n  content: \"\\F223\";\n}\n\n.ion-social-android:before {\n  content: \"\\F225\";\n}\n\n.ion-social-android-outline:before {\n  content: \"\\F224\";\n}\n\n.ion-social-angular:before {\n  content: \"\\F4D9\";\n}\n\n.ion-social-angular-outline:before {\n  content: \"\\F4D8\";\n}\n\n.ion-social-apple:before {\n  content: \"\\F227\";\n}\n\n.ion-social-apple-outline:before {\n  content: \"\\F226\";\n}\n\n.ion-social-bitcoin:before {\n  content: \"\\F2AF\";\n}\n\n.ion-social-bitcoin-outline:before {\n  content: \"\\F2AE\";\n}\n\n.ion-social-buffer:before {\n  content: \"\\F229\";\n}\n\n.ion-social-buffer-outline:before {\n  content: \"\\F228\";\n}\n\n.ion-social-chrome:before {\n  content: \"\\F4DB\";\n}\n\n.ion-social-chrome-outline:before {\n  content: \"\\F4DA\";\n}\n\n.ion-social-codepen:before {\n  content: \"\\F4DD\";\n}\n\n.ion-social-codepen-outline:before {\n  content: \"\\F4DC\";\n}\n\n.ion-social-css3:before {\n  content: \"\\F4DF\";\n}\n\n.ion-social-css3-outline:before {\n  content: \"\\F4DE\";\n}\n\n.ion-social-designernews:before {\n  content: \"\\F22B\";\n}\n\n.ion-social-designernews-outline:before {\n  content: \"\\F22A\";\n}\n\n.ion-social-dribbble:before {\n  content: \"\\F22D\";\n}\n\n.ion-social-dribbble-outline:before {\n  content: \"\\F22C\";\n}\n\n.ion-social-dropbox:before {\n  content: \"\\F22F\";\n}\n\n.ion-social-dropbox-outline:before {\n  content: \"\\F22E\";\n}\n\n.ion-social-euro:before {\n  content: \"\\F4E1\";\n}\n\n.ion-social-euro-outline:before {\n  content: \"\\F4E0\";\n}\n\n.ion-social-facebook:before {\n  content: \"\\F231\";\n}\n\n.ion-social-facebook-outline:before {\n  content: \"\\F230\";\n}\n\n.ion-social-foursquare:before {\n  content: \"\\F34D\";\n}\n\n.ion-social-foursquare-outline:before {\n  content: \"\\F34C\";\n}\n\n.ion-social-freebsd-devil:before {\n  content: \"\\F2C4\";\n}\n\n.ion-social-github:before {\n  content: \"\\F233\";\n}\n\n.ion-social-github-outline:before {\n  content: \"\\F232\";\n}\n\n.ion-social-google:before {\n  content: \"\\F34F\";\n}\n\n.ion-social-google-outline:before {\n  content: \"\\F34E\";\n}\n\n.ion-social-googleplus:before {\n  content: \"\\F235\";\n}\n\n.ion-social-googleplus-outline:before {\n  content: \"\\F234\";\n}\n\n.ion-social-hackernews:before {\n  content: \"\\F237\";\n}\n\n.ion-social-hackernews-outline:before {\n  content: \"\\F236\";\n}\n\n.ion-social-html5:before {\n  content: \"\\F4E3\";\n}\n\n.ion-social-html5-outline:before {\n  content: \"\\F4E2\";\n}\n\n.ion-social-instagram:before {\n  content: \"\\F351\";\n}\n\n.ion-social-instagram-outline:before {\n  content: \"\\F350\";\n}\n\n.ion-social-javascript:before {\n  content: \"\\F4E5\";\n}\n\n.ion-social-javascript-outline:before {\n  content: \"\\F4E4\";\n}\n\n.ion-social-linkedin:before {\n  content: \"\\F239\";\n}\n\n.ion-social-linkedin-outline:before {\n  content: \"\\F238\";\n}\n\n.ion-social-markdown:before {\n  content: \"\\F4E6\";\n}\n\n.ion-social-nodejs:before {\n  content: \"\\F4E7\";\n}\n\n.ion-social-octocat:before {\n  content: \"\\F4E8\";\n}\n\n.ion-social-pinterest:before {\n  content: \"\\F2B1\";\n}\n\n.ion-social-pinterest-outline:before {\n  content: \"\\F2B0\";\n}\n\n.ion-social-python:before {\n  content: \"\\F4E9\";\n}\n\n.ion-social-reddit:before {\n  content: \"\\F23B\";\n}\n\n.ion-social-reddit-outline:before {\n  content: \"\\F23A\";\n}\n\n.ion-social-rss:before {\n  content: \"\\F23D\";\n}\n\n.ion-social-rss-outline:before {\n  content: \"\\F23C\";\n}\n\n.ion-social-sass:before {\n  content: \"\\F4EA\";\n}\n\n.ion-social-skype:before {\n  content: \"\\F23F\";\n}\n\n.ion-social-skype-outline:before {\n  content: \"\\F23E\";\n}\n\n.ion-social-snapchat:before {\n  content: \"\\F4EC\";\n}\n\n.ion-social-snapchat-outline:before {\n  content: \"\\F4EB\";\n}\n\n.ion-social-tumblr:before {\n  content: \"\\F241\";\n}\n\n.ion-social-tumblr-outline:before {\n  content: \"\\F240\";\n}\n\n.ion-social-tux:before {\n  content: \"\\F2C5\";\n}\n\n.ion-social-twitch:before {\n  content: \"\\F4EE\";\n}\n\n.ion-social-twitch-outline:before {\n  content: \"\\F4ED\";\n}\n\n.ion-social-twitter:before {\n  content: \"\\F243\";\n}\n\n.ion-social-twitter-outline:before {\n  content: \"\\F242\";\n}\n\n.ion-social-usd:before {\n  content: \"\\F353\";\n}\n\n.ion-social-usd-outline:before {\n  content: \"\\F352\";\n}\n\n.ion-social-vimeo:before {\n  content: \"\\F245\";\n}\n\n.ion-social-vimeo-outline:before {\n  content: \"\\F244\";\n}\n\n.ion-social-whatsapp:before {\n  content: \"\\F4F0\";\n}\n\n.ion-social-whatsapp-outline:before {\n  content: \"\\F4EF\";\n}\n\n.ion-social-windows:before {\n  content: \"\\F247\";\n}\n\n.ion-social-windows-outline:before {\n  content: \"\\F246\";\n}\n\n.ion-social-wordpress:before {\n  content: \"\\F249\";\n}\n\n.ion-social-wordpress-outline:before {\n  content: \"\\F248\";\n}\n\n.ion-social-yahoo:before {\n  content: \"\\F24B\";\n}\n\n.ion-social-yahoo-outline:before {\n  content: \"\\F24A\";\n}\n\n.ion-social-yen:before {\n  content: \"\\F4F2\";\n}\n\n.ion-social-yen-outline:before {\n  content: \"\\F4F1\";\n}\n\n.ion-social-youtube:before {\n  content: \"\\F24D\";\n}\n\n.ion-social-youtube-outline:before {\n  content: \"\\F24C\";\n}\n\n.ion-soup-can:before {\n  content: \"\\F4F4\";\n}\n\n.ion-soup-can-outline:before {\n  content: \"\\F4F3\";\n}\n\n.ion-speakerphone:before {\n  content: \"\\F2B2\";\n}\n\n.ion-speedometer:before {\n  content: \"\\F2B3\";\n}\n\n.ion-spoon:before {\n  content: \"\\F2B4\";\n}\n\n.ion-star:before {\n  content: \"\\F24E\";\n}\n\n.ion-stats-bars:before {\n  content: \"\\F2B5\";\n}\n\n.ion-steam:before {\n  content: \"\\F30B\";\n}\n\n.ion-stop:before {\n  content: \"\\F24F\";\n}\n\n.ion-thermometer:before {\n  content: \"\\F2B6\";\n}\n\n.ion-thumbsdown:before {\n  content: \"\\F250\";\n}\n\n.ion-thumbsup:before {\n  content: \"\\F251\";\n}\n\n.ion-toggle:before {\n  content: \"\\F355\";\n}\n\n.ion-toggle-filled:before {\n  content: \"\\F354\";\n}\n\n.ion-transgender:before {\n  content: \"\\F4F5\";\n}\n\n.ion-trash-a:before {\n  content: \"\\F252\";\n}\n\n.ion-trash-b:before {\n  content: \"\\F253\";\n}\n\n.ion-trophy:before {\n  content: \"\\F356\";\n}\n\n.ion-tshirt:before {\n  content: \"\\F4F7\";\n}\n\n.ion-tshirt-outline:before {\n  content: \"\\F4F6\";\n}\n\n.ion-umbrella:before {\n  content: \"\\F2B7\";\n}\n\n.ion-university:before {\n  content: \"\\F357\";\n}\n\n.ion-unlocked:before {\n  content: \"\\F254\";\n}\n\n.ion-upload:before {\n  content: \"\\F255\";\n}\n\n.ion-usb:before {\n  content: \"\\F2B8\";\n}\n\n.ion-videocamera:before {\n  content: \"\\F256\";\n}\n\n.ion-volume-high:before {\n  content: \"\\F257\";\n}\n\n.ion-volume-low:before {\n  content: \"\\F258\";\n}\n\n.ion-volume-medium:before {\n  content: \"\\F259\";\n}\n\n.ion-volume-mute:before {\n  content: \"\\F25A\";\n}\n\n.ion-wand:before {\n  content: \"\\F358\";\n}\n\n.ion-waterdrop:before {\n  content: \"\\F25B\";\n}\n\n.ion-wifi:before {\n  content: \"\\F25C\";\n}\n\n.ion-wineglass:before {\n  content: \"\\F2B9\";\n}\n\n.ion-woman:before {\n  content: \"\\F25D\";\n}\n\n.ion-wrench:before {\n  content: \"\\F2BA\";\n}\n\n.ion-xbox:before {\n  content: \"\\F30C\";\n}\n\n/**\n * Resets\n * --------------------------------------------------\n * Adapted from normalize.css and some reset.css. We don't care even one\n * bit about old IE, so we don't need any hacks for that in here.\n *\n * There are probably other things we could remove here, as well.\n *\n * normalize.css v2.1.2 | MIT License | git.io/normalize\n\n * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)\n * http://cssreset.com\n */\n\nhtml,\nbody,\ndiv,\nspan,\napplet,\nobject,\niframe,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\np,\nblockquote,\npre,\na,\nabbr,\nacronym,\naddress,\nbig,\ncite,\ncode,\ndel,\ndfn,\nem,\nimg,\nins,\nkbd,\nq,\ns,\nsamp,\nsmall,\nstrike,\nstrong,\nsub,\nsup,\ntt,\nvar,\nb,\ni,\nu,\ncenter,\ndl,\ndt,\ndd,\nol,\nul,\nli,\nfieldset,\nform,\nlabel,\nlegend,\ntable,\ncaption,\ntbody,\ntfoot,\nthead,\ntr,\nth,\ntd,\narticle,\naside,\ncanvas,\ndetails,\nembed,\nfieldset,\nfigure,\nfigcaption,\nfooter,\nheader,\nhgroup,\nmenu,\nnav,\noutput,\nruby,\nsection,\nsummary,\ntime,\nmark,\naudio,\nvideo {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  vertical-align: baseline;\n  font: inherit;\n  font-size: 100%;\n}\n\nol,\nul {\n  list-style: none;\n}\n\nblockquote,\nq {\n  quotes: none;\n}\n\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: '';\n  content: none;\n}\n\n/**\n * Prevent modern browsers from displaying `audio` without controls.\n * Remove excess height in iOS 5 devices.\n */\n\naudio:not([controls]) {\n  display: none;\n  height: 0;\n}\n\n/**\n * Hide the `template` element in IE, Safari, and Firefox < 22.\n */\n\n[hidden],\ntemplate {\n  display: none;\n}\n\nscript {\n  display: none !important;\n}\n\n/* ==========================================================================\n   Base\n   ========================================================================== */\n\n/**\n * 1. Set default font family to sans-serif.\n * 2. Prevent iOS text size adjust after orientation change, without disabling\n *  user zoom.\n */\n\nhtml {\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  font-family: sans-serif;\n  /* 1 */\n  -webkit-text-size-adjust: 100%;\n  -ms-text-size-adjust: 100%;\n  /* 2 */\n  -webkit-text-size-adjust: 100%;\n  /* 2 */\n}\n\n/**\n * Remove default margin.\n */\n\nbody {\n  margin: 0;\n  line-height: 1;\n}\n\n/**\n * Remove default outlines.\n */\n\na,\nbutton,\n:focus,\na:focus,\nbutton:focus,\na:active,\na:hover {\n  outline: 0;\n}\n\n/* *\n * Remove tap highlight color\n */\n\na {\n  -webkit-user-drag: none;\n  -webkit-tap-highlight-color: transparent;\n  -webkit-tap-highlight-color: transparent;\n}\n\na[href]:hover {\n  cursor: pointer;\n}\n\n/* ==========================================================================\n   Typography\n   ========================================================================== */\n\n/**\n * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.\n */\n\nb,\nstrong {\n  font-weight: bold;\n}\n\n/**\n * Address styling not present in Safari 5 and Chrome.\n */\n\ndfn {\n  font-style: italic;\n}\n\n/**\n * Address differences between Firefox and other browsers.\n */\n\nhr {\n  -moz-box-sizing: content-box;\n  box-sizing: content-box;\n  height: 0;\n}\n\n/**\n * Correct font family set oddly in Safari 5 and Chrome.\n */\n\ncode,\nkbd,\npre,\nsamp {\n  font-size: 1em;\n  font-family: monospace, serif;\n}\n\n/**\n * Improve readability of pre-formatted text in all browsers.\n */\n\npre {\n  white-space: pre-wrap;\n}\n\n/**\n * Set consistent quote types.\n */\n\nq {\n  quotes: \"\\201C\" \"\\201D\" \"\\2018\" \"\\2019\";\n}\n\n/**\n * Address inconsistent and variable font size in all browsers.\n */\n\nsmall {\n  font-size: 80%;\n}\n\n/**\n * Prevent `sub` and `sup` affecting `line-height` in all browsers.\n */\n\nsub,\nsup {\n  position: relative;\n  vertical-align: baseline;\n  font-size: 75%;\n  line-height: 0;\n}\n\nsup {\n  top: -0.5em;\n}\n\nsub {\n  bottom: -0.25em;\n}\n\n/**\n * Define consistent border, margin, and padding.\n */\n\nfieldset {\n  margin: 0 2px;\n  padding: 0.35em 0.625em 0.75em;\n  border: 1px solid #c0c0c0;\n}\n\n/**\n * 1. Correct `color` not being inherited in IE 8/9.\n * 2. Remove padding so people aren't caught out if they zero out fieldsets.\n */\n\nlegend {\n  padding: 0;\n  /* 2 */\n  border: 0;\n  /* 1 */\n}\n\n/**\n * 1. Correct font family not being inherited in all browsers.\n * 2. Correct font size not being inherited in all browsers.\n * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.\n * 4. Remove any default :focus styles\n * 5. Make sure webkit font smoothing is being inherited\n * 6. Remove default gradient in Android Firefox / FirefoxOS\n */\n\nbutton,\ninput,\nselect,\ntextarea {\n  margin: 0;\n  /* 3 */\n  font-size: 100%;\n  /* 2 */\n  font-family: inherit;\n  /* 1 */\n  outline-offset: 0;\n  /* 4 */\n  outline-style: none;\n  /* 4 */\n  outline-width: 0;\n  /* 4 */\n  -webkit-font-smoothing: inherit;\n  /* 5 */\n  background-image: none;\n  /* 6 */\n}\n\n/**\n * Address Firefox 4+ setting `line-height` on `input` using `importnt` in\n * the UA stylesheet.\n */\n\nbutton,\ninput {\n  line-height: normal;\n}\n\n/**\n * Address inconsistent `text-transform` inheritance for `button` and `select`.\n * All other form control elements do not inherit `text-transform` values.\n * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.\n * Correct `select` style inheritance in Firefox 4+ and Opera.\n */\n\nbutton,\nselect {\n  text-transform: none;\n}\n\n/**\n * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`\n *  and `video` controls.\n * 2. Correct inability to style clickable `input` types in iOS.\n * 3. Improve usability and consistency of cursor style between image-type\n *  `input` and others.\n */\n\nbutton,\nhtml input[type=\"button\"],\ninput[type=\"reset\"],\ninput[type=\"submit\"] {\n  cursor: pointer;\n  /* 3 */\n  -webkit-appearance: button;\n  /* 2 */\n}\n\n/**\n * Re-set default cursor for disabled elements.\n */\n\nbutton[disabled],\nhtml input[disabled] {\n  cursor: default;\n}\n\n/**\n * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.\n * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome\n *  (include `-moz` to future-proof).\n */\n\ninput[type=\"search\"] {\n  -webkit-box-sizing: content-box;\n  /* 2 */\n  -moz-box-sizing: content-box;\n  box-sizing: content-box;\n  -webkit-appearance: textfield;\n  /* 1 */\n}\n\n/**\n * Remove inner padding and search cancel button in Safari 5 and Chrome\n * on OS X.\n */\n\ninput[type=\"search\"]::-webkit-search-cancel-button,\ninput[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\n\n/**\n * Remove inner padding and border in Firefox 4+.\n */\n\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  padding: 0;\n  border: 0;\n}\n\n/**\n * 1. Remove default vertical scrollbar in IE 8/9.\n * 2. Improve readability and alignment in all browsers.\n */\n\ntextarea {\n  overflow: auto;\n  /* 1 */\n  vertical-align: top;\n  /* 2 */\n}\n\nimg {\n  -webkit-user-drag: none;\n}\n\n/* ==========================================================================\n   Tables\n   ========================================================================== */\n\n/**\n * Remove most spacing between table cells.\n */\n\ntable {\n  border-spacing: 0;\n  border-collapse: collapse;\n}\n\n/**\n * Scaffolding\n * --------------------------------------------------\n */\n\n*,\n*:before,\n*:after {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\nhtml {\n  overflow: hidden;\n  -ms-touch-action: pan-y;\n  touch-action: pan-y;\n}\n\nbody,\n.ionic-body {\n  -webkit-touch-callout: none;\n  -webkit-font-smoothing: antialiased;\n  font-smoothing: antialiased;\n  -webkit-text-size-adjust: none;\n  -moz-text-size-adjust: none;\n  text-size-adjust: none;\n  -webkit-tap-highlight-color: transparent;\n  -webkit-tap-highlight-color: transparent;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  overflow: hidden;\n  margin: 0;\n  padding: 0;\n  color: #968D78;\n  word-wrap: break-word;\n  font-size: 16px;\n  font-family: \"Titillium Web\", sans-serif;\n  line-height: 22px;\n  text-rendering: optimizeLegibility;\n  -webkit-backface-visibility: hidden;\n  -webkit-user-drag: none;\n  -ms-content-zooming: none;\n}\n\nbody.grade-b,\nbody.grade-c {\n  text-rendering: auto;\n}\n\n.content {\n  position: relative;\n}\n\n.scroll-content {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  overflow: hidden;\n  margin-top: -1px;\n  padding-top: 1px;\n  margin-bottom: -1px;\n  width: auto;\n  height: auto;\n}\n\n.menu .scroll-content.scroll-content-false {\n  z-index: 11;\n}\n\n.scroll-view {\n  position: relative;\n  display: block;\n  overflow: hidden;\n  margin-top: -1px;\n}\n\n/**\n * Scroll is the scroll view component available for complex and custom\n * scroll view functionality.\n */\n\n.scroll {\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  -webkit-touch-callout: none;\n  -webkit-text-size-adjust: none;\n  -moz-text-size-adjust: none;\n  text-size-adjust: none;\n  -webkit-transform-origin: left top;\n  transform-origin: left top;\n}\n\n/**\n * Set ms-viewport to prevent MS \"page squish\" and allow fluid scrolling\n * https://msdn.microsoft.com/en-us/library/ie/hh869615(v=vs.85).aspx\n */\n\n@-ms-viewport {\n  width: device-width;\n}\n\n.scroll-bar {\n  position: absolute;\n  z-index: 9999;\n}\n\n.ng-animate .scroll-bar {\n  visibility: hidden;\n}\n\n.scroll-bar-h {\n  right: 2px;\n  bottom: 3px;\n  left: 2px;\n  height: 3px;\n}\n\n.scroll-bar-h .scroll-bar-indicator {\n  height: 100%;\n}\n\n.scroll-bar-v {\n  top: 2px;\n  right: 3px;\n  bottom: 2px;\n  width: 3px;\n}\n\n.scroll-bar-v .scroll-bar-indicator {\n  width: 100%;\n}\n\n.scroll-bar-indicator {\n  position: absolute;\n  border-radius: 4px;\n  background: rgba(0, 0, 0, 0.3);\n  opacity: 1;\n  -webkit-transition: opacity 0.3s linear;\n  transition: opacity 0.3s linear;\n}\n\n.scroll-bar-indicator.scroll-bar-fade-out {\n  opacity: 0;\n}\n\n.platform-android .scroll-bar-indicator {\n  border-radius: 0;\n}\n\n.grade-b .scroll-bar-indicator,\n.grade-c .scroll-bar-indicator {\n  background: #aaa;\n}\n\n.grade-b .scroll-bar-indicator.scroll-bar-fade-out,\n.grade-c .scroll-bar-indicator.scroll-bar-fade-out {\n  -webkit-transition: none;\n  transition: none;\n}\n\nion-infinite-scroll {\n  height: 60px;\n  width: 100%;\n  display: block;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-direction: normal;\n  -webkit-box-orient: horizontal;\n  -webkit-flex-direction: row;\n  -moz-flex-direction: row;\n  -ms-flex-direction: row;\n  flex-direction: row;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  -webkit-justify-content: center;\n  -moz-justify-content: center;\n  justify-content: center;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  -webkit-align-items: center;\n  -moz-align-items: center;\n  align-items: center;\n}\n\nion-infinite-scroll .icon {\n  color: #666666;\n  font-size: 30px;\n  color: #666666;\n}\n\nion-infinite-scroll:not(.active) .spinner,\nion-infinite-scroll:not(.active) .icon:before {\n  display: none;\n}\n\n.overflow-scroll {\n  overflow-x: hidden;\n  overflow-y: scroll;\n  -webkit-overflow-scrolling: touch;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  position: absolute;\n}\n\n.overflow-scroll .scroll {\n  position: static;\n  height: 100%;\n  -webkit-transform: translate3d(0, 0, 0);\n}\n\n/* If you change these, change platform.scss as well */\n\n.has-header {\n  top: 44px;\n}\n\n.no-header {\n  top: 0;\n}\n\n.has-subheader {\n  top: 88px;\n}\n\n.has-tabs-top {\n  top: 93px;\n}\n\n.has-header.has-subheader.has-tabs-top {\n  top: 137px;\n}\n\n.has-footer {\n  bottom: 44px;\n}\n\n.has-subfooter {\n  bottom: 88px;\n}\n\n.has-tabs,\n.bar-footer.has-tabs {\n  bottom: 49px;\n}\n\n.has-tabs.pane,\n.bar-footer.has-tabs.pane {\n  bottom: 49px;\n  height: auto;\n}\n\n.has-footer.has-tabs {\n  bottom: 93px;\n}\n\n.pane {\n  -webkit-transform: translate3d(0, 0, 0);\n  transform: translate3d(0, 0, 0);\n  -webkit-transition-duration: 0;\n  transition-duration: 0;\n  z-index: 1;\n}\n\n.view {\n  z-index: 1;\n}\n\n.pane,\n.view {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: #fff;\n  overflow: hidden;\n}\n\n.view-container {\n  position: absolute;\n  display: block;\n  width: 100%;\n  height: 100%;\n}\n\n/**\n * Typography\n * --------------------------------------------------\n */\n\np {\n  margin: 0 0 11px;\n}\n\nsmall {\n  font-size: 85%;\n}\n\ncite {\n  font-style: normal;\n}\n\n.text-left {\n  text-align: left;\n}\n\n.text-right {\n  text-align: right;\n}\n\n.text-center {\n  text-align: center;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\n.h1,\n.h2,\n.h3,\n.h4,\n.h5,\n.h6 {\n  color: #968D78;\n  font-weight: 500;\n  font-family: \"Titillium Web\", sans-serif;\n  line-height: 1.2;\n}\n\nh1 small,\nh2 small,\nh3 small,\nh4 small,\nh5 small,\nh6 small,\n.h1 small,\n.h2 small,\n.h3 small,\n.h4 small,\n.h5 small,\n.h6 small {\n  font-weight: normal;\n  line-height: 1;\n}\n\nh1,\n.h1,\nh2,\n.h2,\nh3,\n.h3 {\n  margin-top: 22px;\n  margin-bottom: 11px;\n}\n\nh1:first-child,\n.h1:first-child,\nh2:first-child,\n.h2:first-child,\nh3:first-child,\n.h3:first-child {\n  margin-top: 0;\n}\n\nh1 + h1,\nh1 + .h1,\nh1 + h2,\nh1 + .h2,\nh1 + h3,\nh1 + .h3,\n.h1 + h1,\n.h1 + .h1,\n.h1 + h2,\n.h1 + .h2,\n.h1 + h3,\n.h1 + .h3,\nh2 + h1,\nh2 + .h1,\nh2 + h2,\nh2 + .h2,\nh2 + h3,\nh2 + .h3,\n.h2 + h1,\n.h2 + .h1,\n.h2 + h2,\n.h2 + .h2,\n.h2 + h3,\n.h2 + .h3,\nh3 + h1,\nh3 + .h1,\nh3 + h2,\nh3 + .h2,\nh3 + h3,\nh3 + .h3,\n.h3 + h1,\n.h3 + .h1,\n.h3 + h2,\n.h3 + .h2,\n.h3 + h3,\n.h3 + .h3 {\n  margin-top: 11px;\n}\n\nh4,\n.h4,\nh5,\n.h5,\nh6,\n.h6 {\n  margin-top: 11px;\n  margin-bottom: 11px;\n}\n\nh1,\n.h1 {\n  font-size: 41px;\n}\n\nh2,\n.h2 {\n  font-size: 34px;\n}\n\nh3,\n.h3 {\n  font-size: 28px;\n}\n\nh4,\n.h4 {\n  font-size: 20px;\n}\n\nh5,\n.h5 {\n  font-size: 16px;\n}\n\nh6,\n.h6 {\n  font-size: 14px;\n}\n\nh1 small,\n.h1 small {\n  font-size: 28px;\n}\n\nh2 small,\n.h2 small {\n  font-size: 20px;\n}\n\nh3 small,\n.h3 small,\nh4 small,\n.h4 small {\n  font-size: 16px;\n}\n\ndl {\n  margin-bottom: 22px;\n}\n\ndt,\ndd {\n  line-height: 1.42857;\n}\n\ndt {\n  font-weight: bold;\n}\n\nblockquote {\n  margin: 0 0 22px;\n  padding: 11px 22px;\n  border-left: 5px solid gray;\n}\n\nblockquote p {\n  font-weight: 300;\n  font-size: 20px;\n  line-height: 1.25;\n}\n\nblockquote p:last-child {\n  margin-bottom: 0;\n}\n\nblockquote small {\n  display: block;\n  line-height: 1.42857;\n}\n\nblockquote small:before {\n  content: '\\2014   \\A0';\n}\n\nq:before,\nq:after,\nblockquote:before,\nblockquote:after {\n  content: \"\";\n}\n\naddress {\n  display: block;\n  margin-bottom: 22px;\n  font-style: normal;\n  line-height: 1.42857;\n}\n\na.subdued {\n  padding-right: 10px;\n  color: #888;\n  text-decoration: none;\n}\n\na.subdued:hover {\n  text-decoration: none;\n}\n\na.subdued:last-child {\n  padding-right: 0;\n}\n\n/**\n * Action Sheets\n * --------------------------------------------------\n */\n\n.action-sheet-backdrop {\n  -webkit-transition: background-color 150ms ease-in-out;\n  transition: background-color 150ms ease-in-out;\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 11;\n  width: 100%;\n  height: 100%;\n  background-color: transparent;\n}\n\n.action-sheet-backdrop.active {\n  background-color: rgba(0, 0, 0, 0.4);\n}\n\n.action-sheet-wrapper {\n  -webkit-transform: translate3d(0, 100%, 0);\n  transform: translate3d(0, 100%, 0);\n  -webkit-transition: all cubic-bezier(0.36, 0.66, 0.04, 1) 500ms;\n  transition: all cubic-bezier(0.36, 0.66, 0.04, 1) 500ms;\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  width: 100%;\n  max-width: 500px;\n  margin: auto;\n}\n\n.action-sheet-up {\n  -webkit-transform: translate3d(0, 0, 0);\n  transform: translate3d(0, 0, 0);\n}\n\n.action-sheet {\n  margin-left: 8px;\n  margin-right: 8px;\n  width: auto;\n  z-index: 11;\n  overflow: hidden;\n}\n\n.action-sheet .button,\n.action-sheet .button-pill {\n  display: block;\n  padding: 1px;\n  width: 100%;\n  border-radius: 0;\n  border-color: #d1d3d6;\n  background-color: transparent;\n  color: #007aff;\n  font-size: 21px;\n}\n\n.action-sheet .button:hover,\n.action-sheet .button-pill:hover {\n  color: #007aff;\n}\n\n.action-sheet .button.destructive,\n.action-sheet .destructive.button-pill {\n  color: #ff3b30;\n}\n\n.action-sheet .button.destructive:hover,\n.action-sheet .destructive.button-pill:hover {\n  color: #ff3b30;\n}\n\n.action-sheet .button.active,\n.action-sheet .active.button-pill,\n.action-sheet .button.activated,\n.action-sheet .activated.button-pill {\n  box-shadow: none;\n  border-color: #d1d3d6;\n  color: #007aff;\n  background: #e4e5e7;\n}\n\n.action-sheet-has-icons .icon {\n  position: absolute;\n  left: 16px;\n}\n\n.action-sheet-title {\n  padding: 16px;\n  color: #8f8f8f;\n  text-align: center;\n  font-size: 13px;\n}\n\n.action-sheet-group {\n  margin-bottom: 8px;\n  border-radius: 4px;\n  background-color: #fff;\n  overflow: hidden;\n}\n\n.action-sheet-group .button,\n.action-sheet-group .button-pill {\n  border-width: 1px 0px 0px 0px;\n}\n\n.action-sheet-group .button:first-child:last-child,\n.action-sheet-group .button-pill:first-child:last-child {\n  border-width: 0;\n}\n\n.action-sheet-options {\n  background: #f1f2f3;\n}\n\n.action-sheet-cancel .button,\n.action-sheet-cancel .button-pill {\n  font-weight: 500;\n}\n\n.action-sheet-open {\n  pointer-events: none;\n}\n\n.action-sheet-open.modal-open .modal {\n  pointer-events: none;\n}\n\n.action-sheet-open .action-sheet-backdrop {\n  pointer-events: auto;\n}\n\n.platform-android .action-sheet-backdrop.active {\n  background-color: rgba(0, 0, 0, 0.2);\n}\n\n.platform-android .action-sheet {\n  margin: 0;\n}\n\n.platform-android .action-sheet .action-sheet-title,\n.platform-android .action-sheet .button,\n.platform-android .action-sheet .button-pill {\n  text-align: left;\n  border-color: transparent;\n  font-size: 16px;\n  color: inherit;\n}\n\n.platform-android .action-sheet .action-sheet-title {\n  font-size: 14px;\n  padding: 16px;\n  color: #666;\n}\n\n.platform-android .action-sheet .button.active,\n.platform-android .action-sheet .active.button-pill,\n.platform-android .action-sheet .button.activated,\n.platform-android .action-sheet .activated.button-pill {\n  background: #e8e8e8;\n}\n\n.platform-android .action-sheet-group {\n  margin: 0;\n  border-radius: 0;\n  background-color: #fafafa;\n}\n\n.platform-android .action-sheet-cancel {\n  display: none;\n}\n\n.platform-android .action-sheet-has-icons .button,\n.platform-android .action-sheet-has-icons .button-pill {\n  padding-left: 56px;\n}\n\n.backdrop {\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 11;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0, 0, 0, 0.4);\n  visibility: hidden;\n  opacity: 0;\n  -webkit-transition: 0.1s opacity linear;\n  transition: 0.1s opacity linear;\n}\n\n.backdrop.visible {\n  visibility: visible;\n}\n\n.backdrop.active {\n  opacity: 1;\n}\n\n/**\n * Bar (Headers and Footers)\n * --------------------------------------------------\n */\n\n.bar {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-transform: translate3d(0, 0, 0);\n  transform: translate3d(0, 0, 0);\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  position: absolute;\n  right: 0;\n  left: 0;\n  z-index: 9;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n  padding: 5px;\n  width: 100%;\n  height: 44px;\n  border-width: 0;\n  border-style: solid;\n  border-top: 1px solid transparent;\n  border-bottom: 1px solid #ddd;\n  background-color: #00f1d3;\n  /* border-width: 1px will actually create 2 device pixels on retina */\n  /* this nifty trick sets an actual 1px border on hi-res displays */\n  background-size: 0;\n}\n\n@media (min--moz-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {\n  .bar {\n    border: none;\n    background-image: linear-gradient(0deg, #ddd, #ddd 50%, transparent 50%);\n    background-position: bottom;\n    background-size: 100% 1px;\n    background-repeat: no-repeat;\n  }\n}\n\n.bar.bar-clear {\n  border: none;\n  background: none;\n  color: #fff;\n}\n\n.bar.bar-clear .button,\n.bar.bar-clear .button-pill {\n  color: #fff;\n}\n\n.bar.bar-clear .title {\n  color: #fff;\n}\n\n.bar.item-input-inset .item-input-wrapper {\n  margin-top: -1px;\n}\n\n.bar.item-input-inset .item-input-wrapper input {\n  padding-left: 8px;\n  width: 94%;\n  height: 28px;\n  background: transparent;\n}\n\n.bar.bar-light {\n  border-color: #ddd;\n  background-color: #00f1d3;\n  background-image: linear-gradient(0deg, #ddd, #ddd 50%, transparent 50%);\n  color: #444;\n}\n\n.bar.bar-light .title {\n  color: #444;\n}\n\n.bar.bar-light.bar-footer {\n  background-image: linear-gradient(180deg, #ddd, #ddd 50%, transparent 50%);\n}\n\n.bar.bar-stable {\n  border-color: #b2b2b2;\n  background-color: #f8f8f8;\n  background-image: linear-gradient(0deg, #b2b2b2, #b2b2b2 50%, transparent 50%);\n  color: #444;\n}\n\n.bar.bar-stable .title {\n  color: #444;\n}\n\n.bar.bar-stable.bar-footer {\n  background-image: linear-gradient(180deg, #b2b2b2, #b2b2b2 50%, transparent 50%);\n}\n\n.bar.bar-positive {\n  border-color: #007163;\n  background-color: #00a490;\n  background-image: linear-gradient(0deg, #007163, #007163 50%, transparent 50%);\n  color: #fff;\n}\n\n.bar.bar-positive .title {\n  color: #fff;\n}\n\n.bar.bar-positive.bar-footer {\n  background-image: linear-gradient(180deg, #007163, #007163 50%, transparent 50%);\n}\n\n.bar.bar-calm {\n  border-color: #0a9dc7;\n  background-color: #11c1f3;\n  background-image: linear-gradient(0deg, #0a9dc7, #0a9dc7 50%, transparent 50%);\n  color: #fff;\n}\n\n.bar.bar-calm .title {\n  color: #fff;\n}\n\n.bar.bar-calm.bar-footer {\n  background-image: linear-gradient(180deg, #0a9dc7, #0a9dc7 50%, transparent 50%);\n}\n\n.bar.bar-assertive {\n  border-color: #e42112;\n  background-color: #ef473a;\n  background-image: linear-gradient(0deg, #e42112, #e42112 50%, transparent 50%);\n  color: #fff;\n}\n\n.bar.bar-assertive .title {\n  color: #fff;\n}\n\n.bar.bar-assertive.bar-footer {\n  background-image: linear-gradient(180deg, #e42112, #e42112 50%, transparent 50%);\n}\n\n.bar.bar-balanced {\n  border-color: #28a54c;\n  background-color: #33cd5f;\n  background-image: linear-gradient(0deg, #28a54c, #28a54c 50%, transparent 50%);\n  color: #fff;\n}\n\n.bar.bar-balanced .title {\n  color: #fff;\n}\n\n.bar.bar-balanced.bar-footer {\n  background-image: linear-gradient(180deg, #28a54c, #007163 50%, transparent 50%);\n}\n\n.bar.bar-energized {\n  border-color: #e6b500;\n  background-color: #ffc900;\n  background-image: linear-gradient(0deg, #e6b500, #e6b500 50%, transparent 50%);\n  color: #fff;\n}\n\n.bar.bar-energized .title {\n  color: #fff;\n}\n\n.bar.bar-energized.bar-footer {\n  background-image: linear-gradient(180deg, #e6b500, #e6b500 50%, transparent 50%);\n}\n\n.bar.bar-royal {\n  border-color: #6b46e5;\n  background-color: #886aea;\n  background-image: linear-gradient(0deg, #6b46e5, #6b46e5 50%, transparent 50%);\n  color: #fff;\n}\n\n.bar.bar-royal .title {\n  color: #fff;\n}\n\n.bar.bar-royal.bar-footer {\n  background-image: linear-gradient(180deg, #6b46e5, #6b46e5 50%, transparent 50%);\n}\n\n.bar.bar-dark {\n  border-color: #111;\n  background-color: #444444;\n  background-image: linear-gradient(0deg, #111, #111 50%, transparent 50%);\n  color: #fff;\n}\n\n.bar.bar-dark .title {\n  color: #fff;\n}\n\n.bar.bar-dark.bar-footer {\n  background-image: linear-gradient(180deg, #111, #111 50%, transparent 50%);\n}\n\n.bar .title {\n  position: absolute;\n  top: 0;\n  right: 0;\n  left: 0;\n  z-index: 0;\n  overflow: hidden;\n  margin: 0 10px;\n  min-width: 30px;\n  height: 43px;\n  text-align: center;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  font-size: 17px;\n  font-weight: 500;\n  line-height: 44px;\n}\n\n.bar .title.title-left {\n  text-align: left;\n}\n\n.bar .title.title-right {\n  text-align: right;\n}\n\n.bar .title a {\n  color: inherit;\n}\n\n.bar .button,\n.bar .button-pill {\n  z-index: 1;\n  padding: 0 8px;\n  min-width: initial;\n  min-height: 31px;\n  font-weight: 400;\n  font-size: 13px;\n  line-height: 32px;\n}\n\n.bar .button.button-icon:before,\n.bar .button-icon.button-pill:before,\n.bar .button .icon:before,\n.bar .button-pill .icon:before,\n.bar .button.icon:before,\n.bar .icon.button-pill:before,\n.bar .button.icon-left:before,\n.bar .icon-left.button-pill:before,\n.bar .button.icon-right:before,\n.bar .icon-right.button-pill:before {\n  padding-right: 2px;\n  padding-left: 2px;\n  font-size: 20px;\n  line-height: 32px;\n}\n\n.bar .button.button-icon,\n.bar .button-icon.button-pill {\n  font-size: 17px;\n}\n\n.bar .button.button-icon .icon:before,\n.bar .button-icon.button-pill .icon:before,\n.bar .button.button-icon:before,\n.bar .button-icon.button-pill:before,\n.bar .button.button-icon.icon-left:before,\n.bar .button-icon.icon-left.button-pill:before,\n.bar .button.button-icon.icon-right:before,\n.bar .button-icon.icon-right.button-pill:before {\n  vertical-align: top;\n  font-size: 32px;\n  line-height: 32px;\n}\n\n.bar .button.button-clear,\n.bar .button-clear.button-pill {\n  padding-right: 2px;\n  padding-left: 2px;\n  font-weight: 300;\n  font-size: 17px;\n}\n\n.bar .button.button-clear .icon:before,\n.bar .button-clear.button-pill .icon:before,\n.bar .button.button-clear.icon:before,\n.bar .button-clear.icon.button-pill:before,\n.bar .button.button-clear.icon-left:before,\n.bar .button-clear.icon-left.button-pill:before,\n.bar .button.button-clear.icon-right:before,\n.bar .button-clear.icon-right.button-pill:before {\n  font-size: 32px;\n  line-height: 32px;\n}\n\n.bar .button.back-button,\n.bar .back-button.button-pill {\n  display: block;\n  margin-right: 5px;\n  padding: 0;\n  white-space: nowrap;\n  font-weight: 400;\n}\n\n.bar .button.back-button.active,\n.bar .back-button.active.button-pill,\n.bar .button.back-button.activated,\n.bar .back-button.activated.button-pill {\n  opacity: 0.2;\n}\n\n.bar .button-bar > .button,\n.bar .button-bar > .button-pill,\n.bar .buttons > .button,\n.bar .buttons > .button-pill {\n  min-height: 31px;\n  line-height: 32px;\n}\n\n.bar .button-bar + .button,\n.bar .button-bar + .button-pill,\n.bar .button + .button-bar,\n.bar .button-pill + .button-bar {\n  margin-left: 5px;\n}\n\n.bar .buttons,\n.bar .buttons.primary-buttons,\n.bar .buttons.secondary-buttons {\n  display: inherit;\n}\n\n.bar .buttons span {\n  display: inline-block;\n}\n\n.bar .buttons-left span {\n  margin-right: 5px;\n  display: inherit;\n}\n\n.bar .buttons-right span {\n  margin-left: 5px;\n  display: inherit;\n}\n\n.bar .title + .button:last-child,\n.bar .title + .button-pill:last-child,\n.bar > .button + .button:last-child,\n.bar > .button-pill + .button:last-child,\n.bar > .button + .button-pill:last-child,\n.bar > .button-pill + .button-pill:last-child,\n.bar > .button.pull-right,\n.bar > .pull-right.button-pill,\n.bar .buttons.pull-right,\n.bar .title + .buttons {\n  position: absolute;\n  top: 5px;\n  right: 5px;\n  bottom: 5px;\n}\n\n.platform-android .nav-bar-has-subheader .bar {\n  background-image: none;\n}\n\n.platform-android .bar .back-button .icon:before {\n  font-size: 24px;\n}\n\n.platform-android .bar .title {\n  font-size: 19px;\n  line-height: 44px;\n}\n\n.bar-light .button,\n.bar-light .button-pill {\n  border-color: #ddd;\n  background-color: #00f1d3;\n  color: #444;\n}\n\n.bar-light .button:hover,\n.bar-light .button-pill:hover {\n  color: #444;\n  text-decoration: none;\n}\n\n.bar-light .button.active,\n.bar-light .active.button-pill,\n.bar-light .button.activated,\n.bar-light .activated.button-pill {\n  border-color: #ccc;\n  background-color: #fafafa;\n  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\n.bar-light .button.button-clear,\n.bar-light .button-clear.button-pill {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  color: #444;\n  font-size: 17px;\n}\n\n.bar-light .button.button-icon,\n.bar-light .button-icon.button-pill {\n  border-color: transparent;\n  background: none;\n}\n\n.bar-stable .button,\n.bar-stable .button-pill {\n  border-color: #b2b2b2;\n  background-color: #f8f8f8;\n  color: #444;\n}\n\n.bar-stable .button:hover,\n.bar-stable .button-pill:hover {\n  color: #444;\n  text-decoration: none;\n}\n\n.bar-stable .button.active,\n.bar-stable .active.button-pill,\n.bar-stable .button.activated,\n.bar-stable .activated.button-pill {\n  border-color: #a2a2a2;\n  background-color: #e5e5e5;\n  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\n.bar-stable .button.button-clear,\n.bar-stable .button-clear.button-pill {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  color: #444;\n  font-size: 17px;\n}\n\n.bar-stable .button.button-icon,\n.bar-stable .button-icon.button-pill {\n  border-color: transparent;\n  background: none;\n}\n\n.bar-positive .button,\n.bar-positive .button-pill {\n  border-color: #007163;\n  background-color: #00a490;\n  color: #fff;\n}\n\n.bar-positive .button:hover,\n.bar-positive .button-pill:hover {\n  color: #fff;\n  text-decoration: none;\n}\n\n.bar-positive .button.active,\n.bar-positive .active.button-pill,\n.bar-positive .button.activated,\n.bar-positive .activated.button-pill {\n  border-color: #007163;\n  background-color: #007163;\n  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\n.bar-positive .button.button-clear,\n.bar-positive .button-clear.button-pill {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  color: #fff;\n  font-size: 17px;\n}\n\n.bar-positive .button.button-icon,\n.bar-positive .button-icon.button-pill {\n  border-color: transparent;\n  background: none;\n}\n\n.bar-calm .button,\n.bar-calm .button-pill {\n  border-color: #0a9dc7;\n  background-color: #11c1f3;\n  color: #fff;\n}\n\n.bar-calm .button:hover,\n.bar-calm .button-pill:hover {\n  color: #fff;\n  text-decoration: none;\n}\n\n.bar-calm .button.active,\n.bar-calm .active.button-pill,\n.bar-calm .button.activated,\n.bar-calm .activated.button-pill {\n  border-color: #0a9dc7;\n  background-color: #0a9dc7;\n  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\n.bar-calm .button.button-clear,\n.bar-calm .button-clear.button-pill {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  color: #fff;\n  font-size: 17px;\n}\n\n.bar-calm .button.button-icon,\n.bar-calm .button-icon.button-pill {\n  border-color: transparent;\n  background: none;\n}\n\n.bar-assertive .button,\n.bar-assertive .button-pill {\n  border-color: #e42112;\n  background-color: #ef473a;\n  color: #fff;\n}\n\n.bar-assertive .button:hover,\n.bar-assertive .button-pill:hover {\n  color: #fff;\n  text-decoration: none;\n}\n\n.bar-assertive .button.active,\n.bar-assertive .active.button-pill,\n.bar-assertive .button.activated,\n.bar-assertive .activated.button-pill {\n  border-color: #e42112;\n  background-color: #e42112;\n  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\n.bar-assertive .button.button-clear,\n.bar-assertive .button-clear.button-pill {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  color: #fff;\n  font-size: 17px;\n}\n\n.bar-assertive .button.button-icon,\n.bar-assertive .button-icon.button-pill {\n  border-color: transparent;\n  background: none;\n}\n\n.bar-balanced .button,\n.bar-balanced .button-pill {\n  border-color: #28a54c;\n  background-color: #33cd5f;\n  color: #fff;\n}\n\n.bar-balanced .button:hover,\n.bar-balanced .button-pill:hover {\n  color: #fff;\n  text-decoration: none;\n}\n\n.bar-balanced .button.active,\n.bar-balanced .active.button-pill,\n.bar-balanced .button.activated,\n.bar-balanced .activated.button-pill {\n  border-color: #28a54c;\n  background-color: #28a54c;\n  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\n.bar-balanced .button.button-clear,\n.bar-balanced .button-clear.button-pill {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  color: #fff;\n  font-size: 17px;\n}\n\n.bar-balanced .button.button-icon,\n.bar-balanced .button-icon.button-pill {\n  border-color: transparent;\n  background: none;\n}\n\n.bar-energized .button,\n.bar-energized .button-pill {\n  border-color: #e6b500;\n  background-color: #ffc900;\n  color: #fff;\n}\n\n.bar-energized .button:hover,\n.bar-energized .button-pill:hover {\n  color: #fff;\n  text-decoration: none;\n}\n\n.bar-energized .button.active,\n.bar-energized .active.button-pill,\n.bar-energized .button.activated,\n.bar-energized .activated.button-pill {\n  border-color: #e6b500;\n  background-color: #e6b500;\n  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\n.bar-energized .button.button-clear,\n.bar-energized .button-clear.button-pill {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  color: #fff;\n  font-size: 17px;\n}\n\n.bar-energized .button.button-icon,\n.bar-energized .button-icon.button-pill {\n  border-color: transparent;\n  background: none;\n}\n\n.bar-royal .button,\n.bar-royal .button-pill {\n  border-color: #6b46e5;\n  background-color: #886aea;\n  color: #fff;\n}\n\n.bar-royal .button:hover,\n.bar-royal .button-pill:hover {\n  color: #fff;\n  text-decoration: none;\n}\n\n.bar-royal .button.active,\n.bar-royal .active.button-pill,\n.bar-royal .button.activated,\n.bar-royal .activated.button-pill {\n  border-color: #6b46e5;\n  background-color: #6b46e5;\n  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\n.bar-royal .button.button-clear,\n.bar-royal .button-clear.button-pill {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  color: #fff;\n  font-size: 17px;\n}\n\n.bar-royal .button.button-icon,\n.bar-royal .button-icon.button-pill {\n  border-color: transparent;\n  background: none;\n}\n\n.bar-dark .button,\n.bar-dark .button-pill {\n  border-color: #111;\n  background-color: #444444;\n  color: #fff;\n}\n\n.bar-dark .button:hover,\n.bar-dark .button-pill:hover {\n  color: #fff;\n  text-decoration: none;\n}\n\n.bar-dark .button.active,\n.bar-dark .active.button-pill,\n.bar-dark .button.activated,\n.bar-dark .activated.button-pill {\n  border-color: #000;\n  background-color: #262626;\n  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\n.bar-dark .button.button-clear,\n.bar-dark .button-clear.button-pill {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  color: #fff;\n  font-size: 17px;\n}\n\n.bar-dark .button.button-icon,\n.bar-dark .button-icon.button-pill {\n  border-color: transparent;\n  background: none;\n}\n\n.bar-header {\n  top: 0;\n  border-top-width: 0;\n  border-bottom-width: 1px;\n}\n\n.bar-header.has-tabs-top {\n  border-bottom-width: 0px;\n  background-image: none;\n}\n\n.tabs-top .bar-header {\n  border-bottom-width: 0px;\n  background-image: none;\n}\n\n.bar-footer {\n  bottom: 0;\n  border-top-width: 1px;\n  border-bottom-width: 0;\n  background-position: top;\n  height: 44px;\n}\n\n.bar-footer.item-input-inset {\n  position: absolute;\n}\n\n.bar-tabs {\n  padding: 0;\n}\n\n.bar-subheader {\n  top: 44px;\n  display: block;\n  height: 44px;\n}\n\n.bar-subfooter {\n  bottom: 44px;\n  display: block;\n  height: 44px;\n}\n\n.nav-bar-block {\n  position: absolute;\n  top: 0;\n  right: 0;\n  left: 0;\n  z-index: 9;\n}\n\n.bar .back-button.hide,\n.bar .buttons .hide {\n  display: none;\n}\n\n.nav-bar-tabs-top .bar {\n  background-image: none;\n}\n\n/**\n * Tabs\n * --------------------------------------------------\n * A navigation bar with any number of tab items supported.\n */\n\n.tabs {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-direction: normal;\n  -webkit-box-orient: horizontal;\n  -webkit-flex-direction: horizontal;\n  -moz-flex-direction: horizontal;\n  -ms-flex-direction: horizontal;\n  flex-direction: horizontal;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  -webkit-justify-content: center;\n  -moz-justify-content: center;\n  justify-content: center;\n  -webkit-transform: translate3d(0, 0, 0);\n  transform: translate3d(0, 0, 0);\n  border-color: #b2b2b2;\n  background-color: #f8f8f8;\n  background-image: linear-gradient(0deg, #b2b2b2, #b2b2b2 50%, transparent 50%);\n  color: #444;\n  position: absolute;\n  bottom: 0;\n  z-index: 5;\n  width: 100%;\n  height: 49px;\n  border-style: solid;\n  border-top-width: 1px;\n  background-size: 0;\n  line-height: 49px;\n}\n\n.tabs .tab-item .badge {\n  background-color: #444;\n  color: #f8f8f8;\n}\n\n@media (min--moz-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {\n  .tabs {\n    padding-top: 2px;\n    border-top: none !important;\n    border-bottom: none;\n    background-position: top;\n    background-size: 100% 1px;\n    background-repeat: no-repeat;\n  }\n}\n\n/* Allow parent element of tabs to define color, or just the tab itself */\n\n.tabs-light > .tabs,\n.tabs.tabs-light {\n  border-color: #ddd;\n  background-color: #00F1D3;\n  background-image: linear-gradient(0deg, #ddd, #ddd 50%, transparent 50%);\n  color: #444;\n}\n\n.tabs-light > .tabs .tab-item .badge,\n.tabs.tabs-light .tab-item .badge {\n  background-color: #444;\n  color: #00F1D3;\n}\n\n.tabs-stable > .tabs,\n.tabs.tabs-stable {\n  border-color: #b2b2b2;\n  background-color: #f8f8f8;\n  background-image: linear-gradient(0deg, #b2b2b2, #b2b2b2 50%, transparent 50%);\n  color: #444;\n}\n\n.tabs-stable > .tabs .tab-item .badge,\n.tabs.tabs-stable .tab-item .badge {\n  background-color: #444;\n  color: #f8f8f8;\n}\n\n.tabs-positive > .tabs,\n.tabs.tabs-positive {\n  border-color: #007163;\n  background-color: #00A490;\n  background-image: linear-gradient(0deg, #007163, #007163 50%, transparent 50%);\n  color: #fff;\n}\n\n.tabs-positive > .tabs .tab-item .badge,\n.tabs.tabs-positive .tab-item .badge {\n  background-color: #fff;\n  color: #00A490;\n}\n\n.tabs-calm > .tabs,\n.tabs.tabs-calm {\n  border-color: #0a9dc7;\n  background-color: #11c1f3;\n  background-image: linear-gradient(0deg, #0a9dc7, #0a9dc7 50%, transparent 50%);\n  color: #fff;\n}\n\n.tabs-calm > .tabs .tab-item .badge,\n.tabs.tabs-calm .tab-item .badge {\n  background-color: #fff;\n  color: #11c1f3;\n}\n\n.tabs-assertive > .tabs,\n.tabs.tabs-assertive {\n  border-color: #e42112;\n  background-color: #ef473a;\n  background-image: linear-gradient(0deg, #e42112, #e42112 50%, transparent 50%);\n  color: #fff;\n}\n\n.tabs-assertive > .tabs .tab-item .badge,\n.tabs.tabs-assertive .tab-item .badge {\n  background-color: #fff;\n  color: #ef473a;\n}\n\n.tabs-balanced > .tabs,\n.tabs.tabs-balanced {\n  border-color: #28a54c;\n  background-color: #33cd5f;\n  background-image: linear-gradient(0deg, #28a54c, #28a54c 50%, transparent 50%);\n  color: #fff;\n}\n\n.tabs-balanced > .tabs .tab-item .badge,\n.tabs.tabs-balanced .tab-item .badge {\n  background-color: #fff;\n  color: #33cd5f;\n}\n\n.tabs-energized > .tabs,\n.tabs.tabs-energized {\n  border-color: #e6b500;\n  background-color: #ffc900;\n  background-image: linear-gradient(0deg, #e6b500, #e6b500 50%, transparent 50%);\n  color: #fff;\n}\n\n.tabs-energized > .tabs .tab-item .badge,\n.tabs.tabs-energized .tab-item .badge {\n  background-color: #fff;\n  color: #ffc900;\n}\n\n.tabs-royal > .tabs,\n.tabs.tabs-royal {\n  border-color: #6b46e5;\n  background-color: #886aea;\n  background-image: linear-gradient(0deg, #6b46e5, #6b46e5 50%, transparent 50%);\n  color: #fff;\n}\n\n.tabs-royal > .tabs .tab-item .badge,\n.tabs.tabs-royal .tab-item .badge {\n  background-color: #fff;\n  color: #886aea;\n}\n\n.tabs-dark > .tabs,\n.tabs.tabs-dark {\n  border-color: #111;\n  background-color: #444;\n  background-image: linear-gradient(0deg, #111, #111 50%, transparent 50%);\n  color: #fff;\n}\n\n.tabs-dark > .tabs .tab-item .badge,\n.tabs.tabs-dark .tab-item .badge {\n  background-color: #fff;\n  color: #444;\n}\n\n.tabs-striped .tabs {\n  background-color: white;\n  background-image: none;\n  border: none;\n  border-bottom: 1px solid #ddd;\n  padding-top: 2px;\n}\n\n.tabs-striped .tab-item.tab-item-active,\n.tabs-striped .tab-item.active,\n.tabs-striped .tab-item.activated {\n  margin-top: -2px;\n  border-style: solid;\n  border-width: 2px 0 0 0;\n  border-color: #444;\n}\n\n.tabs-striped .tab-item.tab-item-active .badge,\n.tabs-striped .tab-item.active .badge,\n.tabs-striped .tab-item.activated .badge {\n  top: 2px;\n  opacity: 1;\n}\n\n.tabs-striped.tabs-light .tabs {\n  background-color: #00F1D3;\n}\n\n.tabs-striped.tabs-light .tab-item {\n  color: rgba(68, 68, 68, 0.4);\n  opacity: 1;\n}\n\n.tabs-striped.tabs-light .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-striped.tabs-light .tab-item.tab-item-active,\n.tabs-striped.tabs-light .tab-item.active,\n.tabs-striped.tabs-light .tab-item.activated {\n  margin-top: -2px;\n  color: #444;\n  border-style: solid;\n  border-width: 2px 0 0 0;\n  border-color: #444;\n}\n\n.tabs-striped.tabs-top .tab-item.tab-item-active .badge,\n.tabs-striped.tabs-top .tab-item.active .badge,\n.tabs-striped.tabs-top .tab-item.activated .badge {\n  top: 4%;\n}\n\n.tabs-striped.tabs-stable .tabs {\n  background-color: #f8f8f8;\n}\n\n.tabs-striped.tabs-stable .tab-item {\n  color: rgba(68, 68, 68, 0.4);\n  opacity: 1;\n}\n\n.tabs-striped.tabs-stable .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-striped.tabs-stable .tab-item.tab-item-active,\n.tabs-striped.tabs-stable .tab-item.active,\n.tabs-striped.tabs-stable .tab-item.activated {\n  margin-top: -2px;\n  color: #444;\n  border-style: solid;\n  border-width: 2px 0 0 0;\n  border-color: #444;\n}\n\n.tabs-striped.tabs-top .tab-item.tab-item-active .badge,\n.tabs-striped.tabs-top .tab-item.active .badge,\n.tabs-striped.tabs-top .tab-item.activated .badge {\n  top: 4%;\n}\n\n.tabs-striped.tabs-positive .tabs {\n  background-color: #00A490;\n}\n\n.tabs-striped.tabs-positive .tab-item {\n  color: rgba(0, 241, 211, 0.4);\n  opacity: 1;\n}\n\n.tabs-striped.tabs-positive .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-striped.tabs-positive .tab-item.tab-item-active,\n.tabs-striped.tabs-positive .tab-item.active,\n.tabs-striped.tabs-positive .tab-item.activated {\n  margin-top: -2px;\n  color: #00F1D3;\n  border-style: solid;\n  border-width: 2px 0 0 0;\n  border-color: #00F1D3;\n}\n\n.tabs-striped.tabs-top .tab-item.tab-item-active .badge,\n.tabs-striped.tabs-top .tab-item.active .badge,\n.tabs-striped.tabs-top .tab-item.activated .badge {\n  top: 4%;\n}\n\n.tabs-striped.tabs-calm .tabs {\n  background-color: #11c1f3;\n}\n\n.tabs-striped.tabs-calm .tab-item {\n  color: rgba(0, 241, 211, 0.4);\n  opacity: 1;\n}\n\n.tabs-striped.tabs-calm .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-striped.tabs-calm .tab-item.tab-item-active,\n.tabs-striped.tabs-calm .tab-item.active,\n.tabs-striped.tabs-calm .tab-item.activated {\n  margin-top: -2px;\n  color: #00F1D3;\n  border-style: solid;\n  border-width: 2px 0 0 0;\n  border-color: #00F1D3;\n}\n\n.tabs-striped.tabs-top .tab-item.tab-item-active .badge,\n.tabs-striped.tabs-top .tab-item.active .badge,\n.tabs-striped.tabs-top .tab-item.activated .badge {\n  top: 4%;\n}\n\n.tabs-striped.tabs-assertive .tabs {\n  background-color: #ef473a;\n}\n\n.tabs-striped.tabs-assertive .tab-item {\n  color: rgba(0, 241, 211, 0.4);\n  opacity: 1;\n}\n\n.tabs-striped.tabs-assertive .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-striped.tabs-assertive .tab-item.tab-item-active,\n.tabs-striped.tabs-assertive .tab-item.active,\n.tabs-striped.tabs-assertive .tab-item.activated {\n  margin-top: -2px;\n  color: #00F1D3;\n  border-style: solid;\n  border-width: 2px 0 0 0;\n  border-color: #00F1D3;\n}\n\n.tabs-striped.tabs-top .tab-item.tab-item-active .badge,\n.tabs-striped.tabs-top .tab-item.active .badge,\n.tabs-striped.tabs-top .tab-item.activated .badge {\n  top: 4%;\n}\n\n.tabs-striped.tabs-balanced .tabs {\n  background-color: #33cd5f;\n}\n\n.tabs-striped.tabs-balanced .tab-item {\n  color: rgba(0, 241, 211, 0.4);\n  opacity: 1;\n}\n\n.tabs-striped.tabs-balanced .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-striped.tabs-balanced .tab-item.tab-item-active,\n.tabs-striped.tabs-balanced .tab-item.active,\n.tabs-striped.tabs-balanced .tab-item.activated {\n  margin-top: -2px;\n  color: #00F1D3;\n  border-style: solid;\n  border-width: 2px 0 0 0;\n  border-color: #00F1D3;\n}\n\n.tabs-striped.tabs-top .tab-item.tab-item-active .badge,\n.tabs-striped.tabs-top .tab-item.active .badge,\n.tabs-striped.tabs-top .tab-item.activated .badge {\n  top: 4%;\n}\n\n.tabs-striped.tabs-energized .tabs {\n  background-color: #ffc900;\n}\n\n.tabs-striped.tabs-energized .tab-item {\n  color: rgba(0, 241, 211, 0.4);\n  opacity: 1;\n}\n\n.tabs-striped.tabs-energized .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-striped.tabs-energized .tab-item.tab-item-active,\n.tabs-striped.tabs-energized .tab-item.active,\n.tabs-striped.tabs-energized .tab-item.activated {\n  margin-top: -2px;\n  color: #00F1D3;\n  border-style: solid;\n  border-width: 2px 0 0 0;\n  border-color: #00F1D3;\n}\n\n.tabs-striped.tabs-top .tab-item.tab-item-active .badge,\n.tabs-striped.tabs-top .tab-item.active .badge,\n.tabs-striped.tabs-top .tab-item.activated .badge {\n  top: 4%;\n}\n\n.tabs-striped.tabs-royal .tabs {\n  background-color: #886aea;\n}\n\n.tabs-striped.tabs-royal .tab-item {\n  color: rgba(0, 241, 211, 0.4);\n  opacity: 1;\n}\n\n.tabs-striped.tabs-royal .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-striped.tabs-royal .tab-item.tab-item-active,\n.tabs-striped.tabs-royal .tab-item.active,\n.tabs-striped.tabs-royal .tab-item.activated {\n  margin-top: -2px;\n  color: #00F1D3;\n  border-style: solid;\n  border-width: 2px 0 0 0;\n  border-color: #00F1D3;\n}\n\n.tabs-striped.tabs-top .tab-item.tab-item-active .badge,\n.tabs-striped.tabs-top .tab-item.active .badge,\n.tabs-striped.tabs-top .tab-item.activated .badge {\n  top: 4%;\n}\n\n.tabs-striped.tabs-dark .tabs {\n  background-color: #444;\n}\n\n.tabs-striped.tabs-dark .tab-item {\n  color: rgba(0, 241, 211, 0.4);\n  opacity: 1;\n}\n\n.tabs-striped.tabs-dark .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-striped.tabs-dark .tab-item.tab-item-active,\n.tabs-striped.tabs-dark .tab-item.active,\n.tabs-striped.tabs-dark .tab-item.activated {\n  margin-top: -2px;\n  color: #00F1D3;\n  border-style: solid;\n  border-width: 2px 0 0 0;\n  border-color: #00F1D3;\n}\n\n.tabs-striped.tabs-top .tab-item.tab-item-active .badge,\n.tabs-striped.tabs-top .tab-item.active .badge,\n.tabs-striped.tabs-top .tab-item.activated .badge {\n  top: 4%;\n}\n\n.tabs-striped.tabs-background-light .tabs {\n  background-color: #00F1D3;\n  background-image: none;\n}\n\n.tabs-striped.tabs-background-stable .tabs {\n  background-color: #f8f8f8;\n  background-image: none;\n}\n\n.tabs-striped.tabs-background-positive .tabs {\n  background-color: #00A490;\n  background-image: none;\n}\n\n.tabs-striped.tabs-background-calm .tabs {\n  background-color: #11c1f3;\n  background-image: none;\n}\n\n.tabs-striped.tabs-background-assertive .tabs {\n  background-color: #ef473a;\n  background-image: none;\n}\n\n.tabs-striped.tabs-background-balanced .tabs {\n  background-color: #33cd5f;\n  background-image: none;\n}\n\n.tabs-striped.tabs-background-energized .tabs {\n  background-color: #ffc900;\n  background-image: none;\n}\n\n.tabs-striped.tabs-background-royal .tabs {\n  background-color: #886aea;\n  background-image: none;\n}\n\n.tabs-striped.tabs-background-dark .tabs {\n  background-color: #444;\n  background-image: none;\n}\n\n.tabs-striped.tabs-color-light .tab-item {\n  color: rgba(0, 241, 211, 0.4);\n  opacity: 1;\n}\n\n.tabs-striped.tabs-color-light .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-striped.tabs-color-light .tab-item.tab-item-active,\n.tabs-striped.tabs-color-light .tab-item.active,\n.tabs-striped.tabs-color-light .tab-item.activated {\n  margin-top: -2px;\n  color: #00F1D3;\n  border: 0 solid #00F1D3;\n  border-top-width: 2px;\n}\n\n.tabs-striped.tabs-color-light .tab-item.tab-item-active .badge,\n.tabs-striped.tabs-color-light .tab-item.active .badge,\n.tabs-striped.tabs-color-light .tab-item.activated .badge {\n  top: 2px;\n  opacity: 1;\n}\n\n.tabs-striped.tabs-color-stable .tab-item {\n  color: rgba(248, 248, 248, 0.4);\n  opacity: 1;\n}\n\n.tabs-striped.tabs-color-stable .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-striped.tabs-color-stable .tab-item.tab-item-active,\n.tabs-striped.tabs-color-stable .tab-item.active,\n.tabs-striped.tabs-color-stable .tab-item.activated {\n  margin-top: -2px;\n  color: #f8f8f8;\n  border: 0 solid #f8f8f8;\n  border-top-width: 2px;\n}\n\n.tabs-striped.tabs-color-stable .tab-item.tab-item-active .badge,\n.tabs-striped.tabs-color-stable .tab-item.active .badge,\n.tabs-striped.tabs-color-stable .tab-item.activated .badge {\n  top: 2px;\n  opacity: 1;\n}\n\n.tabs-striped.tabs-color-positive .tab-item {\n  color: rgba(0, 164, 144, 0.4);\n  opacity: 1;\n}\n\n.tabs-striped.tabs-color-positive .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-striped.tabs-color-positive .tab-item.tab-item-active,\n.tabs-striped.tabs-color-positive .tab-item.active,\n.tabs-striped.tabs-color-positive .tab-item.activated {\n  margin-top: -2px;\n  color: #00A490;\n  border: 0 solid #00A490;\n  border-top-width: 2px;\n}\n\n.tabs-striped.tabs-color-positive .tab-item.tab-item-active .badge,\n.tabs-striped.tabs-color-positive .tab-item.active .badge,\n.tabs-striped.tabs-color-positive .tab-item.activated .badge {\n  top: 2px;\n  opacity: 1;\n}\n\n.tabs-striped.tabs-color-calm .tab-item {\n  color: rgba(17, 193, 243, 0.4);\n  opacity: 1;\n}\n\n.tabs-striped.tabs-color-calm .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-striped.tabs-color-calm .tab-item.tab-item-active,\n.tabs-striped.tabs-color-calm .tab-item.active,\n.tabs-striped.tabs-color-calm .tab-item.activated {\n  margin-top: -2px;\n  color: #11c1f3;\n  border: 0 solid #11c1f3;\n  border-top-width: 2px;\n}\n\n.tabs-striped.tabs-color-calm .tab-item.tab-item-active .badge,\n.tabs-striped.tabs-color-calm .tab-item.active .badge,\n.tabs-striped.tabs-color-calm .tab-item.activated .badge {\n  top: 2px;\n  opacity: 1;\n}\n\n.tabs-striped.tabs-color-assertive .tab-item {\n  color: rgba(239, 71, 58, 0.4);\n  opacity: 1;\n}\n\n.tabs-striped.tabs-color-assertive .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-striped.tabs-color-assertive .tab-item.tab-item-active,\n.tabs-striped.tabs-color-assertive .tab-item.active,\n.tabs-striped.tabs-color-assertive .tab-item.activated {\n  margin-top: -2px;\n  color: #ef473a;\n  border: 0 solid #ef473a;\n  border-top-width: 2px;\n}\n\n.tabs-striped.tabs-color-assertive .tab-item.tab-item-active .badge,\n.tabs-striped.tabs-color-assertive .tab-item.active .badge,\n.tabs-striped.tabs-color-assertive .tab-item.activated .badge {\n  top: 2px;\n  opacity: 1;\n}\n\n.tabs-striped.tabs-color-balanced .tab-item {\n  color: rgba(51, 205, 95, 0.4);\n  opacity: 1;\n}\n\n.tabs-striped.tabs-color-balanced .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-striped.tabs-color-balanced .tab-item.tab-item-active,\n.tabs-striped.tabs-color-balanced .tab-item.active,\n.tabs-striped.tabs-color-balanced .tab-item.activated {\n  margin-top: -2px;\n  color: #33cd5f;\n  border: 0 solid #33cd5f;\n  border-top-width: 2px;\n}\n\n.tabs-striped.tabs-color-balanced .tab-item.tab-item-active .badge,\n.tabs-striped.tabs-color-balanced .tab-item.active .badge,\n.tabs-striped.tabs-color-balanced .tab-item.activated .badge {\n  top: 2px;\n  opacity: 1;\n}\n\n.tabs-striped.tabs-color-energized .tab-item {\n  color: rgba(255, 201, 0, 0.4);\n  opacity: 1;\n}\n\n.tabs-striped.tabs-color-energized .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-striped.tabs-color-energized .tab-item.tab-item-active,\n.tabs-striped.tabs-color-energized .tab-item.active,\n.tabs-striped.tabs-color-energized .tab-item.activated {\n  margin-top: -2px;\n  color: #ffc900;\n  border: 0 solid #ffc900;\n  border-top-width: 2px;\n}\n\n.tabs-striped.tabs-color-energized .tab-item.tab-item-active .badge,\n.tabs-striped.tabs-color-energized .tab-item.active .badge,\n.tabs-striped.tabs-color-energized .tab-item.activated .badge {\n  top: 2px;\n  opacity: 1;\n}\n\n.tabs-striped.tabs-color-royal .tab-item {\n  color: rgba(136, 106, 234, 0.4);\n  opacity: 1;\n}\n\n.tabs-striped.tabs-color-royal .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-striped.tabs-color-royal .tab-item.tab-item-active,\n.tabs-striped.tabs-color-royal .tab-item.active,\n.tabs-striped.tabs-color-royal .tab-item.activated {\n  margin-top: -2px;\n  color: #886aea;\n  border: 0 solid #886aea;\n  border-top-width: 2px;\n}\n\n.tabs-striped.tabs-color-royal .tab-item.tab-item-active .badge,\n.tabs-striped.tabs-color-royal .tab-item.active .badge,\n.tabs-striped.tabs-color-royal .tab-item.activated .badge {\n  top: 2px;\n  opacity: 1;\n}\n\n.tabs-striped.tabs-color-dark .tab-item {\n  color: rgba(68, 68, 68, 0.4);\n  opacity: 1;\n}\n\n.tabs-striped.tabs-color-dark .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-striped.tabs-color-dark .tab-item.tab-item-active,\n.tabs-striped.tabs-color-dark .tab-item.active,\n.tabs-striped.tabs-color-dark .tab-item.activated {\n  margin-top: -2px;\n  color: #444;\n  border: 0 solid #444;\n  border-top-width: 2px;\n}\n\n.tabs-striped.tabs-color-dark .tab-item.tab-item-active .badge,\n.tabs-striped.tabs-color-dark .tab-item.active .badge,\n.tabs-striped.tabs-color-dark .tab-item.activated .badge {\n  top: 2px;\n  opacity: 1;\n}\n\n.tabs-background-light .tabs,\n.tabs-background-light > .tabs {\n  background-color: #00F1D3;\n  background-image: linear-gradient(0deg, #ddd, #ddd 50%, transparent 50%);\n  border-color: #ddd;\n}\n\n.tabs-background-stable .tabs,\n.tabs-background-stable > .tabs {\n  background-color: #f8f8f8;\n  background-image: linear-gradient(0deg, #b2b2b2, #b2b2b2 50%, transparent 50%);\n  border-color: #b2b2b2;\n}\n\n.tabs-background-positive .tabs,\n.tabs-background-positive > .tabs {\n  background-color: #00A490;\n  background-image: linear-gradient(0deg, #007163, #007163 50%, transparent 50%);\n  border-color: #007163;\n}\n\n.tabs-background-calm .tabs,\n.tabs-background-calm > .tabs {\n  background-color: #11c1f3;\n  background-image: linear-gradient(0deg, #0a9dc7, #0a9dc7 50%, transparent 50%);\n  border-color: #0a9dc7;\n}\n\n.tabs-background-assertive .tabs,\n.tabs-background-assertive > .tabs {\n  background-color: #ef473a;\n  background-image: linear-gradient(0deg, #e42112, #e42112 50%, transparent 50%);\n  border-color: #e42112;\n}\n\n.tabs-background-balanced .tabs,\n.tabs-background-balanced > .tabs {\n  background-color: #33cd5f;\n  background-image: linear-gradient(0deg, #28a54c, #28a54c 50%, transparent 50%);\n  border-color: #28a54c;\n}\n\n.tabs-background-energized .tabs,\n.tabs-background-energized > .tabs {\n  background-color: #ffc900;\n  background-image: linear-gradient(0deg, #e6b500, #e6b500 50%, transparent 50%);\n  border-color: #e6b500;\n}\n\n.tabs-background-royal .tabs,\n.tabs-background-royal > .tabs {\n  background-color: #886aea;\n  background-image: linear-gradient(0deg, #6b46e5, #6b46e5 50%, transparent 50%);\n  border-color: #6b46e5;\n}\n\n.tabs-background-dark .tabs,\n.tabs-background-dark > .tabs {\n  background-color: #444;\n  background-image: linear-gradient(0deg, #111, #111 50%, transparent 50%);\n  border-color: #111;\n}\n\n.tabs-color-light .tab-item {\n  color: rgba(0, 241, 211, 0.4);\n  opacity: 1;\n}\n\n.tabs-color-light .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-color-light .tab-item.tab-item-active,\n.tabs-color-light .tab-item.active,\n.tabs-color-light .tab-item.activated {\n  color: #00F1D3;\n  border: 0 solid #00F1D3;\n}\n\n.tabs-color-light .tab-item.tab-item-active .badge,\n.tabs-color-light .tab-item.active .badge,\n.tabs-color-light .tab-item.activated .badge {\n  opacity: 1;\n}\n\n.tabs-color-stable .tab-item {\n  color: rgba(248, 248, 248, 0.4);\n  opacity: 1;\n}\n\n.tabs-color-stable .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-color-stable .tab-item.tab-item-active,\n.tabs-color-stable .tab-item.active,\n.tabs-color-stable .tab-item.activated {\n  color: #f8f8f8;\n  border: 0 solid #f8f8f8;\n}\n\n.tabs-color-stable .tab-item.tab-item-active .badge,\n.tabs-color-stable .tab-item.active .badge,\n.tabs-color-stable .tab-item.activated .badge {\n  opacity: 1;\n}\n\n.tabs-color-positive .tab-item {\n  color: rgba(0, 164, 144, 0.4);\n  opacity: 1;\n}\n\n.tabs-color-positive .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-color-positive .tab-item.tab-item-active,\n.tabs-color-positive .tab-item.active,\n.tabs-color-positive .tab-item.activated {\n  color: #00A490;\n  border: 0 solid #00A490;\n}\n\n.tabs-color-positive .tab-item.tab-item-active .badge,\n.tabs-color-positive .tab-item.active .badge,\n.tabs-color-positive .tab-item.activated .badge {\n  opacity: 1;\n}\n\n.tabs-color-calm .tab-item {\n  color: rgba(17, 193, 243, 0.4);\n  opacity: 1;\n}\n\n.tabs-color-calm .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-color-calm .tab-item.tab-item-active,\n.tabs-color-calm .tab-item.active,\n.tabs-color-calm .tab-item.activated {\n  color: #11c1f3;\n  border: 0 solid #11c1f3;\n}\n\n.tabs-color-calm .tab-item.tab-item-active .badge,\n.tabs-color-calm .tab-item.active .badge,\n.tabs-color-calm .tab-item.activated .badge {\n  opacity: 1;\n}\n\n.tabs-color-assertive .tab-item {\n  color: rgba(239, 71, 58, 0.4);\n  opacity: 1;\n}\n\n.tabs-color-assertive .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-color-assertive .tab-item.tab-item-active,\n.tabs-color-assertive .tab-item.active,\n.tabs-color-assertive .tab-item.activated {\n  color: #ef473a;\n  border: 0 solid #ef473a;\n}\n\n.tabs-color-assertive .tab-item.tab-item-active .badge,\n.tabs-color-assertive .tab-item.active .badge,\n.tabs-color-assertive .tab-item.activated .badge {\n  opacity: 1;\n}\n\n.tabs-color-balanced .tab-item {\n  color: rgba(51, 205, 95, 0.4);\n  opacity: 1;\n}\n\n.tabs-color-balanced .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-color-balanced .tab-item.tab-item-active,\n.tabs-color-balanced .tab-item.active,\n.tabs-color-balanced .tab-item.activated {\n  color: #33cd5f;\n  border: 0 solid #33cd5f;\n}\n\n.tabs-color-balanced .tab-item.tab-item-active .badge,\n.tabs-color-balanced .tab-item.active .badge,\n.tabs-color-balanced .tab-item.activated .badge {\n  opacity: 1;\n}\n\n.tabs-color-energized .tab-item {\n  color: rgba(255, 201, 0, 0.4);\n  opacity: 1;\n}\n\n.tabs-color-energized .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-color-energized .tab-item.tab-item-active,\n.tabs-color-energized .tab-item.active,\n.tabs-color-energized .tab-item.activated {\n  color: #ffc900;\n  border: 0 solid #ffc900;\n}\n\n.tabs-color-energized .tab-item.tab-item-active .badge,\n.tabs-color-energized .tab-item.active .badge,\n.tabs-color-energized .tab-item.activated .badge {\n  opacity: 1;\n}\n\n.tabs-color-royal .tab-item {\n  color: rgba(136, 106, 234, 0.4);\n  opacity: 1;\n}\n\n.tabs-color-royal .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-color-royal .tab-item.tab-item-active,\n.tabs-color-royal .tab-item.active,\n.tabs-color-royal .tab-item.activated {\n  color: #886aea;\n  border: 0 solid #886aea;\n}\n\n.tabs-color-royal .tab-item.tab-item-active .badge,\n.tabs-color-royal .tab-item.active .badge,\n.tabs-color-royal .tab-item.activated .badge {\n  opacity: 1;\n}\n\n.tabs-color-dark .tab-item {\n  color: rgba(68, 68, 68, 0.4);\n  opacity: 1;\n}\n\n.tabs-color-dark .tab-item .badge {\n  opacity: 0.4;\n}\n\n.tabs-color-dark .tab-item.tab-item-active,\n.tabs-color-dark .tab-item.active,\n.tabs-color-dark .tab-item.activated {\n  color: #444;\n  border: 0 solid #444;\n}\n\n.tabs-color-dark .tab-item.tab-item-active .badge,\n.tabs-color-dark .tab-item.active .badge,\n.tabs-color-dark .tab-item.activated .badge {\n  opacity: 1;\n}\n\nion-tabs.tabs-color-active-light .tab-item {\n  color: #444;\n}\n\nion-tabs.tabs-color-active-light .tab-item.tab-item-active,\nion-tabs.tabs-color-active-light .tab-item.active,\nion-tabs.tabs-color-active-light .tab-item.activated {\n  color: #00F1D3;\n}\n\nion-tabs.tabs-color-active-stable .tab-item {\n  color: #444;\n}\n\nion-tabs.tabs-color-active-stable .tab-item.tab-item-active,\nion-tabs.tabs-color-active-stable .tab-item.active,\nion-tabs.tabs-color-active-stable .tab-item.activated {\n  color: #f8f8f8;\n}\n\nion-tabs.tabs-color-active-positive .tab-item {\n  color: #444;\n}\n\nion-tabs.tabs-color-active-positive .tab-item.tab-item-active,\nion-tabs.tabs-color-active-positive .tab-item.active,\nion-tabs.tabs-color-active-positive .tab-item.activated {\n  color: #00A490;\n}\n\nion-tabs.tabs-color-active-calm .tab-item {\n  color: #444;\n}\n\nion-tabs.tabs-color-active-calm .tab-item.tab-item-active,\nion-tabs.tabs-color-active-calm .tab-item.active,\nion-tabs.tabs-color-active-calm .tab-item.activated {\n  color: #11c1f3;\n}\n\nion-tabs.tabs-color-active-assertive .tab-item {\n  color: #444;\n}\n\nion-tabs.tabs-color-active-assertive .tab-item.tab-item-active,\nion-tabs.tabs-color-active-assertive .tab-item.active,\nion-tabs.tabs-color-active-assertive .tab-item.activated {\n  color: #ef473a;\n}\n\nion-tabs.tabs-color-active-balanced .tab-item {\n  color: #444;\n}\n\nion-tabs.tabs-color-active-balanced .tab-item.tab-item-active,\nion-tabs.tabs-color-active-balanced .tab-item.active,\nion-tabs.tabs-color-active-balanced .tab-item.activated {\n  color: #33cd5f;\n}\n\nion-tabs.tabs-color-active-energized .tab-item {\n  color: #444;\n}\n\nion-tabs.tabs-color-active-energized .tab-item.tab-item-active,\nion-tabs.tabs-color-active-energized .tab-item.active,\nion-tabs.tabs-color-active-energized .tab-item.activated {\n  color: #ffc900;\n}\n\nion-tabs.tabs-color-active-royal .tab-item {\n  color: #444;\n}\n\nion-tabs.tabs-color-active-royal .tab-item.tab-item-active,\nion-tabs.tabs-color-active-royal .tab-item.active,\nion-tabs.tabs-color-active-royal .tab-item.activated {\n  color: #886aea;\n}\n\nion-tabs.tabs-color-active-dark .tab-item {\n  color: #00F1D3;\n}\n\nion-tabs.tabs-color-active-dark .tab-item.tab-item-active,\nion-tabs.tabs-color-active-dark .tab-item.active,\nion-tabs.tabs-color-active-dark .tab-item.activated {\n  color: #444;\n}\n\n.tabs-top.tabs-striped {\n  padding-bottom: 0;\n}\n\n.tabs-top.tabs-striped .tab-item {\n  background: transparent;\n  -webkit-transition: color .1s ease;\n  -moz-transition: color .1s ease;\n  -ms-transition: color .1s ease;\n  -o-transition: color .1s ease;\n  transition: color .1s ease;\n}\n\n.tabs-top.tabs-striped .tab-item.tab-item-active,\n.tabs-top.tabs-striped .tab-item.active,\n.tabs-top.tabs-striped .tab-item.activated {\n  margin-top: 1px;\n  border-width: 0px 0px 2px 0px !important;\n  border-style: solid;\n}\n\n.tabs-top.tabs-striped .tab-item.tab-item-active > .badge,\n.tabs-top.tabs-striped .tab-item.tab-item-active > i,\n.tabs-top.tabs-striped .tab-item.active > .badge,\n.tabs-top.tabs-striped .tab-item.active > i,\n.tabs-top.tabs-striped .tab-item.activated > .badge,\n.tabs-top.tabs-striped .tab-item.activated > i {\n  margin-top: -1px;\n}\n\n.tabs-top.tabs-striped .tab-item .badge {\n  -webkit-transition: color .2s ease;\n  -moz-transition: color .2s ease;\n  -ms-transition: color .2s ease;\n  -o-transition: color .2s ease;\n  transition: color .2s ease;\n}\n\n.tabs-top.tabs-striped:not(.tabs-icon-left):not(.tabs-icon-top) .tab-item.tab-item-active .tab-title,\n.tabs-top.tabs-striped:not(.tabs-icon-left):not(.tabs-icon-top) .tab-item.tab-item-active i,\n.tabs-top.tabs-striped:not(.tabs-icon-left):not(.tabs-icon-top) .tab-item.active .tab-title,\n.tabs-top.tabs-striped:not(.tabs-icon-left):not(.tabs-icon-top) .tab-item.active i,\n.tabs-top.tabs-striped:not(.tabs-icon-left):not(.tabs-icon-top) .tab-item.activated .tab-title,\n.tabs-top.tabs-striped:not(.tabs-icon-left):not(.tabs-icon-top) .tab-item.activated i {\n  display: block;\n  margin-top: -1px;\n}\n\n.tabs-top.tabs-striped.tabs-icon-left .tab-item {\n  margin-top: 1px;\n}\n\n.tabs-top.tabs-striped.tabs-icon-left .tab-item.tab-item-active .tab-title,\n.tabs-top.tabs-striped.tabs-icon-left .tab-item.tab-item-active i,\n.tabs-top.tabs-striped.tabs-icon-left .tab-item.active .tab-title,\n.tabs-top.tabs-striped.tabs-icon-left .tab-item.active i,\n.tabs-top.tabs-striped.tabs-icon-left .tab-item.activated .tab-title,\n.tabs-top.tabs-striped.tabs-icon-left .tab-item.activated i {\n  margin-top: -0.1em;\n}\n\n/* Allow parent element to have tabs-top */\n\n/* If you change this, change platform.scss as well */\n\n.tabs-top > .tabs,\n.tabs.tabs-top {\n  top: 44px;\n  padding-top: 0;\n  background-position: bottom;\n  border-top-width: 0;\n  border-bottom-width: 1px;\n}\n\n.tabs-top > .tabs .tab-item.tab-item-active .badge,\n.tabs-top > .tabs .tab-item.active .badge,\n.tabs-top > .tabs .tab-item.activated .badge,\n.tabs.tabs-top .tab-item.tab-item-active .badge,\n.tabs.tabs-top .tab-item.active .badge,\n.tabs.tabs-top .tab-item.activated .badge {\n  top: 4%;\n}\n\n.tabs-top ~ .bar-header {\n  border-bottom-width: 0;\n}\n\n.tab-item {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n  -moz-box-flex: 1;\n  -moz-flex: 1;\n  -ms-flex: 1;\n  flex: 1;\n  display: block;\n  overflow: hidden;\n  max-width: 150px;\n  height: 100%;\n  color: inherit;\n  text-align: center;\n  text-decoration: none;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  font-weight: 400;\n  font-size: 14px;\n  font-family: \"Helvetica Neue\", \"Roboto\", \"Segoe UI\", sans-serif;\n  opacity: 0.7;\n}\n\n.tab-item:hover {\n  cursor: pointer;\n}\n\n.tab-item.tab-hidden {\n  display: none;\n}\n\n.tabs-item-hide > .tabs,\n.tabs.tabs-item-hide {\n  display: none;\n}\n\n.tabs-icon-top > .tabs .tab-item,\n.tabs-icon-top.tabs .tab-item,\n.tabs-icon-bottom > .tabs .tab-item,\n.tabs-icon-bottom.tabs .tab-item {\n  font-size: 10px;\n  line-height: 14px;\n}\n\n.tab-item .icon {\n  display: block;\n  margin: 0 auto;\n  height: 32px;\n  font-size: 32px;\n}\n\n.tabs-icon-left.tabs .tab-item,\n.tabs-icon-left > .tabs .tab-item,\n.tabs-icon-right.tabs .tab-item,\n.tabs-icon-right > .tabs .tab-item {\n  font-size: 10px;\n}\n\n.tabs-icon-left.tabs .tab-item .icon,\n.tabs-icon-left.tabs .tab-item .tab-title,\n.tabs-icon-left > .tabs .tab-item .icon,\n.tabs-icon-left > .tabs .tab-item .tab-title,\n.tabs-icon-right.tabs .tab-item .icon,\n.tabs-icon-right.tabs .tab-item .tab-title,\n.tabs-icon-right > .tabs .tab-item .icon,\n.tabs-icon-right > .tabs .tab-item .tab-title {\n  display: inline-block;\n  vertical-align: top;\n  margin-top: -.1em;\n}\n\n.tabs-icon-left.tabs .tab-item .icon:before,\n.tabs-icon-left.tabs .tab-item .tab-title:before,\n.tabs-icon-left > .tabs .tab-item .icon:before,\n.tabs-icon-left > .tabs .tab-item .tab-title:before,\n.tabs-icon-right.tabs .tab-item .icon:before,\n.tabs-icon-right.tabs .tab-item .tab-title:before,\n.tabs-icon-right > .tabs .tab-item .icon:before,\n.tabs-icon-right > .tabs .tab-item .tab-title:before {\n  font-size: 24px;\n  line-height: 49px;\n}\n\n.tabs-icon-left > .tabs .tab-item .icon,\n.tabs-icon-left.tabs .tab-item .icon {\n  padding-right: 3px;\n}\n\n.tabs-icon-right > .tabs .tab-item .icon,\n.tabs-icon-right.tabs .tab-item .icon {\n  padding-left: 3px;\n}\n\n.tabs-icon-only > .tabs .icon,\n.tabs-icon-only.tabs .icon {\n  line-height: inherit;\n}\n\n.tab-item.has-badge {\n  position: relative;\n}\n\n.tab-item .badge {\n  position: absolute;\n  top: 4%;\n  right: 33%;\n  right: calc(50% - 26px);\n  padding: 1px 6px;\n  height: auto;\n  font-size: 12px;\n  line-height: 16px;\n}\n\n/* Navigational tab */\n\n/* Active state for tab */\n\n.tab-item.tab-item-active,\n.tab-item.active,\n.tab-item.activated {\n  opacity: 1;\n}\n\n.tab-item.tab-item-active.tab-item-light,\n.tab-item.active.tab-item-light,\n.tab-item.activated.tab-item-light {\n  color: #00F1D3;\n}\n\n.tab-item.tab-item-active.tab-item-stable,\n.tab-item.active.tab-item-stable,\n.tab-item.activated.tab-item-stable {\n  color: #f8f8f8;\n}\n\n.tab-item.tab-item-active.tab-item-positive,\n.tab-item.active.tab-item-positive,\n.tab-item.activated.tab-item-positive {\n  color: #00A490;\n}\n\n.tab-item.tab-item-active.tab-item-calm,\n.tab-item.active.tab-item-calm,\n.tab-item.activated.tab-item-calm {\n  color: #11c1f3;\n}\n\n.tab-item.tab-item-active.tab-item-assertive,\n.tab-item.active.tab-item-assertive,\n.tab-item.activated.tab-item-assertive {\n  color: #ef473a;\n}\n\n.tab-item.tab-item-active.tab-item-balanced,\n.tab-item.active.tab-item-balanced,\n.tab-item.activated.tab-item-balanced {\n  color: #33cd5f;\n}\n\n.tab-item.tab-item-active.tab-item-energized,\n.tab-item.active.tab-item-energized,\n.tab-item.activated.tab-item-energized {\n  color: #ffc900;\n}\n\n.tab-item.tab-item-active.tab-item-royal,\n.tab-item.active.tab-item-royal,\n.tab-item.activated.tab-item-royal {\n  color: #886aea;\n}\n\n.tab-item.tab-item-active.tab-item-dark,\n.tab-item.active.tab-item-dark,\n.tab-item.activated.tab-item-dark {\n  color: #444;\n}\n\n.item.tabs {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  padding: 0;\n}\n\n.item.tabs .icon:before {\n  position: relative;\n}\n\n.tab-item.disabled,\n.tab-item[disabled] {\n  opacity: .4;\n  cursor: default;\n  pointer-events: none;\n}\n\n.nav-bar-tabs-top.hide ~ .view-container .tabs-top .tabs {\n  top: 0;\n}\n\n.pane[hide-nav-bar=\"true\"] .has-tabs-top {\n  top: 49px;\n}\n\n/**\n * Menus\n * --------------------------------------------------\n * Side panel structure\n */\n\n.menu {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  z-index: 0;\n  overflow: hidden;\n  min-height: 100%;\n  max-height: 100%;\n  width: 275px;\n  background-color: #fff;\n}\n\n.menu .scroll-content {\n  z-index: 10;\n}\n\n.menu .bar-header {\n  z-index: 11;\n}\n\n.menu-content {\n  -webkit-transform: none;\n  transform: none;\n  box-shadow: -1px 0px 2px rgba(0, 0, 0, 0.2), 1px 0px 2px rgba(0, 0, 0, 0.2);\n}\n\n.menu-open .menu-content .pane,\n.menu-open .menu-content .scroll-content {\n  pointer-events: none;\n  overflow: hidden;\n}\n\n.grade-b .menu-content,\n.grade-c .menu-content {\n  -webkit-box-sizing: content-box;\n  -moz-box-sizing: content-box;\n  box-sizing: content-box;\n  right: -1px;\n  left: -1px;\n  border-right: 1px solid #ccc;\n  border-left: 1px solid #ccc;\n  box-shadow: none;\n}\n\n.menu-left {\n  left: 0;\n}\n\n.menu-right {\n  right: 0;\n}\n\n.aside-open.aside-resizing .menu-right {\n  display: none;\n}\n\n.menu-animated {\n  -webkit-transition: -webkit-transform 200ms ease;\n  transition: transform 200ms ease;\n}\n\n/**\n * Modals\n * --------------------------------------------------\n * Modals are independent windows that slide in from off-screen.\n */\n\n.modal-backdrop,\n.modal-backdrop-bg {\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 10;\n  width: 100%;\n  height: 100%;\n}\n\n.modal-backdrop-bg {\n  pointer-events: none;\n}\n\n.modal {\n  display: block;\n  position: absolute;\n  top: 0;\n  z-index: 10;\n  overflow: hidden;\n  min-height: 100%;\n  width: 100%;\n  background-color: #fff;\n}\n\n@media (min-width: 680px) {\n  .modal {\n    top: 20%;\n    right: 20%;\n    bottom: 20%;\n    left: 20%;\n    min-height: 240px;\n    width: 60%;\n  }\n\n  .modal.ng-leave-active {\n    bottom: 0;\n  }\n\n  .platform-ios.platform-cordova .modal-wrapper .modal .bar-header:not(.bar-subheader) {\n    height: 44px;\n  }\n\n  .platform-ios.platform-cordova .modal-wrapper .modal .bar-header:not(.bar-subheader) > * {\n    margin-top: 0;\n  }\n\n  .platform-ios.platform-cordova .modal-wrapper .modal .tabs-top > .tabs,\n  .platform-ios.platform-cordova .modal-wrapper .modal .tabs.tabs-top {\n    top: 44px;\n  }\n\n  .platform-ios.platform-cordova .modal-wrapper .modal .has-header,\n  .platform-ios.platform-cordova .modal-wrapper .modal .bar-subheader {\n    top: 44px;\n  }\n\n  .platform-ios.platform-cordova .modal-wrapper .modal .has-subheader {\n    top: 88px;\n  }\n\n  .platform-ios.platform-cordova .modal-wrapper .modal .has-header.has-tabs-top {\n    top: 93px;\n  }\n\n  .platform-ios.platform-cordova .modal-wrapper .modal .has-header.has-subheader.has-tabs-top {\n    top: 137px;\n  }\n\n  .modal-backdrop-bg {\n    -webkit-transition: opacity 300ms ease-in-out;\n    transition: opacity 300ms ease-in-out;\n    background-color: #000;\n    opacity: 0;\n  }\n\n  .active .modal-backdrop-bg {\n    opacity: 0.5;\n  }\n}\n\n.modal-open {\n  pointer-events: none;\n}\n\n.modal-open .modal,\n.modal-open .modal-backdrop {\n  pointer-events: auto;\n}\n\n.modal-open.loading-active .modal,\n.modal-open.loading-active .modal-backdrop {\n  pointer-events: none;\n}\n\n/**\n * Popovers\n * --------------------------------------------------\n * Popovers are independent views which float over content\n */\n\n.popover-backdrop {\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 10;\n  width: 100%;\n  height: 100%;\n  background-color: transparent;\n}\n\n.popover-backdrop.active {\n  background-color: rgba(0, 0, 0, 0.1);\n}\n\n.popover {\n  position: absolute;\n  top: 25%;\n  left: 50%;\n  z-index: 10;\n  display: block;\n  margin-top: 12px;\n  margin-left: -110px;\n  height: 280px;\n  width: 220px;\n  background-color: #00F1D3;\n  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);\n  opacity: 0;\n}\n\n.popover .item:first-child {\n  border-top: 0;\n}\n\n.popover .item:last-child {\n  border-bottom: 0;\n}\n\n.popover.popover-bottom {\n  margin-top: -12px;\n}\n\n.popover,\n.popover .bar-header {\n  border-radius: 2px;\n}\n\n.popover .scroll-content {\n  z-index: 1;\n  margin: 2px 0;\n}\n\n.popover .bar-header {\n  border-bottom-right-radius: 0;\n  border-bottom-left-radius: 0;\n}\n\n.popover .has-header {\n  border-top-right-radius: 0;\n  border-top-left-radius: 0;\n}\n\n.popover-arrow {\n  display: none;\n}\n\n.platform-ios .popover {\n  box-shadow: 0 0 40px rgba(0, 0, 0, 0.08);\n  border-radius: 10px;\n}\n\n.platform-ios .popover .bar-header {\n  -webkit-border-top-right-radius: 10px;\n  border-top-right-radius: 10px;\n  -webkit-border-top-left-radius: 10px;\n  border-top-left-radius: 10px;\n}\n\n.platform-ios .popover .scroll-content {\n  margin: 8px 0;\n  border-radius: 10px;\n}\n\n.platform-ios .popover .scroll-content.has-header {\n  margin-top: 0;\n}\n\n.platform-ios .popover-arrow {\n  position: absolute;\n  display: block;\n  top: -17px;\n  width: 30px;\n  height: 19px;\n  overflow: hidden;\n}\n\n.platform-ios .popover-arrow:after {\n  position: absolute;\n  top: 12px;\n  left: 5px;\n  width: 20px;\n  height: 20px;\n  background-color: #00F1D3;\n  border-radius: 3px;\n  content: '';\n  -webkit-transform: rotate(-45deg);\n  transform: rotate(-45deg);\n}\n\n.platform-ios .popover-bottom .popover-arrow {\n  top: auto;\n  bottom: -10px;\n}\n\n.platform-ios .popover-bottom .popover-arrow:after {\n  top: -6px;\n}\n\n.platform-android .popover {\n  margin-top: -32px;\n  background-color: #fafafa;\n  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);\n}\n\n.platform-android .popover .item {\n  border-color: #fafafa;\n  background-color: #fafafa;\n  color: #4d4d4d;\n}\n\n.platform-android .popover.popover-bottom {\n  margin-top: 32px;\n}\n\n.platform-android .popover-backdrop,\n.platform-android .popover-backdrop.active {\n  background-color: transparent;\n}\n\n.popover-open {\n  pointer-events: none;\n}\n\n.popover-open .popover,\n.popover-open .popover-backdrop {\n  pointer-events: auto;\n}\n\n.popover-open.loading-active .popover,\n.popover-open.loading-active .popover-backdrop {\n  pointer-events: none;\n}\n\n@media (min-width: 680px) {\n  .popover {\n    width: 360px;\n  }\n}\n\n/**\n * Popups\n * --------------------------------------------------\n */\n\n.popup-container {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  background: transparent;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  -webkit-justify-content: center;\n  -moz-justify-content: center;\n  justify-content: center;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  -webkit-align-items: center;\n  -moz-align-items: center;\n  align-items: center;\n  z-index: 12;\n  visibility: hidden;\n}\n\n.popup-container.popup-showing {\n  visibility: visible;\n}\n\n.popup-container.popup-hidden .popup {\n  -webkit-animation-name: scaleOut;\n  animation-name: scaleOut;\n  -webkit-animation-duration: 0.1s;\n  animation-duration: 0.1s;\n  -webkit-animation-timing-function: ease-in-out;\n  animation-timing-function: ease-in-out;\n  -webkit-animation-fill-mode: both;\n  animation-fill-mode: both;\n}\n\n.popup-container.active .popup {\n  -webkit-animation-name: superScaleIn;\n  animation-name: superScaleIn;\n  -webkit-animation-duration: 0.2s;\n  animation-duration: 0.2s;\n  -webkit-animation-timing-function: ease-in-out;\n  animation-timing-function: ease-in-out;\n  -webkit-animation-fill-mode: both;\n  animation-fill-mode: both;\n}\n\n.popup-container .popup {\n  width: 250px;\n  max-width: 100%;\n  max-height: 90%;\n  border-radius: 0px;\n  background-color: rgba(255, 255, 255, 0.9);\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-direction: normal;\n  -webkit-box-orient: vertical;\n  -webkit-flex-direction: column;\n  -moz-flex-direction: column;\n  -ms-flex-direction: column;\n  flex-direction: column;\n}\n\n.popup-container input,\n.popup-container textarea {\n  width: 100%;\n}\n\n.popup-head {\n  padding: 15px 10px;\n  border-bottom: 1px solid #eee;\n  text-align: center;\n}\n\n.popup-title {\n  margin: 0;\n  padding: 0;\n  font-size: 15px;\n}\n\n.popup-sub-title {\n  margin: 5px 0 0 0;\n  padding: 0;\n  font-weight: normal;\n  font-size: 11px;\n}\n\n.popup-body {\n  padding: 10px;\n  overflow: auto;\n}\n\n.popup-buttons {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-direction: normal;\n  -webkit-box-orient: horizontal;\n  -webkit-flex-direction: row;\n  -moz-flex-direction: row;\n  -ms-flex-direction: row;\n  flex-direction: row;\n  padding: 10px;\n  min-height: 65px;\n}\n\n.popup-buttons .button,\n.popup-buttons .button-pill {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n  -moz-box-flex: 1;\n  -moz-flex: 1;\n  -ms-flex: 1;\n  flex: 1;\n  display: block;\n  min-height: 45px;\n  border-radius: 2px;\n  line-height: 20px;\n  margin-right: 5px;\n}\n\n.popup-buttons .button:last-child,\n.popup-buttons .button-pill:last-child {\n  margin-right: 0px;\n}\n\n.popup-open {\n  pointer-events: none;\n}\n\n.popup-open.modal-open .modal {\n  pointer-events: none;\n}\n\n.popup-open .popup-backdrop,\n.popup-open .popup {\n  pointer-events: auto;\n}\n\n/**\n * Loading\n * --------------------------------------------------\n */\n\n.loading-container {\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  z-index: 13;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  -webkit-justify-content: center;\n  -moz-justify-content: center;\n  justify-content: center;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  -webkit-align-items: center;\n  -moz-align-items: center;\n  align-items: center;\n  -webkit-transition: 0.2s opacity linear;\n  transition: 0.2s opacity linear;\n  visibility: hidden;\n  opacity: 0;\n}\n\n.loading-container:not(.visible) .icon,\n.loading-container:not(.visible) .spinner {\n  display: none;\n}\n\n.loading-container.visible {\n  visibility: visible;\n}\n\n.loading-container.active {\n  opacity: 1;\n}\n\n.loading-container .loading {\n  padding: 20px;\n  border-radius: 5px;\n  background-color: rgba(0, 0, 0, 0.7);\n  color: #fff;\n  text-align: center;\n  text-overflow: ellipsis;\n  font-size: 15px;\n}\n\n.loading-container .loading h1,\n.loading-container .loading h2,\n.loading-container .loading h3,\n.loading-container .loading h4,\n.loading-container .loading h5,\n.loading-container .loading h6 {\n  color: #fff;\n}\n\n/**\n * Items\n * --------------------------------------------------\n */\n\n.item {\n  border-color: #ddd;\n  background-color: #00F1D3;\n  color: #444;\n  position: relative;\n  z-index: 2;\n  display: block;\n  margin: -1px;\n  padding: 16px;\n  border-width: 1px;\n  border-style: solid;\n  font-size: 16px;\n}\n\n.item h2 {\n  margin: 0 0 2px 0;\n  font-size: 16px;\n  font-weight: normal;\n}\n\n.item h3 {\n  margin: 0 0 4px 0;\n  font-size: 14px;\n}\n\n.item h4 {\n  margin: 0 0 4px 0;\n  font-size: 12px;\n}\n\n.item h5,\n.item h6 {\n  margin: 0 0 3px 0;\n  font-size: 10px;\n}\n\n.item p {\n  color: #666;\n  font-size: 14px;\n  margin-bottom: 2px;\n}\n\n.item h1:last-child,\n.item h2:last-child,\n.item h3:last-child,\n.item h4:last-child,\n.item h5:last-child,\n.item h6:last-child,\n.item p:last-child {\n  margin-bottom: 0;\n}\n\n.item .badge {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  position: absolute;\n  top: 16px;\n  right: 32px;\n}\n\n.item.item-button-right .badge {\n  right: 67px;\n}\n\n.item.item-divider .badge {\n  top: 8px;\n}\n\n.item .badge + .badge {\n  margin-right: 5px;\n}\n\n.item.item-light {\n  border-color: #ddd;\n  background-color: #00F1D3;\n  color: #444;\n}\n\n.item.item-stable {\n  border-color: #b2b2b2;\n  background-color: #f8f8f8;\n  color: #444;\n}\n\n.item.item-positive {\n  border-color: #007163;\n  background-color: #00A490;\n  color: #fff;\n}\n\n.item.item-calm {\n  border-color: #0a9dc7;\n  background-color: #11c1f3;\n  color: #fff;\n}\n\n.item.item-assertive {\n  border-color: #e42112;\n  background-color: #ef473a;\n  color: #fff;\n}\n\n.item.item-balanced {\n  border-color: #28a54c;\n  background-color: #33cd5f;\n  color: #fff;\n}\n\n.item.item-energized {\n  border-color: #e6b500;\n  background-color: #ffc900;\n  color: #fff;\n}\n\n.item.item-royal {\n  border-color: #6b46e5;\n  background-color: #886aea;\n  color: #fff;\n}\n\n.item.item-dark {\n  border-color: #111;\n  background-color: #444;\n  color: #fff;\n}\n\n.item[ng-click]:hover {\n  cursor: pointer;\n}\n\n.list-borderless .item,\n.item-borderless {\n  border-width: 0;\n}\n\n.item.active,\n.item.activated,\n.item-complex.active .item-content,\n.item-complex.activated .item-content,\n.item .item-content.active,\n.item .item-content.activated {\n  border-color: #ccc;\n  background-color: #D9D9D9;\n}\n\n.item.active.item-light,\n.item.activated.item-light,\n.item-complex.active .item-content.item-light,\n.item-complex.activated .item-content.item-light,\n.item .item-content.active.item-light,\n.item .item-content.activated.item-light {\n  border-color: #ccc;\n  background-color: #fafafa;\n}\n\n.item.active.item-stable,\n.item.activated.item-stable,\n.item-complex.active .item-content.item-stable,\n.item-complex.activated .item-content.item-stable,\n.item .item-content.active.item-stable,\n.item .item-content.activated.item-stable {\n  border-color: #a2a2a2;\n  background-color: #e5e5e5;\n}\n\n.item.active.item-positive,\n.item.activated.item-positive,\n.item-complex.active .item-content.item-positive,\n.item-complex.activated .item-content.item-positive,\n.item .item-content.active.item-positive,\n.item .item-content.activated.item-positive {\n  border-color: #007163;\n  background-color: #007163;\n}\n\n.item.active.item-calm,\n.item.activated.item-calm,\n.item-complex.active .item-content.item-calm,\n.item-complex.activated .item-content.item-calm,\n.item .item-content.active.item-calm,\n.item .item-content.activated.item-calm {\n  border-color: #0a9dc7;\n  background-color: #0a9dc7;\n}\n\n.item.active.item-assertive,\n.item.activated.item-assertive,\n.item-complex.active .item-content.item-assertive,\n.item-complex.activated .item-content.item-assertive,\n.item .item-content.active.item-assertive,\n.item .item-content.activated.item-assertive {\n  border-color: #e42112;\n  background-color: #e42112;\n}\n\n.item.active.item-balanced,\n.item.activated.item-balanced,\n.item-complex.active .item-content.item-balanced,\n.item-complex.activated .item-content.item-balanced,\n.item .item-content.active.item-balanced,\n.item .item-content.activated.item-balanced {\n  border-color: #28a54c;\n  background-color: #28a54c;\n}\n\n.item.active.item-energized,\n.item.activated.item-energized,\n.item-complex.active .item-content.item-energized,\n.item-complex.activated .item-content.item-energized,\n.item .item-content.active.item-energized,\n.item .item-content.activated.item-energized {\n  border-color: #e6b500;\n  background-color: #e6b500;\n}\n\n.item.active.item-royal,\n.item.activated.item-royal,\n.item-complex.active .item-content.item-royal,\n.item-complex.activated .item-content.item-royal,\n.item .item-content.active.item-royal,\n.item .item-content.activated.item-royal {\n  border-color: #6b46e5;\n  background-color: #6b46e5;\n}\n\n.item.active.item-dark,\n.item.activated.item-dark,\n.item-complex.active .item-content.item-dark,\n.item-complex.activated .item-content.item-dark,\n.item .item-content.active.item-dark,\n.item .item-content.activated.item-dark {\n  border-color: #000;\n  background-color: #262626;\n}\n\n.item,\n.item h1,\n.item h2,\n.item h3,\n.item h4,\n.item h5,\n.item h6,\n.item p,\n.item-content,\n.item-content h1,\n.item-content h2,\n.item-content h3,\n.item-content h4,\n.item-content h5,\n.item-content h6,\n.item-content p {\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n}\n\na.item {\n  color: inherit;\n  text-decoration: none;\n}\n\na.item:hover,\na.item:focus {\n  text-decoration: none;\n}\n\n/**\n * Complex Items\n * --------------------------------------------------\n * Adding .item-complex allows the .item to be slidable and\n * have options underneath the button, but also requires an\n * additional .item-content element inside .item.\n * Basically .item-complex removes any default settings which\n * .item added, so that .item-content looks them as just .item.\n */\n\n.item-complex,\na.item.item-complex,\nbutton.item.item-complex {\n  padding: 0;\n}\n\n.item-complex .item-content,\n.item-radio .item-content {\n  position: relative;\n  z-index: 2;\n  padding: 16px 49px 16px 16px;\n  border: none;\n  background-color: #00F1D3;\n}\n\na.item-content {\n  display: block;\n  color: inherit;\n  text-decoration: none;\n}\n\n.item-text-wrap .item,\n.item-text-wrap .item-content,\n.item-text-wrap,\n.item-text-wrap h1,\n.item-text-wrap h2,\n.item-text-wrap h3,\n.item-text-wrap h4,\n.item-text-wrap h5,\n.item-text-wrap h6,\n.item-text-wrap p,\n.item-complex.item-text-wrap .item-content,\n.item-body h1,\n.item-body h2,\n.item-body h3,\n.item-body h4,\n.item-body h5,\n.item-body h6,\n.item-body p {\n  overflow: visible;\n  white-space: normal;\n}\n\n.item-complex.item-text-wrap,\n.item-complex.item-text-wrap h1,\n.item-complex.item-text-wrap h2,\n.item-complex.item-text-wrap h3,\n.item-complex.item-text-wrap h4,\n.item-complex.item-text-wrap h5,\n.item-complex.item-text-wrap h6,\n.item-complex.item-text-wrap p {\n  overflow: visible;\n  white-space: normal;\n}\n\n.item-complex.item-light > .item-content {\n  border-color: #ddd;\n  background-color: #00F1D3;\n  color: #444;\n}\n\n.item-complex.item-light > .item-content.active,\n.item-complex.item-light > .item-content:active {\n  border-color: #ccc;\n  background-color: #fafafa;\n}\n\n.item-complex.item-stable > .item-content {\n  border-color: #b2b2b2;\n  background-color: #f8f8f8;\n  color: #444;\n}\n\n.item-complex.item-stable > .item-content.active,\n.item-complex.item-stable > .item-content:active {\n  border-color: #a2a2a2;\n  background-color: #e5e5e5;\n}\n\n.item-complex.item-positive > .item-content {\n  border-color: #007163;\n  background-color: #00A490;\n  color: #fff;\n}\n\n.item-complex.item-positive > .item-content.active,\n.item-complex.item-positive > .item-content:active {\n  border-color: #007163;\n  background-color: #007163;\n}\n\n.item-complex.item-calm > .item-content {\n  border-color: #0a9dc7;\n  background-color: #11c1f3;\n  color: #fff;\n}\n\n.item-complex.item-calm > .item-content.active,\n.item-complex.item-calm > .item-content:active {\n  border-color: #0a9dc7;\n  background-color: #0a9dc7;\n}\n\n.item-complex.item-assertive > .item-content {\n  border-color: #e42112;\n  background-color: #ef473a;\n  color: #fff;\n}\n\n.item-complex.item-assertive > .item-content.active,\n.item-complex.item-assertive > .item-content:active {\n  border-color: #e42112;\n  background-color: #e42112;\n}\n\n.item-complex.item-balanced > .item-content {\n  border-color: #28a54c;\n  background-color: #33cd5f;\n  color: #fff;\n}\n\n.item-complex.item-balanced > .item-content.active,\n.item-complex.item-balanced > .item-content:active {\n  border-color: #28a54c;\n  background-color: #28a54c;\n}\n\n.item-complex.item-energized > .item-content {\n  border-color: #e6b500;\n  background-color: #ffc900;\n  color: #fff;\n}\n\n.item-complex.item-energized > .item-content.active,\n.item-complex.item-energized > .item-content:active {\n  border-color: #e6b500;\n  background-color: #e6b500;\n}\n\n.item-complex.item-royal > .item-content {\n  border-color: #6b46e5;\n  background-color: #886aea;\n  color: #fff;\n}\n\n.item-complex.item-royal > .item-content.active,\n.item-complex.item-royal > .item-content:active {\n  border-color: #6b46e5;\n  background-color: #6b46e5;\n}\n\n.item-complex.item-dark > .item-content {\n  border-color: #111;\n  background-color: #444;\n  color: #fff;\n}\n\n.item-complex.item-dark > .item-content.active,\n.item-complex.item-dark > .item-content:active {\n  border-color: #000;\n  background-color: #262626;\n}\n\n/**\n * Item Icons\n * --------------------------------------------------\n */\n\n.item-icon-left .icon,\n.item-icon-right .icon {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  -webkit-align-items: center;\n  -moz-align-items: center;\n  align-items: center;\n  position: absolute;\n  top: 0;\n  height: 100%;\n  font-size: 32px;\n}\n\n.item-icon-left .icon:before,\n.item-icon-right .icon:before {\n  display: block;\n  width: 32px;\n  text-align: center;\n}\n\n.item .fill-icon {\n  min-width: 30px;\n  min-height: 30px;\n  font-size: 28px;\n}\n\n.item-icon-left {\n  padding-left: 54px;\n}\n\n.item-icon-left .icon {\n  left: 11px;\n}\n\n.item-complex.item-icon-left {\n  padding-left: 0;\n}\n\n.item-complex.item-icon-left .item-content {\n  padding-left: 54px;\n}\n\n.item-icon-right {\n  padding-right: 54px;\n}\n\n.item-icon-right .icon {\n  right: 11px;\n}\n\n.item-complex.item-icon-right {\n  padding-right: 0;\n}\n\n.item-complex.item-icon-right .item-content {\n  padding-right: 54px;\n}\n\n.item-icon-left.item-icon-right .icon:first-child {\n  right: auto;\n}\n\n.item-icon-left.item-icon-right .icon:last-child,\n.item-icon-left .item-delete .icon {\n  left: auto;\n}\n\n.item-icon-left .icon-accessory,\n.item-icon-right .icon-accessory {\n  color: #ccc;\n  font-size: 16px;\n}\n\n.item-icon-left .icon-accessory {\n  left: 3px;\n}\n\n.item-icon-right .icon-accessory {\n  right: 3px;\n}\n\n/**\n * Item Button\n * --------------------------------------------------\n * An item button is a child button inside an .item (not the entire .item)\n */\n\n.item-button-left {\n  padding-left: 72px;\n}\n\n.item-button-left > .button,\n.item-button-left > .button-pill,\n.item-button-left .item-content > .button,\n.item-button-left .item-content > .button-pill {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  -webkit-align-items: center;\n  -moz-align-items: center;\n  align-items: center;\n  position: absolute;\n  top: 8px;\n  left: 11px;\n  min-width: 34px;\n  min-height: 34px;\n  font-size: 18px;\n  line-height: 32px;\n}\n\n.item-button-left > .button .icon:before,\n.item-button-left > .button-pill .icon:before,\n.item-button-left .item-content > .button .icon:before,\n.item-button-left .item-content > .button-pill .icon:before {\n  position: relative;\n  left: auto;\n  width: auto;\n  line-height: 31px;\n}\n\n.item-button-left > .button > .button,\n.item-button-left > .button-pill > .button,\n.item-button-left > .button > .button-pill,\n.item-button-left > .button-pill > .button-pill,\n.item-button-left .item-content > .button > .button,\n.item-button-left .item-content > .button-pill > .button,\n.item-button-left .item-content > .button > .button-pill,\n.item-button-left .item-content > .button-pill > .button-pill {\n  margin: 0px 2px;\n  min-height: 34px;\n  font-size: 18px;\n  line-height: 32px;\n}\n\n.item-button-right,\na.item.item-button-right,\nbutton.item.item-button-right {\n  padding-right: 80px;\n}\n\n.item-button-right > .button,\n.item-button-right > .button-pill,\n.item-button-right .item-content > .button,\n.item-button-right .item-content > .button-pill,\n.item-button-right > .buttons,\n.item-button-right .item-content > .buttons {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  -webkit-align-items: center;\n  -moz-align-items: center;\n  align-items: center;\n  position: absolute;\n  top: 8px;\n  right: 16px;\n  min-width: 34px;\n  min-height: 34px;\n  font-size: 18px;\n  line-height: 32px;\n}\n\n.item-button-right > .button .icon:before,\n.item-button-right > .button-pill .icon:before,\n.item-button-right .item-content > .button .icon:before,\n.item-button-right .item-content > .button-pill .icon:before,\n.item-button-right > .buttons .icon:before,\n.item-button-right .item-content > .buttons .icon:before {\n  position: relative;\n  left: auto;\n  width: auto;\n  line-height: 31px;\n}\n\n.item-button-right > .button > .button,\n.item-button-right > .button-pill > .button,\n.item-button-right > .button > .button-pill,\n.item-button-right > .button-pill > .button-pill,\n.item-button-right .item-content > .button > .button,\n.item-button-right .item-content > .button-pill > .button,\n.item-button-right .item-content > .button > .button-pill,\n.item-button-right .item-content > .button-pill > .button-pill,\n.item-button-right > .buttons > .button,\n.item-button-right > .buttons > .button-pill,\n.item-button-right .item-content > .buttons > .button,\n.item-button-right .item-content > .buttons > .button-pill {\n  margin: 0px 2px;\n  min-width: 34px;\n  min-height: 34px;\n  font-size: 18px;\n  line-height: 32px;\n}\n\n.item-avatar,\n.item-avatar .item-content,\n.item-avatar-left,\n.item-avatar-left .item-content {\n  padding-left: 72px;\n  min-height: 72px;\n}\n\n.item-avatar > img:first-child,\n.item-avatar .item-image,\n.item-avatar .item-content > img:first-child,\n.item-avatar .item-content .item-image,\n.item-avatar-left > img:first-child,\n.item-avatar-left .item-image,\n.item-avatar-left .item-content > img:first-child,\n.item-avatar-left .item-content .item-image {\n  position: absolute;\n  top: 16px;\n  left: 16px;\n  max-width: 40px;\n  max-height: 40px;\n  width: 100%;\n  height: 100%;\n  border-radius: 50%;\n}\n\n.item-avatar-right,\n.item-avatar-right .item-content {\n  padding-right: 72px;\n  min-height: 72px;\n}\n\n.item-avatar-right > img:first-child,\n.item-avatar-right .item-image,\n.item-avatar-right .item-content > img:first-child,\n.item-avatar-right .item-content .item-image {\n  position: absolute;\n  top: 16px;\n  right: 16px;\n  max-width: 40px;\n  max-height: 40px;\n  width: 100%;\n  height: 100%;\n  border-radius: 50%;\n}\n\n.item-thumbnail-left,\n.item-thumbnail-left .item-content {\n  padding-top: 8px;\n  padding-left: 106px;\n  min-height: 100px;\n}\n\n.item-thumbnail-left > img:first-child,\n.item-thumbnail-left .item-image,\n.item-thumbnail-left .item-content > img:first-child,\n.item-thumbnail-left .item-content .item-image {\n  position: absolute;\n  top: 10px;\n  left: 10px;\n  max-width: 80px;\n  max-height: 80px;\n  width: 100%;\n  height: 100%;\n}\n\n.item-avatar.item-complex,\n.item-avatar-left.item-complex,\n.item-thumbnail-left.item-complex {\n  padding-top: 0;\n  padding-left: 0;\n}\n\n.item-thumbnail-right,\n.item-thumbnail-right .item-content {\n  padding-top: 8px;\n  padding-right: 106px;\n  min-height: 100px;\n}\n\n.item-thumbnail-right > img:first-child,\n.item-thumbnail-right .item-image,\n.item-thumbnail-right .item-content > img:first-child,\n.item-thumbnail-right .item-content .item-image {\n  position: absolute;\n  top: 10px;\n  right: 10px;\n  max-width: 80px;\n  max-height: 80px;\n  width: 100%;\n  height: 100%;\n}\n\n.item-avatar-right.item-complex,\n.item-thumbnail-right.item-complex {\n  padding-top: 0;\n  padding-right: 0;\n}\n\n.item-image {\n  padding: 0;\n  text-align: center;\n}\n\n.item-image img:first-child,\n.item-image .list-img {\n  width: 100%;\n  vertical-align: middle;\n}\n\n.item-body {\n  overflow: auto;\n  padding: 16px;\n  text-overflow: inherit;\n  white-space: normal;\n}\n\n.item-body h1,\n.item-body h2,\n.item-body h3,\n.item-body h4,\n.item-body h5,\n.item-body h6,\n.item-body p {\n  margin-top: 16px;\n  margin-bottom: 16px;\n}\n\n.item-divider {\n  padding-top: 8px;\n  padding-bottom: 8px;\n  min-height: 30px;\n  background-color: #f5f5f5;\n  color: #222;\n  font-weight: 500;\n}\n\n.platform-ios .item-divider-platform,\n.item-divider-ios {\n  padding-top: 26px;\n  text-transform: uppercase;\n  font-weight: 300;\n  font-size: 13px;\n  background-color: #efeff4;\n  color: #555;\n}\n\n.platform-android .item-divider-platform,\n.item-divider-android {\n  font-weight: 300;\n  font-size: 13px;\n}\n\n.item-note {\n  float: right;\n  color: #aaa;\n  font-size: 14px;\n}\n\n.item-left-editable .item-content,\n.item-right-editable .item-content {\n  -webkit-transition-duration: 250ms;\n  transition-duration: 250ms;\n  -webkit-transition-timing-function: ease-in-out;\n  transition-timing-function: ease-in-out;\n  -webkit-transition-property: -webkit-transform;\n  -moz-transition-property: -moz-transform;\n  transition-property: transform;\n}\n\n.list-left-editing .item-left-editable .item-content,\n.item-left-editing.item-left-editable .item-content {\n  -webkit-transform: translate3d(50px, 0, 0);\n  transform: translate3d(50px, 0, 0);\n}\n\n.item-remove-animate.ng-leave {\n  -webkit-transition-duration: 300ms;\n  transition-duration: 300ms;\n}\n\n.item-remove-animate.ng-leave .item-content,\n.item-remove-animate.ng-leave:last-of-type {\n  -webkit-transition-duration: 300ms;\n  transition-duration: 300ms;\n  -webkit-transition-timing-function: ease-in;\n  transition-timing-function: ease-in;\n  -webkit-transition-property: all;\n  transition-property: all;\n}\n\n.item-remove-animate.ng-leave.ng-leave-active .item-content {\n  opacity: 0;\n  -webkit-transform: translate3d(-100%, 0, 0) !important;\n  transform: translate3d(-100%, 0, 0) !important;\n}\n\n.item-remove-animate.ng-leave.ng-leave-active:last-of-type {\n  opacity: 0;\n}\n\n.item-remove-animate.ng-leave.ng-leave-active ~ ion-item:not(.ng-leave) {\n  -webkit-transform: translate3d(0, -webkit-calc(-100% + 1px), 0);\n  transform: translate3d(0, calc(-100% + 1px), 0);\n  -webkit-transition-duration: 300ms;\n  transition-duration: 300ms;\n  -webkit-transition-timing-function: cubic-bezier(0.25, 0.81, 0.24, 1);\n  transition-timing-function: cubic-bezier(0.25, 0.81, 0.24, 1);\n  -webkit-transition-property: all;\n  transition-property: all;\n}\n\n.item-left-edit {\n  -webkit-transition: all ease-in-out 125ms;\n  transition: all ease-in-out 125ms;\n  position: absolute;\n  top: 0;\n  left: 0;\n  z-index: 0;\n  width: 50px;\n  height: 100%;\n  line-height: 100%;\n  display: none;\n  opacity: 0;\n  -webkit-transform: translate3d(-21px, 0, 0);\n  transform: translate3d(-21px, 0, 0);\n}\n\n.item-left-edit .button,\n.item-left-edit .button-pill {\n  height: 100%;\n}\n\n.item-left-edit .button.icon,\n.item-left-edit .icon.button-pill {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  -webkit-align-items: center;\n  -moz-align-items: center;\n  align-items: center;\n  position: absolute;\n  top: 0;\n  height: 100%;\n}\n\n.item-left-edit.visible {\n  display: block;\n}\n\n.item-left-edit.visible.active {\n  opacity: 1;\n  -webkit-transform: translate3d(8px, 0, 0);\n  transform: translate3d(8px, 0, 0);\n}\n\n.list-left-editing .item-left-edit {\n  -webkit-transition-delay: 125ms;\n  transition-delay: 125ms;\n}\n\n.item-delete .button.icon,\n.item-delete .icon.button-pill {\n  color: #ef473a;\n  font-size: 24px;\n}\n\n.item-delete .button.icon:hover,\n.item-delete .icon.button-pill:hover {\n  opacity: .7;\n}\n\n.item-right-edit {\n  -webkit-transition: all ease-in-out 250ms;\n  transition: all ease-in-out 250ms;\n  position: absolute;\n  top: 0;\n  right: 0;\n  z-index: 3;\n  width: 75px;\n  height: 100%;\n  background: inherit;\n  padding-left: 20px;\n  display: block;\n  opacity: 0;\n  -webkit-transform: translate3d(75px, 0, 0);\n  transform: translate3d(75px, 0, 0);\n}\n\n.item-right-edit .button,\n.item-right-edit .button-pill {\n  min-width: 50px;\n  height: 100%;\n}\n\n.item-right-edit .button.icon,\n.item-right-edit .icon.button-pill {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  -webkit-align-items: center;\n  -moz-align-items: center;\n  align-items: center;\n  position: absolute;\n  top: 0;\n  height: 100%;\n  font-size: 32px;\n}\n\n.item-right-edit.visible {\n  display: block;\n}\n\n.item-right-edit.visible.active {\n  opacity: 1;\n  -webkit-transform: translate3d(0, 0, 0);\n  transform: translate3d(0, 0, 0);\n}\n\n.item-reorder .button.icon,\n.item-reorder .icon.button-pill {\n  color: #444;\n  font-size: 32px;\n}\n\n.item-reordering {\n  position: absolute;\n  left: 0;\n  top: 0;\n  z-index: 9;\n  width: 100%;\n  box-shadow: 0px 0px 10px 0px #aaa;\n}\n\n.item-reordering .item-reorder {\n  z-index: 9;\n}\n\n.item-placeholder {\n  opacity: 0.7;\n}\n\n/**\n * The hidden right-side buttons that can be exposed under a list item\n * with dragging.\n */\n\n.item-options {\n  position: absolute;\n  top: 0;\n  right: 0;\n  z-index: 1;\n  height: 100%;\n}\n\n.item-options .button,\n.item-options .button-pill {\n  height: 100%;\n  border: none;\n  border-radius: 0;\n  display: -webkit-inline-box;\n  display: -webkit-inline-flex;\n  display: -moz-inline-flex;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  -webkit-align-items: center;\n  -moz-align-items: center;\n  align-items: center;\n}\n\n.item-options .button:before,\n.item-options .button-pill:before {\n  margin: 0 auto;\n}\n\n/**\n * Lists\n * --------------------------------------------------\n */\n\n.list {\n  position: relative;\n  padding-top: 1px;\n  padding-bottom: 1px;\n  padding-left: 0;\n  margin-bottom: 20px;\n}\n\n.list:last-child {\n  margin-bottom: 0px;\n}\n\n.list:last-child.card {\n  margin-bottom: 40px;\n}\n\n/**\n * List Header\n * --------------------------------------------------\n */\n\n.list-header {\n  margin-top: 20px;\n  padding: 5px 15px;\n  background-color: transparent;\n  color: #222;\n  font-weight: bold;\n}\n\n.card.list .list-item {\n  padding-right: 1px;\n  padding-left: 1px;\n}\n\n/**\n * Cards and Inset Lists\n * --------------------------------------------------\n * A card and list-inset are close to the same thing, except a card as a box shadow.\n */\n\n.card,\n.list-inset {\n  overflow: hidden;\n  margin: 20px 10px;\n  border-radius: 2px;\n  background-color: #fff;\n}\n\n.card {\n  padding-top: 1px;\n  padding-bottom: 1px;\n  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);\n}\n\n.card .item {\n  border-left: 0;\n  border-right: 0;\n}\n\n.card .item:first-child {\n  border-top: 0;\n}\n\n.card .item:last-child {\n  border-bottom: 0;\n}\n\n.padding .card,\n.padding .list-inset {\n  margin-left: 0;\n  margin-right: 0;\n}\n\n.card .item:first-child,\n.list-inset .item:first-child,\n.padding > .list .item:first-child {\n  border-top-left-radius: 2px;\n  border-top-right-radius: 2px;\n}\n\n.card .item:first-child .item-content,\n.list-inset .item:first-child .item-content,\n.padding > .list .item:first-child .item-content {\n  border-top-left-radius: 2px;\n  border-top-right-radius: 2px;\n}\n\n.card .item:last-child,\n.list-inset .item:last-child,\n.padding > .list .item:last-child {\n  border-bottom-right-radius: 2px;\n  border-bottom-left-radius: 2px;\n}\n\n.card .item:last-child .item-content,\n.list-inset .item:last-child .item-content,\n.padding > .list .item:last-child .item-content {\n  border-bottom-right-radius: 2px;\n  border-bottom-left-radius: 2px;\n}\n\n.card .item:last-child,\n.list-inset .item:last-child {\n  margin-bottom: -1px;\n}\n\n.card .item,\n.list-inset .item,\n.padding > .list .item,\n.padding-horizontal > .list .item {\n  margin-right: 0;\n  margin-left: 0;\n}\n\n.card .item.item-input input,\n.list-inset .item.item-input input,\n.padding > .list .item.item-input input,\n.padding-horizontal > .list .item.item-input input {\n  padding-right: 44px;\n}\n\n.padding-left > .list .item {\n  margin-left: 0;\n}\n\n.padding-right > .list .item {\n  margin-right: 0;\n}\n\n/**\n * Badges\n * --------------------------------------------------\n */\n\n.badge {\n  background-color: transparent;\n  color: #AAAAAA;\n  z-index: 1;\n  display: inline-block;\n  padding: 3px 8px;\n  min-width: 10px;\n  border-radius: 10px;\n  vertical-align: baseline;\n  text-align: center;\n  white-space: nowrap;\n  font-weight: bold;\n  font-size: 14px;\n  line-height: 16px;\n}\n\n.badge:empty {\n  display: none;\n}\n\n.tabs .tab-item .badge.badge-light,\n.badge.badge-light {\n  background-color: #00F1D3;\n  color: #444;\n}\n\n.tabs .tab-item .badge.badge-stable,\n.badge.badge-stable {\n  background-color: #f8f8f8;\n  color: #444;\n}\n\n.tabs .tab-item .badge.badge-positive,\n.badge.badge-positive {\n  background-color: #00A490;\n  color: #fff;\n}\n\n.tabs .tab-item .badge.badge-calm,\n.badge.badge-calm {\n  background-color: #11c1f3;\n  color: #fff;\n}\n\n.tabs .tab-item .badge.badge-assertive,\n.badge.badge-assertive {\n  background-color: #ef473a;\n  color: #fff;\n}\n\n.tabs .tab-item .badge.badge-balanced,\n.badge.badge-balanced {\n  background-color: #33cd5f;\n  color: #fff;\n}\n\n.tabs .tab-item .badge.badge-energized,\n.badge.badge-energized {\n  background-color: #ffc900;\n  color: #fff;\n}\n\n.tabs .tab-item .badge.badge-royal,\n.badge.badge-royal {\n  background-color: #886aea;\n  color: #fff;\n}\n\n.tabs .tab-item .badge.badge-dark,\n.badge.badge-dark {\n  background-color: #444;\n  color: #fff;\n}\n\n.button .badge,\n.button-pill .badge {\n  position: relative;\n  top: -1px;\n}\n\n/**\n * Slide Box\n * --------------------------------------------------\n */\n\n.slider {\n  position: relative;\n  visibility: hidden;\n  overflow: hidden;\n}\n\n.slider-slides {\n  position: relative;\n  height: 100%;\n}\n\n.slider-slide {\n  position: relative;\n  display: block;\n  float: left;\n  width: 100%;\n  height: 100%;\n  vertical-align: top;\n}\n\n.slider-slide-image > img {\n  width: 100%;\n}\n\n.slider-pager {\n  position: absolute;\n  bottom: 20px;\n  z-index: 1;\n  width: 100%;\n  height: 15px;\n  text-align: center;\n}\n\n.slider-pager .slider-pager-page {\n  display: inline-block;\n  margin: 0px 3px;\n  width: 15px;\n  color: #000;\n  text-decoration: none;\n  opacity: 0.3;\n}\n\n.slider-pager .slider-pager-page.active {\n  -webkit-transition: opacity 0.4s ease-in;\n  transition: opacity 0.4s ease-in;\n  opacity: 1;\n}\n\n.scroll-refresher {\n  position: absolute;\n  top: -60px;\n  right: 0;\n  left: 0;\n  overflow: hidden;\n  margin: auto;\n  height: 60px;\n}\n\n.scroll-refresher .ionic-refresher-content {\n  position: absolute;\n  bottom: 15px;\n  left: 0;\n  width: 100%;\n  color: #666666;\n  text-align: center;\n  font-size: 30px;\n}\n\n.scroll-refresher .ionic-refresher-content .text-refreshing,\n.scroll-refresher .ionic-refresher-content .text-pulling {\n  font-size: 16px;\n  line-height: 16px;\n}\n\n.scroll-refresher .ionic-refresher-content.ionic-refresher-with-text {\n  bottom: 10px;\n}\n\n.scroll-refresher .icon-refreshing,\n.scroll-refresher .icon-pulling {\n  width: 100%;\n  -webkit-backface-visibility: hidden;\n  backface-visibility: hidden;\n  -webkit-transform-style: preserve-3d;\n  transform-style: preserve-3d;\n}\n\n.scroll-refresher .icon-pulling {\n  -webkit-animation-name: refresh-spin-back;\n  animation-name: refresh-spin-back;\n  -webkit-animation-duration: 200ms;\n  animation-duration: 200ms;\n  -webkit-animation-timing-function: linear;\n  animation-timing-function: linear;\n  -webkit-animation-fill-mode: none;\n  animation-fill-mode: none;\n  -webkit-transform: translate3d(0, 0, 0) rotate(0deg);\n  transform: translate3d(0, 0, 0) rotate(0deg);\n}\n\n.scroll-refresher .icon-refreshing,\n.scroll-refresher .text-refreshing {\n  display: none;\n}\n\n.scroll-refresher .icon-refreshing {\n  -webkit-animation-duration: 1.5s;\n  animation-duration: 1.5s;\n}\n\n.scroll-refresher.active .icon-pulling:not(.pulling-rotation-disabled) {\n  -webkit-animation-name: refresh-spin;\n  animation-name: refresh-spin;\n  -webkit-transform: translate3d(0, 0, 0) rotate(-180deg);\n  transform: translate3d(0, 0, 0) rotate(-180deg);\n}\n\n.scroll-refresher.active.refreshing {\n  -webkit-transition: -webkit-transform 0.2s;\n  transition: -webkit-transform 0.2s;\n  -webkit-transition: transform 0.2s;\n  transition: transform 0.2s;\n  -webkit-transform: scale(1, 1);\n  transform: scale(1, 1);\n}\n\n.scroll-refresher.active.refreshing .icon-pulling,\n.scroll-refresher.active.refreshing .text-pulling {\n  display: none;\n}\n\n.scroll-refresher.active.refreshing .icon-refreshing,\n.scroll-refresher.active.refreshing .text-refreshing {\n  display: block;\n}\n\n.scroll-refresher.active.refreshing.refreshing-tail {\n  -webkit-transform: scale(0, 0);\n  transform: scale(0, 0);\n}\n\n.overflow-scroll > .scroll {\n  -webkit-overflow-scrolling: touch;\n  width: 100%;\n}\n\n.overflow-scroll > .scroll.overscroll {\n  position: fixed;\n}\n\n@-webkit-keyframes refresh-spin {\n  0% {\n    -webkit-transform: translate3d(0, 0, 0) rotate(0);\n  }\n\n  100% {\n    -webkit-transform: translate3d(0, 0, 0) rotate(180deg);\n  }\n}\n\n@keyframes refresh-spin {\n  0% {\n    transform: translate3d(0, 0, 0) rotate(0);\n  }\n\n  100% {\n    transform: translate3d(0, 0, 0) rotate(180deg);\n  }\n}\n\n@-webkit-keyframes refresh-spin-back {\n  0% {\n    -webkit-transform: translate3d(0, 0, 0) rotate(180deg);\n  }\n\n  100% {\n    -webkit-transform: translate3d(0, 0, 0) rotate(0);\n  }\n}\n\n@keyframes refresh-spin-back {\n  0% {\n    transform: translate3d(0, 0, 0) rotate(180deg);\n  }\n\n  100% {\n    transform: translate3d(0, 0, 0) rotate(0);\n  }\n}\n\n/**\n * Spinners\n * --------------------------------------------------\n */\n\n.spinner {\n  stroke: #444;\n  fill: #444;\n}\n\n.spinner svg {\n  width: 28px;\n  height: 28px;\n}\n\n.spinner.spinner-light {\n  stroke: #00F1D3;\n  fill: #00F1D3;\n}\n\n.spinner.spinner-stable {\n  stroke: #f8f8f8;\n  fill: #f8f8f8;\n}\n\n.spinner.spinner-positive {\n  stroke: #00A490;\n  fill: #00A490;\n}\n\n.spinner.spinner-calm {\n  stroke: #11c1f3;\n  fill: #11c1f3;\n}\n\n.spinner.spinner-balanced {\n  stroke: #33cd5f;\n  fill: #33cd5f;\n}\n\n.spinner.spinner-assertive {\n  stroke: #ef473a;\n  fill: #ef473a;\n}\n\n.spinner.spinner-energized {\n  stroke: #ffc900;\n  fill: #ffc900;\n}\n\n.spinner.spinner-royal {\n  stroke: #886aea;\n  fill: #886aea;\n}\n\n.spinner.spinner-dark {\n  stroke: #444;\n  fill: #444;\n}\n\n.spinner-android {\n  stroke: #4b8bf4;\n}\n\n.spinner-ios,\n.spinner-ios-small {\n  stroke: #69717d;\n}\n\n.spinner-spiral .stop1 {\n  stop-color: #00F1D3;\n  stop-opacity: 0;\n}\n\n.spinner-spiral.spinner-light .stop1 {\n  stop-color: #444;\n}\n\n.spinner-spiral.spinner-light .stop2 {\n  stop-color: #00F1D3;\n}\n\n.spinner-spiral.spinner-stable .stop2 {\n  stop-color: #f8f8f8;\n}\n\n.spinner-spiral.spinner-positive .stop2 {\n  stop-color: #00A490;\n}\n\n.spinner-spiral.spinner-calm .stop2 {\n  stop-color: #11c1f3;\n}\n\n.spinner-spiral.spinner-balanced .stop2 {\n  stop-color: #33cd5f;\n}\n\n.spinner-spiral.spinner-assertive .stop2 {\n  stop-color: #ef473a;\n}\n\n.spinner-spiral.spinner-energized .stop2 {\n  stop-color: #ffc900;\n}\n\n.spinner-spiral.spinner-royal .stop2 {\n  stop-color: #886aea;\n}\n\n.spinner-spiral.spinner-dark .stop2 {\n  stop-color: #444;\n}\n\n/**\n * Forms\n * --------------------------------------------------\n */\n\nform {\n  margin: 0 0 1.42857;\n}\n\nlegend {\n  display: block;\n  margin-bottom: 1.42857;\n  padding: 0;\n  width: 100%;\n  border: 1px solid #ddd;\n  color: #444;\n  font-size: 24px;\n  line-height: 2.85714;\n}\n\nlegend small {\n  color: #f8f8f8;\n  font-size: 1.07143;\n}\n\nlabel,\ninput,\nbutton,\nselect,\ntextarea {\n  font-weight: normal;\n  font-size: 16px;\n  line-height: 1.42857;\n}\n\ninput,\nbutton,\nselect,\ntextarea {\n  font-family: \"Titillium Web\", sans-serif;\n}\n\n.item-input {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  -webkit-align-items: center;\n  -moz-align-items: center;\n  align-items: center;\n  position: relative;\n  overflow: hidden;\n  padding: 6px 0 5px 16px;\n}\n\n.item-input input {\n  -webkit-border-radius: 0;\n  border-radius: 0;\n  -webkit-box-flex: 1;\n  -webkit-flex: 1 220px;\n  -moz-box-flex: 1;\n  -moz-flex: 1 220px;\n  -ms-flex: 1 220px;\n  flex: 1 220px;\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n  margin: 0;\n  padding-right: 24px;\n  background-color: transparent;\n}\n\n.item-input .button .icon,\n.item-input .button-pill .icon {\n  -webkit-box-flex: 0;\n  -webkit-flex: 0 0 24px;\n  -moz-box-flex: 0;\n  -moz-flex: 0 0 24px;\n  -ms-flex: 0 0 24px;\n  flex: 0 0 24px;\n  position: static;\n  display: inline-block;\n  height: auto;\n  text-align: center;\n  font-size: 16px;\n}\n\n.item-input .button-bar {\n  -webkit-border-radius: 0;\n  border-radius: 0;\n  -webkit-box-flex: 1;\n  -webkit-flex: 1 0 220px;\n  -moz-box-flex: 1;\n  -moz-flex: 1 0 220px;\n  -ms-flex: 1 0 220px;\n  flex: 1 0 220px;\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n}\n\n.item-input .icon {\n  min-width: 14px;\n}\n\n.platform-windowsphone .item-input input {\n  flex-shrink: 1;\n}\n\n.item-input-inset {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  -webkit-align-items: center;\n  -moz-align-items: center;\n  align-items: center;\n  position: relative;\n  overflow: hidden;\n  padding: 10.66667px;\n}\n\n.item-input-wrapper {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-flex: 1;\n  -webkit-flex: 1 0;\n  -moz-box-flex: 1;\n  -moz-flex: 1 0;\n  -ms-flex: 1 0;\n  flex: 1 0;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  -webkit-align-items: center;\n  -moz-align-items: center;\n  align-items: center;\n  -webkit-border-radius: 4px;\n  border-radius: 4px;\n  padding-right: 8px;\n  padding-left: 8px;\n  background: #eee;\n}\n\n.item-input-inset .item-input-wrapper input {\n  padding-left: 4px;\n  height: 29px;\n  background: transparent;\n  line-height: 18px;\n}\n\n.item-input-wrapper ~ .button,\n.item-input-wrapper ~ .button-pill {\n  margin-left: 10.66667px;\n}\n\n.input-label {\n  display: table;\n  padding: 7px 10px 7px 0px;\n  max-width: 200px;\n  width: 35%;\n  color: #444;\n  font-size: 16px;\n}\n\n.placeholder-icon {\n  color: #aaa;\n}\n\n.placeholder-icon:first-child {\n  padding-right: 6px;\n}\n\n.placeholder-icon:last-child {\n  padding-left: 6px;\n}\n\n.item-stacked-label {\n  display: block;\n  background-color: transparent;\n  box-shadow: none;\n}\n\n.item-stacked-label .input-label,\n.item-stacked-label .icon {\n  display: inline-block;\n  padding: 4px 0 0 0px;\n  vertical-align: middle;\n}\n\n.item-stacked-label input,\n.item-stacked-label textarea {\n  -webkit-border-radius: 2px;\n  border-radius: 2px;\n  padding: 4px 8px 3px 0;\n  border: none;\n  background-color: #00F1D3;\n}\n\n.item-stacked-label input {\n  overflow: hidden;\n  height: 50px;\n}\n\n.item-floating-label {\n  display: block;\n  background-color: transparent;\n  box-shadow: none;\n}\n\n.item-floating-label .input-label {\n  position: relative;\n  padding: 5px 0 0 0;\n  opacity: 0;\n  top: 10px;\n  -webkit-transition: opacity 0.15s ease-in, top 0.2s linear;\n  transition: opacity 0.15s ease-in, top 0.2s linear;\n}\n\n.item-floating-label .input-label.has-input {\n  opacity: 1;\n  top: 0;\n  -webkit-transition: opacity 0.15s ease-in, top 0.2s linear;\n  transition: opacity 0.15s ease-in, top 0.2s linear;\n}\n\ntextarea,\ninput[type=\"text\"],\ninput[type=\"password\"],\ninput[type=\"datetime\"],\ninput[type=\"datetime-local\"],\ninput[type=\"date\"],\ninput[type=\"month\"],\ninput[type=\"time\"],\ninput[type=\"week\"],\ninput[type=\"number\"],\ninput[type=\"email\"],\ninput[type=\"url\"],\ninput[type=\"search\"],\ninput[type=\"tel\"],\ninput[type=\"color\"] {\n  display: block;\n  padding-top: 2px;\n  padding-left: 0;\n  height: 38px;\n  color: #111;\n  vertical-align: middle;\n  font-size: 16px;\n  line-height: 18px;\n}\n\n.platform-ios input[type=\"datetime-local\"],\n.platform-ios input[type=\"date\"],\n.platform-ios input[type=\"month\"],\n.platform-ios input[type=\"time\"],\n.platform-ios input[type=\"week\"],\n.platform-android input[type=\"datetime-local\"],\n.platform-android input[type=\"date\"],\n.platform-android input[type=\"month\"],\n.platform-android input[type=\"time\"],\n.platform-android input[type=\"week\"] {\n  padding-top: 8px;\n}\n\n.item-input input,\n.item-input textarea {\n  width: 100%;\n}\n\ntextarea {\n  padding-left: 0;\n}\n\ntextarea::-moz-placeholder {\n  color: #aaaaaa;\n}\n\ntextarea:-ms-input-placeholder {\n  color: #aaaaaa;\n}\n\ntextarea::-webkit-input-placeholder {\n  color: #aaaaaa;\n  text-indent: -3px;\n}\n\ntextarea {\n  height: auto;\n}\n\ntextarea,\ninput[type=\"text\"],\ninput[type=\"password\"],\ninput[type=\"datetime\"],\ninput[type=\"datetime-local\"],\ninput[type=\"date\"],\ninput[type=\"month\"],\ninput[type=\"time\"],\ninput[type=\"week\"],\ninput[type=\"number\"],\ninput[type=\"email\"],\ninput[type=\"url\"],\ninput[type=\"search\"],\ninput[type=\"tel\"],\ninput[type=\"color\"] {\n  border: 0;\n}\n\ninput[type=\"radio\"],\ninput[type=\"checkbox\"] {\n  margin: 0;\n  line-height: normal;\n}\n\n.item-input input[type=\"file\"],\n.item-input input[type=\"image\"],\n.item-input input[type=\"submit\"],\n.item-input input[type=\"reset\"],\n.item-input input[type=\"button\"],\n.item-input input[type=\"radio\"],\n.item-input input[type=\"checkbox\"] {\n  width: auto;\n}\n\ninput[type=\"file\"] {\n  line-height: 36px;\n}\n\n.previous-input-focus,\n.cloned-text-input + input,\n.cloned-text-input + textarea {\n  position: absolute !important;\n  left: -9999px;\n  width: 200px;\n}\n\ninput::-moz-placeholder,\ntextarea::-moz-placeholder {\n  color: #aaaaaa;\n}\n\ninput:-ms-input-placeholder,\ntextarea:-ms-input-placeholder {\n  color: #aaaaaa;\n}\n\ninput::-webkit-input-placeholder,\ntextarea::-webkit-input-placeholder {\n  color: #aaaaaa;\n  text-indent: 0;\n}\n\ninput[disabled],\nselect[disabled],\ntextarea[disabled],\ninput[readonly]:not(.cloned-text-input),\ntextarea[readonly]:not(.cloned-text-input),\nselect[readonly] {\n  background-color: #f8f8f8;\n  cursor: not-allowed;\n}\n\ninput[type=\"radio\"][disabled],\ninput[type=\"checkbox\"][disabled],\ninput[type=\"radio\"][readonly],\ninput[type=\"checkbox\"][readonly] {\n  background-color: transparent;\n}\n\n/**\n * Checkbox\n * --------------------------------------------------\n */\n\n.checkbox {\n  position: relative;\n  display: inline-block;\n  padding: 7px 7px;\n  cursor: pointer;\n}\n\n.checkbox input:before,\n.checkbox .checkbox-icon:before {\n  border-color: #ddd;\n}\n\n.checkbox input:checked:before,\n.checkbox input:checked + .checkbox-icon:before {\n  background: #00A490;\n  border-color: #00A490;\n}\n\n.checkbox-light input:before,\n.checkbox-light .checkbox-icon:before {\n  border-color: #ddd;\n}\n\n.checkbox-light input:checked:before,\n.checkbox-light input:checked + .checkbox-icon:before {\n  background: #ddd;\n  border-color: #ddd;\n}\n\n.checkbox-stable input:before,\n.checkbox-stable .checkbox-icon:before {\n  border-color: #b2b2b2;\n}\n\n.checkbox-stable input:checked:before,\n.checkbox-stable input:checked + .checkbox-icon:before {\n  background: #b2b2b2;\n  border-color: #b2b2b2;\n}\n\n.checkbox-positive input:before,\n.checkbox-positive .checkbox-icon:before {\n  border-color: #00A490;\n}\n\n.checkbox-positive input:checked:before,\n.checkbox-positive input:checked + .checkbox-icon:before {\n  background: #00A490;\n  border-color: #00A490;\n}\n\n.checkbox-calm input:before,\n.checkbox-calm .checkbox-icon:before {\n  border-color: #11c1f3;\n}\n\n.checkbox-calm input:checked:before,\n.checkbox-calm input:checked + .checkbox-icon:before {\n  background: #11c1f3;\n  border-color: #11c1f3;\n}\n\n.checkbox-assertive input:before,\n.checkbox-assertive .checkbox-icon:before {\n  border-color: #ef473a;\n}\n\n.checkbox-assertive input:checked:before,\n.checkbox-assertive input:checked + .checkbox-icon:before {\n  background: #ef473a;\n  border-color: #ef473a;\n}\n\n.checkbox-balanced input:before,\n.checkbox-balanced .checkbox-icon:before {\n  border-color: #33cd5f;\n}\n\n.checkbox-balanced input:checked:before,\n.checkbox-balanced input:checked + .checkbox-icon:before {\n  background: #33cd5f;\n  border-color: #33cd5f;\n}\n\n.checkbox-energized input:before,\n.checkbox-energized .checkbox-icon:before {\n  border-color: #ffc900;\n}\n\n.checkbox-energized input:checked:before,\n.checkbox-energized input:checked + .checkbox-icon:before {\n  background: #ffc900;\n  border-color: #ffc900;\n}\n\n.checkbox-royal input:before,\n.checkbox-royal .checkbox-icon:before {\n  border-color: #886aea;\n}\n\n.checkbox-royal input:checked:before,\n.checkbox-royal input:checked + .checkbox-icon:before {\n  background: #886aea;\n  border-color: #886aea;\n}\n\n.checkbox-dark input:before,\n.checkbox-dark .checkbox-icon:before {\n  border-color: #444;\n}\n\n.checkbox-dark input:checked:before,\n.checkbox-dark input:checked + .checkbox-icon:before {\n  background: #444;\n  border-color: #444;\n}\n\n.checkbox input:disabled:before,\n.checkbox input:disabled + .checkbox-icon:before {\n  border-color: #ddd;\n}\n\n.checkbox input:disabled:checked:before,\n.checkbox input:disabled:checked + .checkbox-icon:before {\n  background: #ddd;\n}\n\n.checkbox.checkbox-input-hidden input {\n  display: none !important;\n}\n\n.checkbox input,\n.checkbox-icon {\n  position: relative;\n  width: 28px;\n  height: 28px;\n  display: block;\n  border: 0;\n  background: transparent;\n  cursor: pointer;\n  -webkit-appearance: none;\n}\n\n.checkbox input:before,\n.checkbox-icon:before {\n  display: table;\n  width: 100%;\n  height: 100%;\n  border-width: 1px;\n  border-style: solid;\n  border-radius: 28px;\n  background: #fff;\n  content: ' ';\n  -webkit-transition: background-color 20ms ease-in-out;\n  transition: background-color 20ms ease-in-out;\n}\n\n.checkbox input:checked:before,\ninput:checked + .checkbox-icon:before {\n  border-width: 2px;\n}\n\n.checkbox input:after,\n.checkbox-icon:after {\n  -webkit-transition: opacity 0.05s ease-in-out;\n  transition: opacity 0.05s ease-in-out;\n  -webkit-transform: rotate(-45deg);\n  transform: rotate(-45deg);\n  position: absolute;\n  top: 33%;\n  left: 25%;\n  display: table;\n  width: 14px;\n  height: 6px;\n  border: 1px solid #fff;\n  border-top: 0;\n  border-right: 0;\n  content: ' ';\n  opacity: 0;\n}\n\n.platform-android .checkbox-platform input:before,\n.platform-android .checkbox-platform .checkbox-icon:before,\n.checkbox-square input:before,\n.checkbox-square .checkbox-icon:before {\n  border-radius: 2px;\n  width: 72%;\n  height: 72%;\n  margin-top: 14%;\n  margin-left: 14%;\n  border-width: 2px;\n}\n\n.platform-android .checkbox-platform input:after,\n.platform-android .checkbox-platform .checkbox-icon:after,\n.checkbox-square input:after,\n.checkbox-square .checkbox-icon:after {\n  border-width: 2px;\n  top: 19%;\n  left: 25%;\n  width: 13px;\n  height: 7px;\n}\n\n.grade-c .checkbox input:after,\n.grade-c .checkbox-icon:after {\n  -webkit-transform: rotate(0);\n  transform: rotate(0);\n  top: 3px;\n  left: 4px;\n  border: none;\n  color: #fff;\n  content: '\\2713';\n  font-weight: bold;\n  font-size: 20px;\n}\n\n.checkbox input:checked:after,\ninput:checked + .checkbox-icon:after {\n  opacity: 1;\n}\n\n.item-checkbox {\n  padding-left: 60px;\n}\n\n.item-checkbox.active {\n  box-shadow: none;\n}\n\n.item-checkbox .checkbox {\n  position: absolute;\n  top: 50%;\n  right: 8px;\n  left: 8px;\n  z-index: 3;\n  margin-top: -21px;\n}\n\n.item-checkbox.item-checkbox-right {\n  padding-right: 60px;\n  padding-left: 16px;\n}\n\n.item-checkbox-right .checkbox input,\n.item-checkbox-right .checkbox-icon {\n  float: right;\n}\n\n/**\n * Toggle\n * --------------------------------------------------\n */\n\n.item-toggle {\n  pointer-events: none;\n}\n\n.toggle {\n  position: relative;\n  display: inline-block;\n  pointer-events: auto;\n  margin: -5px;\n  padding: 5px;\n}\n\n.toggle input:checked + .track {\n  border-color: #4cd964;\n  background-color: #4cd964;\n}\n\n.toggle.dragging .handle {\n  background-color: #f2f2f2 !important;\n}\n\n.toggle.toggle-light input:checked + .track {\n  border-color: #ddd;\n  background-color: #ddd;\n}\n\n.toggle.toggle-stable input:checked + .track {\n  border-color: #b2b2b2;\n  background-color: #b2b2b2;\n}\n\n.toggle.toggle-positive input:checked + .track {\n  border-color: #00A490;\n  background-color: #00A490;\n}\n\n.toggle.toggle-calm input:checked + .track {\n  border-color: #11c1f3;\n  background-color: #11c1f3;\n}\n\n.toggle.toggle-assertive input:checked + .track {\n  border-color: #ef473a;\n  background-color: #ef473a;\n}\n\n.toggle.toggle-balanced input:checked + .track {\n  border-color: #33cd5f;\n  background-color: #33cd5f;\n}\n\n.toggle.toggle-energized input:checked + .track {\n  border-color: #ffc900;\n  background-color: #ffc900;\n}\n\n.toggle.toggle-royal input:checked + .track {\n  border-color: #886aea;\n  background-color: #886aea;\n}\n\n.toggle.toggle-dark input:checked + .track {\n  border-color: #444;\n  background-color: #444;\n}\n\n.toggle input {\n  display: none;\n}\n\n/* the track appearance when the toggle is \"off\" */\n\n.toggle .track {\n  -webkit-transition-timing-function: ease-in-out;\n  transition-timing-function: ease-in-out;\n  -webkit-transition-duration: 0.3s;\n  transition-duration: 0.3s;\n  -webkit-transition-property: background-color, border;\n  transition-property: background-color, border;\n  display: inline-block;\n  box-sizing: border-box;\n  width: 51px;\n  height: 31px;\n  border: solid 2px #e6e6e6;\n  border-radius: 20px;\n  background-color: #fff;\n  content: ' ';\n  cursor: pointer;\n  pointer-events: none;\n}\n\n/* Fix to avoid background color bleeding */\n\n/* (occured on (at least) Android 4.2, Asus MeMO Pad HD7 ME173X) */\n\n.platform-android4_2 .toggle .track {\n  -webkit-background-clip: padding-box;\n}\n\n/* the handle (circle) thats inside the toggle's track area */\n\n/* also the handle's appearance when it is \"off\" */\n\n.toggle .handle {\n  -webkit-transition: 0.3s cubic-bezier(0, 1.1, 1, 1.1);\n  transition: 0.3s cubic-bezier(0, 1.1, 1, 1.1);\n  -webkit-transition-property: background-color, transform;\n  transition-property: background-color, transform;\n  position: absolute;\n  display: block;\n  width: 27px;\n  height: 27px;\n  border-radius: 27px;\n  background-color: #00F1D3;\n  top: 7px;\n  left: 7px;\n  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.35), 0 1px 1px rgba(0, 0, 0, 0.15);\n}\n\n.toggle .handle:before {\n  position: absolute;\n  top: -4px;\n  left: -21.5px;\n  padding: 18.5px 34px;\n  content: \" \";\n}\n\n.toggle input:checked + .track .handle {\n  -webkit-transform: translate3d(20px, 0, 0);\n  transform: translate3d(20px, 0, 0);\n  background-color: #00F1D3;\n}\n\n.item-toggle.active {\n  box-shadow: none;\n}\n\n.item-toggle,\n.item-toggle.item-complex .item-content {\n  padding-right: 99px;\n}\n\n.item-toggle.item-complex {\n  padding-right: 0;\n}\n\n.item-toggle .toggle {\n  position: absolute;\n  top: 10px;\n  right: 16px;\n  z-index: 3;\n}\n\n.toggle input:disabled + .track {\n  opacity: .6;\n}\n\n.toggle-small .track {\n  border: 0;\n  width: 34px;\n  height: 15px;\n  background: #9e9e9e;\n}\n\n.toggle-small input:checked + .track {\n  background: rgba(0, 150, 137, 0.5);\n}\n\n.toggle-small .handle {\n  top: 2px;\n  left: 4px;\n  width: 21px;\n  height: 21px;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);\n}\n\n.toggle-small input:checked + .track .handle {\n  -webkit-transform: translate3d(16px, 0, 0);\n  transform: translate3d(16px, 0, 0);\n  background: #009689;\n}\n\n.toggle-small.item-toggle .toggle {\n  top: 19px;\n}\n\n.toggle-small .toggle-light input:checked + .track {\n  background-color: rgba(221, 221, 221, 0.5);\n}\n\n.toggle-small .toggle-light input:checked + .track .handle {\n  background-color: #ddd;\n}\n\n.toggle-small .toggle-stable input:checked + .track {\n  background-color: rgba(178, 178, 178, 0.5);\n}\n\n.toggle-small .toggle-stable input:checked + .track .handle {\n  background-color: #b2b2b2;\n}\n\n.toggle-small .toggle-positive input:checked + .track {\n  background-color: rgba(0, 164, 144, 0.5);\n}\n\n.toggle-small .toggle-positive input:checked + .track .handle {\n  background-color: #00A490;\n}\n\n.toggle-small .toggle-calm input:checked + .track {\n  background-color: rgba(17, 193, 243, 0.5);\n}\n\n.toggle-small .toggle-calm input:checked + .track .handle {\n  background-color: #11c1f3;\n}\n\n.toggle-small .toggle-assertive input:checked + .track {\n  background-color: rgba(239, 71, 58, 0.5);\n}\n\n.toggle-small .toggle-assertive input:checked + .track .handle {\n  background-color: #ef473a;\n}\n\n.toggle-small .toggle-balanced input:checked + .track {\n  background-color: rgba(51, 205, 95, 0.5);\n}\n\n.toggle-small .toggle-balanced input:checked + .track .handle {\n  background-color: #33cd5f;\n}\n\n.toggle-small .toggle-energized input:checked + .track {\n  background-color: rgba(255, 201, 0, 0.5);\n}\n\n.toggle-small .toggle-energized input:checked + .track .handle {\n  background-color: #ffc900;\n}\n\n.toggle-small .toggle-royal input:checked + .track {\n  background-color: rgba(136, 106, 234, 0.5);\n}\n\n.toggle-small .toggle-royal input:checked + .track .handle {\n  background-color: #886aea;\n}\n\n.toggle-small .toggle-dark input:checked + .track {\n  background-color: rgba(68, 68, 68, 0.5);\n}\n\n.toggle-small .toggle-dark input:checked + .track .handle {\n  background-color: #444;\n}\n\n/**\n * Radio Button Inputs\n * --------------------------------------------------\n */\n\n.item-radio {\n  padding: 0;\n}\n\n.item-radio:hover {\n  cursor: pointer;\n}\n\n.item-radio .item-content {\n  /* give some room to the right for the checkmark icon */\n  padding-right: 64px;\n}\n\n.item-radio .radio-icon {\n  /* checkmark icon will be hidden by default */\n  position: absolute;\n  top: 0;\n  right: 0;\n  z-index: 3;\n  visibility: hidden;\n  padding: 14px;\n  height: 100%;\n  font-size: 24px;\n}\n\n.item-radio input {\n  /* hide any radio button inputs elements (the ugly circles) */\n  position: absolute;\n  left: -9999px;\n}\n\n.item-radio input:checked ~ .item-content {\n  /* style the item content when its checked */\n  background: #f7f7f7;\n}\n\n.item-radio input:checked ~ .radio-icon {\n  /* show the checkmark icon when its checked */\n  visibility: visible;\n}\n\n.platform-android.grade-b .item-radio,\n.platform-android.grade-c .item-radio {\n  -webkit-animation: androidCheckedbugfix infinite 1s;\n}\n\n@-webkit-keyframes androidCheckedbugfix {\n  from {\n    padding: 0;\n  }\n\n  to {\n    padding: 0;\n  }\n}\n\n/**\n * Range\n * --------------------------------------------------\n */\n\n.range input {\n  display: inline-block;\n  overflow: hidden;\n  margin-top: 5px;\n  margin-bottom: 5px;\n  padding-right: 2px;\n  padding-left: 1px;\n  width: auto;\n  height: 43px;\n  outline: none;\n  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ccc), color-stop(100%, #ccc));\n  background: linear-gradient(to right, #ccc 0%, #ccc 100%);\n  background-position: center;\n  background-size: 99% 2px;\n  background-repeat: no-repeat;\n  -webkit-appearance: none;\n}\n\n.range input::-webkit-slider-thumb {\n  position: relative;\n  width: 28px;\n  height: 28px;\n  border-radius: 50%;\n  background-color: #00F1D3;\n  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2);\n  cursor: pointer;\n  -webkit-appearance: none;\n  border: 0;\n}\n\n.range input::-webkit-slider-thumb:before {\n  /* what creates the colorful line on the left side of the slider */\n  position: absolute;\n  top: 13px;\n  left: -2001px;\n  width: 2000px;\n  height: 2px;\n  background: #444;\n  content: ' ';\n}\n\n.range input::-webkit-slider-thumb:after {\n  /* create a larger (but hidden) hit area */\n  position: absolute;\n  top: -15px;\n  left: -15px;\n  padding: 30px;\n  content: ' ';\n}\n\n.range input::-ms-track {\n  background: transparent;\n  border-color: transparent;\n  border-width: 11px 0 16px;\n  color: transparent;\n  margin-top: 20px;\n}\n\n.range input::-ms-thumb {\n  width: 28px;\n  height: 28px;\n  border-radius: 50%;\n  background-color: #00F1D3;\n  border-color: #00F1D3;\n  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2);\n  margin-left: 1px;\n  margin-right: 1px;\n  outline: none;\n}\n\n.range input::-ms-fill-lower {\n  height: 2px;\n  background: #444;\n}\n\n.range input::-ms-fill-upper {\n  height: 2px;\n  background: #ccc;\n}\n\n.range {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  -webkit-align-items: center;\n  -moz-align-items: center;\n  align-items: center;\n  padding: 2px 11px;\n}\n\n.range.range-light input::-webkit-slider-thumb:before {\n  background: #ddd;\n}\n\n.range.range-light input::-ms-fill-lower {\n  background: #ddd;\n}\n\n.range.range-stable input::-webkit-slider-thumb:before {\n  background: #b2b2b2;\n}\n\n.range.range-stable input::-ms-fill-lower {\n  background: #b2b2b2;\n}\n\n.range.range-positive input::-webkit-slider-thumb:before {\n  background: #00A490;\n}\n\n.range.range-positive input::-ms-fill-lower {\n  background: #00A490;\n}\n\n.range.range-calm input::-webkit-slider-thumb:before {\n  background: #11c1f3;\n}\n\n.range.range-calm input::-ms-fill-lower {\n  background: #11c1f3;\n}\n\n.range.range-balanced input::-webkit-slider-thumb:before {\n  background: #33cd5f;\n}\n\n.range.range-balanced input::-ms-fill-lower {\n  background: #33cd5f;\n}\n\n.range.range-assertive input::-webkit-slider-thumb:before {\n  background: #ef473a;\n}\n\n.range.range-assertive input::-ms-fill-lower {\n  background: #ef473a;\n}\n\n.range.range-energized input::-webkit-slider-thumb:before {\n  background: #ffc900;\n}\n\n.range.range-energized input::-ms-fill-lower {\n  background: #ffc900;\n}\n\n.range.range-royal input::-webkit-slider-thumb:before {\n  background: #886aea;\n}\n\n.range.range-royal input::-ms-fill-lower {\n  background: #886aea;\n}\n\n.range.range-dark input::-webkit-slider-thumb:before {\n  background: #444;\n}\n\n.range.range-dark input::-ms-fill-lower {\n  background: #444;\n}\n\n.range .icon {\n  -webkit-box-flex: 0;\n  -webkit-flex: 0;\n  -moz-box-flex: 0;\n  -moz-flex: 0;\n  -ms-flex: 0;\n  flex: 0;\n  display: block;\n  min-width: 24px;\n  text-align: center;\n  font-size: 24px;\n}\n\n.range input {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n  -moz-box-flex: 1;\n  -moz-flex: 1;\n  -ms-flex: 1;\n  flex: 1;\n  display: block;\n  margin-right: 10px;\n  margin-left: 10px;\n}\n\n.range-label {\n  -webkit-box-flex: 0;\n  -webkit-flex: 0 0 auto;\n  -moz-box-flex: 0;\n  -moz-flex: 0 0 auto;\n  -ms-flex: 0 0 auto;\n  flex: 0 0 auto;\n  display: block;\n  white-space: nowrap;\n}\n\n.range-label:first-child {\n  padding-left: 5px;\n}\n\n.range input + .range-label {\n  padding-right: 5px;\n  padding-left: 0;\n}\n\n.platform-windowsphone .range input {\n  height: auto;\n}\n\n/**\n * Select\n * --------------------------------------------------\n */\n\n.item-select {\n  position: relative;\n}\n\n.item-select select {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  right: 0;\n  padding: 0 48px 0 16px;\n  max-width: 65%;\n  border: none;\n  background: #00F1D3;\n  color: #333;\n  text-indent: .01px;\n  text-overflow: '';\n  white-space: nowrap;\n  font-size: 16px;\n  cursor: pointer;\n  direction: rtl;\n}\n\n.item-select select::-ms-expand {\n  display: none;\n}\n\n.item-select option {\n  direction: ltr;\n}\n\n.item-select:after {\n  position: absolute;\n  top: 50%;\n  right: 16px;\n  margin-top: -3px;\n  width: 0;\n  height: 0;\n  border-top: 5px solid;\n  border-right: 5px solid transparent;\n  border-left: 5px solid transparent;\n  color: #999;\n  content: \"\";\n  pointer-events: none;\n}\n\n.item-select.item-light select {\n  background: #00F1D3;\n  color: #444;\n}\n\n.item-select.item-stable select {\n  background: #f8f8f8;\n  color: #444;\n}\n\n.item-select.item-stable:after,\n.item-select.item-stable .input-label {\n  color: #656565;\n}\n\n.item-select.item-positive select {\n  background: #00A490;\n  color: #fff;\n}\n\n.item-select.item-positive:after,\n.item-select.item-positive .input-label {\n  color: #fff;\n}\n\n.item-select.item-calm select {\n  background: #11c1f3;\n  color: #fff;\n}\n\n.item-select.item-calm:after,\n.item-select.item-calm .input-label {\n  color: #fff;\n}\n\n.item-select.item-assertive select {\n  background: #ef473a;\n  color: #fff;\n}\n\n.item-select.item-assertive:after,\n.item-select.item-assertive .input-label {\n  color: #fff;\n}\n\n.item-select.item-balanced select {\n  background: #33cd5f;\n  color: #fff;\n}\n\n.item-select.item-balanced:after,\n.item-select.item-balanced .input-label {\n  color: #fff;\n}\n\n.item-select.item-energized select {\n  background: #ffc900;\n  color: #fff;\n}\n\n.item-select.item-energized:after,\n.item-select.item-energized .input-label {\n  color: #fff;\n}\n\n.item-select.item-royal select {\n  background: #886aea;\n  color: #fff;\n}\n\n.item-select.item-royal:after,\n.item-select.item-royal .input-label {\n  color: #fff;\n}\n\n.item-select.item-dark select {\n  background: #444;\n  color: #fff;\n}\n\n.item-select.item-dark:after,\n.item-select.item-dark .input-label {\n  color: #fff;\n}\n\nselect[multiple],\nselect[size] {\n  height: auto;\n}\n\n/**\n * Progress\n * --------------------------------------------------\n */\n\nprogress {\n  display: block;\n  margin: 15px auto;\n  width: 100%;\n}\n\n/**\n * Buttons\n * --------------------------------------------------\n */\n\n.button,\n.button-pill {\n  border-color: #b2b2b2;\n  background-color: #f8f8f8;\n  color: #444;\n  position: relative;\n  display: inline-block;\n  margin: 0;\n  padding: 0 12px;\n  min-width: 52px;\n  min-height: 47px;\n  border-width: 1px;\n  border-style: solid;\n  border-radius: 2px;\n  vertical-align: top;\n  text-align: center;\n  text-overflow: ellipsis;\n  font-size: 16px;\n  line-height: 42px;\n  cursor: pointer;\n}\n\n.button:hover,\n.button-pill:hover {\n  color: #444;\n  text-decoration: none;\n}\n\n.button.active,\n.active.button-pill,\n.button.activated,\n.activated.button-pill {\n  border-color: #a2a2a2;\n  background-color: #e5e5e5;\n  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\n.button:after,\n.button-pill:after {\n  position: absolute;\n  top: -6px;\n  right: -6px;\n  bottom: -6px;\n  left: -6px;\n  content: ' ';\n}\n\n.button .icon,\n.button-pill .icon {\n  vertical-align: top;\n  pointer-events: none;\n}\n\n.button .icon:before,\n.button-pill .icon:before,\n.button.icon:before,\n.icon.button-pill:before,\n.button.icon-left:before,\n.icon-left.button-pill:before,\n.button.icon-right:before,\n.icon-right.button-pill:before {\n  display: inline-block;\n  padding: 0 0 1px 0;\n  vertical-align: inherit;\n  font-size: 24px;\n  line-height: 41px;\n  pointer-events: none;\n}\n\n.button.icon-left:before,\n.icon-left.button-pill:before {\n  float: left;\n  padding-right: .2em;\n  padding-left: 0;\n}\n\n.button.icon-right:before,\n.icon-right.button-pill:before {\n  float: right;\n  padding-right: 0;\n  padding-left: .2em;\n}\n\n.button.button-block,\n.button-block.button-pill,\n.button.button-full,\n.button-full.button-pill {\n  margin-top: 10px;\n  margin-bottom: 10px;\n}\n\n.button.button-light,\n.button-light.button-pill {\n  border-color: #ddd;\n  background-color: #00F1D3;\n  color: #444;\n}\n\n.button.button-light:hover,\n.button-light.button-pill:hover {\n  color: #444;\n  text-decoration: none;\n}\n\n.button.button-light.active,\n.button-light.active.button-pill,\n.button.button-light.activated,\n.button-light.activated.button-pill {\n  border-color: #ccc;\n  background-color: #fafafa;\n  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\n.button.button-light.button-clear,\n.button-light.button-clear.button-pill {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  color: #ddd;\n}\n\n.button.button-light.button-icon,\n.button-light.button-icon.button-pill {\n  border-color: transparent;\n  background: none;\n}\n\n.button.button-light.button-outline,\n.button-light.button-outline.button-pill {\n  border-color: #ddd;\n  background: transparent;\n  color: #ddd;\n}\n\n.button.button-light.button-outline.active,\n.button-light.button-outline.active.button-pill,\n.button.button-light.button-outline.activated,\n.button-light.button-outline.activated.button-pill {\n  background-color: #ddd;\n  box-shadow: none;\n  color: #fff;\n}\n\n.button.button-stable,\n.button-stable.button-pill {\n  border-color: #b2b2b2;\n  background-color: #f8f8f8;\n  color: #444;\n}\n\n.button.button-stable:hover,\n.button-stable.button-pill:hover {\n  color: #444;\n  text-decoration: none;\n}\n\n.button.button-stable.active,\n.button-stable.active.button-pill,\n.button.button-stable.activated,\n.button-stable.activated.button-pill {\n  border-color: #a2a2a2;\n  background-color: #e5e5e5;\n  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\n.button.button-stable.button-clear,\n.button-stable.button-clear.button-pill {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  color: #b2b2b2;\n}\n\n.button.button-stable.button-icon,\n.button-stable.button-icon.button-pill {\n  border-color: transparent;\n  background: none;\n}\n\n.button.button-stable.button-outline,\n.button-stable.button-outline.button-pill {\n  border-color: #b2b2b2;\n  background: transparent;\n  color: #b2b2b2;\n}\n\n.button.button-stable.button-outline.active,\n.button-stable.button-outline.active.button-pill,\n.button.button-stable.button-outline.activated,\n.button-stable.button-outline.activated.button-pill {\n  background-color: #b2b2b2;\n  box-shadow: none;\n  color: #fff;\n}\n\n.button.button-positive,\n.button-positive.button-pill {\n  border-color: #007163;\n  background-color: #00A490;\n  color: #fff;\n}\n\n.button.button-positive:hover,\n.button-positive.button-pill:hover {\n  color: #fff;\n  text-decoration: none;\n}\n\n.button.button-positive.active,\n.button-positive.active.button-pill,\n.button.button-positive.activated,\n.button-positive.activated.button-pill {\n  border-color: #007163;\n  background-color: #007163;\n  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\n.button.button-positive.button-clear,\n.button-positive.button-clear.button-pill {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  color: #00A490;\n}\n\n.button.button-positive.button-icon,\n.button-positive.button-icon.button-pill {\n  border-color: transparent;\n  background: none;\n}\n\n.button.button-positive.button-outline,\n.button-positive.button-outline.button-pill {\n  border-color: #00A490;\n  background: transparent;\n  color: #00A490;\n}\n\n.button.button-positive.button-outline.active,\n.button-positive.button-outline.active.button-pill,\n.button.button-positive.button-outline.activated,\n.button-positive.button-outline.activated.button-pill {\n  background-color: #00A490;\n  box-shadow: none;\n  color: #fff;\n}\n\n.button.button-calm,\n.button-calm.button-pill {\n  border-color: #0a9dc7;\n  background-color: #11c1f3;\n  color: #fff;\n}\n\n.button.button-calm:hover,\n.button-calm.button-pill:hover {\n  color: #fff;\n  text-decoration: none;\n}\n\n.button.button-calm.active,\n.button-calm.active.button-pill,\n.button.button-calm.activated,\n.button-calm.activated.button-pill {\n  border-color: #0a9dc7;\n  background-color: #0a9dc7;\n  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\n.button.button-calm.button-clear,\n.button-calm.button-clear.button-pill {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  color: #11c1f3;\n}\n\n.button.button-calm.button-icon,\n.button-calm.button-icon.button-pill {\n  border-color: transparent;\n  background: none;\n}\n\n.button.button-calm.button-outline,\n.button-calm.button-outline.button-pill {\n  border-color: #11c1f3;\n  background: transparent;\n  color: #11c1f3;\n}\n\n.button.button-calm.button-outline.active,\n.button-calm.button-outline.active.button-pill,\n.button.button-calm.button-outline.activated,\n.button-calm.button-outline.activated.button-pill {\n  background-color: #11c1f3;\n  box-shadow: none;\n  color: #fff;\n}\n\n.button.button-assertive,\n.button-assertive.button-pill {\n  border-color: #e42112;\n  background-color: #ef473a;\n  color: #fff;\n}\n\n.button.button-assertive:hover,\n.button-assertive.button-pill:hover {\n  color: #fff;\n  text-decoration: none;\n}\n\n.button.button-assertive.active,\n.button-assertive.active.button-pill,\n.button.button-assertive.activated,\n.button-assertive.activated.button-pill {\n  border-color: #e42112;\n  background-color: #e42112;\n  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\n.button.button-assertive.button-clear,\n.button-assertive.button-clear.button-pill {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  color: #ef473a;\n}\n\n.button.button-assertive.button-icon,\n.button-assertive.button-icon.button-pill {\n  border-color: transparent;\n  background: none;\n}\n\n.button.button-assertive.button-outline,\n.button-assertive.button-outline.button-pill {\n  border-color: #ef473a;\n  background: transparent;\n  color: #ef473a;\n}\n\n.button.button-assertive.button-outline.active,\n.button-assertive.button-outline.active.button-pill,\n.button.button-assertive.button-outline.activated,\n.button-assertive.button-outline.activated.button-pill {\n  background-color: #ef473a;\n  box-shadow: none;\n  color: #fff;\n}\n\n.button.button-balanced,\n.button-balanced.button-pill {\n  border-color: #28a54c;\n  background-color: #33cd5f;\n  color: #fff;\n}\n\n.button.button-balanced:hover,\n.button-balanced.button-pill:hover {\n  color: #fff;\n  text-decoration: none;\n}\n\n.button.button-balanced.active,\n.button-balanced.active.button-pill,\n.button.button-balanced.activated,\n.button-balanced.activated.button-pill {\n  border-color: #28a54c;\n  background-color: #28a54c;\n  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\n.button.button-balanced.button-clear,\n.button-balanced.button-clear.button-pill {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  color: #33cd5f;\n}\n\n.button.button-balanced.button-icon,\n.button-balanced.button-icon.button-pill {\n  border-color: transparent;\n  background: none;\n}\n\n.button.button-balanced.button-outline,\n.button-balanced.button-outline.button-pill {\n  border-color: #33cd5f;\n  background: transparent;\n  color: #33cd5f;\n}\n\n.button.button-balanced.button-outline.active,\n.button-balanced.button-outline.active.button-pill,\n.button.button-balanced.button-outline.activated,\n.button-balanced.button-outline.activated.button-pill {\n  background-color: #33cd5f;\n  box-shadow: none;\n  color: #fff;\n}\n\n.button.button-energized,\n.button-energized.button-pill {\n  border-color: #e6b500;\n  background-color: #ffc900;\n  color: #fff;\n}\n\n.button.button-energized:hover,\n.button-energized.button-pill:hover {\n  color: #fff;\n  text-decoration: none;\n}\n\n.button.button-energized.active,\n.button-energized.active.button-pill,\n.button.button-energized.activated,\n.button-energized.activated.button-pill {\n  border-color: #e6b500;\n  background-color: #e6b500;\n  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\n.button.button-energized.button-clear,\n.button-energized.button-clear.button-pill {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  color: #ffc900;\n}\n\n.button.button-energized.button-icon,\n.button-energized.button-icon.button-pill {\n  border-color: transparent;\n  background: none;\n}\n\n.button.button-energized.button-outline,\n.button-energized.button-outline.button-pill {\n  border-color: #ffc900;\n  background: transparent;\n  color: #ffc900;\n}\n\n.button.button-energized.button-outline.active,\n.button-energized.button-outline.active.button-pill,\n.button.button-energized.button-outline.activated,\n.button-energized.button-outline.activated.button-pill {\n  background-color: #ffc900;\n  box-shadow: none;\n  color: #fff;\n}\n\n.button.button-royal,\n.button-royal.button-pill {\n  border-color: #6b46e5;\n  background-color: #886aea;\n  color: #fff;\n}\n\n.button.button-royal:hover,\n.button-royal.button-pill:hover {\n  color: #fff;\n  text-decoration: none;\n}\n\n.button.button-royal.active,\n.button-royal.active.button-pill,\n.button.button-royal.activated,\n.button-royal.activated.button-pill {\n  border-color: #6b46e5;\n  background-color: #6b46e5;\n  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\n.button.button-royal.button-clear,\n.button-royal.button-clear.button-pill {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  color: #886aea;\n}\n\n.button.button-royal.button-icon,\n.button-royal.button-icon.button-pill {\n  border-color: transparent;\n  background: none;\n}\n\n.button.button-royal.button-outline,\n.button-royal.button-outline.button-pill {\n  border-color: #886aea;\n  background: transparent;\n  color: #886aea;\n}\n\n.button.button-royal.button-outline.active,\n.button-royal.button-outline.active.button-pill,\n.button.button-royal.button-outline.activated,\n.button-royal.button-outline.activated.button-pill {\n  background-color: #886aea;\n  box-shadow: none;\n  color: #fff;\n}\n\n.button.button-dark,\n.button-dark.button-pill {\n  border-color: #111;\n  background-color: #444;\n  color: #fff;\n}\n\n.button.button-dark:hover,\n.button-dark.button-pill:hover {\n  color: #fff;\n  text-decoration: none;\n}\n\n.button.button-dark.active,\n.button-dark.active.button-pill,\n.button.button-dark.activated,\n.button-dark.activated.button-pill {\n  border-color: #000;\n  background-color: #262626;\n  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\n.button.button-dark.button-clear,\n.button-dark.button-clear.button-pill {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  color: #444;\n}\n\n.button.button-dark.button-icon,\n.button-dark.button-icon.button-pill {\n  border-color: transparent;\n  background: none;\n}\n\n.button.button-dark.button-outline,\n.button-dark.button-outline.button-pill {\n  border-color: #444;\n  background: transparent;\n  color: #444;\n}\n\n.button.button-dark.button-outline.active,\n.button-dark.button-outline.active.button-pill,\n.button.button-dark.button-outline.activated,\n.button-dark.button-outline.activated.button-pill {\n  background-color: #444;\n  box-shadow: none;\n  color: #fff;\n}\n\n.button-small {\n  padding: 2px 4px 1px;\n  min-width: 28px;\n  min-height: 30px;\n  font-size: 12px;\n  line-height: 26px;\n}\n\n.button-small .icon:before,\n.button-small.icon:before,\n.button-small.icon-left:before,\n.button-small.icon-right:before {\n  font-size: 16px;\n  line-height: 19px;\n  margin-top: 3px;\n}\n\n.button-large {\n  padding: 0 16px;\n  min-width: 68px;\n  min-height: 59px;\n  font-size: 20px;\n  line-height: 53px;\n}\n\n.button-large .icon:before,\n.button-large.icon:before,\n.button-large.icon-left:before,\n.button-large.icon-right:before {\n  padding-bottom: 2px;\n  font-size: 32px;\n  line-height: 51px;\n}\n\n.button-icon {\n  -webkit-transition: opacity 0.1s;\n  transition: opacity 0.1s;\n  padding: 0 6px;\n  min-width: initial;\n  border-color: transparent;\n  background: none;\n}\n\n.button-icon.button.active,\n.button-icon.active.button-pill,\n.button-icon.button.activated,\n.button-icon.activated.button-pill {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  opacity: 0.3;\n}\n\n.button-icon .icon:before,\n.button-icon.icon:before {\n  font-size: 32px;\n}\n\n.button-clear {\n  -webkit-transition: opacity 0.1s;\n  transition: opacity 0.1s;\n  padding: 0 6px;\n  max-height: 42px;\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n}\n\n.button-clear.button-clear {\n  border-color: transparent;\n  background: none;\n  box-shadow: none;\n  color: #b2b2b2;\n}\n\n.button-clear.button-icon {\n  border-color: transparent;\n  background: none;\n}\n\n.button-clear.active,\n.button-clear.activated {\n  opacity: 0.3;\n}\n\n.button-outline {\n  -webkit-transition: opacity 0.1s;\n  transition: opacity 0.1s;\n  background: none;\n  box-shadow: none;\n}\n\n.button-outline.button-outline {\n  border-color: #b2b2b2;\n  background: transparent;\n  color: #b2b2b2;\n}\n\n.button-outline.button-outline.active,\n.button-outline.button-outline.activated {\n  background-color: #b2b2b2;\n  box-shadow: none;\n  color: #fff;\n}\n\n.padding > .button.button-block:first-child,\n.padding > .button-block.button-pill:first-child {\n  margin-top: 0;\n}\n\n.button-block {\n  display: block;\n  clear: both;\n}\n\n.button-block:after {\n  clear: both;\n}\n\n.button-full,\n.button-full > .button,\n.button-full > .button-pill {\n  display: block;\n  margin-right: 0;\n  margin-left: 0;\n  border-right-width: 0;\n  border-left-width: 0;\n  border-radius: 0;\n}\n\nbutton.button-block,\nbutton.button-full,\n.button-full > button.button,\n.button-full > button.button-pill,\ninput.button.button-block,\ninput.button-block.button-pill {\n  width: 100%;\n}\n\na.button,\na.button-pill {\n  text-decoration: none;\n}\n\na.button .icon:before,\na.button-pill .icon:before,\na.button.icon:before,\na.icon.button-pill:before,\na.button.icon-left:before,\na.icon-left.button-pill:before,\na.button.icon-right:before,\na.icon-right.button-pill:before {\n  margin-top: 2px;\n}\n\n.button.disabled,\n.disabled.button-pill,\n.button[disabled],\n[disabled].button-pill {\n  opacity: .4;\n  cursor: default !important;\n  pointer-events: none;\n}\n\n/**\n * Button Bar\n * --------------------------------------------------\n */\n\n.button-bar {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n  -moz-box-flex: 1;\n  -moz-flex: 1;\n  -ms-flex: 1;\n  flex: 1;\n  width: 100%;\n}\n\n.button-bar.button-bar-inline {\n  display: block;\n  width: auto;\n  *zoom: 1;\n}\n\n.button-bar.button-bar-inline:before,\n.button-bar.button-bar-inline:after {\n  display: table;\n  content: \"\";\n  line-height: 0;\n}\n\n.button-bar.button-bar-inline:after {\n  clear: both;\n}\n\n.button-bar.button-bar-inline > .button,\n.button-bar.button-bar-inline > .button-pill {\n  width: auto;\n  display: inline-block;\n  float: left;\n}\n\n.button-bar > .button,\n.button-bar > .button-pill {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n  -moz-box-flex: 1;\n  -moz-flex: 1;\n  -ms-flex: 1;\n  flex: 1;\n  display: block;\n  overflow: hidden;\n  padding: 0 16px;\n  width: 0;\n  border-width: 1px 0px 1px 1px;\n  border-radius: 0;\n  text-align: center;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n}\n\n.button-bar > .button:before,\n.button-bar > .button-pill:before,\n.button-bar > .button .icon:before,\n.button-bar > .button-pill .icon:before {\n  line-height: 44px;\n}\n\n.button-bar > .button:first-child,\n.button-bar > .button-pill:first-child {\n  border-radius: 2px 0px 0px 2px;\n}\n\n.button-bar > .button:last-child,\n.button-bar > .button-pill:last-child {\n  border-right-width: 1px;\n  border-radius: 0px 2px 2px 0px;\n}\n\n.button-bar > .button-small:before,\n.button-bar > .button-small .icon:before {\n  line-height: 28px;\n}\n\n/**\n * Grid\n * --------------------------------------------------\n * Using flexbox for the grid, inspired by Philip Walton:\n * http://philipwalton.github.io/solved-by-flexbox/demos/grids/\n * By default each .col within a .row will evenly take up\n * available width, and the height of each .col with take\n * up the height of the tallest .col in the same .row.\n */\n\n.row {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex;\n  padding: 5px;\n  width: 100%;\n}\n\n.row-wrap {\n  -webkit-flex-wrap: wrap;\n  -moz-flex-wrap: wrap;\n  -ms-flex-wrap: wrap;\n  flex-wrap: wrap;\n}\n\n.row-no-padding {\n  padding: 0;\n}\n\n.row-no-padding > .col {\n  padding: 0;\n}\n\n.row + .row {\n  margin-top: -5px;\n  padding-top: 0;\n}\n\n.col {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n  -moz-box-flex: 1;\n  -moz-flex: 1;\n  -ms-flex: 1;\n  flex: 1;\n  display: block;\n  padding: 5px;\n  width: 100%;\n}\n\n/* Vertically Align Columns */\n\n/* .row-* vertically aligns every .col in the .row */\n\n.row-top {\n  -webkit-box-align: start;\n  -ms-flex-align: start;\n  -webkit-align-items: flex-start;\n  -moz-align-items: flex-start;\n  align-items: flex-start;\n}\n\n.row-bottom {\n  -webkit-box-align: end;\n  -ms-flex-align: end;\n  -webkit-align-items: flex-end;\n  -moz-align-items: flex-end;\n  align-items: flex-end;\n}\n\n.row-center {\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  -webkit-align-items: center;\n  -moz-align-items: center;\n  align-items: center;\n}\n\n.row-stretch {\n  -webkit-box-align: stretch;\n  -ms-flex-align: stretch;\n  -webkit-align-items: stretch;\n  -moz-align-items: stretch;\n  align-items: stretch;\n}\n\n.row-baseline {\n  -webkit-box-align: baseline;\n  -ms-flex-align: baseline;\n  -webkit-align-items: baseline;\n  -moz-align-items: baseline;\n  align-items: baseline;\n}\n\n/* .col-* vertically aligns an individual .col */\n\n.col-top {\n  -webkit-align-self: flex-start;\n  -moz-align-self: flex-start;\n  -ms-flex-item-align: start;\n  align-self: flex-start;\n}\n\n.col-bottom {\n  -webkit-align-self: flex-end;\n  -moz-align-self: flex-end;\n  -ms-flex-item-align: end;\n  align-self: flex-end;\n}\n\n.col-center {\n  -webkit-align-self: center;\n  -moz-align-self: center;\n  -ms-flex-item-align: center;\n  align-self: center;\n}\n\n/* Column Offsets */\n\n.col-offset-10 {\n  margin-left: 10%;\n}\n\n.col-offset-20 {\n  margin-left: 20%;\n}\n\n.col-offset-25 {\n  margin-left: 25%;\n}\n\n.col-offset-33,\n.col-offset-34 {\n  margin-left: 33.3333%;\n}\n\n.col-offset-50 {\n  margin-left: 50%;\n}\n\n.col-offset-66,\n.col-offset-67 {\n  margin-left: 66.6666%;\n}\n\n.col-offset-75 {\n  margin-left: 75%;\n}\n\n.col-offset-80 {\n  margin-left: 80%;\n}\n\n.col-offset-90 {\n  margin-left: 90%;\n}\n\n/* Explicit Column Percent Sizes */\n\n/* By default each grid column will evenly distribute */\n\n/* across the grid. However, you can specify individual */\n\n/* columns to take up a certain size of the available area */\n\n.col-10 {\n  -webkit-box-flex: 0;\n  -webkit-flex: 0 0 10%;\n  -moz-box-flex: 0;\n  -moz-flex: 0 0 10%;\n  -ms-flex: 0 0 10%;\n  flex: 0 0 10%;\n  max-width: 10%;\n}\n\n.col-20 {\n  -webkit-box-flex: 0;\n  -webkit-flex: 0 0 20%;\n  -moz-box-flex: 0;\n  -moz-flex: 0 0 20%;\n  -ms-flex: 0 0 20%;\n  flex: 0 0 20%;\n  max-width: 20%;\n}\n\n.col-25 {\n  -webkit-box-flex: 0;\n  -webkit-flex: 0 0 25%;\n  -moz-box-flex: 0;\n  -moz-flex: 0 0 25%;\n  -ms-flex: 0 0 25%;\n  flex: 0 0 25%;\n  max-width: 25%;\n}\n\n.col-33,\n.col-34 {\n  -webkit-box-flex: 0;\n  -webkit-flex: 0 0 33.3333%;\n  -moz-box-flex: 0;\n  -moz-flex: 0 0 33.3333%;\n  -ms-flex: 0 0 33.3333%;\n  flex: 0 0 33.3333%;\n  max-width: 33.3333%;\n}\n\n.col-50 {\n  -webkit-box-flex: 0;\n  -webkit-flex: 0 0 50%;\n  -moz-box-flex: 0;\n  -moz-flex: 0 0 50%;\n  -ms-flex: 0 0 50%;\n  flex: 0 0 50%;\n  max-width: 50%;\n}\n\n.col-66,\n.col-67 {\n  -webkit-box-flex: 0;\n  -webkit-flex: 0 0 66.6666%;\n  -moz-box-flex: 0;\n  -moz-flex: 0 0 66.6666%;\n  -ms-flex: 0 0 66.6666%;\n  flex: 0 0 66.6666%;\n  max-width: 66.6666%;\n}\n\n.col-75 {\n  -webkit-box-flex: 0;\n  -webkit-flex: 0 0 75%;\n  -moz-box-flex: 0;\n  -moz-flex: 0 0 75%;\n  -ms-flex: 0 0 75%;\n  flex: 0 0 75%;\n  max-width: 75%;\n}\n\n.col-80 {\n  -webkit-box-flex: 0;\n  -webkit-flex: 0 0 80%;\n  -moz-box-flex: 0;\n  -moz-flex: 0 0 80%;\n  -ms-flex: 0 0 80%;\n  flex: 0 0 80%;\n  max-width: 80%;\n}\n\n.col-90 {\n  -webkit-box-flex: 0;\n  -webkit-flex: 0 0 90%;\n  -moz-box-flex: 0;\n  -moz-flex: 0 0 90%;\n  -ms-flex: 0 0 90%;\n  flex: 0 0 90%;\n  max-width: 90%;\n}\n\n/* Responsive Grid Classes */\n\n/* Adding a class of responsive-X to a row */\n\n/* will trigger the flex-direction to */\n\n/* change to column and add some margin */\n\n/* to any columns in the row for clearity */\n\n@media (max-width: 567px) {\n  .responsive-sm {\n    -webkit-box-direction: normal;\n    -moz-box-direction: normal;\n    -webkit-box-orient: vertical;\n    -moz-box-orient: vertical;\n    -webkit-flex-direction: column;\n    -ms-flex-direction: column;\n    flex-direction: column;\n  }\n\n  .responsive-sm .col,\n  .responsive-sm .col-10,\n  .responsive-sm .col-20,\n  .responsive-sm .col-25,\n  .responsive-sm .col-33,\n  .responsive-sm .col-34,\n  .responsive-sm .col-50,\n  .responsive-sm .col-66,\n  .responsive-sm .col-67,\n  .responsive-sm .col-75,\n  .responsive-sm .col-80,\n  .responsive-sm .col-90 {\n    -webkit-box-flex: 1;\n    -webkit-flex: 1;\n    -moz-box-flex: 1;\n    -moz-flex: 1;\n    -ms-flex: 1;\n    flex: 1;\n    margin-bottom: 15px;\n    margin-left: 0;\n    max-width: 100%;\n    width: 100%;\n  }\n}\n\n@media (max-width: 767px) {\n  .responsive-md {\n    -webkit-box-direction: normal;\n    -moz-box-direction: normal;\n    -webkit-box-orient: vertical;\n    -moz-box-orient: vertical;\n    -webkit-flex-direction: column;\n    -ms-flex-direction: column;\n    flex-direction: column;\n  }\n\n  .responsive-md .col,\n  .responsive-md .col-10,\n  .responsive-md .col-20,\n  .responsive-md .col-25,\n  .responsive-md .col-33,\n  .responsive-md .col-34,\n  .responsive-md .col-50,\n  .responsive-md .col-66,\n  .responsive-md .col-67,\n  .responsive-md .col-75,\n  .responsive-md .col-80,\n  .responsive-md .col-90 {\n    -webkit-box-flex: 1;\n    -webkit-flex: 1;\n    -moz-box-flex: 1;\n    -moz-flex: 1;\n    -ms-flex: 1;\n    flex: 1;\n    margin-bottom: 15px;\n    margin-left: 0;\n    max-width: 100%;\n    width: 100%;\n  }\n}\n\n@media (max-width: 1023px) {\n  .responsive-lg {\n    -webkit-box-direction: normal;\n    -moz-box-direction: normal;\n    -webkit-box-orient: vertical;\n    -moz-box-orient: vertical;\n    -webkit-flex-direction: column;\n    -ms-flex-direction: column;\n    flex-direction: column;\n  }\n\n  .responsive-lg .col,\n  .responsive-lg .col-10,\n  .responsive-lg .col-20,\n  .responsive-lg .col-25,\n  .responsive-lg .col-33,\n  .responsive-lg .col-34,\n  .responsive-lg .col-50,\n  .responsive-lg .col-66,\n  .responsive-lg .col-67,\n  .responsive-lg .col-75,\n  .responsive-lg .col-80,\n  .responsive-lg .col-90 {\n    -webkit-box-flex: 1;\n    -webkit-flex: 1;\n    -moz-box-flex: 1;\n    -moz-flex: 1;\n    -ms-flex: 1;\n    flex: 1;\n    margin-bottom: 15px;\n    margin-left: 0;\n    max-width: 100%;\n    width: 100%;\n  }\n}\n\n/**\n * Utility Classes\n * --------------------------------------------------\n */\n\n.hide {\n  display: none;\n}\n\n.opacity-hide {\n  opacity: 0;\n}\n\n.grade-b .opacity-hide,\n.grade-c .opacity-hide {\n  opacity: 1;\n  display: none;\n}\n\n.show {\n  display: block;\n}\n\n.opacity-show {\n  opacity: 1;\n}\n\n.invisible {\n  visibility: hidden;\n}\n\n.keyboard-open .hide-on-keyboard-open {\n  display: none;\n}\n\n.keyboard-open .tabs.hide-on-keyboard-open + .pane .has-tabs,\n.keyboard-open .bar-footer.hide-on-keyboard-open + .pane .has-footer {\n  bottom: 0;\n}\n\n.inline {\n  display: inline-block;\n}\n\n.disable-pointer-events {\n  pointer-events: none;\n}\n\n.enable-pointer-events {\n  pointer-events: auto;\n}\n\n.disable-user-behavior {\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  -webkit-touch-callout: none;\n  -webkit-tap-highlight-color: transparent;\n  -webkit-tap-highlight-color: transparent;\n  -webkit-user-drag: none;\n  -ms-touch-action: none;\n  -ms-content-zooming: none;\n}\n\n.click-block {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  opacity: 0;\n  z-index: 99999;\n  -webkit-transform: translate3d(0, 0, 0);\n  transform: translate3d(0, 0, 0);\n  overflow: hidden;\n}\n\n.click-block-hide {\n  -webkit-transform: translate3d(-9999px, 0, 0);\n  transform: translate3d(-9999px, 0, 0);\n}\n\n.no-resize {\n  resize: none;\n}\n\n.block {\n  display: block;\n  clear: both;\n}\n\n.block:after {\n  display: block;\n  visibility: hidden;\n  clear: both;\n  height: 0;\n  content: \".\";\n}\n\n.full-image {\n  width: 100%;\n}\n\n.clearfix {\n  *zoom: 1;\n}\n\n.clearfix:before,\n.clearfix:after {\n  display: table;\n  content: \"\";\n  line-height: 0;\n}\n\n.clearfix:after {\n  clear: both;\n}\n\n/**\n * Content Padding\n * --------------------------------------------------\n */\n\n.padding {\n  padding: 10px;\n}\n\n.padding-top,\n.padding-vertical {\n  padding-top: 10px;\n}\n\n.padding-right,\n.padding-horizontal {\n  padding-right: 10px;\n}\n\n.padding-bottom,\n.padding-vertical {\n  padding-bottom: 10px;\n}\n\n.padding-left,\n.padding-horizontal {\n  padding-left: 10px;\n}\n\n/**\n * Scrollable iFrames\n * --------------------------------------------------\n */\n\n.iframe-wrapper {\n  position: fixed;\n  -webkit-overflow-scrolling: touch;\n  overflow: scroll;\n}\n\n.iframe-wrapper iframe {\n  height: 100%;\n  width: 100%;\n}\n\n/**\n * Rounded\n * --------------------------------------------------\n */\n\n.rounded {\n  border-radius: 4px;\n}\n\n/**\n * Utility Colors\n * --------------------------------------------------\n * Utility colors are added to help set a naming convention. You'll\n * notice we purposely do not use words like \"red\" or \"blue\", but\n * instead have colors which represent an emotion or generic theme.\n */\n\n.light,\na.light {\n  color: #00F1D3;\n}\n\n.light-bg {\n  background-color: #00F1D3;\n}\n\n.light-border {\n  border-color: #ddd;\n}\n\n.stable,\na.stable {\n  color: #f8f8f8;\n}\n\n.stable-bg {\n  background-color: #f8f8f8;\n}\n\n.stable-border {\n  border-color: #b2b2b2;\n}\n\n.positive,\na.positive {\n  color: #00A490;\n}\n\n.positive-bg {\n  background-color: #00A490;\n}\n\n.positive-border {\n  border-color: #007163;\n}\n\n.calm,\na.calm {\n  color: #11c1f3;\n}\n\n.calm-bg {\n  background-color: #11c1f3;\n}\n\n.calm-border {\n  border-color: #0a9dc7;\n}\n\n.assertive,\na.assertive {\n  color: #ef473a;\n}\n\n.assertive-bg {\n  background-color: #ef473a;\n}\n\n.assertive-border {\n  border-color: #e42112;\n}\n\n.balanced,\na.balanced {\n  color: #33cd5f;\n}\n\n.balanced-bg {\n  background-color: #33cd5f;\n}\n\n.balanced-border {\n  border-color: #28a54c;\n}\n\n.energized,\na.energized {\n  color: #ffc900;\n}\n\n.energized-bg {\n  background-color: #ffc900;\n}\n\n.energized-border {\n  border-color: #e6b500;\n}\n\n.royal,\na.royal {\n  color: #886aea;\n}\n\n.royal-bg {\n  background-color: #886aea;\n}\n\n.royal-border {\n  border-color: #6b46e5;\n}\n\n.dark,\na.dark {\n  color: #444;\n}\n\n.dark-bg {\n  background-color: #444;\n}\n\n.dark-border {\n  border-color: #111;\n}\n\n[collection-repeat] {\n  /* Position is set by transforms */\n  left: 0 !important;\n  top: 0 !important;\n  position: absolute !important;\n  z-index: 1;\n}\n\n.collection-repeat-container {\n  position: relative;\n  z-index: 1;\n}\n\n.collection-repeat-after-container {\n  z-index: 0;\n  display: block;\n  /* when scrolling horizontally, make sure the after container doesn't take up 100% width */\n}\n\n.collection-repeat-after-container.horizontal {\n  display: inline-block;\n}\n\n[ng\\:cloak],\n[ng-cloak],\n[data-ng-cloak],\n[x-ng-cloak],\n.ng-cloak,\n.x-ng-cloak,\n.ng-hide:not(.ng-hide-animate) {\n  display: none !important;\n}\n\n/**\n * Platform\n * --------------------------------------------------\n * Platform specific tweaks\n */\n\n.platform-ios.platform-cordova:not(.fullscreen) .bar-header:not(.bar-subheader) {\n  height: 64px;\n}\n\n.platform-ios.platform-cordova:not(.fullscreen) .bar-header:not(.bar-subheader).item-input-inset .item-input-wrapper {\n  margin-top: 19px !important;\n}\n\n.platform-ios.platform-cordova:not(.fullscreen) .bar-header:not(.bar-subheader) > * {\n  margin-top: 20px;\n}\n\n.platform-ios.platform-cordova:not(.fullscreen) .tabs-top > .tabs,\n.platform-ios.platform-cordova:not(.fullscreen) .tabs.tabs-top {\n  top: 64px;\n}\n\n.platform-ios.platform-cordova:not(.fullscreen) .has-header,\n.platform-ios.platform-cordova:not(.fullscreen) .bar-subheader {\n  top: 64px;\n}\n\n.platform-ios.platform-cordova:not(.fullscreen) .has-subheader {\n  top: 108px;\n}\n\n.platform-ios.platform-cordova:not(.fullscreen) .has-header.has-tabs-top {\n  top: 113px;\n}\n\n.platform-ios.platform-cordova:not(.fullscreen) .has-header.has-subheader.has-tabs-top {\n  top: 157px;\n}\n\n.platform-ios.platform-cordova .popover .bar-header:not(.bar-subheader) {\n  height: 44px;\n}\n\n.platform-ios.platform-cordova .popover .bar-header:not(.bar-subheader).item-input-inset .item-input-wrapper {\n  margin-top: -1px;\n}\n\n.platform-ios.platform-cordova .popover .bar-header:not(.bar-subheader) > * {\n  margin-top: 0;\n}\n\n.platform-ios.platform-cordova .popover .has-header,\n.platform-ios.platform-cordova .popover .bar-subheader {\n  top: 44px;\n}\n\n.platform-ios.platform-cordova .popover .has-subheader {\n  top: 88px;\n}\n\n.platform-ios.platform-cordova.status-bar-hide {\n  margin-bottom: 20px;\n}\n\n@media (orientation: landscape) {\n  .platform-ios.platform-browser.platform-ipad {\n    position: fixed;\n  }\n}\n\n.platform-c:not(.enable-transitions) * {\n  -webkit-transition: none !important;\n  transition: none !important;\n}\n\n.slide-in-up {\n  -webkit-transform: translate3d(0, 100%, 0);\n  transform: translate3d(0, 100%, 0);\n}\n\n.slide-in-up.ng-enter,\n.slide-in-up > .ng-enter {\n  -webkit-transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;\n  transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;\n}\n\n.slide-in-up.ng-enter-active,\n.slide-in-up > .ng-enter-active {\n  -webkit-transform: translate3d(0, 0, 0);\n  transform: translate3d(0, 0, 0);\n}\n\n.slide-in-up.ng-leave,\n.slide-in-up > .ng-leave {\n  -webkit-transition: all ease-in-out 250ms;\n  transition: all ease-in-out 250ms;\n}\n\n@-webkit-keyframes scaleOut {\n  from {\n    -webkit-transform: scale(1);\n    opacity: 1;\n  }\n\n  to {\n    -webkit-transform: scale(0.8);\n    opacity: 0;\n  }\n}\n\n@keyframes scaleOut {\n  from {\n    transform: scale(1);\n    opacity: 1;\n  }\n\n  to {\n    transform: scale(0.8);\n    opacity: 0;\n  }\n}\n\n@-webkit-keyframes superScaleIn {\n  from {\n    -webkit-transform: scale(1.2);\n    opacity: 0;\n  }\n\n  to {\n    -webkit-transform: scale(1);\n    opacity: 1;\n  }\n}\n\n@keyframes superScaleIn {\n  from {\n    transform: scale(1.2);\n    opacity: 0;\n  }\n\n  to {\n    transform: scale(1);\n    opacity: 1;\n  }\n}\n\n[nav-view-transition=\"ios\"] [nav-view=\"entering\"],\n[nav-view-transition=\"ios\"] [nav-view=\"leaving\"] {\n  -webkit-transition-duration: 500ms;\n  transition-duration: 500ms;\n  -webkit-transition-timing-function: cubic-bezier(0.36, 0.66, 0.04, 1);\n  transition-timing-function: cubic-bezier(0.36, 0.66, 0.04, 1);\n  -webkit-transition-property: opacity, -webkit-transform, box-shadow;\n  transition-property: opacity, transform, box-shadow;\n}\n\n[nav-view-transition=\"ios\"][nav-view-direction=\"forward\"],\n[nav-view-transition=\"ios\"][nav-view-direction=\"back\"] {\n  background-color: #000;\n}\n\n[nav-view-transition=\"ios\"] [nav-view=\"active\"],\n[nav-view-transition=\"ios\"][nav-view-direction=\"forward\"] [nav-view=\"entering\"],\n[nav-view-transition=\"ios\"][nav-view-direction=\"back\"] [nav-view=\"leaving\"] {\n  z-index: 3;\n}\n\n[nav-view-transition=\"ios\"][nav-view-direction=\"back\"] [nav-view=\"entering\"],\n[nav-view-transition=\"ios\"][nav-view-direction=\"forward\"] [nav-view=\"leaving\"] {\n  z-index: 2;\n}\n\n[nav-bar-transition=\"ios\"] .title,\n[nav-bar-transition=\"ios\"] .buttons,\n[nav-bar-transition=\"ios\"] .back-text {\n  -webkit-transition-duration: 500ms;\n  transition-duration: 500ms;\n  -webkit-transition-timing-function: cubic-bezier(0.36, 0.66, 0.04, 1);\n  transition-timing-function: cubic-bezier(0.36, 0.66, 0.04, 1);\n  -webkit-transition-property: opacity, -webkit-transform;\n  transition-property: opacity, transform;\n}\n\n[nav-bar-transition=\"ios\"] [nav-bar=\"active\"],\n[nav-bar-transition=\"ios\"] [nav-bar=\"entering\"] {\n  z-index: 10;\n}\n\n[nav-bar-transition=\"ios\"] [nav-bar=\"active\"] .bar,\n[nav-bar-transition=\"ios\"] [nav-bar=\"entering\"] .bar {\n  background: transparent;\n}\n\n[nav-bar-transition=\"ios\"] [nav-bar=\"cached\"] {\n  display: block;\n}\n\n[nav-bar-transition=\"ios\"] [nav-bar=\"cached\"] .header-item {\n  display: none;\n}\n\n[nav-view-transition=\"android\"] [nav-view=\"entering\"],\n[nav-view-transition=\"android\"] [nav-view=\"leaving\"] {\n  -webkit-transition-duration: 200ms;\n  transition-duration: 200ms;\n  -webkit-transition-timing-function: cubic-bezier(0.4, 0.6, 0.2, 1);\n  transition-timing-function: cubic-bezier(0.4, 0.6, 0.2, 1);\n  -webkit-transition-property: -webkit-transform;\n  transition-property: transform;\n}\n\n[nav-view-transition=\"android\"] [nav-view=\"active\"],\n[nav-view-transition=\"android\"][nav-view-direction=\"forward\"] [nav-view=\"entering\"],\n[nav-view-transition=\"android\"][nav-view-direction=\"back\"] [nav-view=\"leaving\"] {\n  z-index: 3;\n}\n\n[nav-view-transition=\"android\"][nav-view-direction=\"back\"] [nav-view=\"entering\"],\n[nav-view-transition=\"android\"][nav-view-direction=\"forward\"] [nav-view=\"leaving\"] {\n  z-index: 2;\n}\n\n[nav-bar-transition=\"android\"] .title,\n[nav-bar-transition=\"android\"] .buttons {\n  -webkit-transition-duration: 200ms;\n  transition-duration: 200ms;\n  -webkit-transition-timing-function: cubic-bezier(0.4, 0.6, 0.2, 1);\n  transition-timing-function: cubic-bezier(0.4, 0.6, 0.2, 1);\n  -webkit-transition-property: opacity;\n  transition-property: opacity;\n}\n\n[nav-bar-transition=\"android\"] [nav-bar=\"active\"],\n[nav-bar-transition=\"android\"] [nav-bar=\"entering\"] {\n  z-index: 10;\n}\n\n[nav-bar-transition=\"android\"] [nav-bar=\"active\"] .bar,\n[nav-bar-transition=\"android\"] [nav-bar=\"entering\"] .bar {\n  background: transparent;\n}\n\n[nav-bar-transition=\"android\"] [nav-bar=\"cached\"] {\n  display: block;\n}\n\n[nav-bar-transition=\"android\"] [nav-bar=\"cached\"] .header-item {\n  display: none;\n}\n\n[nav-swipe=\"fast\"] [nav-view],\n[nav-swipe=\"fast\"] .title,\n[nav-swipe=\"fast\"] .buttons,\n[nav-swipe=\"fast\"] .back-text {\n  -webkit-transition-duration: 50ms;\n  transition-duration: 50ms;\n  -webkit-transition-timing-function: linear;\n  transition-timing-function: linear;\n}\n\n[nav-swipe=\"slow\"] [nav-view],\n[nav-swipe=\"slow\"] .title,\n[nav-swipe=\"slow\"] .buttons,\n[nav-swipe=\"slow\"] .back-text {\n  -webkit-transition-duration: 160ms;\n  transition-duration: 160ms;\n  -webkit-transition-timing-function: linear;\n  transition-timing-function: linear;\n}\n\n[nav-view=\"cached\"],\n[nav-bar=\"cached\"] {\n  display: none;\n}\n\n[nav-view=\"stage\"] {\n  opacity: 0;\n  -webkit-transition-duration: 0;\n  transition-duration: 0;\n}\n\n[nav-bar=\"stage\"] .title,\n[nav-bar=\"stage\"] .buttons,\n[nav-bar=\"stage\"] .back-text {\n  position: absolute;\n  opacity: 0;\n  -webkit-transition-duration: 0s;\n  transition-duration: 0s;\n}\n\n.tabs {\n  border-top: 5px solid #D6C296 !important;\n  height: 80px !important;\n  background: #00A490 !important;\n}\n\n.tab-nav .tab-item .icon {\n  color: #00F1D3;\n  margin-top: 20px !important;\n}\n\n.tab-nav .tab-item.tab-item-active .icon {\n  color: #a4fff2;\n}\n\n.header-parallax {\n  position: absolute;\n  top: 0;\n  width: 100%;\n  height: 208px;\n}\n\n.demo-iframe-holder {\n  position: absolute;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  top: 0;\n  -webkit-overflow-scrolling: touch;\n  overflow-y: scroll;\n  width: 100%;\n}\n\n.demo-iframe-holder iframe {\n  height: 100%;\n  width: 100%;\n}", ""]);
 	
 	// exports
 
 
 /***/ },
-/* 237 */
+/* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(12)();
@@ -84267,25 +84279,25 @@
 
 
 /***/ },
-/* 238 */
+/* 240 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "2c2ae068be3b089e0a5b59abb1831550.eot"
 
 /***/ },
-/* 239 */
+/* 241 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "24712f6c47821394fba7942fbb52c3b2.ttf"
 
 /***/ },
-/* 240 */
+/* 242 */
 /***/ function(module, exports) {
 
 	module.exports = "data:application/font-woff;base64,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u8LuSsJP+OywsMPCDgs7LOywsMPCDgs7LIIv+OyysMvCLgu7LOyyCL7gC77gV+FX4VfhV+FX4VfhV+FX4VfhV+FX4VfhV+FX4VfhV+HX4Nfg1+DX4Nfg1+DX4Nfg1+DX4Nfg1+DX4Nfg1+DX4Nfh1+HX4dfh1+HX4dfh1+HX4dfh1+HX4dfh1+E3eU+T9zR5T5P3NHlPk/c0eU+T9zTHvIfv0eR7tPgeLb5Hi+/R4nu0+B4t+C34Lfgt+C34Lfgt+C34Lfgt+C34bfht+G34bfht+G34bfht+G34bfht+G04bTgdOB04HTgdOB04HTgd3t/hvR3e2+XzXT7f5fNdPt/lc11+ry6f7/L9e/wePT7X43M9/l6Pf7ce/259/n6fv9fn9+vz79CH14fXH/O5f3mJ/xP/J55PPJ94PvF64u/E34m/E38n/k78nfg78Xfi78Tfib8TbyXeSryVeCvxVuKtxFuJtxJvJd5KvJV4K/FW4q3EW4m3Em8l3kq8lXgr8VbircRbibcSbyXeSryVeCvxVuKtxFuJtxJvJd5KvJV4K/FW4q3EW4m3Em8l3kq8lXgr8VbircRbibcSbyXeSryVeCvxVuKtxFuJtxJvJd5KvJV4K/FW4q3EW1mHX4ffgN+A34DfgN+A34DfgN+A34DfgN+A34DfgN+A34DfgN+E34TfhN+E34SPbxPfJr5NfJv4NvFt4tvEt4lvE98mvk18m/g28W3i28S3iW8T3ya+TXyb+DbxbeLbxLeJbxPfJr5NfJv4NvFt4tvEt4lvE98mvk18m/g28W224bfht+Hj4cTDiYcTDyceTjyceDjxcHbg4+PswMfLiZezA78DvwO/A78DvwsfjyceTzyeeDy78Lvw8Xri9cTr2YXfhd+Fj++zC78LH/9nD34PPj1IepA9+D34Pfg9+PQie/DpRtKN7MHvwe/BpyfZh9+H34dPZ5LOJJ1JOpN0JrlbkrsluVuS/uSY/nC3JHeLuFvE3SLuFnG3iLtFdEt0S9wt4m4Rd4vomeiZ6Jm4W8TdIvom7hZxt4i7RXRPdE90T3RPdE90T3RPdE90T3RPdE/cLeJuEXeLuFvE3SLuFnG3iLtF3C3ibhF3i7hbxN0i7hZxt4i7Rdwt4m4Rd4u4W8TdIu4WcbeIu0XcLeJuEXeLuFvE3SLuFnG3iLtF3C2i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/6L/ov+i/+rX/wHuf9d/AAAAAAAB//8AAnjaY2BgYGQAgjO2i86D6AvLjCdB6SkAS/0G9AA="
 
 /***/ },
-/* 241 */
+/* 243 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "621bd386841f74e0053cb8e67f8a0604.svg"
