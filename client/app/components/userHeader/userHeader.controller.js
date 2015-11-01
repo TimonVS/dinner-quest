@@ -1,6 +1,9 @@
 class UserHeaderController {
-  constructor() {
+  constructor($rootScope) {
     this.name = 'userHeader';
+
+    this.user = $rootScope.currentUser.facebook;
+
   }
 }
 

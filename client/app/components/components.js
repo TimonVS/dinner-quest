@@ -10,6 +10,7 @@ import Review from './review/review';
 import Badges from './badges/badges';
 import userHeader from './userHeader/userHeader';
 import Sliders from './sliders/sliders';
+import SearchBar from './searchBar/searchBar'
 
 let componentModule = angular.module('app.components', [
   Dinner.name,
@@ -21,7 +22,8 @@ let componentModule = angular.module('app.components', [
   Review.name,
   Badges.name,
   userHeader.name,
-  Sliders.name
+  Sliders.name,
+  SearchBar.name
 ]);
 
 export default componentModule;

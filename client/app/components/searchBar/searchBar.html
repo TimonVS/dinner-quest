@@ -1,0 +1,19 @@
+<div class="search-container">
+  <div class="search-wrapper" ng-class="{'activated': vm.activated}">
+    <input class="search-input" ng-model="vm.search" ng-click="vm.activateSearch()" ng-class="{'activated': vm.activated}" placeholder="Search Recipes" type="text" data-tap-disabled="true"/>
+    <div class="search-results" ng-show="vm.activated">
+      <ul>
+        <li ng-repeat="recipy in vm.recipies | filter:search | limitTo: 100" ng-click="vm.chooseRecipy(recipy)">
+          <div class="row">
+            <div class="col-20">
+              <img class="recipy-image" ng-src="{{ recipy.receptafbeelding }}" alt=""/>
+            </div>
+            <div class="col-80">
+              <span class="recipy-title" ng-bind="recipy.recepttitel"></span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
