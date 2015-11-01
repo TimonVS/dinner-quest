@@ -7,31 +7,30 @@ import { FIREBASEPATH } from '../common';
 
 let AuthFactory = function ($firebaseAuth, $rootScope, $cookies, $location) {
 
-  var self = this;
-
   let ref = new Firebase(FIREBASEPATH);
+
+  let fail = (err) => console.log(err);
+
+  let afterLogin = function (authData) {
+    if (authData) {
+      console.log('Logged in as:', authData.uid);
+      $rootScope.$emit('USER_LOGGED_IN', authData);
+      $rootScope.currentUser = authData.facebook;
+      $location.path('/');
+    } else {
+      console.log('Authentication failed:', authData);
+    }
+  };
+
   let auth = $firebaseAuth(ref);
+  auth.$onAuth(afterLogin);
 
   /**
    * Login
    */
 
-  let login = (cb) => {
-    self.cb = cb;
-
-    auth.$authWithOAuthRedirect('facebook', function (error) {
-      console.log(error)
-    })
-
-    auth.$onAuth(function (authData) {
-      if (authData) {
-        console.log('Logged in as:', authData.uid);
-        $rootScope.$emit('USER_LOGGED_IN', authData);
-        self.cb(authData);
-      } else {
-        console.log('Authentication failed:', error);
-      }
-    });
+  let login = () => {
+    auth.$authWithOAuthRedirect('facebook', fail);
   };
 
   /**

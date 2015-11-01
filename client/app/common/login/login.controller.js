@@ -9,10 +9,7 @@ class LoginController {
     }
 
     this.login = () => {
-      User.Auth.login((data) => {
-        $rootScope.user = data.facebook;
-        $location.path('/');
-      });
+      User.Auth.login();
     };
   }
 }

@@ -3,7 +3,5 @@
   <ion-nav-view>
     <ion-view></ion-view>
   </ion-nav-view>
-  <div ng-show="currentUser">
-    <footer-nav></footer-nav>
-  </div>
+  <footer-nav ng-if="currentUser"></footer-nav>
 </div>
