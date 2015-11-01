@@ -1,6 +1,10 @@
+'use strict';
+
 class DiscoverItemController {
-  constructor() {
+  constructor ($location) {
     this.name = 'discoverItem';
+
+    this.gotoDetail = (id) => $location.path('/dinner/' + id);
   }
 }
 

@@ -1,5 +1,6 @@
 'use strict';
 
+import Dinner from './dinner/dinner';
 import Discover from './discover/discover';
 import DiscoverItem from './discoverItem/discoverItem';
 import Create from './create/create';
@@ -11,6 +12,7 @@ import userHeader from './userHeader/userHeader';
 import Sliders from './sliders/sliders';
 
 let componentModule = angular.module('app.components', [
+  Dinner.name,
   Discover.name,
   DiscoverItem.name,
   Create.name,
