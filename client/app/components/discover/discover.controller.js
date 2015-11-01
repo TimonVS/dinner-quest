@@ -1,10 +1,21 @@
 'use strict';
 
 class DiscoverController {
-  constructor () {
-    this.name = 'discover';
+  constructor (Dinners, $scope) {
 
-    this.sort = 'default';
+    var vm = this;
+
+    vm.name = 'discover';
+
+    vm.sort = 'distance';
+
+    $scope.$watch(
+        "vm.sort",
+        function changeSort( newValue, oldValue ) {
+          let dinners = Dinners.query({ sort: newValue })
+          vm.dinners = dinners
+        }
+    );
   }
 }
 
