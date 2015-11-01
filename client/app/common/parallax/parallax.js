@@ -1,6 +1,6 @@
 import parallaxComponent from './parallax.component';
 
-let parallaxModule = angular.module('hero', [
+let parallaxModule = angular.module('parallax', [
 
 ])
 

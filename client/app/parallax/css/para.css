@@ -36,7 +36,7 @@ body{
     margin-top: -15%;
     background-image: url(../img/clouds.svg);
     background-repeat: repeat-x;
-} 
+}
 
 
 
@@ -65,7 +65,7 @@ body{
     margin-top: -11%;
     background-image: url(../img/cloudfront.svg);
     background-repeat: repeat-x;
-} 
+}
 
 /* backgr anim */
 .scene li:nth-child(3){
@@ -81,11 +81,11 @@ body{
 }
 
 /*move*/
-@-moz-keyframes move{ 
+@-moz-keyframes move{
  	0% { background-position: 750px 0px; }
 	100% { background-position: 3423px 0px; }
 }
-@-webkit-keyframes move { 
+@-webkit-keyframes move {
  	0% {background-position: 750px 0px;}
 	100% {background-position: 3423px 0px;}
 }
@@ -93,20 +93,3 @@ body{
  	0% {background-position: 750px 0px;}
 	100% {background-position: 3423px 0px;}
  }
-
- @media screen and (min-width: 980px) {
-	.container{
-	    margin: auto;
-	    width: 980px;
-	    height: 544px;
-	    position: fixed;
-	}
-
-	.scene li:nth-child(1) {
-		margin-left: -15%;
-	}
-
-	.scene li:nth-child(2) {
-		margin-left: -15%;
-	}
-}

@@ -3,7 +3,8 @@ import path from 'path'
 module.exports = {
   devtool: 'sourcemap',
   output: {
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: 'http://timonvs.github.io/dinner-quest/dist/'
   },
   resolve: {
     root: [

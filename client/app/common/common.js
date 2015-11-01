@@ -19,7 +19,8 @@ let commonModule = angular.module('app.common', [
   Footer.name,
   Auth.name,
   Login.name,
-  List.name
+  List.name,
+  Parallax.name
 ])
 
 .constant('token', function ($window, $q, $cookies) {
