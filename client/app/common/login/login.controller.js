@@ -2,7 +2,7 @@
 
 class LoginController {
   constructor (User, $rootScope, $location) {
-    this.name = 'Login';
+    this.name = 'Dinner Quest';
 
     if (User.getUser()) {
       return $location.path('/');

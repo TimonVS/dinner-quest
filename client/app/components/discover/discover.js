@@ -18,12 +18,6 @@ let discoverModule = angular.module('discover', [
   $stateProvider
     .state('discover', {
       url: '/',
-      controller: ($rootScope, $scope, dinners) => {
-        $scope.dinners = dinners;
-      },
-      resolve: {
-        dinners: (Dinners) => Dinners.query({ sort: 'location' })
-      },
       template: '<discover dinners="dinners" recepies="recepies"></discover>'
     })
     .state('discover.search', {
