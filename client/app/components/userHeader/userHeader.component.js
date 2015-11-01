@@ -1,6 +1,6 @@
 import template from './userHeader.html';
 import controller from './userHeader.controller';
-import './userHeader.styl';
+import './userHeader.scss';
 
 let userHeaderComponent = function () {
   return {

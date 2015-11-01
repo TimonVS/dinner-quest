@@ -1,6 +1,6 @@
 import template from './badges.html';
 import controller from './badges.controller';
-import './badges.styl';
+import './badges.scss';
 
 let badgesComponent = function () {
   return {

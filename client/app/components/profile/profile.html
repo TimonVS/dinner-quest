@@ -1,17 +1,18 @@
 <ion-content class="has-tabs">
+    <hero></hero>
 
     <user-header></user-header>
 
     <badges></badges>
 
     <div class="row">
-        <button class="create-button">
+        <button class="create-button padding-object">
             Request a dinner!
         </button>
     </div>
 
     <div class="row">
-        <h2><strong>Reviews</strong></h2>
+        <h2 class="padding-object" style="margin-bottom:0;"><strong>Reviews</strong></h2>
     </div>
 
     <div class="discover-item">
@@ -34,8 +35,6 @@
         </div>
     </div>
 
-
-
     <div class="discover-item">
         <div class="row">
             <div class="col col-25">
@@ -44,17 +43,20 @@
             <div class="col col-75">
                 <div class="item-information">
                     <div class="clearfix">
-                        <span class="title" ng-bind="vm.data.title"></span>
-                        <span class="distance">{{ vm.data.distance }}km</span>
+                        <span class="title">Flip van Haaren</span>
+                        <span class="distance">3km</span>
                     </div>
                     <div class="clearfix">
-                        <span class="price">{{ vm.data.price }} coins</span>
-                        <span class="timeago" ng-bind="vm.data.datetime"></span>
+                        <span class="price">5 coins</span>
+                        <span class="timeago">3 days ago</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    &nbsp;<p>
+    &nbsp;<p>
 
 
 </ion-content>
