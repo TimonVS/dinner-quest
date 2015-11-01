@@ -84023,7 +84023,7 @@
 /* 224 */
 /***/ function(module, exports) {
 
-	module.exports = "<!-- Place all UI elements intended to be present across all routes in this file -->\n<div class=\"app\">\n  <ion-nav-view>\n    <ion-view></ion-view>\n  </ion-nav-view>\n  <div ng-show=\"currentUser\">\n    <footer-nav></footer-nav>\n  </div>\n</div>\n"
+	module.exports = "<!-- Place all UI elements intended to be present across all routes in this file -->\n<iframe src=\"http://timonvs.github.io/dinner-quest/dist/parallax/\" frameborder=\"0\" style=\"width: 100%; height: 208px;\"></iframe>\n\n<div class=\"app\">\n  <ion-nav-view>\n    <ion-view></ion-view>\n  </ion-nav-view>\n  <div ng-show=\"currentUser\">\n    <footer-nav></footer-nav>\n  </div>\n</div>\n"
 
 /***/ },
 /* 225 */
