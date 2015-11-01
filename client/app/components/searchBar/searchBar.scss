@@ -9,8 +9,14 @@
   height: auto !important;
   color: #968D78 !important;
   font-size: 18px !important;
-  padding-left: 12px !important;
   transition: all 0.25s;
+  background-image: url('images/dinnerquest-13.svg');
+  background-repeat: no-repeat;
+  background-position-x: 10px;
+  background-size: 22px;
+  background-position-y: 6px;
+  padding-left: 45px !important;
+  padding-right: 45px !important;
 }
 
 .search-input.activated {
@@ -20,13 +26,20 @@
   //box-shadow: 0 0 0 4px #F2E7C2;
   border-radius: 15px 15px 0 0;
   padding: 10px 4px !important;
-  padding-left: 12px !important;
   transition: all 0.25s;
   font-weight: 600;
   border-bottom: 0 !important;
+  background-position-y: 13px;
+  padding-left: 45px !important;
+  padding-right: 45px !important;
 }
 
-input::-webkit-input-placeholder {
+.search-input.activated::-webkit-input-placeholder {
+  color: #968D78 !important;
+  text-align: left;
+}
+
+.search-input::-webkit-input-placeholder {
   color: #968D78 !important;
   text-align: center;
 }
