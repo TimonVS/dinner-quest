@@ -1,41 +1,47 @@
 <div class="dinner-wrapper">
-  <div class="bar bar-header bar-positive">
-    <h1 class="title">{{ vm.name }}</h1>
+  <div class="bar bar-header bar-positive" style="background: transparent;">
+    <button ng-click="vm.back()" class="button back-button buttons button-clear header-item">
+      <i class="icon ion-ios-arrow-back"></i>
+      <span class="back-text">
+        <span class="default-title" style="text-shadow: 1px 2px 2px rgba(0,0,0,0.2);">Back</span></span></button>
   </div>
 
-  <ion-content class="has-header">
-    <br>
-    <section style="background: url({{ vm.dinner.recepie.receptafbeelding }}) no-repeat 50% 50%; min-height: 200px;">
-    </section>
+  <ion-content>
+    <section style="background: url({{ vm.dinner.recepie.receptafbeelding }}) no-repeat #D6C296; background-size: cover; min-height: 200px;">
 
-    <div class="dinner-title" ng-bind="vm.dinner.recepie.recepttitel"></div>
+
+      <h2 class="dinner-title" ng-bind="vm.dinner.recepie.recepttitel"></h2>
+
+
+      <div class="user-card">
+
+        <div class="item item-avatar">
+          <div class="user-image" ng-style="{'background-image': 'url(' + vm.dinner.user.facebook.profileImageURL + ')'}"></div>
+          <div class="user-content">
+            <h1>{{vm.dinner.user.facebook.displayName}}</h1>
+            <p>Table Rookie</p>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
 
     <div class="dinner">
       <button class="button button-block button-positive">
-        Join
+        Join this dinner!
       </button>
 
       <br>
 
-      <div class="text-right discover-item">
-        <div class="row">
-          <div class="col col-25">
-            <div class="image" style="background: url({{ vm.dinner.user.facebook.profileImageURL }}) no-repeat;">
-
-            </div>
-          </div>
-          <div class="col col-75 text-left" style="margin-top: 15px;">
-            &nbsp;&nbsp;<strong>{{ vm.dinner.user.facebook.displayName }}</strong>
-          </div>
-        </div>
-      </div>
-
       <div class="row">
         <div class="col col-25">
-          <strong>Ready in</strong>
+          <strong>Time</strong>
         </div>
         <div class="col col-75 text-right">
-          <span class="timeago" am-time-ago="vm.dinner.readyAt"></span>
+          <span class="timeago">
+            in {{vm.dinner.readyAt | amDurationFormat : 'minute' }}
+          </span>
         </div>
       </div>
 

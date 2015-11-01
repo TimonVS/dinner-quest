@@ -1,6 +1,10 @@
 class DinnerController {
-  constructor() {
+  constructor($scope, $ionicHistory) {
     this.name = 'dinner';
+
+    this.back = function () {
+        $ionicHistory.goBack();
+    }
   }
 }
 
