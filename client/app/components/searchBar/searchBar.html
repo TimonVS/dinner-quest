@@ -3,13 +3,15 @@
     <input class="search-input" ng-model="vm.search" ng-click="vm.activateSearch()" ng-class="{'activated': vm.activated}" placeholder="Search Recipes" type="text" data-tap-disabled="true"/>
     <div class="search-results" ng-show="vm.activated">
       <ul>
-        <li ng-repeat="recipy in vm.recipies | filter:vm.search | limitTo: 100" ng-click="vm.chooseRecipy(recipy)">
+        <li ng-repeat="recipy in vm.recipies | filter:vm.search | limitTo: 100" ng-click="vm.showPopup(recipy)">
           <div class="row">
-            <div class="col-20">
+            <div class="col-25">
               <img class="recipy-image" ng-src="{{ recipy.receptafbeelding }}" alt=""/>
             </div>
-            <div class="col-80">
+            <div class="col"></div>
+            <div class="col-66">
               <span class="recipy-title" ng-bind="recipy.recepttitel"></span>
+              <span class="recipy-time">{{ recipy.receptbereidingstijd }} minutes</span>
             </div>
           </div>
         </li>

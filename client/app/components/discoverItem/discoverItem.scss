@@ -22,6 +22,10 @@ discover-item {display:block;}
 .discover-item .title {
   float: left;
   font-weight: bold;
+  max-width: 170px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .discover-item .distance {
